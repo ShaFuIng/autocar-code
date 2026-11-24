@@ -1,0 +1,19 @@
+# 2026-11-05 (user: IMU logger should start on boot). Record-only MPU6050 logger, same command as imu/start_imu_logger.sh.
+# Not part of vehicle control; does not touch the UART / BMduino. Skipped when an instance already runs (manual start).
+[Unit]
+Description=MPU6050 record-only IMU logger (logs/imu/latest.json)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jetson/orin_interface_v1/imu
+ExecStartPre=/bin/mkdir -p /home/jetson/orin_interface_v1/logs/imu
+ExecCondition=/bin/sh -c "! pgrep -f \"[p]ython3 imu_logger.py\""
+ExecStart=/usr/bin/python3 imu_logger.py --out ../logs/imu
+StandardOutput=append:/home/jetson/orin_interface_v1/logs/imu/logger.out
+StandardError=append:/home/jetson/orin_interface_v1/logs/imu/logger.out
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

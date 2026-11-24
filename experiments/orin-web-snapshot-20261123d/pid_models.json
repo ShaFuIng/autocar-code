@@ -1,0 +1,7 @@
+{
+  "v4-default": {
+    "adapter": "v4",
+    "label": "既有 v4 · 白線語意分割 · 640",
+    "weights": "/home/jetson/orin_interface_v1/lab/notebooks/yolo26_sem_v4_trial/runs/trial01/weights/best.pt"
+  }
+}

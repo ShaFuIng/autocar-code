@@ -1,0 +1,20 @@
+d60e: detector replica mismatches 10 of 7437 play_comp frames
+ccf1: detector replica mismatches 14 of 8644 play_comp frames
+6f61: detector replica mismatches 4 of 8774 play_comp frames
+c6f3: detector replica mismatches 6 of 5871 play_comp frames
+7658: detector replica mismatches 6 of 4546 play_comp frames
+2728: detector replica mismatches 6 of 5952 play_comp frames
+9af6: detector replica mismatches 2 of 7365 play_comp frames
+e69d: detector replica mismatches 6 of 7440 play_comp frames
+54cb: detector replica mismatches 8 of 4225 play_comp frames
+
+yaw change after a play-comp reversal, sign-aligned (+ = yawed the way the flip pushes), deg/s; all runs given
+far     tau 0.20s  n  1109  mean   1.26  median   0.21  sd  12.86
+far     tau 0.30s  n  1119  mean   4.99  median   2.40  sd  16.31
+far     tau 0.45s  n  1142  mean   7.16  median   3.67  sd  22.03
+near    tau 0.20s  n  3587  mean   0.30  median   0.69  sd   8.45
+near    tau 0.30s  n  3600  mean   3.55  median   3.34  sd  10.43
+near    tau 0.45s  n  3723  mean   4.85  median   4.49  sd  13.81
+random  tau 0.20s  n  3794  mean   0.03  median   0.00  sd  12.90
+random  tau 0.30s  n  3834  mean  -0.04  median  -0.02  sd  15.72
+random  tau 0.45s  n  3968  mean  -0.13  median  -0.17  sd  19.14

@@ -1,0 +1,98 @@
+{
+  "camera-ground-measure": {
+    "key": "camera-ground-measure",
+    "rev": 7,
+    "data": {
+      "snapshot": {
+        "id": "0cf2b6b90b4b4f4cbc564d5c1d986b84",
+        "requested_at": 1792502741.610596,
+        "received_at": 1792502742.1011975,
+        "timestamp_kind": "laptop_receipt_not_sensor_exposure",
+        "hardware_output": false,
+        "width": 640,
+        "height": 360,
+        "model": "V4-640",
+        "image_sha256": "698eb63d8cd8f75409898f9c21bf7ecbe50a3090d6563a6141ff70c67631326a",
+        "weights_sha256": "8b802fa03d34fa73049b92ac5c3a6df121f94d3e9f7875103ceaf50de3424e54",
+        "mask_pixels": 13171,
+        "metric_calibrated": false,
+        "state": "completed"
+      },
+      "lines": [
+        {
+          "cm": 50,
+          "left": [
+            105.2444580078125,
+            252.22224934895831
+          ],
+          "right": [
+            591.6444580078125,
+            257.4222493489583
+          ],
+          "confirmed": false
+        },
+        {
+          "cm": 80,
+          "left": [
+            159.02216796875,
+            196.22224934895831
+          ],
+          "right": [
+            517.42216796875,
+            196.22224934895831
+          ],
+          "confirmed": false
+        },
+        {
+          "cm": 120,
+          "left": [
+            223.02224934895833,
+            161.68889567057292
+          ],
+          "right": [
+            453.42224934895825,
+            161.68889567057292
+          ],
+          "confirmed": false
+        }
+      ],
+      "note": "使用者確認：從前輪輪胎最前緣沿地面往前，黃線50 cm、青線80 cm、橘線120 cm；估計誤差1～3 cm，保守按±3 cm。橫向端已驗證，尚未完成地面標定或換算鏡頭／前軸座標。",
+      "origin": "鏡頭中心地面垂足（待使用者確認）",
+      "endpoint_reference": "白線內緣（人工對位）",
+      "metric_calibrated": false,
+      "hardware_output": false
+    }
+  },
+  "camera-ground-validation-thin-stick": {
+    "key": "camera-ground-validation-thin-stick",
+    "rev": 1,
+    "data": {
+      "thickness_unit": "使用者未指定",
+      "estimated_pixel": [
+        333,
+        173
+      ],
+      "known_distance_cm": 100,
+      "source_measurement_revision": 6,
+      "limitations": "人工判讀近側邊緣，區間僅表示像素選點差異，未包含原始三條線±3cm、標記擺放與相機姿態誤差。不能推論全幅或橫向精度。",
+      "estimated_range_cm": [
+        105.05,
+        107.74
+      ],
+      "image_size": [
+        640,
+        360
+      ],
+      "expected_y_at_100": 178.03,
+      "image": "calibration-thin-stick.jpg",
+      "reference": "前輪輪胎最前緣",
+      "method": "沿量尺附近x=333，沿用三條距離線的一維射影擬合；驗證棒未參與擬合",
+      "estimated_distance_cm": 106.38,
+      "pixel_uncertainty_y": 1,
+      "hardware_output": false,
+      "reported_thickness": 0.5,
+      "target": "棒子靠近車子的邊緣（沿用前次擺放基準，待確認未移動距離）",
+      "metric_calibrated": false
+    }
+  }
+}

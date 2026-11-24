@@ -1,0 +1,531 @@
+{
+  "status": "deployed_stationary_verified",
+  "version": "k-parallel-live-r1",
+  "algorithm": "junction-k-lane-v3",
+  "comparison": {
+    "intersection1": {
+      "frames": 181,
+      "baseline_mean_ms": 98.9327807126967,
+      "background_mean_ms": 73.95826769064904,
+      "baseline_cpu_ms": 17772.689152000003,
+      "background_cpu_ms": 11543.156287999998,
+      "baseline_modes": [
+        [
+          640,
+          "KL_A"
+        ],
+        [
+          702,
+          "KL_SUSPECT"
+        ],
+        [
+          703,
+          "KL_A"
+        ],
+        [
+          707,
+          "KL_SUSPECT"
+        ],
+        [
+          714,
+          "KL_CROSS"
+        ],
+        [
+          786,
+          "KL_RETURN_A"
+        ],
+        [
+          790,
+          "KL_A"
+        ]
+      ],
+      "background_modes": [
+        [
+          640,
+          "KL_A"
+        ],
+        [
+          702,
+          "KL_SUSPECT"
+        ],
+        [
+          703,
+          "KL_A"
+        ],
+        [
+          707,
+          "KL_SUSPECT"
+        ],
+        [
+          714,
+          "KL_CROSS"
+        ],
+        [
+          786,
+          "KL_RETURN_A"
+        ],
+        [
+          790,
+          "KL_A"
+        ]
+      ],
+      "baseline_empty": 0,
+      "background_empty": 0,
+      "background_errors": [],
+      "baseline_publish_ms": {
+        "mean": 98.9327807126967,
+        "p95": 142.0706839999184,
+        "p99": 158.29561799982906,
+        "max": 167.4032110004191
+      },
+      "background_publish_ms": {
+        "mean": 66.48432175691129,
+        "p95": 87.44724299958762,
+        "p99": 96.65561359961427,
+        "max": 104.65930600003048
+      },
+      "path_mismatches": 0,
+      "mode_mismatches": 0,
+      "cpu_note": "This final harness measures parent process CPU only; do not interpret it as total CPU reduction. Separate process prototype includes child CPU and increased ~40%.",
+      "baseline_complete_max_ms": 167.4032110004191,
+      "parallel_complete_max_ms": 106.43856000024243
+    },
+    "intersection2": {
+      "frames": 191,
+      "baseline_mean_ms": 90.78181884288676,
+      "background_mean_ms": 72.98731638743138,
+      "baseline_cpu_ms": 17118.907296000005,
+      "background_cpu_ms": 12685.027456,
+      "baseline_modes": [
+        [
+          1010,
+          "KL_A"
+        ],
+        [
+          1072,
+          "KL_SUSPECT"
+        ],
+        [
+          1073,
+          "KL_A"
+        ],
+        [
+          1074,
+          "KL_SUSPECT"
+        ],
+        [
+          1089,
+          "KL_CROSS"
+        ],
+        [
+          1173,
+          "KL_RETURN_A"
+        ],
+        [
+          1177,
+          "KL_A"
+        ]
+      ],
+      "background_modes": [
+        [
+          1010,
+          "KL_A"
+        ],
+        [
+          1072,
+          "KL_SUSPECT"
+        ],
+        [
+          1073,
+          "KL_A"
+        ],
+        [
+          1074,
+          "KL_SUSPECT"
+        ],
+        [
+          1089,
+          "KL_CROSS"
+        ],
+        [
+          1173,
+          "KL_RETURN_A"
+        ],
+        [
+          1177,
+          "KL_A"
+        ]
+      ],
+      "baseline_empty": 0,
+      "background_empty": 0,
+      "background_errors": [],
+      "baseline_publish_ms": {
+        "mean": 90.78181884288676,
+        "p95": 120.77688249974017,
+        "p99": 132.40826649971493,
+        "max": 137.2750990003624
+      },
+      "background_publish_ms": {
+        "mean": 69.00064902617645,
+        "p95": 88.09976600014124,
+        "p99": 100.21290520053297,
+        "max": 105.67523300051107
+      },
+      "path_mismatches": 0,
+      "mode_mismatches": 0,
+      "cpu_note": "This final harness measures parent process CPU only; do not interpret it as total CPU reduction. Separate process prototype includes child CPU and increased ~40%.",
+      "baseline_complete_max_ms": 137.2750990003624,
+      "parallel_complete_max_ms": 111.96514000039315
+    },
+    "stopped_run": {
+      "frames": 47,
+      "baseline_mean_ms": 105.1185126595188,
+      "background_mean_ms": 71.6488324255129,
+      "baseline_cpu_ms": 4798.066399999996,
+      "background_cpu_ms": 2783.2726080000043,
+      "baseline_modes": [
+        [
+          0,
+          "KL_A"
+        ]
+      ],
+      "background_modes": [
+        [
+          0,
+          "KL_A"
+        ]
+      ],
+      "baseline_empty": 0,
+      "background_empty": 0,
+      "background_errors": [],
+      "baseline_publish_ms": {
+        "mean": 105.1185126595188,
+        "p95": 130.36891049978294,
+        "p99": 138.28550103946327,
+        "max": 143.5739949993149
+      },
+      "background_publish_ms": {
+        "mean": 55.36711836172818,
+        "p95": 69.1332686995338,
+        "p99": 75.46760692013777,
+        "max": 78.07665700056532
+      },
+      "path_mismatches": 0,
+      "mode_mismatches": 0,
+      "cpu_note": "This final harness measures parent process CPU only; do not interpret it as total CPU reduction. Separate process prototype includes child CPU and increased ~40%.",
+      "baseline_complete_max_ms": 143.5739949993149,
+      "parallel_complete_max_ms": 91.18770399982168
+    }
+  },
+  "frames": 419,
+  "path_mismatches": 0,
+  "mode_mismatches": 0,
+  "stationary": {
+    "frames": 275,
+    "max_control_age_s": 0.1779825690009602,
+    "max_result_gap_s": 0.11619286899986037,
+    "max_latest_age_before_update_s": 0.27781493600014073
+  },
+  "record_frames": 167,
+  "recording_drops": 0,
+  "recording_errors": 0,
+  "deployment": {
+    "backup": "/home/jetson/orin_interface_v1/backups/k_parallel_20261024_170355",
+    "files": {
+      "web/live_model_worker.py": "9c727e7c1265365536870e72e03a12342f451038afb2c0188379920c212df3df",
+      "web/k_lane_live_path.py": "52d82fdf5fcdf13c80a187709bfff5ca0c20dfee0d4936d65339c7ff4fc65bc9",
+      "web/k_lane_runtime/junction_k_lane.py": "b6307769cbc72bf04b11d97be53c5fe7736324afc0bd5cf08a1799945df1999b",
+      "web/k_parallel_path.py": "a2eff3fdc48e53c78a9fd462d3ed1baf137f328fb9c0db4674e5c5265f880b80"
+    },
+    "service": "MainPID=46184\nActiveState=active\n",
+    "before": {
+      "vehicle": {
+        "type": "status",
+        "fw": "orin-v1.4.1-manual",
+        "manual_hold_version": 1,
+        "pca_off_version": 1,
+        "boot_policy": "orin_saved_center_v2",
+        "web_manual_start": true,
+        "web_calibration_start": true,
+        "web_timed_test_start": true,
+        "ms": 8319991,
+        "mode": "ORIN",
+        "state": "LOCKED",
+        "reason": "REMOTE_STOP",
+        "generation": 9,
+        "neutral_required": true,
+        "cmd_age_ms": -1,
+        "pins": {
+          "D10": 1,
+          "D11": 1,
+          "D12_command": 0
+        },
+        "motor_a": {
+          "pwm_command": 0,
+          "target": 0,
+          "dir": 0,
+          "wanted_dir": 0
+        },
+        "motor_b": {
+          "pwm_command": 0,
+          "target": 0,
+          "dir": 0,
+          "wanted_dir": 0
+        },
+        "servo_calibration": true,
+        "steer_output_enabled": false,
+        "servo_profile_valid": true,
+        "steer_us_command": 1726,
+        "throttle_limit_pct": 50,
+        "pca_ok": true,
+        "i2c_errors": 1,
+        "servo_profile": {
+          "synced": true,
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "servo_returning": false,
+        "ble_enabled": false,
+        "ble_connected": false,
+        "ble_bad_frames": 0,
+        "motor_test": {
+          "active": false,
+          "started": false,
+          "start_ms": 0,
+          "duration_ms": 0,
+          "right_pct": 0,
+          "left_pct": 0
+        },
+        "enc_sample_ms": 8319794,
+        "enc_enabled": true,
+        "enc_a": {
+          "forward": 0,
+          "reverse": 9480,
+          "delta": 0,
+          "edges": 9480,
+          "invalid": 0,
+          "seen": true,
+          "age_ms": 3025673,
+          "ab": 1
+        },
+        "enc_b": {
+          "forward": 9463,
+          "reverse": 2,
+          "delta": 0,
+          "edges": 9465,
+          "invalid": 0,
+          "seen": true,
+          "age_ms": 3025555,
+          "ab": 1
+        },
+        "voltage_v": null,
+        "current_a": null,
+        "speed_mps": null,
+        "rx_good": 46,
+        "rx_bad": 0,
+        "rx_rejected": 0,
+        "tx_dropped": 2,
+        "max_loop_us": 391715
+      },
+      "uart_age_s": 0.05,
+      "synced": true,
+      "motor_busy": false,
+      "manual": {
+        "control_version": 2,
+        "id": "3b428ba5375b4984a4f36c70a11230ae",
+        "status": "stopped",
+        "reason": "PID_VISION_STALE",
+        "created_at": "2026-10-24T08:13:23.520080+00:00",
+        "generation": 8,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1726
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 363.5
+        },
+        "controller": "visual_pid",
+        "deadline": 5282.266001594,
+        "pid_target_us": 1726.4387699729623,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T08:13:29.468787+00:00"
+      },
+      "record": {
+        "id": "5ede36f9cd6a4612a7daa485bef9507b",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T09:02:07.617821+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/5ede36f9cd6a4612a7daa485bef9507b",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T09:02:27.705214+00:00"
+      },
+      "pid": {
+        "state": "idle",
+        "error": null,
+        "run": {
+          "id": "3b428ba5375b4984a4f36c70a11230ae",
+          "state": "stopped",
+          "started": 1792829603.527331,
+          "deadline": 5282.273213852,
+          "seconds": 20,
+          "execution_mode": "orin_timed",
+          "parameters": {
+            "direction_enabled": 0,
+            "direction_far_row": 0.7,
+            "direction_weight": 0.5,
+            "backlash_initial_enabled": 1,
+            "backlash_initial_left_us": 20,
+            "backlash_initial_right_us": 90,
+            "backlash_initial_threshold_us": 10,
+            "backlash_initial_rate": 300,
+            "backlash_enabled": 1,
+            "backlash_left_us": 60,
+            "backlash_right_us": 120,
+            "backlash_threshold_us": 30,
+            "backlash_rate": 300,
+            "kp": 240,
+            "ki": 0,
+            "kd": 60,
+            "pwm": 15,
+            "steer_rate": 300,
+            "row_ratio": 0.6,
+            "center_us": 1580,
+            "left_gain": 1.5,
+            "right_gain": 1.75,
+            "min_us": 1020,
+            "max_us": 2100,
+            "derivative_tau": 0.15,
+            "integral_limit": 0.3,
+            "max_gap": 0.4
+          },
+          "parameter_revision": 77,
+          "model_id": "v4-default",
+          "path_algorithm": "junction-k-lane-v3",
+          "path_algorithm_version": 3,
+          "weights_sha256": "8b802fa03d34fa73049b92ac5c3a6df121f94d3e9f7875103ceaf50de3424e54",
+          "imu_enabled": false,
+          "reason": "PID_VISION_STALE",
+          "ended": 1792829609.274997
+        },
+        "path_algorithm": "junction-k-lane-v3",
+        "path_algorithms": [
+          {
+            "id": "junction-k-lane-v3",
+            "label": "K 完整路口融合＋A接回 · 共用車道 r1",
+            "control": true,
+            "preview": true,
+            "version": 3
+          },
+          {
+            "id": "road-image-v3",
+            "label": "A v3 分段雙／單線 · 動態取樣PID",
+            "control": true,
+            "preview": true,
+            "version": 3
+          },
+          {
+            "id": "road-memory-v3",
+            "label": "B v3 分段＋對齊記憶 · 動態取樣PID",
+            "control": true,
+            "preview": true,
+            "version": 3
+          },
+          {
+            "id": "legacy9",
+            "label": "原9列雙線中心 · 既有實車PID",
+            "control": true,
+            "preview": true,
+            "version": 1
+          },
+          {
+            "id": "temporal-v2",
+            "label": "v2 整條邊界＋對齊歷史 · 僅預覽",
+            "control": false,
+            "preview": true,
+            "version": 2
+          },
+          {
+            "id": "curve-v1",
+            "label": "v1 舊投影候選 · 僅06離線比較",
+            "control": false,
+            "preview": false,
+            "version": 1
+          },
+          {
+            "id": "single-left",
+            "label": "沿左線等距 · 僅06離線比較",
+            "control": false,
+            "preview": false,
+            "version": 1
+          },
+          {
+            "id": "single-right",
+            "label": "沿右線等距 · 僅06離線比較",
+            "control": false,
+            "preview": false,
+            "version": 1
+          },
+          {
+            "id": "boundary-priority",
+            "label": "雙線優先／單線備援 · 僅06離線比較",
+            "control": false,
+            "preview": false,
+            "version": 1
+          },
+          {
+            "id": "calibrated-v7",
+            "label": "校正v7 雙線／單線 · 候選PID",
+            "control": true,
+            "preview": true,
+            "version": 7
+          }
+        ],
+        "road_pid_version": 3,
+        "ready_frames": 271
+      }
+    }
+  },
+  "original_backup": "/home/jetson/orin_interface_v1/backups/k_parallel_20261024_170038",
+  "service_restarted": false,
+  "max_gap_s": 0.4,
+  "pid_started": false,
+  "motor_started": false,
+  "final_state": {
+    "pid": "idle",
+    "vehicle": "LOCKED",
+    "motor_a": 0,
+    "motor_b": 0
+  },
+  "limitations": [
+    "Replay timing excludes model inference/capture; stationary timing includes capture through control-result consumption.",
+    "Recorded stopped-run frames are lower frequency than inference; not an exact reproduction of missing inference frame 87 or pre-run history.",
+    "419 sampled replay frames and stationary recording are not dynamic-driving validation.",
+    "First stationary validation exposed 727ms startup frame; fixed by starting K before ready. Original measurement retained.",
+    "CPU increases accepted; final parent-only CPU fields are not total CPU usage."
+  ]
+}

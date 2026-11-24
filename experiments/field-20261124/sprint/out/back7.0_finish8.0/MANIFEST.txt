@@ -1,0 +1,16 @@
+base D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\experiments\orin-web-snapshot-20261123d (back 0.0)
+back 7.0 m -> D 10.19 m; full throttle until start + 6.75 m (3.44 m before C1s); after-cap 50; up_rate 60; finish 8.0
+
+normal/
+7358b1c96f0e9ffa310d6d987f3504ae9da96d4fdd237a1494dfd48192c27e41  lap_pos.json
+7532d0992add7f350e38e1517369c6950f41db5b5b0d8aab51c49431df1676d4  brake_zones.json
+f88bec01c47a4bc22412ac93e57f9a0daf9c5b1c7152141b2d69affb1659f7db  lap_ff.json
+35bc1f07c556ff441be8d51caaad7909841059fbe831d9e9c4aec7a120ccc629  start_bias.json
+398336aff3f04c674eb7d3d16926579a6ad3dab2675bb26e2bcc1025868184f8  speed_adapt.json
+
+sprint/
+7358b1c96f0e9ffa310d6d987f3504ae9da96d4fdd237a1494dfd48192c27e41  lap_pos.json
+4a607797e99e037251c9a8184301397c758237988f58241468a4b485c892fe02  brake_zones.json
+f88bec01c47a4bc22412ac93e57f9a0daf9c5b1c7152141b2d69affb1659f7db  lap_ff.json
+35bc1f07c556ff441be8d51caaad7909841059fbe831d9e9c4aec7a120ccc629  start_bias.json
+aabcbcc0ebf3c831ffe30aa9e2c66685ecbdc24841aa09885fdd90642900b500  speed_adapt.json

@@ -1,0 +1,23 @@
+更新：使用者已同意，18:17:37完成一次部署重啟，備份backup_pid_20261019_181737。工作台也已重載。即時預覽成功、無路徑拒絕啟動且LOCKED/0PWM；42項測試通過。仍待使用者提供鏡頭前雙白線跑道作架空驗證。以下為部署前候選歷史記錄。
+
+即時PID候選整合，2026-10-19
+
+狀態：候選程式已完成本機測試；尚未重啟／部署原Orin車控。不可標成實車循跡驗收完成。
+42項 unittest test_live_pid test_manual_drive test_control_ws 通過，JS語法與Python編譯檢查通過。
+Orin獨立隔離模型探測已成功，v4抽樣推論約30～52ms；目前相機沒有可靠跑道，拒絕路徑。未發硬體命令。
+
+模型接口：web/pid_models.json 登錄模型ID、adapter、唯讀權重。live_model_worker.py ADAPTERS目前v4；新adapter predict(image)提供白線二值遮罩，由共用corridor產生路徑。協定1回傳seq/model_id/weights_sha256/path/quality/valid/inference_ms；路徑為1280x720分析座標，保留捕捉時間與過期檢查。不可把任意使用者權重路徑直接傳入容器。
+web/live_pid.py使用既有ManualManager控制，不另開UART；模型容器network none且未掛串口。IMU僅留接口，不參與控制。
+04明確啟動單輪1～15秒，06保存參數版本。保存不動車，實車開始時凍結參數；共享中心必須一致。預覽不動車。雙白線包住中央且連續3張新鮮才可開始。
+影像過期、失線、瀏覽器心跳、限時、急停及原車控保護都會停止。頁面離開或失焦會要求停止。無自動續跑。
+05同步pid.jsonl並分頁展示，保留原檔與SHA256。command_dispatched不表示實體輪角／速度已驗證。
+
+待使用者回覆async問題：是否同意更新並重啟一次orin-dashboard.service，因重開UART可能回正。使用者已授權架空馬達／舵機測試，未因此推定允許重啟服務。
+批准前不得執行install.py。
+部署前需再次同步最新web/live_pid.py到/home/jetson/orin_interface_v1/pid_candidate_20261019/。
+候選安裝腳本laptop_workbench/pid_live_candidate/install.py要求原檔雜湊相符、LOCKED、零PWM、新鮮UART；備份後原子替換六檔再重啟。不燒錄、不替換模型。
+部署後核對LOCKED與0PWM、服務狀態及新PID API。筆電服務也須於無活動控制／錄影時重載新API；既有autostart supervisor會自動恢復。
+pid.js目前仍有舊的「尚未接通」文字，須依部署與實測結果更新，總覽列現場未驗證項目。
+需實際瀏覽04、06、05並截圖檢查排版，使用者已授權操控自開分頁。
+架空正向驗證需要相機看見雙側跑道，不改鏡頭安裝姿態、不繞過有效路徑門檻。先零PWM確認方向，再有限時架空動力測試；不自動落地試跑。
+未驗證：真實失線／斷線停止時延、急停動態結果、地面循跡、左右修正符號、彎道／單側失線、負載與連桿間隙。不能宣稱可安全自動跑完整跑道。

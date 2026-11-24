@@ -1,0 +1,69 @@
+{
+  "revision": "camera-inner-20261030-r1",
+  "source_revision": 11,
+  "snapshot": {
+    "id": "86492cf71ff44d918e1443b93399b718",
+    "requested_at": 1793364977.8307328,
+    "received_at": 1793364978.2248774,
+    "timestamp_kind": "laptop_receipt_not_sensor_exposure",
+    "hardware_output": false,
+    "width": 640,
+    "height": 360,
+    "model": "V4-640",
+    "image_sha256": "ab3e8aac15090e77a268c413b2eabf44fa2d6d0461e9ec90a00663f84e84a883",
+    "weights_sha256": "8b802fa03d34fa73049b92ac5c3a6df121f94d3e9f7875103ceaf50de3424e54",
+    "mask_pixels": 12720,
+    "metric_calibrated": false,
+    "state": "completed"
+  },
+  "lines": [
+    {
+      "cm": 50,
+      "left": [
+        90.7777913411458,
+        224.43058268229169
+      ],
+      "right": [
+        591.6666666666666,
+        208.87504069010419
+      ],
+      "confirmed": false
+    },
+    {
+      "cm": 80,
+      "left": [
+        193.4444580078125,
+        154.65279134114584
+      ],
+      "right": [
+        486.7777913411458,
+        147.09724934895834
+      ],
+      "confirmed": false
+    },
+    {
+      "cm": 120,
+      "left": [
+        246.33333333333334,
+        118.65279134114583
+      ],
+      "right": [
+        434.3333333333333,
+        116.43056233723958
+      ],
+      "confirmed": false
+    }
+  ],
+  "fits": {
+    "left": [
+      -1.4706896958466396,
+      420.85701077806766
+    ],
+    "right": [
+      1.7013327932872453,
+      236.35444231696962
+    ]
+  },
+  "metric_calibrated": false,
+  "usage": "Image-row inner width only; distance confirmations remain false; no center offset change"
+}

@@ -1,0 +1,1 @@
+{"enabled": true, "match_cm": 8.0, "heading_deg": 25.0, "speed_mps": 0.0, "pitch_max_deg": 4.0, "dy_px": 0.0, "note": "ground-identity-r1 (2026-11-09): enabled true = single-line identity by ground geometry in camera-pair-v2-junction; read at each model/route load. dy_px = camera horizon shift vs calibration (0 for the calibrated pose)."}

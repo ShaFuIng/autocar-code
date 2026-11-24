@@ -1,0 +1,12 @@
+[Unit]
+Description=Orin vehicle dashboard and motor test bench
+
+[Service]
+ExecStart=/usr/bin/sg dialout -c "/usr/bin/python3 %h/orin_interface_v1/web/server.py"
+Restart=on-failure
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+Environment=ORIN_BIND=10.155.149.240,192.168.50.1
+
+[Install]
+WantedBy=default.target

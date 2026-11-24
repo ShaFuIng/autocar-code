@@ -1,0 +1,636 @@
+{
+ "revision": "lap-ff-r1",
+ "enabled": true,
+ "note": "field 11-16 v2 (curve 2 only): hold the floor through the whole curve (no camera gate; end 185 deg, max 4.8 m), kappa 43->39.5 (runs 8aba/0631: car sat at near error -0.16..-0.36 = inside under the floor), delay 0.15 m (later turn-in), cancel only at near <= -0.5. v3: c2 end_deg 185->175 (runs bfdb/a163: 3 of 5 exits over-rotated, error min -0.35..-0.60 after the curve). v4: floor yields only when the car is INSIDE: scale 1 at near>=0.0 -> 0 at near<=-0.30, after 30 deg (e904 lap 2: floor kept 1746 at near -0.31 after an entry slam). batch 11-16: + c4 block (curve4-ff-20261116), max_drop_us 60, fade_m 0.5. c4 v2 (run d122 lap 3: floor held 1593-1615 while near -0.10..-0.37 after an entry over-rotation -> inner line): cancel at near <= -0.12 (fade 0.15 m), heading guard 6..14 deg ahead.",
+ "far_on": 0.4,
+ "near_min": -0.05,
+ "delay_m": 0.15,
+ "ramp_m": 0.25,
+ "frac": 1.0,
+ "c_eff_us": 1490.0,
+ "gain_table": [
+  [
+   0.8,
+   0.192
+  ],
+  [
+   0.93,
+   0.167
+  ],
+  [
+   1.06,
+   0.159
+  ],
+  [
+   1.22,
+   0.15
+  ],
+  [
+   1.37,
+   0.13
+  ]
+ ],
+ "v_default": 0.95,
+ "fade_m": 0.5,
+ "e_cancel": -0.5,
+ "min_turn_deg": 10.0,
+ "cancel_fade_m": 0.1,
+ "gate_after_deg": 999.0,
+ "gate_e_lo": -0.3,
+ "gate_e_hi": 0.0,
+ "curves": {
+  "c1": {
+   "enabled": true,
+   "anchor": "C4e",
+   "gap_m": 10.74,
+   "win_m": [
+    -1.8,
+    1.2
+   ],
+   "pos_m": null,
+   "kappa_need": 40.8,
+   "end_deg": 147.0,
+   "max_m": 4.7,
+   "cap_us": 1800.0,
+   "check_m": 1.3,
+   "pitch_max": null,
+   "delay_m": 0.3,
+   "ramp_m": 0.2,
+   "band": {
+    "enabled": true,
+    "kappa_turn": [
+     [
+      0.0,
+      36.2
+     ],
+     [
+      28.0,
+      36.2
+     ],
+     [
+      46.0,
+      40.9
+     ],
+     [
+      100.0,
+      40.9
+     ],
+     [
+      113.0,
+      39.0
+     ],
+     [
+      120.0,
+      35.0
+     ],
+     [
+      130.0,
+      25.0
+     ],
+     [
+      140.0,
+      16.0
+     ],
+     [
+      147.0,
+      8.0
+     ],
+     [
+      153.0,
+      -1.1
+     ],
+     [
+      165.0,
+      -15.0
+     ]
+    ],
+    "e_c_turn": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      10.0,
+      0.45
+     ],
+     [
+      20.0,
+      0.58
+     ],
+     [
+      40.0,
+      0.62
+     ],
+     [
+      110.0,
+      0.62
+     ],
+     [
+      125.0,
+      0.52
+     ],
+     [
+      135.0,
+      0.38
+     ],
+     [
+      145.0,
+      0.18
+     ],
+     [
+      152.0,
+      0.08
+     ],
+     [
+      170.0,
+      0.05
+     ]
+    ],
+    "ref_win": [
+     3.0,
+     8.0
+    ],
+    "ref_min_n": 3,
+    "turn0_deg": 0.0,
+    "e_c": 0.62,
+    "k_e_us": 220.0,
+    "e_lo_us": 250.0,
+    "e_hi_us": 150.0,
+    "k_gz_us": 1.5,
+    "gz_lim_us": 60.0,
+    "m_hi_us": 140.0,
+    "cap_us": 1950.0,
+    "end_deg": 400.0,
+    "trig_head_min_deg": -4.0,
+    "lost_hold": true,
+    "lost_max_s": 1.0,
+    "own_after_deg": 0.0,
+    "own_us": 0.0,
+    "note": "c1exit-r1 (field-20261122/c1exit, offline candidate). Curve 1 full-authority band = the structure of the curve-2 band: target = centre + kappa(tb)/g(v) + clip(220*(near - e_c(tb)), -250, +150) + clip(1.5*(gz + v*kappa), +-60), output = target from the trigger (own_after_deg 0). tb = IMU turn since the main straight (C4e + 3..8 m). kappa_turn in gain-table units (36.2 = +231 us = the lane 44.9 deg/m at the identified 0.19 deg/m per us; +4.7 at tb 46..100 gives back the 30 us curve_trim c1 takes off after this layer; with single_centre the profile is centre + kappa/g). Ends at tb 147 + 0.5 m fade. The FAR trigger comes 0.44-0.93 m (median 0.67) before the car has turned 10 deg = ~0.45 m before the arc: delay_m 0.30 + ramp_m 0.20 start the band at the arc. Lap from the start: no C4e anchor -> not armed (today's chain) unless curves.c1.start + lap_ff.py ec52cb21. Off = curves.c1.enabled false. step2 (needs lap_ff.py ec52cb21): own_lo_us -120 (the target may go left of the centre: needed to unwind an over-rotation), v_ref 1.10 (profile no longer follows the 5 Hz speed noise), end_deg 400 + max_m 4.7 = the band keeps the output through the exit (C1e is 3.4-4.2 m after the trigger, median 3.8 -> about C1e + 0.9 m, then 0.5 m fade) instead of ending at tb 147.",
+    "own_lo_us": -120.0,
+    "v_ref": 1.1,
+    "note_c1lap1b_tail": "c1lap1b tail: kappa_turn 105-150 deg raised (the zero crossing at 153 kept): the band camera term was +30..+66 us over 80-150 deg on all laps and the car drifted from -8 cm (80 deg) to +9 cm outside at C1e+0.3 (clr_out -1.4..-4.6 in 10/10 later passes, at C1e+0.5). Back = the previous table."
+   },
+   "start": {
+    "gap_m": 5.55,
+    "win_m": [
+     -1.2,
+     1.0
+    ],
+    "pos_m": null,
+    "ref_win": [
+     0.4,
+     1.8
+    ]
+   }
+  },
+  "c2": {
+   "enabled": true,
+   "anchor": "C1e",
+   "gap_m": 11.94,
+   "win_m": [
+    -1.2,
+    0.6
+   ],
+   "pos_m": -0.35,
+   "kappa_need": 39.5,
+   "end_deg": 175.0,
+   "max_m": 5.8,
+   "cap_us": 1800.0,
+   "check_m": 1.3,
+   "pitch_max": null,
+   "band": {
+    "enabled": true,
+    "kappa_turn": [
+     [
+      0.0,
+      32.0
+     ],
+     [
+      30.0,
+      36.0
+     ],
+     [
+      60.0,
+      42.4
+     ],
+     [
+      120.0,
+      42.4
+     ],
+     [
+      150.0,
+      40.0
+     ],
+     [
+      184.0,
+      40.0
+     ],
+     [
+      204.0,
+      0.0
+     ]
+    ],
+    "ref_win": [
+     4.0,
+     9.0
+    ],
+    "ref_min_n": 3,
+    "turn0_deg": 0.0,
+    "e_c": 0.56,
+    "k_e_us": 220.0,
+    "e_lo_us": 250.0,
+    "e_hi_us": 150.0,
+    "k_gz_us": 1.5,
+    "gz_lim_us": 60.0,
+    "m_hi_us": 140.0,
+    "cap_us": 1950.0,
+    "end_deg": 202.0,
+    "trig_head_min_deg": -4.0,
+    "lost_hold": true,
+    "lost_max_s": 1.0,
+    "note": "c2-band-r1 (c2-crossing-20261117 offline candidate, NOT deployed). Curve 2 = one arc (tape R 1.175 m) = ~44.5 deg per metre of the logged rear odometer (2161 lap 1: 158 deg over 3.48 m); r1 floor kappa 39.5 is ~30 us short and flat in the error (no steering added between near ~0 and ~0.6) -> drift out on the second half -> PID+curve_ff slam to 2048 at near >= 0.75. band = c_eff + kappa(tb)/g(v) + clip(220*(near - 0.5*kappa/44.5), -250, +150) + clip(1.5*(gz + v*kappa), +-60), top = profile + 200 (cap 1950), tb = IMU turn since the C1e+4..9 m straight; ends at tb 196 (+ fade 0.5 m, max_drop 60/frame); FAR trigger deferred while the car points > 4 deg left of the straight (8d97 lap 2); lost frames: profile + gyro term for <= 1.0 s. Delete the 'band' key = r1.",
+    "e_c_turn": [
+     [
+      0,
+      0.3
+     ],
+     [
+      20,
+      0.4
+     ],
+     [
+      42,
+      0.56
+     ],
+     [
+      66,
+      0.64
+     ],
+     [
+      83,
+      0.75
+     ],
+     [
+      102,
+      0.7
+     ],
+     [
+      117,
+      0.55
+     ],
+     [
+      135,
+      0.62
+     ],
+     [
+      156,
+      0.66
+     ],
+     [
+      186.0,
+      0.64
+     ],
+     [
+      204.0,
+      0.3
+     ],
+     [
+      216.0,
+      0.1
+     ]
+    ],
+    "note_e_c_turn": "band-ec-turn-r1 (2026-11-22): error centre over the turned angle from the static centred-pose measurement (centred/poses.jsonl; curve 2 points at 3/18/42/66/83/102/117/135/156/180/204 deg read 0.26/0.39/0.56/0.62/0.77/0.70/0.49/0.63/0.68/0.64/0.06; the 117 deg point softened to 0.55). Needs lap_ff.py with the patch. Delete e_c_turn = fixed e_c as before.",
+    "own_after_deg": 0.0,
+    "note_own": "2026-11-22: band owns the command in curve 2 (out = profile + k_e*(near - e_c_turn) + gz term; PID / curve_ff cannot add on top). Delete own_after_deg = band as floor + top again.",
+    "note_kappa_shape": "2026-11-22 run-1eab (band owns): 30-60 deg 15-19 cm inside, 120-150 deg centre..outside with error 0.83 -> profile lower at the entry, slightly higher from 90 deg. Back: kappa_turn [[0,42.4],[178,42.4],[198,0]].",
+    "note_c1exit": "c1exit-r1 (field-20261122/c1exit): tail +6 deg (the band ended at tb 190-196, 15 of 18 passes by max_m 4.8 m, while the lane ends at ~208; 11-22). Back = previous kappa_turn / e_c_turn / end_deg / max_m.",
+    "v_ref": 1.08
+   }
+  },
+  "c3": {
+   "enabled": false,
+   "anchor": "C2e",
+   "gap_m": 10.44,
+   "win_m": [
+    -2.0,
+    0.8
+   ],
+   "pos_m": null,
+   "kappa_need": 34.0,
+   "end_deg": 200.0,
+   "max_m": 6.0,
+   "cap_us": 1750.0,
+   "check_m": 2.5,
+   "pitch_max": 3.0
+  }
+ },
+ "c4": {
+  "enabled": true,
+  "anchors": [
+   [
+    "LAND8",
+    0.0
+   ],
+   [
+    "DOWN",
+    2.32
+   ]
+  ],
+  "win_m": [
+   -0.3,
+   1.0
+  ],
+  "kappa_table": [
+   [
+    0.0,
+    30.0
+   ],
+   [
+    1.0,
+    30.0
+   ],
+   [
+    1.6,
+    21.0
+   ],
+   [
+    99.0,
+    21.0
+   ]
+  ],
+  "frac": 1.0,
+  "cap_us": 1720.0,
+  "delay_m": 0.0,
+  "ramp_m": 0.3,
+  "end_deg": 168.0,
+  "max_m": 9.0,
+  "fade_m": 0.6,
+  "e_cancel": -0.12,
+  "cancel_after_m": 0.6,
+  "cancel_fade_m": 0.15,
+  "check_m": 2.0,
+  "min_turn_deg": 20.0,
+  "prof_turn": [
+   [
+    0.1,
+    0.0
+   ],
+   [
+    0.6,
+    3.0
+   ],
+   [
+    0.85,
+    14.0
+   ],
+   [
+    1.1,
+    26.0
+   ],
+   [
+    1.35,
+    36.0
+   ],
+   [
+    1.6,
+    43.0
+   ],
+   [
+    2.1,
+    46.0
+   ],
+   [
+    2.6,
+    57.0
+   ],
+   [
+    3.1,
+    69.0
+   ],
+   [
+    4.1,
+    94.0
+   ],
+   [
+    5.1,
+    115.0
+   ],
+   [
+    6.1,
+    142.0
+   ],
+   [
+    7.1,
+    165.0
+   ],
+   [
+    7.6,
+    175.0
+   ],
+   [
+    8.1,
+    188.0
+   ]
+  ],
+  "ahead_lo": 6.0,
+  "ahead_hi": 14.0,
+  "max_drop_us": 90.0,
+  "rearm_m": 20.0,
+  "max_age_s": 0.25,
+  "yield_e": [
+   -0.15,
+   0.1
+  ],
+  "yield_rate": 0.25,
+  "band": {
+   "enabled": true,
+   "ref_anchor": "DOWN",
+   "ref_win": [
+    0.1,
+    1.9
+   ],
+   "ref_min_n": 5,
+   "ref_max_m": 5.0,
+   "kappa_turn": [
+    [
+     0.0,
+     5.0
+    ],
+    [
+     10.0,
+     30.0
+    ],
+    [
+     15.0,
+     46.0
+    ],
+    [
+     30.0,
+     45.0
+    ],
+    [
+     40.0,
+     30.0
+    ],
+    [
+     45.0,
+     15.0
+    ],
+    [
+     50.0,
+     14.0
+    ],
+    [
+     55.0,
+     17.0
+    ],
+    [
+     61.0,
+     20.0
+    ],
+    [
+     157.0,
+     20.0
+    ],
+    [
+     170.0,
+     19.0
+    ],
+    [
+     178.0,
+     16.0
+    ],
+    [
+     186.0,
+     8.0
+    ],
+    [
+     193.0,
+     0.0
+    ]
+   ],
+   "x0_m": 1.2,
+   "ramp_m": 0.3,
+   "e_c": 0.44,
+   "kappa_ref": 22.0,
+   "k_e_us": 200.0,
+   "e_lo_us": 250.0,
+   "e_hi_us": 150.0,
+   "k_gz_us": 1.5,
+   "gz_lim_us": 60.0,
+   "m_hi_us": 120.0,
+   "m_hi_min_us": 40.0,
+   "cap_us": 1780.0,
+   "floor_below_us": 40.0,
+   "end_deg": 193.0,
+   "max_m": 10.5,
+   "lost_hold": true,
+   "lost_max_s": 1.0,
+   "note": "c4-band-r1 (c4-band-20261117 offline candidate, NOT deployed). Curve 4 from 2.3 m after LAND8 (the arc2 landing band owns x < 2.3 and fades out over 2.3..2.8) to the main straight: target = c_eff + kappa(tb)/g(v) + clip(k_e*(near - e_c*kappa/kappa_ref), -e_lo, +e_hi) + clip(1.5*(gz + v*kappa), +-60); band = min(max(PID chain, target), top), top = profile + m_hi (scaled down with kappa in the exit taper, at least m_hi_min), never above cap 1780 (= bottom_owner right cap); tb = IMU turn since the mean heading of the straight downhill (lap_pos DOWN + 0.1..1.9 m; 59 passes: -> main straight 199.4 deg, sd 1.7); kappa_turn = median of the 16 not-bad curve-4 passes of 11-16/11-17 (~21 deg/m at 50-110 deg, ~26-29 at 120-145, ~19 at 160-176), tapered 16 -> 0 over 184..199 deg (the not-bad passes still turned 25 deg/m at 185 and overshot to ~204). End tb >= end_deg (+ r1 fade_m, max_drop_us TAIL). The old c4 floor is replaced from x0 (ramp 0.3 m); no slope reference -> r1 floor unchanged. Lost frames: profile + gyro term <= lost_max_s. Delete 'band' (or enabled false) = r1.",
+   "note_landing4": "landing4 step 3: x0_m 2.3 -> 1.2 (ramp 0.3 m): the curve-4 band owns from 1.5 m after the landing. Back = lap_ff.json 2e121d02 (x0_m 2.3).",
+   "e_c_turn": [
+    [
+     0.0,
+     0.9
+    ],
+    [
+     30.0,
+     0.9
+    ],
+    [
+     40.0,
+     0.6
+    ],
+    [
+     45.0,
+     0.192
+    ],
+    [
+     55.0,
+     0.22
+    ],
+    [
+     65.0,
+     0.371
+    ],
+    [
+     75.0,
+     0.345
+    ],
+    [
+     85.0,
+     0.384
+    ],
+    [
+     95.0,
+     0.351
+    ],
+    [
+     105.0,
+     0.245
+    ],
+    [
+     115.0,
+     0.344
+    ],
+    [
+     125.0,
+     0.339
+    ],
+    [
+     135.0,
+     0.336
+    ],
+    [
+     145.0,
+     0.344
+    ],
+    [
+     155.0,
+     0.236
+    ],
+    [
+     165.0,
+     0.224
+    ],
+    [
+     172.0,
+     0.34
+    ],
+    [
+     178.0,
+     0.32
+    ],
+    [
+     186.0,
+     0.16
+    ],
+    [
+     193.0,
+     0.0
+    ]
+   ],
+   "own": {
+    "enabled": true,
+    "x0_m": 1.5,
+    "ramp_m": 0.6,
+    "e_max": 0.85,
+    "e_band": 0.15
+   }
+  }
+ },
+ "max_drop_us": 60.0,
+ "note_arc2": "arc2-20261116: B -> c2 gate yields only (no_cam_cancel true, gate_rate 0.25/frame); c4 yield_e [-0.15, 0.10] (1 at near >= +0.10 .. 0 at <= -0.15; a centred car in curve 4 sees ~+0.33), yield_rate 0.25/frame, CAMERA_LEFT cancel replaced by the yield (cancel only on lap_pos lost / NOT_TURNING).",
+ "no_cam_cancel": true,
+ "gate_rate": 0.25,
+ "note_c2band": "c2-crossing-20261117: gate_after_deg 30 -> 999 = the r1 inside-yield gate off (only c2 uses it); the band's error term (near below 0.5*kappa/44.5 lowers the target by 220 us per unit, at most 250) does the yielding. Back out: gate_after_deg 30 and delete curves.c2.band.",
+ "note_c4band": "2026-11-18 field: c4.band from c4-band-20261117 on top of the car file 6217662d",
+ "note_c4band_ec": "2026-11-18: c4.band e_c 0.30 -> 0.38 (run 0f91 exited curve 4 on the inside line)",
+ "note_c12": "c12-20261119 step c2-2: c2 band kappa -> 40.5 (profile -25 us vs the car). Back: 42.4.",
+ "note_c2comp_20261120": "field 11-20: after the left front wheel was adjusted the right-turn response changed (4 runs: wheel +50..+250 us turns 1-3 deg/m less, +350..+440 us turns 5-9 % more). Curve 2: band kappa 40.5 -> 42.4 (+12 us profile, same value as c12 step c2-1) and band m_hi_us 200 -> 140 (top = profile + 140: about +405 us instead of +453; 65 deg/m of yesterday is reached at about +360 today). Back = lap_ff.json dbe194d6.",
+ "note_c4tail_20261120": "field 11-20: on every lap of 4e05 / acd9 / 894f the curve-4 band ended with tb 204-208 deg (main straight ~199) and the car entered the straight still turning -19..-61 dps (5-9 deg past). c4.band: last five kappa_turn points and end_deg moved 6 deg earlier (163/176/184/192/199 -> 157/170/178/186/193; end_deg 199 -> 193). Back = lap_ff.json 456bdb96.",
+ "note_curves_20261120": "curves-20261120 offline candidate (NOT deployed): c4.band e_c 0.38 -> 0.44 only (band target = c_eff + kappa/g + 200*(near - e_c*kappa/22) + gyro; 11-20: the band floor binds on 70-90 % of the curve-4 frames at 45-165 deg with e_us -20 = profile ~20 us above need -> rear axle 5-10 cm inside). Each run start, no restart. Back = lap_ff.json 3e1da49b (snapshot 20261120d).",
+ "note_c4own_20261122": "field 11-22 19:2x: c3c4 c4_step2_own re-based on the car file 052be3dc: only c4.band.own + c4.band.floor_below_us 40 added. Back = 052be3dc.",
+ "note_round1_20261123": "field 11-23 round 1: c1lap1b c1_tail_a (curves.c1.band.kappa_turn 100-153 deg raised) + chatter A (curves.c2.band.v_ref 1.08). Base = car 6576d4df. Back = 6576d4df."
+}

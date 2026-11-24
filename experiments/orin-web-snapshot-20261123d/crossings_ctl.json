@@ -1,0 +1,6 @@
+{
+ "enabled": true,
+ "c2_block_until_m": 10.3,
+ "xp1_hold": null,
+ "note": "crossings-ctl-r1 (crossings-20261114, offline candidate). Read by live_pid once per run (start()). enabled false / missing = off (identical to 95033d76). c2_block_until_m: no curve-2 start while lap_pos is anchored at C1e and fewer metres past it. xp1_hold: {anchor, from_m, to_m, k_gz, k_yaw, lim_us, max_s, rel_base, rel_mean_s, rel_lim_us}: gyro hold on lost frames in that lap_pos range (gyro_hold.json crossing profile for missing keys). Needs lap_pos.json enabled true."
+}

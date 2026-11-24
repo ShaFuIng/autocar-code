@@ -1,0 +1,14 @@
+[Unit]
+Description=Camera-only shadow review workbench
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jetson/orin_interface_v1/shadow_workbench
+ExecStart=/usr/bin/python3 /home/jetson/orin_interface_v1/shadow_workbench/orin_service.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+
+[Install]
+WantedBy=default.target

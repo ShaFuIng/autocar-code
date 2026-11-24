@@ -1,0 +1,6 @@
+{"revision": "gyro-hold-r1",
+ "profiles": {
+  "crossing": {"k_gz": 4.0, "k_yaw": 10.0, "lim_us": 250.0, "max_s": 1.5},
+  "downhill": {"k_gz": 4.0, "k_yaw": 10.0, "lim_us": 250.0}
+ },
+ "note": "defaults for keys missing from the caller's json (crossing_pass.json hold_gyro / down_straight.json); read once at import"}

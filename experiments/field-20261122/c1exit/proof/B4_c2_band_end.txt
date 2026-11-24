@@ -1,0 +1,19 @@
+curve-2 band in the car logs: how it ended (first frame with an end reason), band tb and metres from the trigger there, and at the last band frame; final heading = band tb scale extended by the gyro, mean 1.2..2.2 s after the last band frame
+1eab lap 1: end ANGLE  at tb 196.1 x 4.67 m | last band frame tb 201.9 x 5.29 | final heading 208.2 | kind FAR
+1eab lap 2: end MAX_M  at tb 193.7 x 4.87 m | last band frame tb 197.3 x 5.46 | final heading 207.5 | kind FAR
+1eab lap 3: end MAX_M  at tb 195.2 x 4.94 m | last band frame tb 199.7 x 5.55 | final heading 208.7 | kind FAR
+1eab lap 4: end ANGLE  at tb 196.5 x 4.69 m | last band frame tb 198.5 x 5.32 | final heading 209.1 | kind FAR
+e0cd lap 1: end MAX_M  at tb 194.2 x 4.86 m | last band frame tb 198.1 x 5.45 | final heading 207.8 | kind FAR
+e0cd lap 2: end MAX_M  at tb 194.8 x 4.85 m | last band frame tb 199.0 x 5.45 | final heading 207.3 | kind POS
+e0cd lap 3: end MAX_M  at tb 193.0 x 4.90 m | last band frame tb 196.0 x 5.51 | final heading 207.4 | kind FAR
+e0cd lap 4: end MAX_M  at tb 194.0 x 4.89 m | last band frame tb 196.0 x 5.50 | final heading 209.1 | kind FAR
+6f61 lap 1: end MAX_M  at tb 194.7 x 4.85 m | last band frame tb 198.2 x 5.45 | final heading 206.3 | kind FAR
+6f61 lap 2: end MAX_M  at tb 192.6 x 4.93 m | last band frame tb 197.2 x 5.54 | final heading 209.9 | kind FAR
+6f61 lap 3: end MAX_M  at tb 190.1 x 4.91 m | last band frame tb 197.2 x 5.52 | final heading 207.4 | kind POS
+6f61 lap 4: end MAX_M  at tb 194.6 x 4.93 m | last band frame tb 197.5 x 5.54 | final heading 208.9 | kind FAR
+6f61 lap 5: end MAX_M  at tb 191.0 x 4.94 m | last band frame tb 197.8 x 5.56 | final heading 208.4 | kind FAR
+6f61 lap 6: end MAX_M  at tb 192.7 x 4.98 m | last band frame tb 196.2 x 5.61 | final heading 209.2 | kind POS
+c6f3 lap 1: end MAX_M  at tb 193.3 x 4.88 m | last band frame tb 198.6 x 5.48 | final heading 207.4 | kind FAR
+c6f3 lap 2: end ANGLE  at tb 196.3 x 4.70 m | last band frame tb 198.5 x 5.33 | final heading 207.3 | kind FAR
+c6f3 lap 3: end MAX_M  at tb 191.3 x 5.00 m | last band frame tb 197.4 x 5.62 | final heading 207.6 | kind FAR
+c6f3 lap 4: end MAX_M  at tb 190.3 x 4.92 m | last band frame tb 197.1 x 5.55 | final heading 207.3 | kind POS

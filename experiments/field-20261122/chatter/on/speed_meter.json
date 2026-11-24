@@ -1,0 +1,7 @@
+{
+ "revision": "speed-meter-mcu-r1",
+ "mode": "mcu",
+ "win_s": 0.6,
+ "stale_s": 0.45,
+ "note": "chatter-20261122: wheel speed (downhill_speed.SpeedMeter, used for _cm_speed and the downhill scale) = count difference over win_s of MCU status time (vehicle ms), one entry per new 5 Hz status, instead of over Orin frame time. Removes the one-frame +30 % spikes (7.5 % of frames). Needs downhill_speed.py 93e8b2ab (restart once). Read at each SpeedMeter() = run start / resume. No new status for stale_s on the Orin clock -> old frame-time rate (decays as before). Delete this file = old rate (identical to downhill_speed.py 9ec47317)."
+}

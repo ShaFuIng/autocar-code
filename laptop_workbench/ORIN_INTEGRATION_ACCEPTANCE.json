@@ -1,0 +1,987 @@
+{
+  "completed_at": 1792293400.3465176,
+  "remote_record_count": 80,
+  "replay_records": 80,
+  "replay_frames": 10258,
+  "sync": {
+    "state": "completed",
+    "started": 1792293373.4566422,
+    "completed": 3,
+    "errors": [],
+    "total": 3,
+    "current": "manual/051e63c4c6544fd4b031d280459d662e",
+    "finished": 1792293392.1249044
+  },
+  "local_records": [
+    {
+      "kind": "manual",
+      "id": "02f08b83b5774384bef675f497a815ac",
+      "version": "0ccdfbca99d95d8b9da3",
+      "files": 2,
+      "bytes": 20046,
+      "synced_at": 1792293093.4351795,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "051e63c4c6544fd4b031d280459d662e",
+      "version": "3975ba1c9854440ca360",
+      "files": 4,
+      "bytes": 24446606,
+      "synced_at": 1792293392.118854,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "06e477f2ca4d42d1a37fc0029e42f325",
+      "version": "ab25875e11b8c3f30320",
+      "files": 2,
+      "bytes": 18580,
+      "synced_at": 1792293280.862522,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "08dfcb8c29f74ae78dba9f294060e8e9",
+      "version": "1f342054eba8c3c6bff4",
+      "files": 4,
+      "bytes": 7201380,
+      "synced_at": 1792292991.1786153,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "0ca8d1c456174b4cbd81f029bc1862f1",
+      "version": "85e14deaf4fe3cea61b0",
+      "files": 2,
+      "bytes": 10028,
+      "synced_at": 1792293092.9314806,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "0d3e096ba4154815a776faa71e807523",
+      "version": "f04759d4b702b7dbbf29",
+      "files": 2,
+      "bytes": 817033,
+      "synced_at": 1792293266.17858,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "1252ffd9606b4606adb4d03e052d33a2",
+      "version": "3fba8b36493ef49e4d6a",
+      "files": 2,
+      "bytes": 909750,
+      "synced_at": 1792293088.0909946,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "18e44dc545ed45aaa76e8feb40b37ef3",
+      "version": "9bb364e78e9faac08283",
+      "files": 2,
+      "bytes": 1300239,
+      "synced_at": 1792293277.0815115,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "1a4fa7f41a1c4777bf022d837cd108a8",
+      "version": "7dc15452687ef2e60c7c",
+      "files": 4,
+      "bytes": 42040215,
+      "synced_at": 1792293227.362424,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "1bb21de7338e4d12908b99cd46cae0c0",
+      "version": "fc267f96847ac642127d",
+      "files": 2,
+      "bytes": 197537,
+      "synced_at": 1792293267.5552404,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "2513ef9e51454148a849834e05dd1bfc",
+      "version": "04e219f05045fdbd4433",
+      "files": 4,
+      "bytes": 30067884,
+      "synced_at": 1792293244.7063837,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "296bce5b2aea44b0b28c6bcc406a5954",
+      "version": "9fd9a1f1edb9664538f8",
+      "files": 2,
+      "bytes": 1150741,
+      "synced_at": 1792293262.7443812,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "29e93736b089442dbb1ce04d2a91f09c",
+      "version": "379029ac53c5fb31e663",
+      "files": 2,
+      "bytes": 736857,
+      "synced_at": 1792293259.401148,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "2a483d9ee2934d1b97ad4fe9890dcfac",
+      "version": "1ed9f0bd5fde640de8c3",
+      "files": 4,
+      "bytes": 2591470,
+      "synced_at": 1792293232.2145348,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "2c2ee98589a0479d8b4a6894199ecdee",
+      "version": "1483bfed7d992499a7a1",
+      "files": 4,
+      "bytes": 1304149,
+      "synced_at": 1792293013.2814798,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "2eee244fac9c4bf0bb415a9604633079",
+      "version": "0fa0f369e1df3d87775d",
+      "files": 2,
+      "bytes": 219691,
+      "synced_at": 1792293091.9037933,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "31648baf7cd741b1b90bc39f1403feb5",
+      "version": "23d62169b4a497d57db4",
+      "files": 4,
+      "bytes": 4059450,
+      "synced_at": 1792293279.8097231,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "36b21b8ed35b44bf8d86865681bd0677",
+      "version": "50f7792f18ebfaa3c697",
+      "files": 4,
+      "bytes": 2778714,
+      "synced_at": 1792293005.329728,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "3b1586a0add34405b2b2c702eacb267f",
+      "version": "e5ab15a3b64958b7ab88",
+      "files": 2,
+      "bytes": 42487,
+      "synced_at": 1792293277.6116176,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "3bbb0bbfb10c41cfa82fc111a038a2f2",
+      "version": "1c823b5b288bd9c3c339",
+      "files": 2,
+      "bytes": 321986,
+      "synced_at": 1792293092.4327822,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "3c4638859b814c26ae25ec26c6cd7de9",
+      "version": "fa38646bafd46b1d97ab",
+      "files": 2,
+      "bytes": 224020,
+      "synced_at": 1792293181.7495894,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "3d1c45daa44f4858a0a5dbc1a7803d46",
+      "version": "ee5814f8d979ba0ebcc9",
+      "files": 2,
+      "bytes": 23257,
+      "synced_at": 1792293263.9682567,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "3d53ebd7fc974e909651be44b5781694",
+      "version": "aa67b7970276076863da",
+      "files": 4,
+      "bytes": 26366907,
+      "synced_at": 1792293253.9285622,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "42cc66888b754fe0b7411884d8ecc527",
+      "version": "cae2623f0979d52e0aa2",
+      "files": 4,
+      "bytes": 2012511,
+      "synced_at": 1792293008.8226168,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "433daeea689a41688848239403627229",
+      "version": "3097ff6fbd00d1080bff",
+      "files": 2,
+      "bytes": 32985,
+      "synced_at": 1792293089.916206,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "44ee83f74b11411399b0de80aafd490e",
+      "version": "98c5fbe460c11796f553",
+      "files": 4,
+      "bytes": 2117152,
+      "synced_at": 1792293010.6400948,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "451f7d00a3924e0481f256ff53ee1a37",
+      "version": "a7796340571755d9d20f",
+      "files": 2,
+      "bytes": 224112,
+      "synced_at": 1792293085.0217862,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "4c6e1fd4273a4e0a8fdc78bc79cd7b1e",
+      "version": "f2dfbf04e022de9d454d",
+      "files": 4,
+      "bytes": 862741,
+      "synced_at": 1792293003.753934,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "4cab1d92db8b4949a1fd46bff6bf75fe",
+      "version": "a133b6be7ffdaa94989b",
+      "files": 4,
+      "bytes": 39641859,
+      "synced_at": 1792293177.461471,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "5ace197de3d14df788b4ce59adfd2b6c",
+      "version": "4106333921b8bc7c0913",
+      "files": 2,
+      "bytes": 38236,
+      "synced_at": 1792293261.9325805,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "5ae48872f9a149ef890eb6ba8c4c3293",
+      "version": "d33cfe4bb7a74ed68c33",
+      "files": 4,
+      "bytes": 9275197,
+      "synced_at": 1792293276.3191957,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "6157c7d159cf470285aff55fb55f8b27",
+      "version": "fbcefa8cc334989f506e",
+      "files": 2,
+      "bytes": 1587270,
+      "synced_at": 1792293267.040844,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "66987cb34b8e49978053dfe50ef2cfce",
+      "version": "4448ba6d2e72d9fa0123",
+      "files": 2,
+      "bytes": 24827,
+      "synced_at": 1792293261.3991175,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "677f231df3aa4f89a9597d36b3af2248",
+      "version": "3d2902ac92a1f1f50b0c",
+      "files": 2,
+      "bytes": 246753,
+      "synced_at": 1792293180.9243593,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "6dde77c9bb064bd1b99ec0bfe4011d18",
+      "version": "12fbf6163889271e0d97",
+      "files": 2,
+      "bytes": 126963,
+      "synced_at": 1792293095.0061107,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "734b3ba6a6944144b4168db99042bfdd",
+      "version": "2197eb6bf579c0d17129",
+      "files": 2,
+      "bytes": 65713,
+      "synced_at": 1792293269.3006513,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "75530aa457994cc7a3edd7c6462ff586",
+      "version": "7ab6ea25530416aacdf4",
+      "files": 2,
+      "bytes": 761,
+      "synced_at": 1792292997.2661963,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "76953f3e404c4c109c72048a352967d0",
+      "version": "0370eff75a076c5efbc8",
+      "files": 2,
+      "bytes": 22553,
+      "synced_at": 1792293089.2757783,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "7b0d81d38ff646378493554100aca909",
+      "version": "7c7eb7cc7e33bfc6a489",
+      "files": 2,
+      "bytes": 480068,
+      "synced_at": 1792293087.151542,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "7c371ad1ebdf4574926fef6ab3bc8e45",
+      "version": "45c64bbf38e255fcbcc9",
+      "files": 2,
+      "bytes": 914744,
+      "synced_at": 1792293263.4454348,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "7d5f21e294b042908955ce102a60528a",
+      "version": "1811167c6e00bdbdf042",
+      "files": 2,
+      "bytes": 2368298,
+      "synced_at": 1792293091.220574,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "83e222acbce0487da1f8a2a67c8649c6",
+      "version": "11a1c0efc5efb5b56d8b",
+      "files": 2,
+      "bytes": 6738,
+      "synced_at": 1792293269.7660346,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "86fe91895a104d2789e552e9c485a15d",
+      "version": "b3ffbeae42183e7ec175",
+      "files": 2,
+      "bytes": 32470,
+      "synced_at": 1792293259.9580011,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "87b51cf5c1cc4e03aaa4b6e74b2cc5e3",
+      "version": "c51e87af18a38abc3326",
+      "files": 2,
+      "bytes": 93209,
+      "synced_at": 1792293280.3508096,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "8d9682f7c2c34d53bc2fb7314e1b540a",
+      "version": "27336e47506bec152ed8",
+      "files": 4,
+      "bytes": 9201517,
+      "synced_at": 1792293213.7396684,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "93e64d93ce1e424aa91c5f5e34c1d876",
+      "version": "a666e814f38416e91d26",
+      "files": 4,
+      "bytes": 6064287,
+      "synced_at": 1792292995.875922,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "986c9c29b8e0400ab77e2f4650e884b4",
+      "version": "424cf9b906bca5b4c384",
+      "files": 2,
+      "bytes": 437465,
+      "synced_at": 1792293180.009269,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "9e956248ea2347ca94033c7db95126e2",
+      "version": "c5442a9b2493dfd3d738",
+      "files": 2,
+      "bytes": 434273,
+      "synced_at": 1792293268.770993,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "a025bb00a9e9442ca28e5a2cd274c1bb",
+      "version": "e47b2bf86c631b773fb0",
+      "files": 2,
+      "bytes": 366968,
+      "synced_at": 1792293094.5109534,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "a8f6f2cc940c40eeb342fe3a2033c410",
+      "version": "5fcf1d86ad44067dca0d",
+      "files": 4,
+      "bytes": 5311285,
+      "synced_at": 1792292999.5943882,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "aafa0792fc984afa9290bcb5ee32f42d",
+      "version": "686e04443a680f11df0d",
+      "files": 2,
+      "bytes": 92896,
+      "synced_at": 1792293264.444865,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "bb4d14e17db747bab6b371a86270a5b5",
+      "version": "47dacc603631837457d2",
+      "files": 4,
+      "bytes": 77964412,
+      "synced_at": 1792293208.7614644,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "c241600be5ea46c7996cf08a78c05a85",
+      "version": "c8a770d16f23f4003d0f",
+      "files": 4,
+      "bytes": 7361108,
+      "synced_at": 1792292993.6677473,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "c7c7106abc374791a59aa964315da223",
+      "version": "0037ed4400c538b03ad5",
+      "files": 4,
+      "bytes": 3666860,
+      "synced_at": 1792293007.2861195,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "c9f0a80c97f0401388c52effbda81768",
+      "version": "f91af10bb21ee4691473",
+      "files": 4,
+      "bytes": 699593,
+      "synced_at": 1792293011.8146582,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "cc643bb14afb4eec9e22157da64bc31a",
+      "version": "c9d2771ae3eb55814437",
+      "files": 2,
+      "bytes": 25995,
+      "synced_at": 1792293088.6070662,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "cea2c4fdf7f9461fb31267f729fc5162",
+      "version": "bcad86eb8065de9834d5",
+      "files": 2,
+      "bytes": 124613,
+      "synced_at": 1792293265.0224652,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "ceeeeeeefe784bc0badbfa27165e479b",
+      "version": "4862103d680145ad7565",
+      "files": 2,
+      "bytes": 1083357,
+      "synced_at": 1792293179.2584627,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "cf5a77c9b2c54923a199b33264b3a380",
+      "version": "1723b1bb4b29bb865ca9",
+      "files": 2,
+      "bytes": 881245,
+      "synced_at": 1792293265.6050768,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "d2f81fefe0d34cc98989b766ee0ee41a",
+      "version": "e5d3d9959f8939080170",
+      "files": 2,
+      "bytes": 62584,
+      "synced_at": 1792293086.1718006,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "d45e95c9f034490fbd1df73e2fa2a60f",
+      "version": "a6ba42e94bff8a9cbd9e",
+      "files": 2,
+      "bytes": 741862,
+      "synced_at": 1792293182.9978163,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "d4fe1b74a00947cd90101428958e0927",
+      "version": "0c8508004e5bfcd758c2",
+      "files": 4,
+      "bytes": 7636139,
+      "synced_at": 1792293164.5851164,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "d932b7cfb97c4f37b40ce0d4940c1609",
+      "version": "8c8a13e18c50b90b5b80",
+      "files": 4,
+      "bytes": 4342670,
+      "synced_at": 1792293234.5243824,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "da7dbffae3124e908bbb9a30339bba18",
+      "version": "0575b3b2d8d3cd4c2c5e",
+      "files": 2,
+      "bytes": 18846,
+      "synced_at": 1792293090.412878,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "e14432b9ef4b4a44a24d777c64c558fe",
+      "version": "14645a8c3b4f6a50f4ce",
+      "files": 4,
+      "bytes": 3028148,
+      "synced_at": 1792293271.6398156,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "e1ee52fff0c547cfa23467ec10645825",
+      "version": "86252e80273ed4f0c748",
+      "files": 4,
+      "bytes": 1694225,
+      "synced_at": 1792293230.184493,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "e3e22e4e6ba246c488e71a049c8d0be1",
+      "version": "047998145dbc3bbaa529",
+      "files": 2,
+      "bytes": 2522,
+      "synced_at": 1792292996.7661753,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "e4f3cad05a6444a69195e4253be05d2f",
+      "version": "e557e290e23f537a1b8b",
+      "files": 2,
+      "bytes": 28791,
+      "synced_at": 1792293260.791074,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "f008fb35b9cc424a841f89ba262abb90",
+      "version": "1722139294a3c74a90c1",
+      "files": 2,
+      "bytes": 499880,
+      "synced_at": 1792293268.1784203,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "f555fe0d53044b5ab3055ded98038258",
+      "version": "b7f8c55d2b94bf606d97",
+      "files": 4,
+      "bytes": 6931289,
+      "synced_at": 1792293002.4374418,
+      "verified": true
+    },
+    {
+      "kind": "manual",
+      "id": "ff6e6b359c3647a58f3cdd43b84539ec",
+      "version": "ad383d0bbe704ceae6a5",
+      "files": 2,
+      "bytes": 170374,
+      "synced_at": 1792293093.9781332,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "12ee09788b6c40bc81c840853b829b86",
+      "version": "cd94c6b2cd0d068815e4",
+      "files": 3,
+      "bytes": 17600389,
+      "synced_at": 1792293383.6191201,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "1990d71f48d442bf9acf6c60913847d5",
+      "version": "38694e1dc74f5548cffc",
+      "files": 3,
+      "bytes": 316832,
+      "synced_at": 1792293375.8372924,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "3e961ecb61bb434b98e01d2e9420c520",
+      "version": "7fd343782d0613047dc3",
+      "files": 5,
+      "bytes": 175901465,
+      "synced_at": 1792293154.2858725,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "4c70c9dc239f4415be1d00e8a6cb88e6",
+      "version": "8557a11c04e561704c46",
+      "files": 3,
+      "bytes": 7979161,
+      "synced_at": 1792293157.8242493,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "9190f4c2de9a4127bb4a1275e519cd38",
+      "version": "bf2fba3f0ead5c308087",
+      "files": 3,
+      "bytes": 1629790,
+      "synced_at": 1792292988.120955,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "a63e4f2ee8db46fe8bd3e1a98427400b",
+      "version": "43c6bb9f03f942d42439",
+      "files": 3,
+      "bytes": 106619358,
+      "synced_at": 1792293081.3663006,
+      "verified": true
+    },
+    {
+      "kind": "record",
+      "id": "d295ebb305aa4b05acab035e5de60ee8",
+      "version": "afdbf397c29b13c283dc",
+      "files": 3,
+      "bytes": 550320,
+      "synced_at": 1792293084.2283063,
+      "verified": true
+    },
+    {
+      "kind": "shadow",
+      "id": "a63e4f2ee8db46fe8bd3e1a98427400b",
+      "version": "6d3a93bef00f06278e71",
+      "files": 3035,
+      "bytes": 168421051,
+      "synced_at": 1792293046.2762814,
+      "verified": true
+    },
+    {
+      "kind": "shadow",
+      "id": "d295ebb305aa4b05acab035e5de60ee8",
+      "version": "8e16fd83564fedfe5c82",
+      "files": 35,
+      "bytes": 915799,
+      "synced_at": 1792293082.654944,
+      "verified": true
+    }
+  ],
+  "before": {
+    "at": 1792293204.0649815,
+    "checks": [
+      {
+        "port": 8000,
+        "path": "/",
+        "status": 200,
+        "bytes": 27310,
+        "login_protected": true
+      },
+      {
+        "port": 8000,
+        "path": "/manual",
+        "status": 200,
+        "bytes": 33516,
+        "login_protected": true
+      },
+      {
+        "port": 8000,
+        "path": "/api/status",
+        "status": 200,
+        "bytes": 1768,
+        "login_protected": true
+      },
+      {
+        "port": 8000,
+        "path": "/api/manual/status",
+        "status": 200,
+        "bytes": 24119,
+        "login_protected": true
+      },
+      {
+        "port": 8000,
+        "path": "/api/record/status",
+        "status": 200,
+        "bytes": 381,
+        "login_protected": true
+      },
+      {
+        "port": 8000,
+        "path": "/camera.jpg",
+        "status": 200,
+        "bytes": 4946,
+        "login_protected": true
+      },
+      {
+        "port": 8091,
+        "path": "/",
+        "status": 200,
+        "bytes": 12157,
+        "login_protected": true
+      },
+      {
+        "port": 8091,
+        "path": "/api/runs",
+        "status": 200,
+        "bytes": 154,
+        "login_protected": true
+      },
+      {
+        "port": 8091,
+        "path": "/api/record",
+        "status": 200,
+        "bytes": 381,
+        "login_protected": true
+      },
+      {
+        "port": 8091,
+        "path": "/preview.jpg",
+        "status": 200,
+        "bytes": 4918,
+        "login_protected": true
+      },
+      {
+        "port": 8092,
+        "state": "unreachable",
+        "note": "Read-only probe; service not started or restarted"
+      }
+    ],
+    "services": "NRestarts=0\nId=orin-dashboard.service\nActiveState=active\nActiveEnterTimestamp=Sat 2026-10-17 23:22:49 CST\n\nNRestarts=0\nId=orin-shadow.service\nActiveState=active\nActiveEnterTimestamp=Sat 2026-10-17 23:22:49 CST\n"
+  },
+  "after": {
+    "connected": true,
+    "host": "orinnano-super.local",
+    "at": 1792293401.2656121,
+    "vehicle": {
+      "fw": "orin-v1.4.1-manual",
+      "state": "LOCKED",
+      "reason": "BOOT_LOCK",
+      "generation": 1,
+      "voltage_v": null,
+      "current_a": null,
+      "speed_mps": null,
+      "motor_a": {
+        "pwm_command": 0,
+        "target": 0,
+        "dir": 0,
+        "wanted_dir": 0
+      },
+      "motor_b": {
+        "pwm_command": 0,
+        "target": 0,
+        "dir": 0,
+        "wanted_dir": 0
+      },
+      "pca_ok": true,
+      "i2c_errors": 0
+    },
+    "telemetry": {
+      "uart_age_s": 0.11,
+      "uart_error": null,
+      "camera_age_s": 0.09,
+      "camera_error": null,
+      "motor_busy": false,
+      "servo_settings_synced": true
+    },
+    "recording": {
+      "ok": true,
+      "current": {
+        "id": "1990d71f48d442bf9acf6c60913847d5",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-18T03:14:54.583820+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/1990d71f48d442bf9acf6c60913847d5",
+        "frames": 16,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-18T03:14:56.454432+00:00"
+      }
+    },
+    "services": "NRestarts=0\nId=orin-dashboard.service\nActiveState=active\nActiveEnterTimestamp=Sat 2026-10-17 23:22:49 CST\n\nNRestarts=0\nId=orin-shadow.service\nActiveState=active\nActiveEnterTimestamp=Sat 2026-10-17 23:22:49 CST\n",
+    "disk_free_bytes": 420561121280,
+    "jobs": [
+      {
+        "job": "646cf2918b6e4f2999e4930077ee7af9",
+        "state": "completed",
+        "duration_s": 30,
+        "created": 1792293294.4653792,
+        "record_id": "1990d71f48d442bf9acf6c60913847d5",
+        "started": 1792293294.6363626,
+        "recording": {
+          "id": "1990d71f48d442bf9acf6c60913847d5",
+          "mode": "record_only",
+          "status": "stopped",
+          "created_at": "2026-10-18T03:14:54.583820+00:00",
+          "path": "/home/jetson/orin_interface_v1/logs/record_only/1990d71f48d442bf9acf6c60913847d5",
+          "frames": 16,
+          "nominal_fps": 10,
+          "reason": "USER_STOP",
+          "motion_labels": false,
+          "ended_at": "2026-10-18T03:14:56.454432+00:00"
+        },
+        "finished": 1792293296.4599771
+      },
+      {
+        "job": "8c3b63a7cb60461eb0d7f888204f2654",
+        "state": "completed",
+        "duration_s": 10,
+        "created": 1792292974.2163424,
+        "record_id": "9190f4c2de9a4127bb4a1275e519cd38",
+        "started": 1792292974.3457267,
+        "recording": {
+          "id": "9190f4c2de9a4127bb4a1275e519cd38",
+          "mode": "record_only",
+          "status": "stopped",
+          "created_at": "2026-10-18T03:09:34.340055+00:00",
+          "path": "/home/jetson/orin_interface_v1/logs/record_only/9190f4c2de9a4127bb4a1275e519cd38",
+          "frames": 84,
+          "nominal_fps": 10,
+          "reason": "USER_STOP",
+          "motion_labels": false,
+          "ended_at": "2026-10-18T03:09:44.382569+00:00"
+        },
+        "finished": 1792292984.3868186
+      }
+    ]
+  },
+  "recording_job": {
+    "job": "8c3b63a7cb60461eb0d7f888204f2654",
+    "state": "completed",
+    "duration_s": 10,
+    "created": 1792292974.2163424,
+    "record_id": "9190f4c2de9a4127bb4a1275e519cd38",
+    "started": 1792292974.3457267,
+    "recording": {
+      "id": "9190f4c2de9a4127bb4a1275e519cd38",
+      "mode": "record_only",
+      "status": "stopped",
+      "created_at": "2026-10-18T03:09:34.340055+00:00",
+      "path": "/home/jetson/orin_interface_v1/logs/record_only/9190f4c2de9a4127bb4a1275e519cd38",
+      "frames": 84,
+      "nominal_fps": 10,
+      "reason": "USER_STOP",
+      "motion_labels": false,
+      "ended_at": "2026-10-18T03:09:44.382569+00:00"
+    },
+    "finished": 1792292984.3868186
+  },
+  "initial_sync": {
+    "state": "completed_with_errors",
+    "started": 1792292985.8151479,
+    "completed": 77,
+    "errors": [
+      {
+        "id": "12ee09788b6c40bc81c840853b829b86",
+        "error": "[WinError 32] 程序無法存取檔案，因為檔案正由另一個程序使用。: 'D:\\\\OneDrive\\\\Desktop\\\\自走車\\\\Orin_Interface_v1\\\\laptop_workbench\\\\data\\\\orin\\\\records\\\\record\\\\12ee09788b6c40bc81c840853b829b86\\\\staging-4c026d906f404906a5fddd1e683d844f' -> 'D:\\\\OneDrive\\\\Desktop\\\\自走車\\\\Orin_Interface_v1\\\\laptop_workbench\\\\data\\\\orin\\\\records\\\\record\\\\12ee09788b6c40bc81c840853b829b86\\\\cd94c6b2cd0d068815e4'"
+      },
+      {
+        "id": "051e63c4c6544fd4b031d280459d662e",
+        "error": "[WinError 32] 程序無法存取檔案，因為檔案正由另一個程序使用。: 'D:\\\\OneDrive\\\\Desktop\\\\自走車\\\\Orin_Interface_v1\\\\laptop_workbench\\\\data\\\\orin\\\\records\\\\manual\\\\051e63c4c6544fd4b031d280459d662e\\\\staging-a2d9ad4e7b214676afa8b2b8ac3642ce' -> 'D:\\\\OneDrive\\\\Desktop\\\\自走車\\\\Orin_Interface_v1\\\\laptop_workbench\\\\data\\\\orin\\\\records\\\\manual\\\\051e63c4c6544fd4b031d280459d662e\\\\3975ba1c9854440ca360'"
+      }
+    ],
+    "total": 79,
+    "current": "manual/06e477f2ca4d42d1a37fc0029e42f325",
+    "finished": 1792293280.8653686
+  },
+  "notes": [
+    "Two transient Windows folder sharing violations repaired by retry; source records preserved.",
+    "Camera transport verified; current image dark, scene/optics require on-site check."
+  ],
+  "tests": [
+    "Real Orin status and JPEG through new website",
+    "10-second remote recording completed without browser heartbeat",
+    "Idempotent job key; concurrent start rejected; owned early stop passed",
+    "Unsupported motion API and invalid ownership/duration rejected",
+    "All listed remote records synced with SHA256 verification",
+    "Synced replay rows/timestamps and JPEG reads verified",
+    "Original services startup timestamps and restart counts unchanged",
+    "Vehicle remains LOCKED; both motor command/target zero"
+  ],
+  "replay_breakdown": {
+    "image_records": 35,
+    "event_only_records": 44,
+    "empty_event_records": 1,
+    "image_frames": 10258,
+    "event_rows": 9421
+  },
+  "historical_data_warnings": [
+    {
+      "id": "orin-manual-75530aa457994cc7a3edd7c6462ff586",
+      "warning": "Original recording has no frames/events"
+    },
+    {
+      "id": "orin-manual-cf5a77c9b2c54923a199b33264b3a380",
+      "warnings": [
+        "原始控制紀錄第 488 行不完整或無法解析；原檔保留，回放略過此行。"
+      ]
+    }
+  ]
+}

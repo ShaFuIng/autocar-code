@@ -1,0 +1,25 @@
+c6f3 x bins from 0.6 m, 0.6 m wide:
+   y (cm)          -8.0  -16.0  -18.7  -14.9   -8.0  -12.3  -18.0  -10.2   -6.3   -2.6   +nan
+   cmd - centre    +112   +196    +36    +45   +330    +86   +135   +202   +189   +384   +380
+   cmd max         +229   +280   +181   +263   +403   +239   +218   +280   +370   +450   +383
+   near error     +0.24  +0.35  +0.01  +0.17  +0.68  -0.02  +0.09  +0.52  +0.54  +1.00  +1.00
+   curve_ff %         0      0      0      0     33      0      0      0      7     33      0
+   no arc_lat y %     0      2     35     30      0     12     44     33      1     91    100
+   lap 1: corner 4.2-5.6 err max 0.64 cmd max +270 gz min  -51 cout min  +7.1 | tail 6.0-7.2 err max 1.00 cmd max +450
+   lap 2: corner 4.2-5.6 err max 0.81 cmd max +218 gz min  -36 cout min +12.4 | tail 6.0-7.2 err max 1.00 cmd max +440
+   lap 3: corner 4.2-5.6 err max 0.54 cmd max +217 gz min  -42 cout min +12.8 | tail 6.0-7.2 err max 1.00 cmd max +391
+   lap 4: corner 4.2-5.6 err max 0.72 cmd max +293 gz min  -52 cout min +14.7 | tail 6.0-7.2 err max 0.79 cmd max +374
+6f61 x bins from 0.6 m, 0.6 m wide:
+   y (cm)         -11.4  -14.2  -11.4   -9.9  -16.8  -12.2   -9.0   -5.5   -6.6  -13.3   +nan
+   cmd - centre     +88   +172   +193    +61    +78   +183   +221   +370    +82   +106   +286
+   cmd max         +134   +277   +320   +146   +182   +296   +396   +399   +370   +449   +405
+   near error     +0.23  +0.49  +0.49  -0.08  +0.02  +0.47  +0.66  +0.77  +0.14  +0.20  +0.67
+   curve_ff %         0      0      0      0      0      2     47     58      2      1      0
+   no arc_lat y %     0      2      0      0     31      7      1      0      9     47    100
+   r1 target - actual: 0.90-1.35  +52 1.35-1.80  +63 1.80-2.25  -67 2.25-2.70 -140 2.70-3.15   +3 3.15-3.60 +128 3.60-4.05  -21 4.05-4.50  -36
+   lap 1: corner 4.2-5.6 err max 1.00 cmd max +388 gz min  -72 cout min  -4.0 | tail 6.0-7.2 err max 0.72 cmd max +358
+   lap 2: corner 4.2-5.6 err max 0.97 cmd max +392 gz min  -75 cout min +12.3 | tail 6.0-7.2 err max 0.89 cmd max +449
+   lap 3: corner 4.2-5.6 err max 0.77 cmd max +370 gz min  -65 cout min +10.7 | tail 6.0-7.2 err max 0.89 cmd max +439
+   lap 4: corner 4.2-5.6 err max 1.00 cmd max +396 gz min  -73 cout min  +1.3 | tail 6.0-7.2 err max 0.82 cmd max +407
+   lap 5: corner 4.2-5.6 err max 1.00 cmd max +391 gz min  -72 cout min  -0.9 | tail 6.0-7.2 err max 0.81 cmd max +405
+   lap 6: corner 4.2-5.6 err max 1.00 cmd max +399 gz min  -77 cout min  +9.5 | tail 6.0-7.2 err max 0.86 cmd max +434

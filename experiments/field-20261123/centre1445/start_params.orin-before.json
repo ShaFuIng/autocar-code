@@ -1,0 +1,51 @@
+{
+ "note": "手機服務開跑固定內容。parameters 取自筆電工作台 PID 文件 rev154（2026-11-21），與 run-f847 起跑紀錄逐鍵相同。center_us／min_us／max_us 於起跑時由手機服務改用車上舵機保存設定（中心只有一個）。owner 每次新產生。",
+ "parameter_revision": 154,
+ "prepare": {
+  "model_id": "v4-default",
+  "path_algorithm": "camera-pair-v2-junction-flag",
+  "row_ratio": 0.6,
+  "visual_center_offset_px_640": 18,
+  "curve_outward_px_640": 0
+ },
+ "start": {
+  "path_algorithm": "camera-pair-v2-junction-flag",
+  "area_clear": true,
+  "parameter_revision": 154,
+  "execution_mode": "orin_timed",
+  "seconds": null,
+  "parameters": {
+   "direction_enabled": 0,
+   "direction_far_row": 0.7,
+   "direction_weight": 0.5,
+   "backlash_initial_enabled": 0,
+   "backlash_initial_left_us": 20,
+   "backlash_initial_right_us": 90,
+   "backlash_initial_threshold_us": 10,
+   "backlash_initial_rate": 300,
+   "backlash_enabled": 0,
+   "backlash_left_us": 30,
+   "backlash_right_us": 80,
+   "backlash_threshold_us": 30,
+   "backlash_rate": 500,
+   "kp": 220,
+   "ki": 40,
+   "kd": 30,
+   "pwm": 15,
+   "steer_rate": 1500,
+   "row_ratio": 0.6,
+   "center_us": 1475,
+   "left_gain": 1.5,
+   "right_gain": 1.45,
+   "min_us": 780,
+   "max_us": 2050,
+   "derivative_tau": 0.15,
+   "integral_limit": 1.0,
+   "max_gap": 0.4,
+   "visual_center_offset_px_640": 18,
+   "curve_outward_px_640": 0,
+   "preview_far_weight": 0.2,
+   "preview_far_row": 0.45
+  }
+ }
+}

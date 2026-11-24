@@ -1,0 +1,11 @@
+x after LAND8 | frames | PWM mean (min..max) | PWM source | speed_adapt level | |e| mean / P90 | gz mean / sd | cmd - 1475 mean / max | outer clr median / min | inner clr median / min | bottom_owner phase | owner
+ 0.0-0.5 |  73 | 31 (30..31) | brake31 100% | LOW 96% MID 4% | 0.77 / 1.00 | -21 / 28 | +215 / +240 | -11.1 / -12.4 (n 8) | +25.1 / +22.4 (n 8) | CAP 100% | bottom_owner 67% pid 16% lap_ff4 11%
+ 0.5-1.0 | 151 | 31 (30..31) | brake31 100% | LOW 97% MID 3% | 0.72 / 1.00 | -53 / 9 | +200 / +240 | -2.2 / -12.8 (n 66) | +16.2 / -4.9 (n 66) | CAP 100% | bottom_owner 56% pid 19% arc2_land 9%
+ 1.0-1.5 | 118 | 31 (30..31) | brake31 100% | LOW 53% MID 47% | 0.20 / 0.51 | -22 / 23 | +35 / +185 | +7.6 / -11.7 (n 117) | +6.4 / -6.5 (n 117) | RAMP 71% CAP 29% | lap_ff4 39% arc2_land 31% gain_schedule 21%
+ 1.5-2.0 | 140 | 32 (30..50) | landing 79% brake31 21% | MID 70% LOW 24% HIGH 6% | 0.14 / 0.24 | -9 / 13 | +78 / +152 | +13.2 / -1.5 (n 140) | +0.8 / -6.1 (n 140) | RAMP 62% OPEN 38% | lap_ff4 89% yaw_inner 8% arc2_land 3%
+ 2.0-2.5 | 148 | 35 (30..50) | landing 100% | LOW 66% MID 28% HIGH 7% | 0.23 / 0.40 | -18 / 10 | +112 / +155 | +15.9 / +9.1 (n 148) | -1.9 / -8.9 (n 148) | OPEN 100% | lap_ff4 62% arc2_land 19% gain_schedule 16%
+ 2.5-3.0 | 156 | 35 (33..50) | landing 100% | LOW 88% HIGH 10% MID 3% | 0.39 / 0.61 | -23 / 10 | +147 / +247 | +13.1 / +3.9 (n 156) | +0.9 / -6.8 (n 156) | OPEN 100% | lap_ff4 52% gain_schedule 35% arc2_land 13%
+ 3.0-3.5 | 136 | 35 (27..50) | landing 40% c4 by-curve 40% other 20% | LOW 99% HIGH 1% | 0.42 / 0.59 | -29 / 8 | +152 / +255 | +10.0 / +2.1 (n 136) | +4.0 / -4.3 (n 136) | OPEN 60% None 40% | lap_ff4 49% curve_smooth 26% gain_schedule 23%
+ 3.5-4.0 | 144 | 44 (31..48) | c4 by-curve 100% | LOW 78% MID 22% | 0.36 / 0.56 | -29 / 7 | +129 / +228 | +10.9 / +2.5 (n 144) | +3.2 / -3.9 (n 144) | None 100% | curve_smooth 69% lap_ff4 31%
+ 4.0-4.5 | 132 | 48 (44..50) | c4 by-curve 90% other 10% | LOW 52% MID 38% HIGH 10% | 0.25 / 0.51 | -27 / 8 | +108 / +230 | +10.6 / +2.5 (n 132) | +3.4 / -3.6 (n 132) | None 100% | lap_ff4 61% curve_smooth 38% yaw_inner 1%
+ 4.5-5.0 | 120 | 48 (48..50) | c4 by-curve 95% other 5% | LOW 85% MID 10% HIGH 5% | 0.30 / 0.46 | -26 / 8 | +133 / +218 | +14.9 / +3.5 (n 117) | -0.9 / -5.7 (n 117) | None 100% | lap_ff4 89% curve_smooth 8% yaw_inner 2%

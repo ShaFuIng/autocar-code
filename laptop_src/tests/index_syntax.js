@@ -1,0 +1,83 @@
+
+const labURL=`http://${location.hostname}:8888/lab`;document.getElementById('lablink').href=labURL;
+function page(lab){document.getElementById('motorPanel').style.display=lab?'none':'block';document.getElementById('dash').style.display=lab?'none':'grid';document.getElementById('servoPanel').style.display=lab?'none':'block';document.getElementById('lab').style.display=lab?'block':'none';if(lab&&!document.getElementById('notebook').src)document.getElementById('notebook').src=labURL}
+async function status(){try{let r=await fetch('/api/status');if(!r.ok)throw Error(r.status);let d=await r.json(),v=d.vehicle;document.getElementById('connection').textContent=d.uart_error|| (d.uart_age_s>1?'UART 狀態已過期':'UART 正常 · '+d.uart_age_s+' 秒前更新');document.getElementById('state').textContent=v?v.mode+' / '+v.state:'—';document.getElementById('pwm').textContent=v?v.motor_a.pwm_command+' / '+v.motor_b.pwm_command:'—';document.getElementById('enc').textContent=v?v.enc_a.delta+' / '+v.enc_b.delta:'—';document.getElementById('bad').textContent=d.bad_startup+' / '+d.bad_steady;document.getElementById('raw').textContent=JSON.stringify(v,null,2);servoStatus(d);document.getElementById('camstate').textContent=d.camera_error||'取像 '+(d.camera_size||[]).join(' × ')+' · 預覽最多 10 FPS';}catch(e){document.getElementById('connection').textContent='操作台連線中斷';document.getElementById('state').textContent='資料不可用';servoStatus(null);}finally{setTimeout(status,500)}}
+let vehicle=null,usable=false,authorized=false,busy=false,lastData=null,lastAck=null,settings=null,formDirty=false,editRevision=null,dragAngle=null;
+const dial=document.getElementById('dial'),message=document.getElementById('servoMessage');
+for(const id of ['minUs','centerUs','maxUs'])document.getElementById(id).oninput=()=>{if(!formDirty)editRevision=settings?.revision;formDirty=true};
+function servoStatus(d){
+ if(d?.vehicle&&lastAck&&d.vehicle.generation===lastAck.generation&&d.vehicle.state==='READY'&&d.vehicle.ms<=lastAck.ms){d.vehicle.steer_us_command=lastAck.us;d.vehicle.steer_output_enabled=true}
+ lastData=d;vehicle=d?.vehicle;settings=d?.servo_settings||settings;
+ const fresh=!!(d&&d.uart_age_s<1&&!d.uart_error),correct=['orin-v1.3.0-bench','orin-v1.4.0-manual'].includes(vehicle?.fw);
+ authorized=!!(fresh&&correct&&vehicle.servo_calibration&&vehicle.state==='READY'&&vehicle.pins.D11===1);
+ usable=authorized&&!!d?.servo_settings_synced;
+ const enabled=!!vehicle?.steer_output_enabled,returning=!!vehicle?.servo_returning;
+ document.getElementById('enableSwitch').textContent=authorized?'開啟 · 點擊關閉':'關閉 · 按實體啟動鍵開啟';
+ document.getElementById('enableSwitch').disabled=!!d?.motor_busy;document.getElementById('enableSwitch').setAttribute('aria-checked',String(authorized));document.getElementById('enableSwitch').classList.toggle('on',authorized);
+ document.getElementById('readyNote').textContent=!correct?'等待 orin-v1.3.0-bench 韌體。':!fresh?'UART 未更新，控制暫停。':!authorized?'LOCKED：放開急停，按一下實體啟動鍵再放開。':!d.servo_settings_synced?'READY：等待設定同步，尚不能移動。':returning?'正在逐步回中心；可按關閉或急停停止。':'READY：保持啟用，直到關閉、急停、故障或重新開機。';
+ document.getElementById('initialize').textContent='啟用並定位至中心 '+(settings?.center_us??'—')+' µs';
+ document.getElementById('initialize').disabled=!usable||enabled||busy;
+ document.getElementById('returnCenter').disabled=!usable||!enabled||busy||returning;
+ document.getElementById('minus').disabled=document.getElementById('plus').disabled=!usable||!enabled||busy||returning;
+ document.getElementById('saveCurrent').disabled=!usable||!enabled||busy||returning;
+ document.getElementById('saveSettings').disabled=busy||returning;
+ dial.setAttribute('aria-disabled',String(!usable||!enabled||busy||returning));
+ document.getElementById('pulseLabel').textContent=enabled?vehicle.steer_us_command+' µs（設定）':'輸出關閉';
+ if(enabled&&settings){let offset=vehicle.steer_us_command-settings.center_us;const span=offset>=0?settings.max_us-settings.center_us:settings.center_us-settings.min_us;const angle=Math.max(-90,Math.min(90,offset/span*90));document.getElementById('needle').setAttribute('transform',`rotate(${angle} 150 150)`)}
+ if(settings){document.getElementById('settingsStatus').textContent=`保存：左 ${settings.min_us}／中心 ${settings.center_us}／右 ${settings.max_us} µs · 版本 ${settings.revision} · `+(d?.servo_settings_synced?'BMduino 已同步':d?.profile_sync_error||'等待同步');if(!formDirty){document.getElementById('minUs').value=settings.min_us;document.getElementById('centerUs').value=settings.center_us;document.getElementById('maxUs').value=settings.max_us;editRevision=settings.revision}}
+ if(d?.motor_busy){document.getElementById('enableSwitch').textContent='馬達測試中（舵機保持）';usable=false;for(const id of ['initialize','returnCenter','minus','plus','saveCurrent','saveSettings'])document.getElementById(id).disabled=true;dial.setAttribute('aria-disabled','true');document.getElementById('readyNote').textContent='後輪測試進行中，舵機保持原設定。'}if(!usable)dragAngle=null;
+}
+async function controlRequest(path,payload){
+ if(busy&&payload.action!=='stop'){message.textContent='上一筆指令確認中，請稍候。';return false}
+ busy=true;servoStatus(lastData);
+ try{const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-Orin-Control':'1'},body:JSON.stringify(payload)});const result=await r.json();if(!r.ok||!result.ok)throw Error(result.reason||'控制失敗');
+ if(result.profile){settings=result.profile;formDirty=false;editRevision=settings.revision;if(lastData){lastData.servo_settings=settings;lastData.servo_settings_synced=false}message.textContent='設定已保存，不會移動舵機；等待 BMduino 同步。'}
+ else if(Number.isInteger(result.servo_us)){lastAck={us:result.servo_us,generation:result.generation,ms:result.status_ms};if(vehicle&&vehicle.generation===result.generation){vehicle.steer_us_command=result.servo_us;vehicle.steer_output_enabled=true}message.textContent='BMduino 已接受 '+result.servo_us+' µs；請觀察車輪。'}
+ else message.textContent=payload.action==='stop'?'已關閉並鎖定。':'已接受回中心，完成與否請看狀態；指令位置不是實測角度。';return true
+ }catch(e){dragAngle=null;message.textContent=e.message;return false}finally{busy=false;servoStatus(lastData)}
+}
+function sendServo(payload){return controlRequest('/api/servo',payload)}
+function saveForm(){const p={expected_revision:editRevision??settings?.revision,min_us:Number(document.getElementById('minUs').value),center_us:Number(document.getElementById('centerUs').value),max_us:Number(document.getElementById('maxUs').value)};return controlRequest('/api/servo/settings',p)}
+document.getElementById('saveSettings').onclick=saveForm;
+document.getElementById('saveCurrent').onclick=()=>{document.getElementById('centerUs').value=vehicle.steer_us_command;if(!formDirty)editRevision=settings.revision;formDirty=true;saveForm()};
+document.getElementById('enableSwitch').onclick=()=>{dragAngle=null;if(authorized)sendServo({action:'stop'});else message.textContent='請按實體啟動鍵；網頁不能取代急停後的重新啟動。'};
+document.getElementById('initialize').onclick=()=>sendServo({us:settings.center_us,generation:vehicle.generation});
+document.getElementById('returnCenter').onclick=()=>sendServo({action:'center',generation:vehicle.generation});
+function stepSize(){return Number(document.getElementById('stepSize').value)}
+document.getElementById('stepSize').onchange=()=>{document.getElementById('minus').textContent='−'+stepSize()+' µs';document.getElementById('plus').textContent='＋'+stepSize()+' µs'};
+for(const [id,sign] of [['minus',-1],['plus',1]])document.getElementById(id).onclick=()=>sendServo({action:'step',delta:sign*stepSize(),generation:vehicle.generation});
+function pointerAngle(e){const r=dial.getBoundingClientRect();return Math.atan2(e.clientX-r.left-r.width/2,-(e.clientY-r.top-r.height/2))*180/Math.PI}
+dial.onpointerdown=e=>{if(!usable||!vehicle.steer_output_enabled||busy||vehicle.servo_returning)return;dragAngle=pointerAngle(e);dial.setPointerCapture(e.pointerId)};
+dial.onpointerup=e=>{if(dragAngle===null)return;const difference=(pointerAngle(e)-dragAngle+540)%360-180;dragAngle=null;if(usable&&Math.abs(difference)>3)sendServo({action:'step',delta:Math.sign(difference)*stepSize(),generation:vehicle.generation})};
+dial.onpointercancel=()=>{dragAngle=null};document.addEventListener('visibilitychange',()=>{if(document.hidden)dragAngle=null});
+const motorOwner=Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('');
+let myMotorRun=null,motorCurrent=null,historySelection=null,motorStartBusy=false,heartbeatBusy=false;
+const motorText=document.getElementById('motorMessage');
+const numberText=(x,d=1)=>typeof x==='number'&&Number.isFinite(x)?x.toFixed(d):'—';
+function motorInputs(){const both=document.getElementById('motorWheel').value==='both',equal=document.getElementById('motorEqual').checked;document.getElementById('motorRight').disabled=document.getElementById('motorWheel').value==='left';document.getElementById('motorLeft').disabled=document.getElementById('motorWheel').value==='right'||(both&&equal);if(both&&equal)document.getElementById('motorLeft').value=document.getElementById('motorRight').value}
+for(const id of ['motorWheel','motorEqual','motorRight'])document.getElementById(id).onchange=motorInputs;motorInputs();
+async function motorPost(route,payload){const r=await fetch('/api/motor/'+route,{method:'POST',headers:{'Content-Type':'application/json','X-Orin-Control':'1'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok||!d.ok)throw Error(d.reason||'測試請求失敗');return d}
+document.getElementById('motorStart').onclick=async()=>{if(motorStartBusy)return;motorStartBusy=true;try{motorInputs();const d=await motorPost('start',{owner:motorOwner,wheels_raised:document.getElementById('wheelsRaised').checked,wheel:document.getElementById('motorWheel').value,direction:document.getElementById('motorDirection').value,right_pct:Number(document.getElementById('motorRight').value),left_pct:Number(document.getElementById('motorLeft').value),seconds:Number(document.getElementById('motorSeconds').value),warmup_s:Number(document.getElementById('motorWarmup').value),label:document.getElementById('motorLabel').value});myMotorRun=d.run_id;historySelection=null;motorText.textContent='已建立測試，等待韌體授權確認。';motorHeartbeat()}catch(e){motorText.textContent=e.message}finally{motorStartBusy=false}};
+document.getElementById('motorStop').onclick=async()=>{try{await motorPost('stop',{});motorText.textContent='已要求停止，請確認車輪停止；緊急時按實體急停。'}catch(e){motorText.textContent=e.message}};
+function drawMotor(run){const canvas=document.getElementById('motorChart'),ctx=canvas.getContext('2d'),w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h);const rows=(run?.rows||[]).filter(x=>x.right_cps!==null&&x.left_cps!==null),duration=Math.max(run?.config?.seconds||5,...rows.map(x=>x.elapsed_s),.5),maximum=Math.max(1,...rows.flatMap(x=>[Math.abs(x.right_cps),Math.abs(x.left_cps)]));ctx.font='13px system-ui';ctx.strokeStyle='#476079';ctx.fillStyle='#a6b8ca';ctx.beginPath();ctx.moveTo(65,h/2);ctx.lineTo(w-15,h/2);ctx.stroke();ctx.fillText('0',35,h/2+4);ctx.fillText(numberText(maximum,0)+' counts/s',10,18);ctx.fillText(numberText(duration,1)+' s',w-65,h-10);ctx.fillText('0 s',65,h-10);if(run){const warm=run.config.warmup_s/duration*(w-80);ctx.fillStyle='#ffffff09';ctx.fillRect(65,25,warm,h-50)}for(const [key,color] of [['right_cps','#71d4ba'],['left_cps','#ffb36b']]){ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();rows.forEach((row,i)=>{const x=65+row.elapsed_s/duration*(w-80),y=h/2-row[key]/maximum*(h/2-30);if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y)});ctx.stroke()}}
+function motorLinks(target,run){target.replaceChildren();if(!run)return;if(['preparing','running','stopping'].includes(run.status)){target.textContent='測試完成後可下載原始資料。';return}for(const [ext,label] of [['csv','下載 CSV'],['jsonl','下載 JSONL']]){const a=document.createElement('a');a.href='/api/motor/result/'+run.id+'.'+ext;a.download=run.id+'.'+ext;a.textContent=label;a.style.marginRight='10px';target.append(a)}}
+function showMotor(run){if(!run)return;const latest=(run.rows||[]).at(-1);document.getElementById('motorRunState').textContent=run.status+' · '+run.reason;document.getElementById('motorCountdown').textContent=numberText(Math.max(0,run.config.seconds-(run.elapsed_s||0)));document.getElementById('motorCps').textContent=numberText(latest?.right_cps)+' / '+numberText(latest?.left_cps);document.getElementById('motorPwm').textContent=latest?latest.right_pwm+' / '+latest.left_pwm:'—';const a=run.summary;document.getElementById('motorSummary').textContent=a?'穩定樣本 '+a.steady_samples+' · 平均 |counts/s| 右／左 '+numberText(a.mean_right_cps)+' / '+numberText(a.mean_left_cps)+' · 右÷左 '+numberText(a.right_left_ratio,3)+' · 非法計數增加 '+a.right_invalid_added+' / '+a.left_invalid_added:'測試進行中，尚未計算穩定平均。';drawMotor(run);motorLinks(document.getElementById('motorDownloads'),run)}
+function motorHistory(runs){const body=document.getElementById('motorHistory').querySelector('tbody');body.replaceChildren();for(const run of runs){const tr=document.createElement('tr'),a=run.summary||{},c=run.config;const values=[(c.label||run.id.slice(0,8))+' · '+run.status,c.wheel+' / '+c.direction,c.right_pct+' / '+c.left_pct,c.seconds+' / '+c.warmup_s,numberText(a.mean_right_cps)+' / '+numberText(a.mean_left_cps),numberText(a.right_left_ratio,3),numberText(a.speed_gap_pct),numberText(a.first_right_pulse_s)+' / '+numberText(a.first_left_pulse_s)];for(const value of values){const td=document.createElement('td');td.textContent=value;tr.append(td)}const td=document.createElement('td'),button=document.createElement('button');button.textContent='查看';button.onclick=async()=>{try{const r=await fetch('/api/motor/result/'+run.id);if(!r.ok)throw Error('讀取失敗');historySelection=await r.json();showMotor(historySelection)}catch(e){motorText.textContent=e.message}};td.append(button);tr.append(td);body.append(tr)}}
+// Heartbeat traffic is independent of status/history/chart/camera requests.
+async function motorHeartbeat(){
+ const runId=myMotorRun;
+ if(!runId||heartbeatBusy||document.hidden||document.getElementById('motorPanel').style.display==='none')return;
+ heartbeatBusy=true;
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),600);
+ try{
+  const r=await fetch('/api/motor/heartbeat',{method:'POST',cache:'no-store',signal:controller.signal,headers:{'Content-Type':'application/json','X-Orin-Control':'1'},body:JSON.stringify({run_id:runId,owner:motorOwner})});
+  const d=await r.json();
+  if(!r.ok||!d.ok)throw Error(d.reason||'心跳傳送失敗');
+  if(d.active===false&&myMotorRun===runId){myMotorRun=null;motorText.textContent=d.status==='completed'?'測試正常完成，資料已保存。':'測試已停止：'+d.reason;}
+ }catch(e){if(myMotorRun===runId)motorText.textContent='控制心跳未確認；若持續失聯，測試會停止。';}
+ finally{clearTimeout(timeout);heartbeatBusy=false;}
+}
+function heartbeatTick(){motorHeartbeat();setTimeout(heartbeatTick,200)}
+heartbeatTick();
+async function motorPoll(){try{const r=await fetch('/api/motor/status');if(!r.ok)throw Error('馬達測試資料不可用');const d=await r.json();motorCurrent=d.current;const active=!!(motorCurrent&&['preparing','running','stopping'].includes(motorCurrent.status));document.getElementById('motorStart').disabled=active||motorStartBusy||!usable||vehicle?.servo_returning;document.getElementById('motorStop').disabled=!active;if(!active&&myMotorRun===motorCurrent?.id){myMotorRun=null;motorText.textContent=motorCurrent.status==='completed'?'測試正常完成，資料已保存。':'測試已停止：'+motorCurrent.reason;}if(active)historySelection=null;if(historySelection)showMotor(historySelection);else if(motorCurrent)showMotor(motorCurrent);motorHistory(d.history)}catch(e){motorText.textContent=e.message;document.getElementById('motorStart').disabled=true}finally{setTimeout(motorPoll,300)}}motorPoll();
+async function camera(){try{let r=await fetch('/camera.jpg');if(!r.ok)throw Error();let b=await r.blob(),old=document.getElementById('camera').src;document.getElementById('camera').src=URL.createObjectURL(b);if(old.startsWith('blob:'))URL.revokeObjectURL(old)}catch(e){document.getElementById('camstate').textContent='相機畫面暫時不可用'}finally{setTimeout(camera,200)}}status();camera();

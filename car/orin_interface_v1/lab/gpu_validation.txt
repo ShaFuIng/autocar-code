@@ -1,0 +1,1 @@
+{"torch": "2.10.0", "cuda": "12.6", "gpu": "Orin", "torchvision": "0.25.0", "ultralytics": "8.4.174", "tensorrt": "10.7.0", "gpu_matrix": "passed", "gpu_nms": "passed"}

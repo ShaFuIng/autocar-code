@@ -1,0 +1,1 @@
+{"enabled": false, "post_s": 6.0, "term_cap_us": 40.0, "d_cap_us": null, "curves": [1, 2, 4], "release_reasons": ["ANGLE_DONE"], "level_pitch_deg": 3.0, "c1_window": null, "c1_d_cap": false}

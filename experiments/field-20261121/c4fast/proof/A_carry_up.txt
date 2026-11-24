@@ -1,0 +1,67 @@
+A. candidate/lap_speed.py af31a1c2 (carry_up) vs the car's lap_speed.py 3ad2272b: both modules driven by the same recorded frames (tools/emul.py; module level, NOT a live_pid replay).
+   car lap_speed.json 77ffbe32 (key absent)   e1b4 frames 6857 identical (log + pwm) 6857
+   car lap_speed.json 77ffbe32 (key absent)   b93e frames 5434 identical (log + pwm) 5434
+   car lap_speed.json 77ffbe32 (key absent)   9934 frames 5602 identical (log + pwm) 5602
+   on/lap_speed.step58.json (key absent)      e1b4 frames 6857 identical (log + pwm) 6857
+   on/lap_speed.step58.json (key absent)      b93e frames 5434 identical (log + pwm) 5434
+   on/lap_speed.step58.json (key absent)      9934 frames 5602 identical (log + pwm) 5602
+   on/lap_speed.step70.json (key absent)      e1b4 frames 6857 identical (log + pwm) 6857
+   on/lap_speed.step70.json (key absent)      b93e frames 5434 identical (log + pwm) 5434
+   on/lap_speed.step70.json (key absent)      9934 frames 5602 identical (log + pwm) 5602
+TOTAL frames 53679 identical 53679 all_identical True
+
+B2. carry_up true (candidate module) vs the plain step file (car module): PWM across the zone switch at C4e+0.8
+ step58, run e1b4 lap 2: position | car config | plain | carry_up
+   C4e+0.75 |  48.0 |  58.0 |  58.0 
+   C4e+0.75 |  48.0 |  58.0 |  58.0 
+   C4e+0.75 |  48.0 |  58.0 |  58.0 
+   C4e+0.75 |  48.0 |  58.0 |  58.0 
+   C4e+0.99 |  48.0 |  58.0 |  58.0 
+   C4e+0.99 |  48.0 |  48.0 |  59.3 
+   C4e+0.99 |  52.4 |  52.4 |  63.6 
+   C4e+0.99 |  54.3 |  54.3 |  65.5 
+   C4e+0.99 |  49.0 |  49.0 |  49.0 BLOCKED LOW
+   C4e+1.24 |  48.0 |  48.0 |  48.0 BLOCKED LOW
+   C4e+1.24 |  48.0 |  48.0 |  48.0 
+   C4e+1.24 |  49.9 |  49.9 |  49.9 
+   C4e+1.24 |  51.6 |  51.6 |  51.6 
+   C4e+1.24 |  55.8 |  55.8 |  55.8 
+   C4e+1.24 |  57.9 |  57.9 |  57.9 
+   C4e+1.49 |  59.8 |  59.8 |  59.8 
+   C4e+1.49 |  61.8 |  61.8 |  61.8 
+   C4e+1.49 |  64.0 |  64.0 |  64.0 
+   C4e+1.49 |  67.5 |  67.5 |  67.5 
+   C4e+1.49 |  69.6 |  69.6 |  69.6 
+   C4e+1.74 |  71.6 |  71.6 |  71.6 
+   C4e+1.74 |  74.2 |  74.2 |  74.2 
+   C4e+1.74 |  75.8 |  75.8 |  75.8 
+   C4e+1.74 |  79.9 |  79.9 |  79.9 
+   C4e+1.74 |  82.1 |  82.1 |  82.1 
+   step58: frames where carry_up changes the PWM (3 runs): 152, lowered 0; by (anchor, metres): {('C2e', 5): 1, ('C4e', 1): 101, ('C4e', 2): 50}
+ step70, run e1b4 lap 2: position | car config | plain | carry_up
+   C4e+0.75 |  48.0 |  70.0 |  70.0 
+   C4e+0.75 |  48.0 |  70.0 |  70.0 
+   C4e+0.75 |  48.0 |  70.0 |  70.0 
+   C4e+0.75 |  48.0 |  70.0 |  70.0 
+   C4e+0.99 |  48.0 |  70.0 |  70.0 
+   C4e+0.99 |  48.0 |  48.0 |  71.3 
+   C4e+0.99 |  52.4 |  52.4 |  75.6 
+   C4e+0.99 |  54.3 |  54.3 |  77.5 
+   C4e+0.99 |  49.0 |  49.0 |  49.0 BLOCKED LOW
+   C4e+1.24 |  48.0 |  48.0 |  48.0 BLOCKED LOW
+   C4e+1.24 |  48.0 |  48.0 |  48.0 
+   C4e+1.24 |  49.9 |  49.9 |  49.9 
+   C4e+1.24 |  51.6 |  51.6 |  51.6 
+   C4e+1.24 |  55.8 |  55.8 |  55.8 
+   C4e+1.24 |  57.9 |  57.9 |  57.9 
+   C4e+1.49 |  59.8 |  59.8 |  59.8 
+   C4e+1.49 |  61.8 |  61.8 |  61.8 
+   C4e+1.49 |  64.0 |  64.0 |  64.0 
+   C4e+1.49 |  67.5 |  67.5 |  67.5 
+   C4e+1.49 |  69.6 |  69.6 |  69.6 
+   C4e+1.74 |  71.6 |  71.6 |  71.6 
+   C4e+1.74 |  74.2 |  74.2 |  74.2 
+   C4e+1.74 |  75.8 |  75.8 |  75.8 
+   C4e+1.74 |  79.9 |  79.9 |  79.9 
+   C4e+1.74 |  82.1 |  82.1 |  82.1 
+   step70: frames where carry_up changes the PWM (3 runs): 152, lowered 0; by (anchor, metres): {('C2e', 5): 1, ('C4e', 1): 101, ('C4e', 2): 50}

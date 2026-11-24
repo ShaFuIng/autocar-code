@@ -1,0 +1,80 @@
+{
+ "revision": "current-pose-default-20261101",
+ "horizon_y": 55.36,
+ "width_slope": 3.3058,
+ "measured_from": "corridor r1.5 entrance calibrations at run start (t<1 s, straight with both lines) on live runs after the 2026-10-31 camera adjustment",
+ "sources": {
+  "0f47b0fd": {
+   "t": 0.15,
+   "horizon_y": 68.65,
+   "width_slope": 3.3575
+  },
+  "192bc52f": {
+   "t": 0.2,
+   "horizon_y": 58.98,
+   "width_slope": 3.3325
+  },
+  "589896bd": {
+   "t": 0.2,
+   "horizon_y": 51.46,
+   "width_slope": 3.0512
+  },
+  "5cd6e5b1": {
+   "t": 0.15,
+   "horizon_y": 55.53,
+   "width_slope": 3.3058
+  },
+  "6c2476a7": {
+   "t": 0.2,
+   "horizon_y": 51.26,
+   "width_slope": 3.0797
+  },
+  "7faeac29": {
+   "t": 0.2,
+   "horizon_y": 55.18,
+   "width_slope": 3.0984
+  },
+  "94b6309c": {
+   "t": 0.2,
+   "horizon_y": 52.29,
+   "width_slope": 3.0434
+  },
+  "a52c8058": {
+   "t": 0.16,
+   "horizon_y": 57.58,
+   "width_slope": 3.3795
+  },
+  "b6baecb7": {
+   "t": 0.19,
+   "horizon_y": 72.34,
+   "width_slope": 3.4459
+  },
+  "c1fc3a04": {
+   "t": 0.2,
+   "horizon_y": 55.16,
+   "width_slope": 3.071
+  },
+  "fb528cd3": {
+   "t": 0.19,
+   "horizon_y": 55.36,
+   "width_slope": 3.4148
+  }
+ },
+ "spread": {
+  "horizon_y": [
+   51.3,
+   72.3
+  ],
+  "width_slope": [
+   3.043,
+   3.446
+  ],
+  "width_at_y216_px": [
+   493.9,
+   548.5
+  ]
+ },
+ "excluded": "recalibrations inside junctions / on the ramp (6c2476a7 13.4 s, a52c8058 52.4 s, hand-push 9a2c6570 10.4 s / 115 s) and hand-push sources",
+ "camera_pose": "current pose confirmed 2026-10-31 (27 cm from front tyre edge); re-measure after any camera change",
+ "note": "image-space calibration only (640x360 mask); not a metric ground calibration"
+}

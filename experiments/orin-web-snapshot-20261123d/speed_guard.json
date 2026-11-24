@@ -1,0 +1,86 @@
+{
+ "revision": "speed-guard-r2",
+ "note": "downhill over-speed guard + overspeed_watch on, ramp_cap OFF (user decision 2026-11-13: the uphill is not to be changed). Only after each was tried alone.",
+ "ramp_cap": {
+  "enabled": false,
+  "uphill_cap_pwm": 28.0,
+  "level_deg": 5.0,
+  "climbed_route": true
+ },
+ "downhill_guard": {
+  "enabled": true,
+  "trigger_cps": 6800.0,
+  "release_cps": 4500.0,
+  "low_pwm": 5.0,
+  "arm_after_s": 0.0,
+  "max_hold_s": 3.0,
+  "min_span_s": 0.15,
+  "win_s": 0.45,
+  "stale_s": 0.6
+ },
+ "overspeed_watch": {
+  "enabled": true,
+  "margin_cps": 500.0,
+  "clear_cps": 250.0,
+  "min_samples": 2.0,
+  "clear_unjudged_s": 1.0,
+  "tau_up_s": 0.405,
+  "tau_down_s": 0.631,
+  "u_min": 17.0,
+  "u_max": 50.5,
+  "min_exp_cps": 1000.0,
+  "flat_deg": 4.0,
+  "settle_s": 2.0,
+  "pitch_gap_s": 0.5,
+  "step_pwm": 6.0,
+  "step_settle_s": 1.0,
+  "pwm_split": 3.0,
+  "min_span_s": 0.15,
+  "win_s": 0.45,
+  "stale_s": 0.6,
+  "steer_win_s": 0.5,
+  "table": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    350.0
+   ],
+   [
+    10.0,
+    1000.0
+   ],
+   [
+    15.0,
+    1700.0
+   ],
+   [
+    17.6,
+    2235.0
+   ],
+   [
+    18.8,
+    2370.0
+   ],
+   [
+    20.8,
+    2735.0
+   ],
+   [
+    27.8,
+    3822.0
+   ],
+   [
+    29.8,
+    4159.0
+   ],
+   [
+    49.8,
+    5450.0
+   ]
+  ]
+ },
+ "note_guard68_20261121": "field 11-21 (user): with the slope-mouth cap at 40 the car lands at ~1.3 m/s (5800-6050 cps) and the downhill guard (trigger 6000 cps = 1.33 m/s, PWM 5 until 3500 cps = 0.78 m/s) fired at the landing on run-4a78 lap 3: PWM 5 for 0.9 s, speed down to ~0.3 m/s. trigger_cps 6000 -> 6800 (1.51 m/s), release_cps 3500 -> 4500 (1.0 m/s). Back = speed_guard.json fbea0490."
+}

@@ -1,0 +1,32 @@
+{
+  "version": "workbench-last-inputs-20261022.33",
+  "unit_tests": 7,
+  "js_syntax_checks": 12,
+  "browser_checks": [
+    "shadowStride keyboard 1 -> 3 -> reload stays 3; restored 1",
+    "kMask true -> false -> reload stays false; restored true",
+    "overview -> models retains kMask=true and stride=1",
+    "no browser console errors"
+  ],
+  "not_exercised": [
+    "vehicle commands",
+    "Orin deployment",
+    "every individual form in browser"
+  ],
+  "storage": "browser localStorage plus existing versioned documents/drafts",
+  "hardware_output": false,
+  "sha256": {
+    "last-inputs": "2462ddc55b7880f51b527dc67dbcfdb8c4b7f28d196d61f059372c5507ecbd21",
+    "app": "06fb9d07f04c427523b33ce6e900d1cb330d89cef72a185b71fcaaade4cc3abd",
+    "analysis": "c10f7afb3e263e90aa072d3aae68555b16d4d0395c8a352b46d78a677de8c8db",
+    "integration": "8622b83a31388908031cc911afc8b7c6fa830cb6bb8fb89279cb972c9160c0e8",
+    "pid": "418c671000e4efc4e6b6774e9468d5b550047a34e72cfd0d8602dd8bb5527418",
+    "pid-console": "55a65f650a8e2914e00efcb6244b7762cd022850b4ee44e1eb1cc999a49dc4d3",
+    "pid-live": "5de7e1bc8fc9259bb3901b74dae0e51d2ca78667308500bc2a6a92b623fa660f",
+    "vision-layers": "36c1c0ba6700d528ad009f6949b53b9dc9781b9e41e2b322da0243973f0fccc0",
+    "shadow-offline": "945576fd39ce0748c625e6b19c9f0e4c5e1e156d0c719fba9df62f7eda0502cc",
+    "junction-cases": "286f034d7299c7ace32c9d6754297e71a45072dec7a0da066d617ee1fe72fed7",
+    "field-trials": "2d6f9211a36cdd2ce4f73c7d5cf3f04e313cf48a9bd661ce9fa28963151e4232",
+    "vehicle-pagination": "1212935edfbf01a4413f0442e99a8d14fc2df1835a83f4a01299d85904b3cbd9"
+  }
+}

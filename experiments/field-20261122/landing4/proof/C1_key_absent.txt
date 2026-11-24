@@ -1,0 +1,11 @@
+e1b4  frames in  6940 | replayed old  6939 new  6939 | commands identical  6939 | read order identical  6939 | proposals identical  6939 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 6939 of 6939 | |steer diff| median 2.4 P90 25.3 P99 348.9 max 567 us, <=1 us on 32.8% | pwm identical 73.5% | reason identical 99.9%
+65ea  frames in  7529 | replayed old  7528 new  7528 | commands identical  7528 | read order identical  7528 | proposals identical  7528 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 7528 of 7528 | |steer diff| median 1.8 P90 21.4 P99 123.8 max 572 us, <=1 us on 38.0% | pwm identical 76.6% | reason identical 100.0%
+3197  frames in 11880 | replayed old 11879 new 11879 | commands identical 11879 | read order identical 11879 | proposals identical 11879 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 11879 of 11879 | |steer diff| median 1.9 P90 19.4 P99 129.9 max 604 us, <=1 us on 37.6% | pwm identical 76.2% | reason identical 100.0%
+8350  frames in  6039 | replayed old  6038 new  6038 | commands identical  6038 | read order identical  6038 | proposals identical  6038 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 6038 of 6038 | |steer diff| median 1.8 P90 22.6 P99 339.4 max 567 us, <=1 us on 39.2% | pwm identical 74.1% | reason identical 100.0%
+46c9  frames in  2793 | replayed old  2792 new  2792 | commands identical  2792 | read order identical  2792 | proposals identical  2792 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 2792 of 2792 | |steer diff| median 1.7 P90 28.5 P99 363.5 max 574 us, <=1 us on 39.3% | pwm identical 73.0% | reason identical 99.7%
+TOTAL frames 35176 | identical 35176 | all runs identical: True

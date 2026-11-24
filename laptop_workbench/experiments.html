@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>夜間模型實驗報告</title>
+<style>.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.stages canvas{width:100%;border-radius:8px}.stages h3{font-size:16px}label{display:inline-block;margin:8px 12px 8px 0}td{vertical-align:top}@media(max-width:1000px){.stages{grid-template-columns:1fr}}body{background:#101b28;color:#e8eef3;font:16px system-ui;margin:0;padding:32px;max-width:1400px;margin:auto}a{color:#80e0c5}h1{font-size:32px}section{background:#1a2a3b;border:1px solid #33485a;padding:24px;border-radius:16px;margin:20px 0}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #405163}small,p{color:#b7c7d6;line-height:1.6}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}img{width:100%;background:#080f17}select,button,input{font:inherit;padding:10px;background:#263e51;color:white;border:1px solid #7191a8;border-radius:6px}input{width:95%}.error{color:#ffb4a5}.pill{color:#7de9ba}details{margin:12px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere}li{margin:9px 0}@media(max-width:800px){body{padding:12px}.grid{grid-template-columns:1fr}table{font-size:12px}td,th{padding:5px}}</style>
+<a class="back-link" href="/#models" target="_top">← 工作台：模型與算法比較</a><h1>夜間離線實驗 · 2026-10-18</h1><p>既有 v4 原影片｜原始時間戳｜候選權重與部署分離</p><section id="status">讀取實驗狀態…</section>
+<section><h2>目前結論</h2><div id="findings">完整結論於批次完成後彙整。</div><p id="parity"></p><a href="/experiment/night-20261018/source_audit.json">原始影片 SHA256 與訓練／驗證重疊稽核</a><p>v3／v4／v5 訓練影像與此驗證集未發現檔案雜湊完全重複；仍有同路線、近鄰影格與預訓練繼承關係。全跑道影片含訓練影格，只能作回歸檢查。</p></section>
+<section><h2>開發驗證集評分</h2><p>白線前景像素 IoU／Dice，非車道正確率。延遲為筆電單張推論含前後處理，不含路徑、不代表 Orin FPS。排除每組首張暖機；新訓練模型使用驗證集選最佳 epoch，存在選模偏差。</p><div style="overflow:auto"><table><thead><tr><th>模型</th><th>IoU</th><th>Dice</th><th>精確率</th><th>召回率</th><th>延遲中位 ms</th></tr></thead><tbody id="scores"></tbody></table></div></section>
+<section><h2>同影格：辨識白線 → 計算候選路徑</h2>
+<p><strong>步驟 1：辨識器回答「哪些像素是白線？」</strong>紫色區域是所選模型的白線分割結果；選 OpenCV 時則是傳統影像規則的辨識結果。這一步沒有決定車子往哪裡走。</p>
+<p><strong>步驟 2：路徑演算法回答「車道中間可能在哪裡？」</strong>A、B、C 讀取同一組白線遮罩，搭配各自的追蹤與幾何規則，算出候選行進中心線。三條線不是三個模型，也不是車子實際走過的軌跡。</p>
+<table><tr><th>路徑</th><th>怎麼算、用來比較什麼</th></tr>
+<tr><td>黃色 A<br>邊界配對與歷史寬度</td><td>在影像中配對左右白線，取中間位置；只看到單側時，嘗試沿用之前估出的車道寬度。用來觀察配對是否跳到別條白線，以及缺一側時是否仍合理。</td></tr>
+<tr><td>藍色 B<br>透視轉換與運動補償</td><td>先轉到近似俯視平面，用光流追蹤畫面移動，再配對邊界；單側時以假設寬度向內偏移。用來觀察彎道與畫面移動時的連續性。此平面尚未實體標定，不能把寬度當成公尺。</td></tr>
+<tr><td>綠色 C<br>統一車道追蹤</td><td>在影像座標中結合光流補償、雙側配對及單側推估，並檢查車道寬度、邊界衝突與中心線是否穿過可見標線。這是目前的統一路徑候選版本，不表示已通過實車驗證。</td></tr></table>
+<p>下方把辨識與路徑分開顯示。切換「辨識模型」會同時換成該模型的遮罩與相應路徑紀錄；切換「路徑演算法」只改變要查看哪條候選線。沒有線表示該影格未產生路徑，不是車輛停止回報。</p>
+<label>影片來源 <select id="source"><option value="fulltrack">完整跑道</option><option value="straight">直線短片</option></select></label>
+<label>辨識模型／方法 <select id="model"></select></label>
+<label>路徑演算法 <select id="pathChoice"><option value="C">C · 統一車道追蹤（綠）</option><option value="A">A · 邊界配對（黃）</option><option value="B">B · 透視與運動補償（藍）</option><option value="all">A / B / C 疊加比較</option></select></label>
+<button id="play">播放抽樣</button><p id="frameinfo"></p><input aria-label="回放影格" type="range" id="frame" min="0" max="0" value="0">
+<div class="stages"><div><h3>① 原始相機影格</h3><img id="raw" alt="原始影格"></div><div><h3>② 辨識結果：紫色白線區域</h3><canvas id="maskView" width="1280" height="720" aria-label="純白線辨識結果"></canvas></div><div><h3>③ 演算法結果：候選行進中心線</h3><canvas id="pathView" width="1280" height="720" aria-label="路徑演算法結果"></canvas></div></div>
+<p id="modes"></p><p>目前是每 30 影格的抽樣回看，分析本身逐影格執行。遮罩依原始 AVI 與保存權重補算；路徑與評分沿用原實驗紀錄。這些是影像座標候選線，尚未轉成輪角、油門或控制命令。</p><a id="rows">完整逐影格結果 JSON</a></section>
+<section><h2>影片結構性統計</h2><p>有路徑輸出不等於路徑正確；沒有人工逐影格車道真值，這裡不宣稱駕駛準確率。</p><div id="videos"></div></section>
+<section><h2>環境、資料與限制</h2><div id="limits"></div><details><summary>環境與資料版本</summary><pre id="env"></pre><a href="/experiment/night-20261018/dataset_manifest.json">資料檔案與 SHA256</a></details><div id="sources"></div><a href="/experiment/night-20261018/report.json">完整報告 JSON（含每張評分／權重雜湊）</a></section>
+<style>
+html.embedded body{background:transparent;color:#263e40;padding:0;max-width:none;font:16px system-ui}
+html.embedded .back-link{display:none}html.embedded h1{font-size:24px;margin:12px 0}
+html.embedded section{background:#fff;border:1px solid #dce5df;border-radius:14px;padding:24px;margin:20px 0}
+html.embedded p,html.embedded small{color:#587075}html.embedded a{color:#1d7471}
+html.embedded td,html.embedded th{border-color:#dce5df}html.embedded button{background:#1d7471;color:#fff;border-color:#1d7471;cursor:pointer}
+html.embedded select{background:#f7faf8;color:#263e40;border-color:#cad9d1}html.embedded input{accent-color:#1d7471}
+html.embedded .pill{color:#18745c}html.embedded .error{color:#a44136}html.embedded img{border-radius:8px}
+</style><script>
+if(new URLSearchParams(location.search).get('embedded')==='1'){
+ document.documentElement.classList.add('embedded');
+ const resize=()=>parent.postMessage({type:'experiment-height',height:document.body.getBoundingClientRect().height+24},location.origin);
+ new ResizeObserver(resize).observe(document.body);window.addEventListener('load',resize);
+ document.addEventListener('click',e=>{const a=e.target.closest('a');if(a&&!a.classList.contains('back-link')){a.target='_blank';a.rel='noopener'}});
+}
+
+const base='/experiment/night-20261018/', $=id=>document.getElementById(id);let report=null,playing=false;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let frameToken=0,rowsCache=new Map();
+async function frame(){const token=++frameToken;const v=report?.videos.find(v=>v.model===$('model').value&&v.source===$('source').value);if(!v){$('frameinfo').textContent='此組影片尚未完成。';return}
+$('frame').max=v.samples.length-1;const sample=v.samples[+$('frame').value]||v.samples[0];$('frameinfo').textContent=`影格 ${sample.frame} · 原始時間 ${sample.capture_s.toFixed(3)} 秒 · 辨識：${v.model}`;$('raw').src=base+sample.raw;$('rows').href=base+v.rows;
+try{if(!rowsCache.has(v.rows))rowsCache.set(v.rows,fetch(base+v.rows).then(r=>{if(!r.ok)throw Error('路徑紀錄讀取失敗');return r.json()}));
+const original=new Image(),mask=new Image();original.src=base+sample.raw;mask.src=base+`masks/${v.model}/${v.source}/${String(sample.frame).padStart(6,'0')}.png`;
+const [rows]=await Promise.all([rowsCache.get(v.rows),original.decode(),mask.decode()]);if(token!==frameToken)return;
+const mc=$('maskView').getContext('2d'),pc=$('pathView').getContext('2d');mc.drawImage(original,0,0,1280,720);pc.drawImage(original,0,0,1280,720);
+const tmp=document.createElement('canvas');tmp.width=1280;tmp.height=720;const tc=tmp.getContext('2d');tc.drawImage(mask,0,0);const pixels=tc.getImageData(0,0,1280,720);for(let i=0;i<pixels.data.length;i+=4){const on=pixels.data[i]>0;pixels.data[i]=235;pixels.data[i+1]=30;pixels.data[i+2]=235;pixels.data[i+3]=on?145:0}tc.putImageData(pixels,0,0);mc.drawImage(tmp,0,0);
+const row=rows[sample.frame],choice=$('pathChoice').value,keys=choice==='all'?['A','B','C']:[choice];
+$('modes').textContent=keys.map(k=>`${k}：${row[k]?.path?.length?'有候選路徑':'未產生路徑'}（${row[k]?.mode||'未知'}）`).join('；');
+for(const k of keys){const pts=row[k]?.path||[];pc.strokeStyle={A:'#ffd700',B:'#008dff',C:'#24e52f'}[k];pc.lineWidth=5;pc.beginPath();pts.forEach(([x,y],i)=>i?pc.lineTo(x,y):pc.moveTo(x,y));pc.stroke()}
+}catch(e){if(token===frameToken){for(const id of ['maskView','pathView'])$(id).getContext('2d').clearRect(0,0,1280,720);$('modes').textContent='影像／路徑載入失敗：'+e.message}}
+}
+function models(){let old=$('model').value;const names=report.videos.filter(v=>v.source===$('source').value).map(v=>v.model);$('model').innerHTML=names.map(n=>`<option>${esc(n)}</option>`).join('');if(names.includes(old))$('model').value=old;frame()}
+async function refresh(){try{const r=await fetch(base+'report.json',{cache:'no-store'});if(!r.ok)throw Error('報告尚未產生');report=await r.json();$('status').innerHTML=`<strong class="pill">${esc(report.state)}</strong> · ${esc(report.current)}<p>更新 ${esc(report.updated)} · ${esc(report.safety)}</p><details><summary>工作佇列（${report.jobs.length}）</summary>${report.jobs.map(j=>`<p class="${j.state==='failed'?'error':''}">${esc(j.name)}：${esc(j.state)} ${j.elapsed_s?Math.round(j.elapsed_s)+' 秒':''}</p>`).join('')}</details>${report.errors.map(e=>`<details class="error"><summary>${esc(e.job)} 失敗</summary><pre>${esc(e.error)}</pre></details>`).join('')}${report.fatal?'<pre class="error">'+esc(report.fatal)+'</pre>':''}`;
+$('scores').innerHTML=report.results.map(r=>`<tr><td>${esc(r.model)}</td>${['iou','dice','precision','recall'].map(k=>`<td>${(r[k]*100).toFixed(2)}%</td>`).join('')}<td>${r.latency_median_ms.toFixed(1)}</td></tr>`).join('');
+$('videos').innerHTML=report.videos.map(v=>`<p>${esc(v.model)} / ${esc(v.source)}：${v.frames} 影格，${v.duration_s.toFixed(2)} 秒；路徑出現 A ${(v.path_output_count.A/v.frames*100).toFixed(1)}% / B ${(v.path_output_count.B/v.frames*100).toFixed(1)}% / C ${(v.path_output_count.C/v.frames*100).toFixed(1)}%</p>`).join('');$('limits').innerHTML='<ul>'+report.limitations.map(l=>'<li>'+esc(l)+'</li>').join('')+'</ul>';$('env').textContent=JSON.stringify({environment:report.environment,dataset:report.dataset},null,2);$('sources').innerHTML=report.sources.map(s=>`<p><a href="${esc(s.url)}">${esc(s.name)}</a></p>`).join('');models()}catch(e){$('status').textContent='無法更新：'+e.message}}
+async function findings(){try{const f=await(await fetch(base+'findings.json',{cache:'no-store'})).json();$('findings').innerHTML='<p>彙整時間 '+esc(f.updated)+'（'+esc(f.state)+'）</p><ul>'+f.findings.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul>';const p=await(await fetch(base+'parity.json')).json();$('parity').textContent=`Orin 單張一致性檢查：${p.different_pixels} / ${p.total_pixels} 像素不同。相同圖／權重，PyTorch 與 GPU 不同；不能宣稱完全相同環境。`}catch{}}
+$('pathChoice').onchange=frame;$('frame').oninput=frame;$('model').onchange=frame;$('source').onchange=models;$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'暫停':'播放抽樣'};setInterval(()=>{if(playing&&$('model').value){$('frame').value=(+$('frame').value+1)%(+$('frame').max+1);frame()}},700);refresh();findings();setInterval(refresh,10000);setInterval(findings,30000);
+</script></html>

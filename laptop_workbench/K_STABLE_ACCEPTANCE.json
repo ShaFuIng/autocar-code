@@ -1,0 +1,202 @@
+{
+  "state": "completed_offline",
+  "revision": "k-stable-v2",
+  "opencv": "4.11.0",
+  "baseline_preserved": true,
+  "frames": 352,
+  "unit_tests": 5,
+  "worker_check": {
+    "frames": 352,
+    "opencv": "4.11.0",
+    "canonical_worker_matches_candidate": true,
+    "pid_called": false,
+    "hardware_output": false
+  },
+  "cases": [
+    {
+      "id": "first",
+      "label": "A · 第一次路口",
+      "job": "3c92628ecb2446f482e70e3e79c10c49",
+      "frames": 171,
+      "state_differences": 0,
+      "source_differences": 0,
+      "shape_differences": [
+        6
+      ],
+      "max_common_y_difference_px": 7.516027320088597,
+      "laptop_rejoin_movie_s": [
+        79.0
+      ],
+      "rejoin_movie_s": [
+        79.0
+      ],
+      "laptop_metrics": {
+        "rejoins": [
+          79.0
+        ],
+        "post_rejoin_returns": 0,
+        "confirmation_returns": 1,
+        "empty": 0,
+        "near_jump_max_px": 43.09416955110862
+      },
+      "orin_metrics": {
+        "rejoins": [
+          79.0
+        ],
+        "post_rejoin_returns": 0,
+        "confirmation_returns": 1,
+        "empty": 0,
+        "near_jump_max_px": 43.045512554772245
+      },
+      "original_orin_metrics": {
+        "rejoins": [
+          79.3,
+          81.5
+        ],
+        "post_rejoin_returns": 1,
+        "confirmation_returns": 2,
+        "empty": 0,
+        "near_jump_max_px": 118.43951702769357
+      },
+      "jump_interval_start_s": 78,
+      "events": [
+        {
+          "frame": 0,
+          "movie_s": 65.0,
+          "state": "APPROACH"
+        },
+        {
+          "frame": 38,
+          "movie_s": 68.8,
+          "state": "CROSS"
+        },
+        {
+          "frame": 80,
+          "movie_s": 73.0,
+          "state": "CONFIRM"
+        },
+        {
+          "frame": 83,
+          "movie_s": 73.3,
+          "state": "CROSS"
+        },
+        {
+          "frame": 132,
+          "movie_s": 78.2,
+          "state": "CONFIRM"
+        },
+        {
+          "frame": 136,
+          "movie_s": 78.6,
+          "state": "BLEND"
+        },
+        {
+          "frame": 140,
+          "movie_s": 79.0,
+          "state": "FOLLOW_A"
+        }
+      ]
+    },
+    {
+      "id": "second",
+      "label": "B · 第二次路口",
+      "job": "68c3846e884e4cb0af9e4f6969855ea0",
+      "frames": 181,
+      "state_differences": 0,
+      "source_differences": 0,
+      "shape_differences": [],
+      "max_common_y_difference_px": 1.9456465932670426,
+      "laptop_rejoin_movie_s": [
+        117.7
+      ],
+      "rejoin_movie_s": [
+        117.7
+      ],
+      "laptop_metrics": {
+        "rejoins": [
+          117.7
+        ],
+        "post_rejoin_returns": 0,
+        "confirmation_returns": 1,
+        "empty": 0,
+        "near_jump_max_px": 41.51252945087265
+      },
+      "orin_metrics": {
+        "rejoins": [
+          117.7
+        ],
+        "post_rejoin_returns": 0,
+        "confirmation_returns": 1,
+        "empty": 0,
+        "near_jump_max_px": 41.483148113190055
+      },
+      "original_orin_metrics": {
+        "rejoins": [
+          117.8
+        ],
+        "post_rejoin_returns": 0,
+        "confirmation_returns": 2,
+        "empty": 0,
+        "near_jump_max_px": 41.483148113190055
+      },
+      "jump_interval_start_s": 116,
+      "events": [
+        {
+          "frame": 0,
+          "movie_s": 102.0,
+          "state": "APPROACH"
+        },
+        {
+          "frame": 29,
+          "movie_s": 104.9,
+          "state": "CROSS"
+        },
+        {
+          "frame": 139,
+          "movie_s": 115.9,
+          "state": "CONFIRM"
+        },
+        {
+          "frame": 142,
+          "movie_s": 116.2,
+          "state": "CROSS"
+        },
+        {
+          "frame": 146,
+          "movie_s": 116.6,
+          "state": "CONFIRM"
+        },
+        {
+          "frame": 153,
+          "movie_s": 117.3,
+          "state": "BLEND"
+        },
+        {
+          "frame": 157,
+          "movie_s": 117.7,
+          "state": "FOLLOW_A"
+        }
+      ]
+    }
+  ],
+  "control_service": {
+    "MainPID": 1322,
+    "NRestarts": 0,
+    "ActiveEnterTimestamp": "Wed 2026-10-21 23:56:59 CST",
+    "unchanged": true
+  },
+  "runtime_sha256": "081a50dae7a8d7124e4e43f9f68c54886be51c21b8c8080865512bd68d7569e1",
+  "orin_runtime_sha256": "081a50dae7a8d7124e4e43f9f68c54886be51c21b8c8080865512bd68d7569e1",
+  "hardware_output": false,
+  "pid_connected": false,
+  "ui_verified_frames": [
+    80.2,
+    117.7
+  ],
+  "limits": [
+    "使用同一批352張原圖與已保存V4遮罩，沒有重新比較模型推論",
+    "藍線位移包含相機運動，沒有逐格道路真值；不是準確率",
+    "同版本不等於逐像素完全一致；短線外推與路口區域的歷史誤差仍存在",
+    "未接實車PID、未重啟車控、未動車"
+  ]
+}

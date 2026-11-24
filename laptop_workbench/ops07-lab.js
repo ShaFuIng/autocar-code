@@ -1,0 +1,32 @@
+/* Explicit offline surface. Every request is local lab/catalog; no real control. */
+window.Ops07Lab={async mount(){
+  window.Ops07.dispose();document.body.classList.add('ops07-active');
+  const main=document.getElementById('main');
+  main.innerHTML='<div id="ops07"><section id="opLab" class="op-panel" style="padding:24px"><h1>07 離線流程測試</h1><p>全部使用假資料與假執行器，不連接 Orin、不操作車子。</p><button id="labReturn" class="op-secondary">返回正式頁</button><div id="labBody">正在讀取…</div></section></div>';
+  const $=id=>document.getElementById(id);let busy=false;
+  const api=async(action,body)=>{const r=await fetch('/api/ops07/'+action,body===undefined?{cache:'no-store'}:{method:'POST',headers:{'X-Workbench':'1','Content-Type':'application/json'},body:JSON.stringify(body)});const d=await r.json();if(!r.ok)throw Error(d.error);return d;};
+  $('labReturn').onclick=()=>window.Ops07.mount();
+  let c;try{c=await api('catalog');}catch(e){$('labBody').textContent=e.message;return;}
+  if(!$('opLab'))return;
+  $('labBody').innerHTML=`<div class="op-issue warning">離線候選驗證；此處圈數、距離與燈號都不是實車資料。</div><div class="op-layout"><div><h2>假車設定</h2><p>起點可更改；原地暫停保留目前位置。暫停與繼續都回到保存中心。</p><label>固定方案 <select id="labPackage"></select></label><label class="op-option"><input id="labTraffic" type="checkbox" checked>等待假綠燈起跑</label><label class="op-option"><input id="labFront" type="checkbox">前車停等（假距離）</label><label>起跑／搬車位置 <select id="labLocation"></select></label><label class="op-option"><input id="labMoved" type="checkbox">暫停後已搬車／重新選位置</label><label>路線階段 <select id="labPhase"><option value="first">第一次下坡前</option><option value="after_down">已經下坡後</option></select></label><div class="op-buttons" style="margin:18px 0"><button data-act="prepare">準備假車</button><button data-act="start">開始假流程</button><button data-act="pause">暫停假車／取消等待</button><button data-act="resume">接續假場次</button><button data-act="stop" class="op-stop">停止假輸出</button><button data-act="reset">重置假場次</button></div><h2>假中控與故障</h2><div class="op-buttons"><button data-distance="1">前車 1 公尺</button><button data-distance="3">前車已到 3 公尺</button><button data-distance="unknown">距離不明</button></div><p>開啟前車停等後，假距離達 3 公尺才自動接續；手動暫停不會自動接續。</p><div class="op-buttons"><button data-flag="0">假紅燈（0）</button><button data-flag="1">假綠燈（1）</button><button data-flag="offline">假中控斷線</button></div><p>首次讀到綠燈不放行；斷線後重新等待 0 → 1。</p><label>故障來源 <select id="labFault"><option value="i2c">I²C</option><option value="path">找不到路徑</option><option value="camera">相機失效</option><option value="uart">控制板通訊</option><option value="estop">實體急停</option></select></label><div class="op-buttons"><button id="labBreak">注入假故障</button><button id="labRepair">排除假故障</button><button data-act="restart_mcu">假控制板重啟</button></div></div><div><h2 id="labState">—</h2><p id="labSummary"></p><p id="labClock"></p><div class="op-map"><img src="/ops07-track.webp" alt="離線測試用正式跑道圖"><svg viewBox="0 0 1980 1213"><circle id="labOrigin" r="30" fill="none" stroke="#ffc868" stroke-width="6"/><circle id="labDot" r="24" fill="#68eee1" stroke="#15161d" stroke-width="6"/></svg></div><p id="labPosition"></p><p id="labMessage" role="status"></p><details open><summary>假事件紀錄（最近 12 筆）</summary><pre id="labEvents" style="white-space:pre-wrap;font-size:12px"></pre></details></div></div>`;
+  for(const p of c.packages){const o=new Option(p.name,p.id);o.disabled=!p.verified;$('labPackage').add(o);}
+  for(const l of c.locations)$('labLocation').add(new Option(l.name,l.id));
+  const names={idle:'尚未準備',ready:'準備完成，假輸出關閉',waiting:'等待假綠燈',running:'持續運行（假車）',paused:'已暫停，保留本場',fault:'假故障停止',front_wait:'前車停等（假車）'};
+  let hydrated=false;
+  function render(s){if(!$('opLab'))return;
+    if(!hydrated){hydrated=true;if(s.id){$('labPackage').value=s.package.id;$('labLocation').value=s.entry;$('labTraffic').checked=s.traffic_light;$('labFront').checked=!!s.front_car;$('labMoved').checked=s.needs_location;$('labPhase').value=s.map_lap||'first';}}
+    $('labState').textContent=names[s.state];$('labSummary').textContent=`假輸出：${s.outputs_active?'開啟':'關閉'}；旗標：${s.flag===null?'離線':s.flag}；${s.saw_zero?'已看見紅燈':'尚未取得有效紅燈'}；放行 ${s.release_count} 次；舵機：${s.center_status==='confirmed_fake'?'假回正已確認':'回正未確認'}`;
+    $('labClock').textContent=`本場經過 ${(s.wall_s||0).toFixed(1)} 秒｜有效行駛 ${s.elapsed_s.toFixed(1)} 秒｜本圈 ${s.lap_elapsed_s.toFixed(1)} 秒｜完整假圈 ${s.laps.filter(x=>x.valid).length}｜不完整圈 ${s.laps.filter(x=>!x.valid).length}｜無倒數截止`;
+    const mapped=window.Ops07.mapPosition({s_m:s.s_m,segment:s.segment});if(mapped){$('labDot').setAttribute('cx',mapped.point[0]);$('labDot').setAttribute('cy',mapped.point[1]);$('labPosition').textContent=`青色目前位置：${mapped.label}；金色圓圈為本場起點；${s.incomplete?'當圈不計完整圈':'當圈可計圈'}。`;} 
+    const origins={flag:17.65,'12_to_01':14,'02_to_03_before':27,'02_to_03_after':32,'04_to_05_before':43,'04_to_05_after':47,'05_to_06':49,ramp:58.4,crest:60.4}; const origin=window.Ops07.mapPosition({s_m:origins[s.origin]??17.65}); if(origin){$('labOrigin').setAttribute('cx',origin.point[0]);$('labOrigin').setAttribute('cy',origin.point[1]);}
+    $('labEvents').textContent=s.events.slice(-12).map(e=>`${e.elapsed_s.toFixed(1)} 秒 ${JSON.stringify(e)}`).join('\n');
+  }
+  async function send(action,extra={}){if(busy)return;busy=true;try{const d=await api('lab-'+action,{package_id:$('labPackage').value,traffic_light:$('labTraffic').checked,front_car:$('labFront').checked,location:$('labLocation').value,moved:$('labMoved').checked,map_lap:$('labPhase').value,...extra});if($('opLab')){render(d);$('labMessage').textContent='假流程操作完成；未送實車指令。';}}catch(e){if($('opLab'))$('labMessage').textContent=e.message;}finally{busy=false;}}
+  main.querySelectorAll('[data-act]').forEach(b=>b.onclick=()=>send(b.dataset.act));
+  main.querySelectorAll('[data-flag]').forEach(b=>b.onclick=()=>send('flag',{value:b.dataset.flag==='offline'?null:Number(b.dataset.flag)}));
+  main.querySelectorAll('[data-distance]').forEach(b=>b.onclick=()=>send('front_distance',{value:b.dataset.distance==='unknown'?null:Number(b.dataset.distance)}));
+  $('labBreak').onclick=()=>send('health',{key:$('labFault').value,value:$('labFault').value==='estop'});
+  $('labRepair').onclick=()=>send('health',{key:$('labFault').value,value:$('labFault').value!=='estop'});
+  async function poll(){if(!$('opLab')||location.hash!=='#operations')return;try{render(await api('lab-status'));}catch(e){if($('labMessage'))$('labMessage').textContent='筆電測試服務暫時無法連線；未確認假流程狀態。';}if($('opLab'))setTimeout(poll,500);}
+  poll();
+}};

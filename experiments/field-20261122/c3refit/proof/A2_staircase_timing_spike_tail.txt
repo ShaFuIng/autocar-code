@@ -1,0 +1,29 @@
+(a) frames with C3s + 0.9 .. 4.05 m (band share 1). "step frame" = the distance the band uses changed on this frame (5 Hz encoder; the band sees the step one frame after lap_pos logs it).
+   c6f3 final command (band owns)   step frames n  56: |change| median  36 P90  94 max 140 us | other frames n  216: median  13 P90  38 max  90 us | on step frames the feed-forward alone moves median 65 max 125 us, the error centre (x K 300) median 31 max 62 us
+   6f61 band target (shadow)        step frames n  84: |change| median  54 P90 111 max 152 us | other frames n  318: median   8 P90  27 max 116 us | on step frames the feed-forward alone moves median 56 max 140 us, the error centre (x K 300) median 32 max 61 us
+   6f61 final command (chain)       step frames n  84: |change| median  16 P90  37 max  45 us | other frames n  318: median   8 P90  20 max  42 us | on step frames the feed-forward alone moves median 56 max 140 us, the error centre (x K 300) median 32 max 61 us
+   size of a distance step: median 0.23 m, P90 0.25 m, max 0.26 m; slope of the car table: feed-forward up to 571 us per m, error centre up to 0.84 per m
+(b) centre (weighted mean position) of the turning in bend 1 (0.9-2.7 m) and bend 2 (2.7-4.3 m)
+   0.9-2.7 m: lane bend centre 1.78 m (61 deg) | car table feed-forward centre 1.53 m | 6f61 (chain) car curvature centre 1.91 m (sd 0.08) | c6f3 (band) car curvature centre 1.64 m (sd 0.05)
+   2.7-4.3 m: lane bend centre 3.65 m (41 deg) | car table feed-forward centre 3.51 m | 6f61 (chain) car curvature centre 3.67 m (sd 0.06) | c6f3 (band) car curvature centre 3.62 m (sd 0.02)
+   plant dead time + lag 0.18 s = 0.19 m at 1.05 m/s: a feed-forward centred that far before the lane bend puts the turning on the bend.
+(c) c6f3, 2.7-3.6 m, per pass (medians per 0.3 m of the continuous distance): final cmd | band parts: feed-forward, error term, gyro term -> target (cap +330) | band share | near error vs table e_c | y, psi (= lane heading - car heading) | curve_ff applied %
+   lap 1 2.7-3.0: cmd  +11 (max +185) |   +8   -8 +13 ->  +11 | 1.00 | err +0.01 vs e_c 0.04 | y -15.9 psi  +4.3 |   0
+   lap 1 3.0-3.3: cmd +325 (max +330) | +195 +138 +10 -> +325 | 1.00 | err +0.58 vs e_c 0.15 | y -12.4 psi  +4.6 |  12
+   lap 1 3.3-3.6: cmd +330 (max +335) | +254 +146 -19 -> +330 | 0.98 | err +0.77 vs e_c 0.29 | y  -8.6 psi  +2.5 |  62
+   lap 2 2.7-3.0: cmd  +77 (max +220) |  +10  +54 +12 ->  +77 | 1.00 | err +0.22 vs e_c 0.04 | y -17.1 psi  +6.0 |   0
+   lap 2 3.0-3.3: cmd +295 (max +331) | +159 +153  -3 -> +295 | 1.00 | err +0.63 vs e_c 0.12 | y -10.9 psi  +7.8 |  17
+   lap 2 3.3-3.6: cmd +330 (max +344) | +252 +144 -24 -> +330 | 0.95 | err +0.80 vs e_c 0.32 | y  -7.5 psi  +2.5 |  71
+   lap 3 2.7-3.0: cmd  +79 (max +239) |   +9  +57 +15 ->  +79 | 1.00 | err +0.23 vs e_c 0.04 | y -17.2 psi  +8.3 |   0
+   lap 3 3.0-3.3: cmd +330 (max +358) | +200 +176 -15 -> +330 | 0.82 | err +0.74 vs e_c 0.16 | y -10.5 psi  +9.4 |  57
+   lap 3 3.3-3.6: cmd +352 (max +403) | +251 +155 -29 -> +330 | 0.56 | err +0.81 vs e_c 0.30 | y  -5.1 psi  +1.0 |  50
+   lap 4 2.7-3.0: cmd +103 (max +210) |   +6  +91  +7 -> +103 | 1.00 | err +0.34 vs e_c 0.03 | y -11.8 psi +12.1 |   0
+   lap 4 3.0-3.3: cmd +326 (max +330) | +182 +160 -17 -> +326 | 1.00 | err +0.66 vs e_c 0.14 | y  -7.3 psi  +7.1 |   0
+   lap 4 3.3-3.6: cmd +330 (max +330) | +253 +102 -22 -> +330 | 1.00 | err +0.62 vs e_c 0.28 | y  -7.1 psi  +2.4 |   0
+(d) share of frames where arc_lat gave no value (in curve 3 almost always Y_RANGE = beyond +-20 cm), per 0.3 m: the logged y medians and the -12..-13 cm inner-clearance minima are cut at that range
+   6f61: 0.6: 0% 0.9: 0% 1.2: 3% 1.5: 0% 1.8: 0% 2.1: 0% 2.4: 0% 2.7: 0% 3.0:19% 3.3:28% 3.6:23% 3.9: 7% 4.2: 5% 4.5: 0%
+   c6f3: 0.6: 0% 0.9: 0% 1.2: 0% 1.5: 0% 1.8:29% 2.1:50% 2.4:46% 2.7:12% 3.0: 0% 3.3: 0% 3.6: 0% 3.9:12% 4.2:27% 4.5:55%
+(e) after the corner (medians): heading since C3s at 5.1 / 5.4 / 5.7 / 6.0 m | y at 5.7 / 6.0 | curvature 4.8-5.4 m | near error 5.4-6.0 m | cmd max 6.0-6.6 m
+   no x-band (15 passes)  h 151.6 171.4 185.8 193.9 | y  -3.0 -12.7 | curvature 57.7 | err +0.22 | cmd max per pass +312 +305 +384 +475 +413 +369 +394 +390 +424 +217 +449 +439 +407 +174 +434
+   c6f3 (4 passes)        h 151.0 161.4 172.8 184.7 | y  -7.4  -5.2 | curvature 38.2 | err +0.52 | cmd max per pass +450 +440 +391 +374
+   lane heading (model.json) at 5.3 / 5.6 / 5.9 / 6.2 m: 171 169 179 201

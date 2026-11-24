@@ -1,0 +1,61 @@
+10/24 場地資料已保存（原檔＋時間戳＋控制/PID紀錄，依各筆實際存在內容）
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records
+共29筆、127檔，原始562950511 bytes，SHA256核對通過。
+2026-10-24T21:50:47.319488+08:00 | ef5740a252ca4752af1c27e9610e0c30 | 338格 | 43.16s | BUTTON_STOP | 起伏跑道與開口路段，正常按鈕停止。
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\ef5740a252ca4752af1c27e9610e0c30\f47f6da6839171f77e6c
+2026-10-24T21:50:04.369023+08:00 | ed704ccd324547d78251e2ebe53b988c | 22格 | 2.77s | CAMERA_LOST | CAMERA_LOST短片，不能當完整通過紀錄。
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\ed704ccd324547d78251e2ebe53b988c\0c0ebbe469e4aeb6a3c2
+2026-10-24T21:47:56.043562+08:00 | dcb92d6b50ae47a6a8400ae95dca5c30 | 378格 | 48.41s | CAMERA_LOST | 起伏／斜坡附近道路；CAMERA_LOST中斷，保留已錄內容。
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\dcb92d6b50ae47a6a8400ae95dca5c30\4ba052157bea16b64e52
+2026-10-24T21:46:47.485017+08:00 | 60aee9fc8be344d2bd2e3ded24bc4819 | 508格 | 64.60s | BUTTON_STOP | 斜坡接近、上坡、坡頂及下坡；含相鄰跑道。
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\60aee9fc8be344d2bd2e3ded24bc4819\386baf3b61e873169ffa
+2026-10-24T21:45:03.903048+08:00 | 4edf0adca4fe442ba061c2e4bd203e4e | 507格 | 62.99s | BUTTON_STOP | 暖光隧道出口、第一入口接近與通過、後續道路。
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\4edf0adca4fe442ba061c2e4bd203e4e\247ab8902dfc7e649daf
+2026-10-24T21:43:28.910372+08:00 | 1274e47fc80946fb9a031fbbccbcd695 | 418格 | 52.23s | BUTTON_STOP | 第二入口接近、通過與暖光隧道，後續彎道；接近至通過可見。
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\1274e47fc80946fb9a031fbbccbcd695\0ba54ddbe499aad3d34d
+2026-10-24T20:50:32.140595+08:00 | eff15e02071a461988d5ffe1332e929c | 244格 | 29.84s | PID_DURATION_COMPLETE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\eff15e02071a461988d5ffe1332e929c\173f8c523cbb77d433dd
+2026-10-24T20:35:41.302803+08:00 | ab5e60677d5e4d89aaa9b4904e0b734c | 167格 | 20.16s | STALE_GENERATION | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\ab5e60677d5e4d89aaa9b4904e0b734c\eefe48e2034b231aa078
+2026-10-24T20:12:06.055692+08:00 | 4e2a9ac52d0c470ab571af09254d370c | 492格 | 59.89s | PID_DURATION_COMPLETE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\4e2a9ac52d0c470ab571af09254d370c\386899484d0b3967abc8
+2026-10-24T19:40:45.327962+08:00 | 0d77c3ca05284af9b8e5ad4d0ef81d5c | 482格 | 59.75s | PID_DURATION_COMPLETE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\0d77c3ca05284af9b8e5ad4d0ef81d5c\82c4b41103ca7fdc3bae
+2026-10-24T19:11:02.024195+08:00 | 7d69dd63290a436287e777efdab56aa6 | 83格 | 10.19s | STALE_GENERATION | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\7d69dd63290a436287e777efdab56aa6\9aab509cdcdfded16b48
+2026-10-24T19:05:14.355871+08:00 | 14177717d0de42acbdcff3bda6108d65 | 33格 | 3.97s | PID_INVALID_OR_STALE_PATH | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\14177717d0de42acbdcff3bda6108d65\db2ed947569c48e1e105
+2026-10-24T18:50:19.606873+08:00 | 4396573ebfb64cb8b698b61e3b70d3bf | 88格 | 10.98s | PID_INVALID_OR_STALE_PATH | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\4396573ebfb64cb8b698b61e3b70d3bf\e53e763323cd4e8339eb
+2026-10-24T18:48:23.038384+08:00 | b2728f20b8be456dad944f1dc62c29dc | 19格 | 2.16s | PID_VISION_STALE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\b2728f20b8be456dad944f1dc62c29dc\4c1efde9ab420f3fdf90
+2026-10-24T18:47:09.349374+08:00 | 05d104ddad73471ca7320af8a64d2403 | 50格 | 5.89s | PID_INVALID_OR_STALE_PATH | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\05d104ddad73471ca7320af8a64d2403\d2fcf36e289db80e71cd
+2026-10-24T18:29:33.195406+08:00 | 3e2e923da282451d90bd2b8085433fa1 | 54格 | 6.36s | PID_INVALID_OR_STALE_PATH | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\3e2e923da282451d90bd2b8085433fa1\56be24c7b11fcef5d5f7
+2026-10-24T18:10:13.965518+08:00 | db7089a3c4a246c1a7c8595779681d00 | 287格 | 34.78s | PID_INVALID_OR_STALE_PATH | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\db7089a3c4a246c1a7c8595779681d00\ce97f174208d1b17e4c7
+2026-10-24T17:46:39.396601+08:00 | 98fac47fa70342e7a55ec294e535319f | 161格 | 19.32s | STALE_GENERATION | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\98fac47fa70342e7a55ec294e535319f\6382c83f1de7655af0e8
+2026-10-24T17:14:15.053437+08:00 | 6bbe2c1ae4594017baf7be13d77d9bdb | 143格 | 17.73s | STALE_GENERATION | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\6bbe2c1ae4594017baf7be13d77d9bdb\fe973a006b5f8bac8037
+2026-10-24T17:11:00.241859+08:00 | aff77d9714784624b1b36488e61da309 | 163格 | 19.90s | PID_DURATION_COMPLETE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\aff77d9714784624b1b36488e61da309\14465ed1e4d62cbf7c54
+2026-10-24T17:04:21.987046+08:00 | 45890d2042b74db1a56852450ea07472 | 167格 | 19.95s | USER_STOP | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\record\45890d2042b74db1a56852450ea07472\1f928c7fc3d063e8a1c6
+2026-10-24T17:02:07.617821+08:00 | 5ede36f9cd6a4612a7daa485bef9507b | 167格 | 19.91s | USER_STOP | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\record\5ede36f9cd6a4612a7daa485bef9507b\0ae7c36cc94376cc04b1
+2026-10-24T16:13:23.520080+08:00 | 3b428ba5375b4984a4f36c70a11230ae | 47格 | 5.49s | PID_VISION_STALE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\3b428ba5375b4984a4f36c70a11230ae\bdb0bf64ffc3b27a2986
+2026-10-24T16:08:38.869976+08:00 | 14ded31be9ea4a25909db5e1cae1c038 | 167格 | 19.90s | USER_STOP | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\record\14ded31be9ea4a25909db5e1cae1c038\1acf657ced2d33a67ecc
+2026-10-24T15:50:52.064609+08:00 | 94e4c8d6e9084bab92268691bafeef24 | 167格 | 19.94s | USER_STOP | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\record\94e4c8d6e9084bab92268691bafeef24\057c387c8b0e280470f6
+2026-10-24T15:47:54.403118+08:00 | a923a06268aa4073a72516f30d025440 | 167格 | 19.96s | USER_STOP | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\record\a923a06268aa4073a72516f30d025440\b53cf30423de0bf10d81
+2026-10-24T15:45:09.697534+08:00 | bedd3a2252c34349acb148c2fde6ee1b | 167格 | 19.94s | USER_STOP | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\record\bedd3a2252c34349acb148c2fde6ee1b\71f528d43d3bd8ad76fe
+2026-10-24T15:36:01.516221+08:00 | 7f544862c0f54ab1ab1666e8614ab8b5 | 3格 | 0.24s | PID_VISION_STALE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\7f544862c0f54ab1ab1666e8614ab8b5\f72e72e92bfad1eedb8e
+2026-10-24T15:35:46.163695+08:00 | a668e3b475aa43349184e8db57e60115 | 2格 | 0.10s | PID_VISION_STALE | 歷史試跑／錄影，未逐段判讀場景
+D:\OneDrive\Desktop\自走車\Orin_Interface_v1\laptop_workbench\data\orin\records\manual\a668e3b475aa43349184e8db57e60115\c1574508927e17f2b6e9

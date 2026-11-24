@@ -1,0 +1,5 @@
+{
+ "revision": "single-centre-r1",
+ "enabled": true,
+ "note": "single-centre-20261117: on = the shared steering centre (servo saved profile = PID document center_us) is the only centre: lap_ff / arc2 straight points 1490 / 1513 and bottom_guide +33 -> center_us; absolute caps (lap_ff 1800/1750/1950/1720/1780, arc2 c3 1750, curve-3 curve_ff 1850, upper_path table) -> center_us + (value - 1480). Read once per run (no restart). Delete the file or enabled false = unchanged."
+}

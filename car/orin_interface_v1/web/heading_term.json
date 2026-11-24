@@ -1,0 +1,1 @@
+{"enabled": false, "k_us": 100.0, "cap_us": 120.0, "tau_s": 0.2, "row_lo": 0.6, "row_hi": 0.85, "min_points": 4, "gz_max": 12.0, "gz_tau_s": 0.3, "err_max": 0.5, "h_max": 1.5}

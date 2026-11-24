@@ -1,0 +1,19 @@
+{
+  "settings_version": "0.0.8",
+  "datasets_dir": "D:\\OneDrive\\Desktop\\\u81ea\u8d70\u8eca\\Orin_Interface_v1\\laptop_workbench\\datasets",
+  "weights_dir": "weights",
+  "runs_dir": "runs",
+  "uuid": "7e9b5453c5939fea94a63312698363a25db1405be009001631b7ebdf532ea6a4",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "mlflow": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}

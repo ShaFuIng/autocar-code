@@ -1,0 +1,6 @@
+6f61 valid share per 0.3 m from 0.6: 1.00 1.00 0.97 1.00 1.00 1.00 1.00 1.00 0.81 0.72 0.77 0.93 0.95 1.00 | frame-to-frame sd of y 0.9 1.0 0.7 1.1 0.6 0.7 cm | longest gap (frames) 4 0 11 3 8 0
+    {(True, None, None, None): 446, (False, 'Y_RANGE', None, None): 28, (False, 'JUMP', None, None): 6, (True, None, 'L', None): 2}
+c6f3 valid share per 0.3 m from 0.6: 1.00 1.00 1.00 1.00 0.71 0.50 0.54 0.88 1.00 1.00 1.00 0.88 0.73 0.45 | frame-to-frame sd of y 0.5 0.7 0.9 0.9 cm | longest gap (frames) 0 15 17 7
+    {(True, None, None, None): 284, (False, 'Y_RANGE', None, None): 36, (False, 'Y_RANGE', 'L', None): 3}
+d60e valid share per 0.3 m from 0.6: 1.00 1.00 1.00 0.72 0.97 1.00 1.00 0.89 0.93 0.66 0.75 0.86 1.00 1.00 | frame-to-frame sd of y 0.7 0.5 0.7 1.0 0.8 cm | longest gap (frames) 8 0 11 7 6
+    {(True, None, None, None): 370, (False, 'Y_RANGE', None, None): 33, (True, None, 'L', None): 1, (False, 'NO_LINE', None, None): 8}

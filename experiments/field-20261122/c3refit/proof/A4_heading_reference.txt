@@ -1,0 +1,29 @@
+per pass: H - h, turned - h (deg, medians over 0.6-5.5 m)
+  d60e 1  H-h  +9.1  turned-h  -6.1  H at the first C3s frame 9.1
+  d60e 2  H-h  +8.9  turned-h   -    H at the first C3s frame 10.6
+  d60e 3  H-h  +8.5  turned-h  -5.8  H at the first C3s frame 8.5
+  d60e 4  H-h  +4.9  turned-h -12.7  H at the first C3s frame 4.9
+  d60e 5  H-h  +2.1  turned-h -13.9  H at the first C3s frame 2.1
+  84f2 1  H-h +10.0  turned-h  -5.2  H at the first C3s frame 10.0
+  84f2 2  H-h +10.0  turned-h  -8.1  H at the first C3s frame 10.0
+  84f2 3  H-h  +4.0  turned-h  -8.8  H at the first C3s frame 4.0
+  84f2 4  H-h  +5.5  turned-h  -6.8  H at the first C3s frame 5.5
+  6f61 1  H-h  -0.6  turned-h -10.0  H at the first C3s frame -0.6
+  6f61 2  H-h  +9.9  turned-h -10.3  H at the first C3s frame 9.9
+  6f61 3  H-h  +6.9  turned-h  -5.4  H at the first C3s frame 6.9
+  6f61 4  H-h  +5.6  turned-h -11.9  H at the first C3s frame 5.6
+  6f61 5  H-h  +6.1  turned-h  -7.5  H at the first C3s frame 6.1
+  6f61 6  H-h  +4.7  turned-h  -6.4  H at the first C3s frame 4.7
+spread (sd, deg) over the passes of [car heading + arc_lat psi] at x:
+  x 0.9  h 1.8  turned 2.9  H 2.2   (n 15 / 14 / 15)
+  x 1.2  h 2.5  turned 2.1  H 2.2   (n 15 / 14 / 15)
+  x 2.6  h 3.0  turned 2.5  H 2.0   (n 15 / 14 / 15)
+  x 2.9  h 3.6  turned 3.5  H 2.3   (n 15 / 14 / 15)
+  x 3.2  h 2.8  turned 3.3  H 4.2   (n 15 / 14 / 15)
+  x 4.3  h 3.7  turned 3.6  H 2.8   (n 15 / 14 / 15)
+spread (sd, deg) of the CAR heading itself at x (driving scatter + reference scatter):
+  x 0.6  h 4.4  turned 2.0  H 3.3  | medians h 23.6 turned 18.1 H 29.6
+  x 1.2  h 2.3  turned 3.9  H 4.3  | medians h 36.4 turned 28.1 H 42.9
+  x 2.4  h 2.2  turned 3.1  H 3.1  | medians h 79.2 turned 70.2 H 84.9
+  x 3.0  h 3.3  turned 2.4  H 2.3  | medians h 93.8 turned 87.2 H 100.5
+  x 4.2  h 3.8  turned 5.1  H 5.6  | medians h 117.4 turned 107.7 H 123.4

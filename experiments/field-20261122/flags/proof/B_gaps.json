@@ -1,0 +1,5718 @@
+{
+"frame_gaps": [],
+"streaks": [
+{
+"run": "014e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.5,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.097,
+"route": "DONE"
+},
+{
+"run": "014e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.067,
+"route": "DONE"
+},
+{
+"run": "014e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"n": 7,
+"dur": 0.224,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.299,
+"route": "DONE"
+},
+{
+"run": "014e",
+"lap": 2,
+"lseg": "curve4",
+"seg": "downhill",
+"anchor": "LAND8",
+"since": 0.29,
+"n": 12,
+"dur": 0.443,
+"reasons": {
+"PID_HOLD": 10,
+"DOWNHILL_HOLD": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.505,
+"route": "DONE"
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.91,
+"n": 7,
+"dur": 0.238,
+"reasons": {
+"UPPER_SINGLE_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.301,
+"route": "OPEN"
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.31,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.067,
+"route": "DONE"
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 5,
+"dur": 0.172,
+"reasons": {
+"PID_HOLD": 5
+},
+"next": "WARMUP",
+"valid_gap": 0.236,
+"route": "DONE"
+},
+{
+"run": "18fc",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.13,
+"n": 4,
+"dur": 0.146,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.198,
+"route": "DONE"
+},
+{
+"run": "18fc",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"n": 8,
+"dur": 0.241,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.302,
+"route": "DONE"
+},
+{
+"run": "18fc",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.88,
+"n": 8,
+"dur": 0.239,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.303,
+"route": "DONE"
+},
+{
+"run": "18fc",
+"lap": 4,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.46,
+"n": 15,
+"dur": 0.5,
+"reasons": {
+"PID_HOLD": 11,
+"LOST_HEADING": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.564,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "18fc",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.46,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "18fc",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.95,
+"n": 8,
+"dur": 0.28,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.336,
+"route": "DONE"
+},
+{
+"run": "1eab",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.76,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.067,
+"route": "DONE"
+},
+{
+"run": "1eab",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.99,
+"n": 7,
+"dur": 0.201,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.259,
+"route": "DONE"
+},
+{
+"run": "1eab",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.19,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "1eab",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.14,
+"n": 4,
+"dur": 0.131,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.191,
+"route": "DONE"
+},
+{
+"run": "1eab",
+"lap": 3,
+"lseg": "curve2",
+"seg": "straight",
+"anchor": "C2s",
+"since": 1.18,
+"n": 13,
+"dur": 0.417,
+"reasons": {
+"PID_HOLD": 12,
+"LOST_TURN": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.463,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "1eab",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.94,
+"n": 18,
+"dur": 0.591,
+"reasons": {
+"UPPER_SINGLE_HOLD": 18
+},
+"next": "WARMUP",
+"valid_gap": 0.636,
+"route": "OPEN"
+},
+{
+"run": "1eab",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.06,
+"n": 6,
+"dur": 0.207,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.235,
+"route": "DONE"
+},
+{
+"run": "1eab",
+"lap": 4,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 4.74,
+"n": 13,
+"dur": 0.421,
+"reasons": {
+"PID_HOLD": 12,
+"LOST_TURN": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.468,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "1eab",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.95,
+"n": 14,
+"dur": 0.46,
+"reasons": {
+"UPPER_SINGLE_HOLD": 14
+},
+"next": "WARMUP",
+"valid_gap": 0.502,
+"route": "OPEN"
+},
+{
+"run": "2728",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.47,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.097,
+"route": "DONE"
+},
+{
+"run": "2728",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.065,
+"route": "DONE"
+},
+{
+"run": "2728",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"n": 9,
+"dur": 0.283,
+"reasons": {
+"PID_HOLD": 9
+},
+"next": "WARMUP",
+"valid_gap": 0.332,
+"route": "DONE"
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.78,
+"n": 14,
+"dur": 0.493,
+"reasons": {
+"UPPER_SINGLE_HOLD": 14
+},
+"next": "WARMUP",
+"valid_gap": 0.543,
+"route": "OPEN"
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.27,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.66,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.07,
+"route": "DONE"
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"n": 5,
+"dur": 0.167,
+"reasons": {
+"PID_HOLD": 5
+},
+"next": "WARMUP",
+"valid_gap": 0.206,
+"route": "DONE"
+},
+{
+"run": "2728",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.96,
+"n": 11,
+"dur": 0.375,
+"reasons": {
+"UPPER_SINGLE_HOLD": 11
+},
+"next": "WARMUP",
+"valid_gap": 0.408,
+"route": "OPEN"
+},
+{
+"run": "2728",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.04,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "3197",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.86,
+"n": 12,
+"dur": 0.389,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.429,
+"route": "OPEN"
+},
+{
+"run": "3197",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 7,
+"dur": 0.208,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.271,
+"route": "DONE"
+},
+{
+"run": "3197",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.9,
+"n": 17,
+"dur": 0.566,
+"reasons": {
+"UPPER_SINGLE_HOLD": 17
+},
+"next": "WARMUP",
+"valid_gap": 0.605,
+"route": "OPEN"
+},
+{
+"run": "3197",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.03,
+"n": 6,
+"dur": 0.193,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.232,
+"route": "DONE"
+},
+{
+"run": "3197",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.95,
+"n": 7,
+"dur": 0.271,
+"reasons": {
+"UPPER_SINGLE_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.301,
+"route": "OPEN"
+},
+{
+"run": "3197",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.36,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.097,
+"route": "DONE"
+},
+{
+"run": "3197",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 7,
+"dur": 0.226,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.266,
+"route": "DONE"
+},
+{
+"run": "3197",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.79,
+"n": 18,
+"dur": 0.583,
+"reasons": {
+"UPPER_SINGLE_HOLD": 18
+},
+"next": "WARMUP",
+"valid_gap": 0.638,
+"route": "OPEN"
+},
+{
+"run": "3197",
+"lap": 5,
+"lseg": "curve4",
+"seg": "downhill",
+"anchor": "LAND8",
+"since": 0.22,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.104,
+"route": "DONE"
+},
+{
+"run": "3197",
+"lap": 7,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "3fd4",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.95,
+"n": 6,
+"dur": 0.257,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.311,
+"route": "OPEN"
+},
+{
+"run": "3fd4",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.04,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.065,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.0,
+"n": 10,
+"dur": 0.349,
+"reasons": {
+"UPPER_SINGLE_HOLD": 10
+},
+"next": "WARMUP",
+"valid_gap": 0.4,
+"route": "OPEN"
+},
+{
+"run": "46c9",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.06,
+"n": 9,
+"dur": 0.316,
+"reasons": {
+"PID_HOLD": 9
+},
+"next": "WARMUP",
+"valid_gap": 0.37,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.63,
+"n": 6,
+"dur": 0.21,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.238,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.76,
+"n": 8,
+"dur": 0.254,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.298,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.22,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.069,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.59,
+"n": 9,
+"dur": 0.296,
+"reasons": {
+"PID_HOLD": 9
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.336,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.0,
+"n": 3,
+"dur": 0.097,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.135,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.0,
+"n": 2,
+"dur": 0.062,
+"reasons": {
+"PID_HOLD": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.097,
+"route": "DONE"
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.0,
+"n": 79,
+"dur": 2.635,
+"reasons": {
+"PID_HOLD": 5,
+"DOWNHILL_HOLD": 74
+},
+"next": "WARMUP",
+"valid_gap": 2.68,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.26,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.097,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"n": 9,
+"dur": 0.291,
+"reasons": {
+"PID_HOLD": 9
+},
+"next": "WARMUP",
+"valid_gap": 0.335,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.13,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.068,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.49,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.098,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.97,
+"n": 8,
+"dur": 0.244,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.303,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.78,
+"n": 13,
+"dur": 0.445,
+"reasons": {
+"UPPER_SINGLE_HOLD": 13
+},
+"next": "WARMUP",
+"valid_gap": 0.471,
+"route": "OPEN"
+},
+{
+"run": "4bbe",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.37,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.096,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.45,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.102,
+"route": "DONE"
+},
+{
+"run": "4bbe",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.87,
+"n": 4,
+"dur": 0.135,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.205,
+"route": "DONE"
+},
+{
+"run": "54cb",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.068,
+"route": "DONE"
+},
+{
+"run": "54cb",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"n": 4,
+"dur": 0.117,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.167,
+"route": "DONE"
+},
+{
+"run": "54cb",
+"lap": 1,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 2.07,
+"n": 14,
+"dur": 0.453,
+"reasons": {
+"PID_HOLD": 11,
+"DOWNHILL_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.501,
+"route": "DONE"
+},
+{
+"run": "54cb",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.0,
+"n": 6,
+"dur": 0.239,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.269,
+"route": "OPEN"
+},
+{
+"run": "54cb",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"n": 10,
+"dur": 0.343,
+"reasons": {
+"PID_HOLD": 10
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.377,
+"route": "DONE"
+},
+{
+"run": "54cb",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.73,
+"n": 12,
+"dur": 0.401,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.434,
+"route": "OPEN"
+},
+{
+"run": "54cb",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.16,
+"n": 87,
+"dur": 2.992,
+"reasons": {
+"PID_HOLD": 12,
+"DOWNHILL_HOLD": 75
+},
+"next": "END",
+"valid_gap": null,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.89,
+"n": 8,
+"dur": 0.245,
+"reasons": {
+"UPPER_SINGLE_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.304,
+"route": "OPEN"
+},
+{
+"run": "65ea",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.45,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.097,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.91,
+"n": 6,
+"dur": 0.19,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.268,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 2,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 1.78,
+"n": 2,
+"dur": 0.092,
+"reasons": {
+"PID_HOLD": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.167,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.07,
+"n": 6,
+"dur": 0.251,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.302,
+"route": "OPEN"
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.11,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"n": 6,
+"dur": 0.219,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.237,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 1.26,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.066,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.78,
+"n": 8,
+"dur": 0.338,
+"reasons": {
+"UPPER_SINGLE_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.371,
+"route": "OPEN"
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.38,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.101,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.89,
+"n": 8,
+"dur": 0.257,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.305,
+"route": "DONE"
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 1.31,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.107,
+"route": "DONE"
+},
+{
+"run": "69d9",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 3.92,
+"n": 24,
+"dur": 0.797,
+"reasons": {
+"PID_HOLD": 12,
+"LOST_HEADING": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.87,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "69d9",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 4.92,
+"n": 24,
+"dur": 0.785,
+"reasons": {
+"PID_HOLD": 12,
+"LOST_TURN": 12
+},
+"next": "END",
+"valid_gap": null,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "6f61",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.07,
+"n": 4,
+"dur": 0.152,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.2,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.91,
+"n": 7,
+"dur": 0.215,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.268,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.06,
+"n": 3,
+"dur": 0.097,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.135,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.095,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"n": 2,
+"dur": 0.076,
+"reasons": {
+"PID_HOLD": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.101,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"n": 8,
+"dur": 0.254,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.289,
+"route": "DONE"
+},
+{
+"run": "6f61",
+"lap": 6,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.91,
+"n": 14,
+"dur": 0.506,
+"reasons": {
+"UPPER_SINGLE_HOLD": 14
+},
+"next": "WARMUP",
+"valid_gap": 0.567,
+"route": "OPEN"
+},
+{
+"run": "6f61",
+"lap": 6,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"n": 6,
+"dur": 0.2,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.246,
+"route": "DONE"
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.92,
+"n": 30,
+"dur": 1.039,
+"reasons": {
+"PID_HOLD": 11,
+"LOST_TURN": 19
+},
+"next": "WARMUP",
+"valid_gap": 1.081,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "ramp",
+"seg": "climb",
+"anchor": "RAMP",
+"since": 0.49,
+"n": 11,
+"dur": 0.424,
+"reasons": {
+"PID_HOLD": 9,
+"LOST_HEADING": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.499,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "ramp",
+"seg": "climb",
+"anchor": "RAMP",
+"since": 0.9,
+"n": 19,
+"dur": 0.721,
+"reasons": {
+"PID_HOLD": 10,
+"LOST_TURN": 9
+},
+"next": "WARMUP",
+"valid_gap": 0.737,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.86,
+"n": 8,
+"dur": 0.255,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.325,
+"route": "DONE"
+},
+{
+"run": "7658",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.81,
+"n": 15,
+"dur": 0.563,
+"reasons": {
+"UPPER_SINGLE_HOLD": 15
+},
+"next": "WARMUP",
+"valid_gap": 0.637,
+"route": "OPEN"
+},
+{
+"run": "7658",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.79,
+"n": 10,
+"dur": 0.337,
+"reasons": {
+"PID_HOLD": 10
+},
+"next": "WARMUP",
+"valid_gap": 0.368,
+"route": "DONE"
+},
+{
+"run": "7658",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.79,
+"n": 11,
+"dur": 0.401,
+"reasons": {
+"UPPER_SINGLE_HOLD": 11
+},
+"next": "WARMUP",
+"valid_gap": 0.437,
+"route": "OPEN"
+},
+{
+"run": "7658",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.04,
+"n": 6,
+"dur": 0.223,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.267,
+"route": "DONE"
+},
+{
+"run": "8350",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.84,
+"n": 5,
+"dur": 0.205,
+"reasons": {
+"UPPER_SINGLE_HOLD": 5
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.237,
+"route": "OPEN"
+},
+{
+"run": "8350",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.84,
+"n": 12,
+"dur": 0.453,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.506,
+"route": "OPEN"
+},
+{
+"run": "8350",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.07,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.098,
+"route": "DONE"
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.16,
+"n": 7,
+"dur": 0.273,
+"reasons": {
+"UPPER_SINGLE_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.303,
+"route": "OPEN"
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.38,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.104,
+"route": "DONE"
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.84,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.104,
+"route": "DONE"
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.84,
+"n": 8,
+"dur": 0.245,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.296,
+"route": "DONE"
+},
+{
+"run": "84f2",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "84f2",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.01,
+"n": 9,
+"dur": 0.304,
+"reasons": {
+"UPPER_SINGLE_HOLD": 9
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.335,
+"route": "OPEN"
+},
+{
+"run": "9af6",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.25,
+"n": 3,
+"dur": 0.1,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.134,
+"route": "DONE"
+},
+{
+"run": "9af6",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 7,
+"dur": 0.216,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.275,
+"route": "DONE"
+},
+{
+"run": "9af6",
+"lap": 3,
+"lseg": "curve4",
+"seg": "straight",
+"anchor": "LAND8",
+"since": 4.99,
+"n": 12,
+"dur": 0.42,
+"reasons": {
+"PID_HOLD": 10,
+"LOST_HEADING": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.48,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "9af6",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.89,
+"n": 5,
+"dur": 0.168,
+"reasons": {
+"PID_HOLD": 5
+},
+"next": "WARMUP",
+"valid_gap": 0.198,
+"route": "DONE"
+},
+{
+"run": "9af6",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.33,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.098,
+"route": "DONE"
+},
+{
+"run": "a392",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.09,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "a392",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.09,
+"n": 3,
+"dur": 0.111,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.167,
+"route": "DONE"
+},
+{
+"run": "beb1",
+"lap": 2,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.42,
+"n": 15,
+"dur": 0.493,
+"reasons": {
+"PID_HOLD": 11,
+"LOST_HEADING": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.541,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "beb1",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.92,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.068,
+"route": "DONE"
+},
+{
+"run": "beb1",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.92,
+"n": 3,
+"dur": 0.095,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.167,
+"route": "DONE"
+},
+{
+"run": "beb1",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.29,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.068,
+"route": "DONE"
+},
+{
+"run": "c6f3",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.83,
+"n": 6,
+"dur": 0.211,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.268,
+"route": "OPEN"
+},
+{
+"run": "c6f3",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.29,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.098,
+"route": "DONE"
+},
+{
+"run": "c6f3",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 7,
+"dur": 0.24,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.266,
+"route": "DONE"
+},
+{
+"run": "c6f3",
+"lap": 3,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 6.15,
+"n": 8,
+"dur": 0.261,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.308,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "c6f3",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.87,
+"n": 8,
+"dur": 0.252,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.303,
+"route": "DONE"
+},
+{
+"run": "c6f3",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.07,
+"n": 9,
+"dur": 0.281,
+"reasons": {
+"PID_HOLD": 9
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.334,
+"route": "DONE"
+},
+{
+"run": "c6f3",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.31,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.068,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 4.71,
+"n": 8,
+"dur": 0.266,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.344,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "ccf1",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.063,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.068,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.13,
+"n": 3,
+"dur": 0.116,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.169,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"n": 7,
+"dur": 0.23,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.3,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.23,
+"n": 7,
+"dur": 0.256,
+"reasons": {
+"UPPER_SINGLE_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.278,
+"route": "OPEN"
+},
+{
+"run": "ccf1",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.45,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.094,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.91,
+"n": 5,
+"dur": 0.15,
+"reasons": {
+"PID_HOLD": 5
+},
+"next": "WARMUP",
+"valid_gap": 0.199,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.03,
+"n": 11,
+"dur": 0.416,
+"reasons": {
+"UPPER_SINGLE_HOLD": 11
+},
+"next": "WARMUP",
+"valid_gap": 0.468,
+"route": "OPEN"
+},
+{
+"run": "ccf1",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.78,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.071,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"n": 4,
+"dur": 0.147,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.201,
+"route": "DONE"
+},
+{
+"run": "ccf1",
+"lap": 6,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.6,
+"n": 13,
+"dur": 0.456,
+"reasons": {
+"PID_HOLD": 11,
+"DOWNHILL_HOLD": 2
+},
+"next": "WARMUP",
+"valid_gap": 0.506,
+"route": "DONE"
+},
+{
+"run": "d60e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.11,
+"n": 6,
+"dur": 0.186,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.259,
+"route": "DONE"
+},
+{
+"run": "d60e",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.1,
+"n": 6,
+"dur": 0.222,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.271,
+"route": "OPEN"
+},
+{
+"run": "d60e",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.062,
+"route": "DONE"
+},
+{
+"run": "d60e",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"n": 6,
+"dur": 0.222,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.274,
+"route": "DONE"
+},
+{
+"run": "d60e",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.82,
+"n": 18,
+"dur": 0.61,
+"reasons": {
+"UPPER_SINGLE_HOLD": 18
+},
+"next": "WARMUP",
+"valid_gap": 0.645,
+"route": "OPEN"
+},
+{
+"run": "d60e",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"n": 6,
+"dur": 0.199,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.271,
+"route": "DONE"
+},
+{
+"run": "d60e",
+"lap": 4,
+"lseg": "dashed_turn",
+"seg": "upper_post",
+"anchor": "DASHs",
+"since": 0.47,
+"n": 9,
+"dur": 0.31,
+"reasons": {
+"UPPER_SINGLE_HOLD": 9
+},
+"next": "WARMUP",
+"valid_gap": 0.406,
+"route": "OPEN"
+},
+{
+"run": "d60e",
+"lap": 4,
+"lseg": "dashed_turn",
+"seg": "upper_post",
+"anchor": "DASHs",
+"since": 0.75,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"UPPER_SINGLE_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.074,
+"route": "OPEN"
+},
+{
+"run": "d60e",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 7,
+"dur": 0.247,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.26,
+"route": "DONE"
+},
+{
+"run": "e0cd",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 4.91,
+"n": 13,
+"dur": 0.432,
+"reasons": {
+"PID_HOLD": 12,
+"LOST_TURN": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.472,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "e0cd",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.88,
+"n": 9,
+"dur": 0.3,
+"reasons": {
+"PID_HOLD": 9
+},
+"next": "WARMUP",
+"valid_gap": 0.378,
+"route": "DONE"
+},
+{
+"run": "e0cd",
+"lap": 2,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.97,
+"n": 7,
+"dur": 0.215,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.259,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "e0cd",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.66,
+"n": 12,
+"dur": 0.395,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.46,
+"route": "OPEN"
+},
+{
+"run": "e0cd",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.17,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.066,
+"route": "DONE"
+},
+{
+"run": "e0cd",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 7,
+"dur": 0.209,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.3,
+"route": "DONE"
+},
+{
+"run": "e0cd",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.01,
+"n": 12,
+"dur": 0.422,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.47,
+"route": "OPEN"
+},
+{
+"run": "e0cd",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.37,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.1,
+"route": "DONE"
+},
+{
+"run": "e69d",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.3,
+"n": 24,
+"dur": 0.821,
+"reasons": {
+"UPPER_SINGLE_HOLD": 24
+},
+"next": "WARMUP",
+"valid_gap": 0.87,
+"route": "OPEN"
+},
+{
+"run": "e69d",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.3,
+"n": 6,
+"dur": 0.214,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.236,
+"route": "OPEN"
+},
+{
+"run": "e69d",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.98,
+"n": 4,
+"dur": 0.123,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.166,
+"route": "DONE"
+},
+{
+"run": "e69d",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 6,
+"dur": 0.178,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.269,
+"route": "DONE"
+},
+{
+"run": "e69d",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 2.27,
+"n": 6,
+"dur": 0.201,
+"reasons": {
+"UPPER_SINGLE_HOLD": 6
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.267,
+"route": "OPEN"
+},
+{
+"run": "e69d",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.95,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.069,
+"route": "DONE"
+},
+{
+"run": "e69d",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.18,
+"n": 3,
+"dur": 0.094,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.142,
+"route": "DONE"
+},
+{
+"run": "e69d",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 8,
+"dur": 0.255,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.297,
+"route": "DONE"
+},
+{
+"run": "e69d",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.96,
+"n": 5,
+"dur": 0.151,
+"reasons": {
+"PID_HOLD": 5
+},
+"next": "WARMUP",
+"valid_gap": 0.235,
+"route": "DONE"
+},
+{
+"run": "ff42",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.55,
+"n": 10,
+"dur": 0.3,
+"reasons": {
+"UPPER_SINGLE_HOLD": 10
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.372,
+"route": "OPEN"
+},
+{
+"run": "ff42",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.102,
+"route": "DONE"
+},
+{
+"run": "ff42",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"n": 4,
+"dur": 0.135,
+"reasons": {
+"PID_HOLD": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.174,
+"route": "DONE"
+},
+{
+"run": "ff42",
+"lap": 2,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.56,
+"n": 13,
+"dur": 0.416,
+"reasons": {
+"PID_HOLD": 12,
+"LOST_HEADING": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.482,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "ff42",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 3,
+"dur": 0.097,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.133,
+"route": "DONE"
+},
+{
+"run": "ff42",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.067,
+"route": "DONE"
+},
+{
+"run": "ff42",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.95,
+"n": 10,
+"dur": 0.346,
+"reasons": {
+"PID_HOLD": 10
+},
+"next": "WARMUP",
+"valid_gap": 0.395,
+"route": "DONE"
+},
+{
+"run": "ff42",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.87,
+"n": 6,
+"dur": 0.218,
+"reasons": {
+"PID_HOLD": 6
+},
+"next": "WARMUP",
+"valid_gap": 0.234,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.03,
+"n": 8,
+"dur": 0.254,
+"reasons": {
+"PID_HOLD": 8
+},
+"next": "WARMUP",
+"valid_gap": 0.296,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "dashed_turn",
+"seg": "upper_post",
+"anchor": "DASHs",
+"since": 0.45,
+"n": 12,
+"dur": 0.404,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.468,
+"route": "OPEN"
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.62,
+"n": 12,
+"dur": 0.39,
+"reasons": {
+"UPPER_SINGLE_HOLD": 12
+},
+"next": "WARMUP",
+"valid_gap": 0.436,
+"route": "OPEN"
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.78,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.073,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.78,
+"n": 11,
+"dur": 0.337,
+"reasons": {
+"PID_HOLD": 10,
+"DOWNHILL_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.399,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.31,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.099,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 3,
+"dur": 0.092,
+"reasons": {
+"PID_HOLD": 3
+},
+"next": "WARMUP",
+"valid_gap": 0.134,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.07,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.43,
+"n": 1,
+"dur": 0.033,
+"reasons": {
+"PID_HOLD": 1
+},
+"next": "WARMUP",
+"valid_gap": 0.101,
+"route": "DONE"
+},
+{
+"run": "ff94",
+"lap": 5,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.49,
+"n": 15,
+"dur": 0.501,
+"reasons": {
+"PID_HOLD": 11,
+"LOST_HEADING": 4
+},
+"next": "WARMUP",
+"valid_gap": 0.569,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "ff94",
+"lap": 5,
+"lseg": "curve3",
+"seg": "climb",
+"anchor": "C3s",
+"since": 6.38,
+"n": 10,
+"dur": 0.326,
+"reasons": {
+"PID_HOLD": 10
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.398,
+"route": "WAIT_CLIMB"
+},
+{
+"run": "ff94",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "upper_post",
+"anchor": "DASHe",
+"since": 1.89,
+"n": 5,
+"dur": 0.22,
+"reasons": {
+"UPPER_SINGLE_HOLD": 5
+},
+"next": "PROPOSAL_ONLY",
+"valid_gap": 0.261,
+"route": "OPEN"
+},
+{
+"run": "ff94",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"n": 7,
+"dur": 0.248,
+"reasons": {
+"PID_HOLD": 7
+},
+"next": "WARMUP",
+"valid_gap": 0.3,
+"route": "DONE"
+}
+],
+"warmups": [
+{
+"run": "014e",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "014e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.5,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 47.1
+},
+{
+"run": "014e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.93
+},
+{
+"run": "014e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.18
+},
+{
+"run": "014e",
+"lap": 2,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 0.29,
+"held": true,
+"prev_reason": "DOWNHILL_HOLD",
+"t_from_start": 109.81
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.31,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 226.18
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 227.96
+},
+{
+"run": "014e",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 228.21
+},
+{
+"run": "0b11",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "1377",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "1540",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "16c1",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "18fc",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "18fc",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.13,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.15
+},
+{
+"run": "18fc",
+"lap": 4,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.46,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 212.85
+},
+{
+"run": "18fc",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.46,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 224.63
+},
+{
+"run": "18fc",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.95,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 285.48
+},
+{
+"run": "1cd7",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "1e89",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "1eab",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "1eab",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.76,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.99
+},
+{
+"run": "1eab",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.99,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.27
+},
+{
+"run": "1eab",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.19,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 106.02
+},
+{
+"run": "1eab",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.14,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 107.95
+},
+{
+"run": "1eab",
+"lap": 3,
+"lseg": "curve2",
+"seg": "straight",
+"anchor": "C2s",
+"since": 1.18,
+"held": true,
+"prev_reason": "LOST_TURN",
+"t_from_start": 135.75
+},
+{
+"run": "1eab",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.94,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 163.89
+},
+{
+"run": "1eab",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.06,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 167.0
+},
+{
+"run": "1eab",
+"lap": 4,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 4.74,
+"held": true,
+"prev_reason": "LOST_TURN",
+"t_from_start": 211.49
+},
+{
+"run": "1eab",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.95,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 223.34
+},
+{
+"run": "1f45",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "2454",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "2514",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "25f9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "2728",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "2728",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.47,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 47.25
+},
+{
+"run": "2728",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.01
+},
+{
+"run": "2728",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.42
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.78,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 105.8
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.27,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 106.91
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.66,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.78
+},
+{
+"run": "2728",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 109.02
+},
+{
+"run": "2728",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.96,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 165.44
+},
+{
+"run": "2728",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.04,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 168.56
+},
+{
+"run": "27c6",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "28c3",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "2b72",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "3197",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "3197",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.86,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 46.81
+},
+{
+"run": "3197",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.9,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 107.72
+},
+{
+"run": "3197",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.03,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 110.87
+},
+{
+"run": "3197",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.36,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 169.38
+},
+{
+"run": "3197",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 171.53
+},
+{
+"run": "3197",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.79,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 228.54
+},
+{
+"run": "3197",
+"lap": 5,
+"lseg": "curve4",
+"seg": "downhill",
+"anchor": "LAND8",
+"since": 0.22,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 291.52
+},
+{
+"run": "3197",
+"lap": 7,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 411.17
+},
+{
+"run": "3431",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "370e",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "3f22",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "3fd4",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "3fd4",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.04,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.52
+},
+{
+"run": "46c9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "46c9",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 2.0,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 46.7
+},
+{
+"run": "46c9",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.06,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 50.07
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.22,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.76
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.0,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 109.61
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.0,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 109.7
+},
+{
+"run": "46c9",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.0,
+"held": true,
+"prev_reason": "DOWNHILL_HOLD",
+"t_from_start": 112.39
+},
+{
+"run": "4bbe",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "4bbe",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.26,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 46.58
+},
+{
+"run": "4bbe",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.32
+},
+{
+"run": "4bbe",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.83,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.66
+},
+{
+"run": "4bbe",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.13,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 107.18
+},
+{
+"run": "4bbe",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.49,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 163.8
+},
+{
+"run": "4bbe",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.97,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 165.82
+},
+{
+"run": "4bbe",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.78,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 221.36
+},
+{
+"run": "4bbe",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.37,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 222.48
+},
+{
+"run": "4bbe",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.45,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 281.27
+},
+{
+"run": "4bbe",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.87,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 283.27
+},
+{
+"run": "54cb",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "54cb",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.62
+},
+{
+"run": "54cb",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.83
+},
+{
+"run": "54cb",
+"lap": 1,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 2.07,
+"held": true,
+"prev_reason": "DOWNHILL_HOLD",
+"t_from_start": 52.15
+},
+{
+"run": "54cb",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.73,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 165.68
+},
+{
+"run": "57dd",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "5aa9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "63af",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "65ea",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "65ea",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.45,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 109.34
+},
+{
+"run": "65ea",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.91,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 111.38
+},
+{
+"run": "65ea",
+"lap": 2,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 1.78,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 112.97
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.11,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 231.53
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 233.26
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 233.5
+},
+{
+"run": "65ea",
+"lap": 4,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 1.26,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 234.6
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.38,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 292.65
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.89,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 294.67
+},
+{
+"run": "65ea",
+"lap": 5,
+"lseg": "curve4",
+"seg": "bottom",
+"anchor": "LAND8",
+"since": 1.31,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 295.79
+},
+{
+"run": "676f",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "687a",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "69d9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "69d9",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 3.92,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 33.99
+},
+{
+"run": "6b58",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "6ba6",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "6e69",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "6ef9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "6f61",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "6f61",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.07,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.17
+},
+{
+"run": "6f61",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.91,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 107.96
+},
+{
+"run": "6f61",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.06,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 166.7
+},
+{
+"run": "6f61",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 225.42
+},
+{
+"run": "6f61",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 225.5
+},
+{
+"run": "6f61",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 284.02
+},
+{
+"run": "6f61",
+"lap": 6,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.91,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 340.22
+},
+{
+"run": "6f61",
+"lap": 6,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 343.41
+},
+{
+"run": "7658",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "curve3",
+"seg": "climb",
+"anchor": "C3s",
+"since": 5.92,
+"held": true,
+"prev_reason": "LOST_TURN",
+"t_from_start": 36.66
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "ramp",
+"seg": "climb",
+"anchor": "RAMP",
+"since": 0.49,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 37.23
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "ramp",
+"seg": "climb",
+"anchor": "RAMP",
+"since": 0.9,
+"held": true,
+"prev_reason": "LOST_TURN",
+"t_from_start": 38.1
+},
+{
+"run": "7658",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.86,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 50.4
+},
+{
+"run": "7658",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.81,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 106.65
+},
+{
+"run": "7658",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.79,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 109.99
+},
+{
+"run": "7658",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.79,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 166.36
+},
+{
+"run": "7b99",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "7e79",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "8019",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "813e",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "8350",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "8350",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.84,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 226.12
+},
+{
+"run": "8350",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.07,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 229.31
+},
+{
+"run": "848b",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "84f2",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.38,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 47.21
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.84,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.92
+},
+{
+"run": "84f2",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.84,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.23
+},
+{
+"run": "84f2",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.12
+},
+{
+"run": "8980",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "8ae8",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "9060",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "917f",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "9441",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "9a39",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "9af6",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "9af6",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.25,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.66
+},
+{
+"run": "9af6",
+"lap": 3,
+"lseg": "curve4",
+"seg": "straight",
+"anchor": "LAND8",
+"since": 4.99,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 172.89
+},
+{
+"run": "9af6",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.89,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 227.62
+},
+{
+"run": "9af6",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.33,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 284.1
+},
+{
+"run": "a392",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "a392",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.09,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.55
+},
+{
+"run": "a392",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.09,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.75
+},
+{
+"run": "b17a",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "b23a",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "b3e4",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "b48e",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "b619",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "b6e9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "b7b6",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "bc3d",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "bcb9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "bd83",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "bd9c",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "bddd",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "beb1",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "beb1",
+"lap": 2,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.42,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 96.16
+},
+{
+"run": "beb1",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.92,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 168.98
+},
+{
+"run": "beb1",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.92,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 169.15
+},
+{
+"run": "beb1",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.29,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 285.66
+},
+{
+"run": "bf9c",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "bfe9",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "c097",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "c280",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "c2f2",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "c6f3",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "c6f3",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.29,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 105.98
+},
+{
+"run": "c6f3",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.03
+},
+{
+"run": "c6f3",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.31,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 225.94
+},
+{
+"run": "c7be",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ca48",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ccf1",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ccf1",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.0
+},
+{
+"run": "ccf1",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.09
+},
+{
+"run": "ccf1",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.13,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 107.74
+},
+{
+"run": "ccf1",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 165.93
+},
+{
+"run": "ccf1",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.45,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 222.63
+},
+{
+"run": "ccf1",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.91,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 224.63
+},
+{
+"run": "ccf1",
+"lap": 5,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 2.03,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 279.83
+},
+{
+"run": "ccf1",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.78,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 282.73
+},
+{
+"run": "ccf1",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.02,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 282.94
+},
+{
+"run": "ccf1",
+"lap": 6,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.6,
+"held": true,
+"prev_reason": "DOWNHILL_HOLD",
+"t_from_start": 341.52
+},
+{
+"run": "ce7e",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "d372",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "d5dc",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "d60e",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "d60e",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.11,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 48.95
+},
+{
+"run": "d60e",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 107.46
+},
+{
+"run": "d60e",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.85,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 107.7
+},
+{
+"run": "d60e",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.82,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 163.21
+},
+{
+"run": "d60e",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.81,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 166.33
+},
+{
+"run": "d60e",
+"lap": 4,
+"lseg": "dashed_turn",
+"seg": "upper_pre",
+"anchor": "DASHs",
+"since": 0.47,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 219.35
+},
+{
+"run": "d60e",
+"lap": 4,
+"lseg": "dashed_turn",
+"seg": "upper_pre",
+"anchor": "DASHs",
+"since": 0.75,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 219.47
+},
+{
+"run": "d880",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "de46",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "e0cd",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "e0cd",
+"lap": 1,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 4.91,
+"held": true,
+"prev_reason": "LOST_TURN",
+"t_from_start": 34.88
+},
+{
+"run": "e0cd",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.88,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.26
+},
+{
+"run": "e0cd",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.66,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 164.11
+},
+{
+"run": "e0cd",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 0.17,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 165.4
+},
+{
+"run": "e0cd",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 167.41
+},
+{
+"run": "e0cd",
+"lap": 4,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 2.01,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 223.33
+},
+{
+"run": "e0cd",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.37,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 224.46
+},
+{
+"run": "e38d",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "e436",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "e69d",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "e69d",
+"lap": 1,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.3,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 45.53
+},
+{
+"run": "e69d",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.98,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.28
+},
+{
+"run": "e69d",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.35
+},
+{
+"run": "e69d",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.95,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 167.36
+},
+{
+"run": "e69d",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.18,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 167.51
+},
+{
+"run": "e69d",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 226.5
+},
+{
+"run": "e69d",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.96,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 284.9
+},
+{
+"run": "e757",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "f126",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "f2bb",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "fd22",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ff13",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ff42",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ff42",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.22
+},
+{
+"run": "ff42",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.8,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.39
+},
+{
+"run": "ff42",
+"lap": 2,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.56,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 94.98
+},
+{
+"run": "ff42",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.45
+},
+{
+"run": "ff42",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.08,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.51
+},
+{
+"run": "ff42",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.95,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 167.48
+},
+{
+"run": "ff42",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.87,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 226.43
+},
+{
+"run": "ff94",
+"lap": null,
+"lseg": null,
+"seg": "start",
+"anchor": null,
+"since": null,
+"held": null,
+"prev_reason": null,
+"t_from_start": 0.0
+},
+{
+"run": "ff94",
+"lap": 1,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.03,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 49.3
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "dashed_turn",
+"seg": "upper_pre",
+"anchor": "DASHs",
+"since": 0.45,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 102.82
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "upper_straight",
+"seg": "upper_pre",
+"anchor": "DASHe",
+"since": 1.62,
+"held": true,
+"prev_reason": "UPPER_SINGLE_HOLD",
+"t_from_start": 105.52
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.78,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 108.68
+},
+{
+"run": "ff94",
+"lap": 2,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.78,
+"held": true,
+"prev_reason": "DOWNHILL_HOLD",
+"t_from_start": 109.07
+},
+{
+"run": "ff94",
+"lap": 3,
+"lseg": "upper_straight",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.31,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 166.18
+},
+{
+"run": "ff94",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 168.21
+},
+{
+"run": "ff94",
+"lap": 3,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 2.05,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 168.29
+},
+{
+"run": "ff94",
+"lap": 4,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DASHe",
+"since": 3.43,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 225.73
+},
+{
+"run": "ff94",
+"lap": 5,
+"lseg": "curve3",
+"seg": "straight",
+"anchor": "C3s",
+"since": 5.49,
+"held": true,
+"prev_reason": "LOST_HEADING",
+"t_from_start": 273.33
+},
+{
+"run": "ff94",
+"lap": 5,
+"lseg": "downhill",
+"seg": "downhill",
+"anchor": "DOWN",
+"since": 1.9,
+"held": true,
+"prev_reason": "PID_HOLD",
+"t_from_start": 287.33
+}
+]
+}

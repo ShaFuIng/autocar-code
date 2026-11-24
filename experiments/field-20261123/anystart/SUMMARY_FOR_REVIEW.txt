@@ -1,0 +1,96 @@
+anystart（2026-11-23，離線，未上車）— 起點可放在彎 1 前主直線任一處
+==========================================================================
+標記：【紀錄】＝紀錄重播證實；【程式】＝讀程式推得；【估計】＝模型／推算，未實車。
+底：快照 orin-web-snapshot-20261122c；lap_ff.json 以 field-20261122/round1_20261123/lap_ff.json（6117196e）為底。
+全部只換設定檔，不需重啟（lap_pos.json／brake_zones.json／lap_ff.json／start_bias.json 皆每輪開跑時讀：live_pid 每個 run id 重建 LapPos、BrakeZones、LapFF、start_bias）【程式】。
+
+一、結論（先看這裡）
+--------------------
+1. 現況的致命點【紀錄】：起點離彎 1 起點超過約 4.5 m，lap_pos 在第 0 圈就把 C1s 記成 SKIPPED（skip_after_m 1.5），
+   第 1 圈位置放在名義處 → C1e 錯過 → LOST。截斷重播（5 輪 18 個第 2 圈以後的彎 1）：起點 5 m 有 16/18 圈出事、7 m 以上 18/18 全部出事。
+   lap_pos.json 加 skip_after_by.C1s = 9.0 後，2～10.5 m 全部 18/18 正確（C1s 位置誤差 −0.30～+0.20 m、之後整圈地標全中、無 SKIPPED／LOST）。
+2. 兩種方案都已備妥：
+   A「輸入距離 D」（使用者提議，tools/mkstart.py）：依 D 平移所有綁起跑里程的設定，其餘＝今天驗證過的第 1 圈設定。D＝3.44 時輸出逐位元相同。
+   B「不需輸入距離」（on/anystart）：起跑錨區改用相機事件錨 first_curve，帶狀觸發窗放寬到起跑後 1.0～4.6 m（較遠起點第 1 圈不用帶狀）。
+3. 建議：A＋保險（mkstart --c1s-skip 9）為主。理由：
+   - 第 1 圈入彎減速、彎 1 帶狀、各 fallback 區在正確 D 時與今天固定起點的實際位置相同（重播：減速區起點 C1s−0.70～−1.16 m，今天 −0.78～−1.11）。
+   - 帶狀觸發窗仍是 C1s 前約 1 m 的窄窗，誤觸發機會與今天相同；B 的寬窗在 1/18 圈（9af6 第 4 圈，車在直線偏左 near 0.3）會在 C1s−4.3 m 誤觸發＝全權右轉在直線上，後果嚴重。
+   - C1s 跳過距離放寬當保險：D 輸錯（實際比輸入遠 2 m）也不會整圈錯位（無保險時 2 m 誤差 10～16/18 圈 LOST）。
+   B 留作「量不到距離」時的備案（減速時機改由相機決定，入彎車速估計與今天相近但未實車；遠起點第 1 圈無帶狀）。
+
+二、方案 A：輸入距離 D（tools/mkstart.py）
+------------------------------------------
+D 的定義：與今天 lap_pos start_s −3.44 同一基準＝起點到「彎 1 起點名義位置」的距離（今天的擺法 D＝3.44；陀螺儀認到 C1s 的點約在名義位置前 0.44 m，s_err −0.35～−0.46【紀錄】）。
+用法：
+  python tools/mkstart.py --dist <D> --c1s-skip 9 --base <車上現行檔資料夾（含 lap_pos.json brake_zones.json lap_ff.json start_bias.json）> --out <資料夾>
+  輸出四檔＋逐鍵差異清單；D＝3.44 且不加 --c1s-skip → 四檔逐位元相同（tests/test_mkstart.py 驗過）。
+變動的鍵（Δ＝D−3.44）：
+  lap_pos.json      start_s＝−D；（--c1s-skip）skip_after_by.C1s＝9.0
+  brake_zones.json  所有 anchor 'start' 且 from_m<900 的區 from_m／to_m＋Δ：zones[0] 彎 1 第 1 圈 1.8～3.5 cap36、zones[2] 彎 2 第 1 圈 16.9～18.5 cap30、
+                    zones[5] 圓圈路口第 1 圈 23.5～29.5 cap100、zones[7] crest 第 1 圈 fallback 48.5～51.2 cap34、zones[9] pre-turn 第 1 圈 fallback 44.6～47.0 cap30。
+                    from 999 的假區不動。first_curve_min_m 不動（現行檔沒有區用 first_curve，只是紀錄）。
+  lap_ff.json       curves.c1.start.gap_m＋Δ；win_m 不動（它相對 gap_m，窗跟著平移）；ref_win 上限＝min(1.8, D−0.9)（只在 D<2.7 變，避免直線航向基準取到彎內）。
+  start_bias.json   只在 D<3.44 時縮短 hold_s，使偏置仍約在 C1s 前 0.47 s 結束（依 12 次起跑的起步里程—時間表；D 2.5 → hold 1.57 s）；fade 不動；D≥3.44 不動。
+  理由（start_bias）：今天 C1s 認到點在放開後 3.67 s，偏置 3.2 s 結束＝入彎前 0.47 s【紀錄】。D 2.5 不縮短的話入彎時仍有 −18～−40 µs 左偏【估計】。
+  D 較遠時偏置照舊 3.2 s 結束、之後直線由 PID 收（今天短起跑 0.9 s 版顯示偏置一停車就往右，故遠起點直線上可能有一次小右偏，未驗）。
+例子已產生：on/mkstart_D3.44（逐位元相同）、on/mkstart_D2.5、on/mkstart_D6、on/mkstart_D6_skip9。
+
+D 的容許誤差（誤差＝實際−輸入；截斷重播 18 圈×每個 D）【紀錄】：
+  定位：無保險 −1.0～+1.0 m 全對；+2.0 m 只有 0～4/18 圈對（SKIPPED C1s→LOST）。加 --c1s-skip 9：−1.0～+2.0 全對，程式推得可到約 +8 m；
+        實際比輸入近超過約 2.5 m 才會被「太早」規則擋掉【程式】。
+  帶狀觸發窗：誤差 0～+1.0 m 觸發位置與今天相同（C1s−0.47～−0.92）；誤差 −0.5 m（實際比輸入近）時 17～18/18 圈晚觸發 0.1～0.5 m（窗開時 FAR 早已過 0.4）、
+        −1.0 m 時觸發在 C1s 之後（+0.13～+0.35），帶狀晚進＝第 1 圈彎 1 回到靠 PID 追。誤差 +2 m 以上窗口過早關→部分圈無帶狀（安全側）。
+        → 容許 −0.2～+1.5 m；建議量完把 D 少報 0.2～0.3 m（寧可輸入偏小）。
+  入彎減速區（彎 1 第 1 圈 cap36）：起點相對 C1s 隨誤差 1:1 平移。±0.5 m 時開始煞的位置 C1s−0.2～−1.6（今天 −0.8～−1.1）；
+        少報 0.3 m＝多煞 0.3 m，入彎約慢 0.02～0.04 m/s【估計】；多報 0.5 m＝晚煞，入彎約快 0.03～0.05 m/s【估計】。
+  其他第 1 圈區（彎 2、crest、pre-turn）也 1:1 平移，但第 1 圈同時有 lap_pos 錨定的同功能區在作用（重播：C1e／TOP／DASHe 錨的區第 1 圈都生效【紀錄】），誤差 ±1 m 影響小。
+D 的可用範圍：最近 2.5 m（base0 航向基準要 0.3～1.3 m 直線，彎 1 幾何起點約在 D−0.9；減速區 1.8+Δ 在 D 2.5 時從 0.86 m 起＝起步段只剩 0.86 m 不受限，起步仍到 50 但時間短）；
+  2.0～2.5 m 程式允許但未建議（base0 窗與彎重疊）。最遠約 10.5 m（主直線 C4e→C1s 名義 10.74 m，起點要在彎 4 出彎後的直線上）；mkstart 拒絕 D<1.9 或 >12.5。
+
+實車驗法（A）：
+  每個起點先 2～3 次短起跑（過彎 1 後停）：近 2.5～3、中 6、遠 9～10。
+  看：proposal.lap_pos（events／anchor 由 None→C1s，lap 0→1、lost 不得 true、C1s 後 since_anchor_m 連續）、brake_zones.zone（"curve 1 on lap 1" 開始位置約在 C1s 前 0.8～1.1 m）、
+  lap_ff（curve c1 state RAMP 出現在 C1s 前 0.4～0.9 m）、入彎車速（今天第 1 圈約 1.06～1.10 m/s）、start_bias.bias_us 在入彎時是否已 0。
+  該退：任何一次 lost＝true 或 SKIPPED C1s；帶狀在 C1s 前 >1.5 m 觸發；入彎車速 >1.2 m/s 且出彎偏外 → 退回車上原四檔（輸入 3.44 即為原檔）。
+  中起點過了再跑 1 次整圈（看第 1 圈後段彎 2／crest／pre-turn 是否正常）。
+
+三、方案 B：不需輸入距離（on/anystart、on/anystart_noband、tools/mkcfg.py）
+--------------------------------------------------------------------
+  lap_pos.json  skip_after_by.C1s 9.0（同 A 的保險）。
+  brake_zones.json  first_curve_min_m 3.0→1.0；彎 1 第 1 圈區 start 1.8～3.5 cap36 → first_curve 0～0.5 cap24＋0.5～1.0 cap36（相機一看到彎就跳到 LOW 目標 24，免掉 30/s 的下降斜坡）；
+                    其餘 start 區改錨 first_curve、位置減 2.6 m（today 的 first_curve 約在起跑後 2.6 m）。
+  lap_ff.json   c1.start.win_m [-1.2,1.0]→[-2.2,1.4]（觸發窗＝起跑後 1.0～4.6 m；起點 >~5 m 時窗口先過→第 1 圈無帶狀）。noband 版＝刪 curves.c1.start。
+  first_curve 錨【紀錄】：起點 2～10.5 m 皆落在 C1s−0.25～−0.88（中位約 −0.44）；12 次起跑與 18 圈主直線（C4e+1.1 m 起）上沒有任何一格右側 ERROR_LARGE／CURVE_AHEAD → 誤觸發機會低。
+  固定起點（今天擺法）下的差異【紀錄】：原本 C1s−0.94～−1.25 起 cap36 → 改成 50 一直到 first_curve（C1s−0.21～−0.68），再 cap24 0.5 m、cap36 0.5 m；
+     其他區只差 1 格的邊界。入彎車速【估計】約 1.07～1.12 m/s（今天 1.06～1.10）。帶狀觸發格與今天完全相同（12 輪第 1 圈）。
+  缺點：減速時機改由相機決定（晚 0.3～0.8 m、靠 cap24 補），未實車；寬窗有 1/18 誤觸發風險（見上）；遠起點第 1 圈無帶狀。
+  檔案雜湊：anystart lap_pos a00aa73b、brake_zones e2c92ec1、lap_ff 34c4a9dc；noband lap_ff c3b6701c（其餘同）。
+
+四、綁起跑距離／時間的盤點（判定）
+---------------------------------
+  lap_pos start_s／C1s 跳過【程式＋紀錄】：必改（見一）。認到 C1s 之前的 seg／s_m／to_next 錯：只有 arc_lat 讀 s_m（四彎 control false＝只記錄）、segment() 的 start_straight 沒人用【程式，grep 全部 .py】；
+     其他層（arc2、lap_ff、curve_trim、dash_route、brake_zones r2）只用 anchor／since_anchor_m／lap／odo_m／lost。
+  brake_zones start 區（5 個）：A 平移／B 改錨。lap 錨區（C1e、TOP、DASHe、DOWN、C2e、RAMP）第 1 圈在 C1s 認到後都生效【紀錄 e69d/9af6/2728】；fallback 是 lap_pos lost 時的備援。
+  lap_ff c1.start（gap_m／win_m／ref_win）：A 平移／B 放寬或刪。其他彎 anchor 皆 lap_pos 地標，與起點無關。
+  start_bias（時間制）：A 在 D<3.44 縮短；B 未改（近起點 2～3 m 入彎時仍有部分左偏）。
+  i_ramp preload（相機觸發，min_s 1.5／max_s 15）：D 2.5 時 C1s 約 2.8 s、D 10.5 時約 9.5 s，都在窗內；不改。
+  curve_map seg=start（陀螺儀認彎、odo 地標以彎結束起算）：與起點無關。lap_speed（C4e 錨）：第 1 圈不作用→主直線第 1 圈最高 50，符合需求。
+  dash_route、crossing_pass（彎結束後距離）、xp_anchor（C2e）：與起點無關。track_pos.json（start_s 17.65）只給 07 頁 ops07 用。
+  手機服務：起跑用 start_params.json（PID 參數），不含起點距離【程式，未逐行讀 server.py】；圈數＝彎 1 計時圈數＋1 的規則在任意起點仍成立（手動停車回到起點）。
+
+五、捨棄了什麼
+--------------
+  A：不捨棄（D 正確時＝今天第 1 圈）；D<3.44 時起步不受限的距離變短（1.8+Δ）、start_bias 縮短。
+  B：第 1 圈彎 1 減速改晚＋cap24；起點 >~5 m 第 1 圈無帶狀；fallback 區位置帶 first_curve ±0.3 m 散布。
+  兩者：保險 skip 9 使「後續圈 C1s 漏認」時 9 m 後才跳過（1.5→9）→可能接著 LOST，到坡道才重抓；約 59 輪多圈紀錄（11-20～11-22）只有 IMU 凍結的 25ca 出現過 C1s 漏認。
+
+六、最不確定的三件事
+--------------------
+  1. 截斷重播的起點是「行進中」（車已有速度、可能剛出彎 4 有擺動），不是靜止起步；定位與觸發窗結論不受影響，但起步加速段的相機誤差／start_bias 的效果只有 3.44 m 的 12 次真起跑資料。
+  2. D 的量法：基準是「彎 1 起點名義位置」（今天擺法＝3.44），現場要以今天擺放處為參考點量差值最可靠（D＝3.44＋往後移的距離）。
+  3. 入彎車速（B 全部、A 的 D 誤差影響）只是估計；方案 B 的 cap24 0.5 m 是否煞過頭（11-19 曾因油門 15 區煞過頭移除）未實車。
+
+七、檔案
+--------
+  tools/mkstart.py（方案 A）、tools/mkcfg.py（方案 B）、tests/test_mkstart.py、on/*（各版設定＋README）、proof/（重播腳本與輸出：trunc_*＝現況 vs 保險、proof_*＝方案 B、proof_mk_*＝方案 A，含 D 誤差）、MANIFEST.sha256。
+  重播腳本讀暫存區的精簡紀錄（proof/ext.py 從 run-*/pid.jsonl 產生）；暫存已清，需重跑時先跑 ext.py。

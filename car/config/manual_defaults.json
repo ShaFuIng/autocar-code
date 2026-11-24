@@ -1,0 +1,7 @@
+{
+  "right_pct": 15,
+  "left_pct": 15,
+  "steer_rate_us_s": 300,
+  "accel_seconds": 0.2,
+  "decel_seconds": 0.0
+}

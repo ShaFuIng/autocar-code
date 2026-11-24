@@ -1,0 +1,25 @@
+{
+ "date": "2026-11-16",
+ "status": "FLASHED 2026-11-16 (COM8, Operation success)",
+ "base": "estop_debounce_v1 (bin 9085f10b00f5a976, rebuilt bit-identical from this source copy before the change)",
+ "change": "pwm70-r1: Config.h MAX_THROTTLE_PERCENT 50 -> 70 (one line). Reply strings \"PWM_LIMIT_50\" left unchanged.",
+ "candidate": {
+  "flash_bytes": 63116,
+  "ram_bytes": 15160,
+  "bin_sha256_16": "878f3a22d3e1aca5",
+  "bin_size": 63352
+ },
+ "binary_diff": "7 bytes differ from the base bin: five 50->70 and two 100->140 (0x6834,0x683e,0x6b90,0x6b94,0x6b9a,0x6b9c,0x7be6)",
+ "orin_side": "Orin still caps at 50: speed_adapt.json max_pwm/hard_cap 50 and server.py manual limits -50..50 (lines 240, 269 in snapshot-20261114d). Using more than 50 later needs those changed too (server.py = restart).",
+ "not_verified": "not flashed; no bench or floor test above 50 %; hardware limits of motors / driver / battery unknown",
+ "authorization": "user in chat 2026-11-16: \"現在燒錄\"",
+ "postflash": {
+  "fw": "orin-v1.4.1-manual",
+  "state": "LOCKED",
+  "reason": "BOOT_LOCK",
+  "throttle_limit_pct": 70,
+  "pca_ok": true,
+  "i2c_errors": 0,
+  "estop_debounce_us": 10000
+ }
+}

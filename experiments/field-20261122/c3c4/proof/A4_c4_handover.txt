@@ -1,0 +1,12 @@
+ccf1 L4 |  47.6  -8.5  -1.3 +110 e+0.12 |  50.8  -9.0  -4.0  +87 e+0.11 |  58.7  -1.4  -6.6  +87 e+0.07
+ccf1 L5 |  44.1  -8.3  -3.2  +72 e+0.10 |  49.7  -0.2  -7.2  +88 e+0.15 |  53.8  +2.1  -6.3 +100 e+0.19
+ccf1 L6 |   nan  +nan  +nan +nan e+nan |  44.7  -9.4  -3.9  +88 e+0.10 |  47.9  -8.0  -7.1  +81 e+0.10
+x 1.2  tb med 44.7 (min 36.5 max 48.2 sd 2.5) psi med -8.3 y med -2.8 steer +85 err +0.12
+x 1.5  tb med 49.2 (min 44.7 max 55.1 sd 2.2) psi med -5.8 y med -7.1 steer +77 err +0.09
+x 1.8  tb med 53.8 (min 47.9 max 60.3 sd 3.0) psi med -1.4 y med -7.8 steer +79 err +0.08
+frames x4>=1.5, tb<190: 3193 | final = band target 71.8% | = band top 4.6% | = PID chain (between) 19.9% | other 3.7%
+   tb  40- 70: n  664 target 84% top 0% pid 9%
+   tb  70-110: n  822 target 58% top 0% pid 37%
+   tb 110-150: n  788 target 81% top 1% pid 15%
+   tb 150-180: n  729 target 83% top 1% pid 14%
+   tb 180-195: n  307 target 14% top 69% pid 15%

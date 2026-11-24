@@ -1,0 +1,18 @@
+{
+ "enabled": true,
+ "delay_slack": {
+  "d0": 0.93,
+  "a": 0.61,
+  "b": 0.46,
+  "v_min": 0.2
+ },
+ "along_min_turn": false,
+ "pos_backup": {
+  "after_m": 2.9,
+  "max_m": 4.0,
+  "x_row": 139.0,
+  "max_pitch_deg": 3.0,
+  "min_lap": 1
+ },
+ "note": "upper-turn-r1 (upper-20261115): dash_route reads this at run start. delay_slack caps the r23 TURN_DELAYED delay at max(0, (d0 - a - b v) / v); along_min_turn keeps the TURN until 50 deg (dash-align-min) instead of ending it on an along dashed line. enabled false or file absent = dash-route-r27. pos_backup (dash-pos-backup-r1, dash-late-20261116): if the camera has not started the dashed TURN by lap_pos TOP + after_m (and < max_m, lap_pos anchored TOP and not lost, lap >= min_lap, |pitch| < max_pitch_deg), start it by position with target x_row (px at the control row); delete the key = camera only."
+}

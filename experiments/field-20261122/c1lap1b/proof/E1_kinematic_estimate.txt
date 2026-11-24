@@ -1,0 +1,31 @@
+c1lap1b: kinematic OPEN-LOOP estimate (NOT a validated closed-loop model) of the curve-1 band path, for comparing variants by difference.
+Lane: straight to x=0, right arc R 1.275 m over ARC_DEG (= the diagonal's heading in band turned-angle terms, 152.5), then straight.
+Car (rear axle): curvature kappa_act(s) = GAIN * (u(s - D) + 6) deg/m (c1exit identification: 0.19 deg/m per us, delay 0.20 s = D m).
+u = prof(tb) + OFF(tb): prof = kappa_turn(tb) / g(v_ref) (band feed-forward); OFF(tb) = recorded later-lap median of the band's camera +
+    gyro terms per 20-deg bin (A2_bins: e_us + gz_us), held FIXED (open loop: the camera term would react to a changed path, so the
+    estimated changes are upper bounds); before the band onset u = U_PRE (recorded ~ +40 us).
+The onset (metres relative to the arc start) is calibrated so that the baseline reproduces the recorded later-lap y at 60 deg (-9.2 cm);
+the model's other points are listed next to the recorded medians as a plausibility check. Only differences are used.
+
+calibration onset +0.06 m (rel. arc start): model {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 5.0, 'y140': 8.0, 'y_exit03': 13.3, 'y_exit09': 13.9, 'y_exit_max': 14.3, 'head_exit09': 154.1, 'out_over': 14.3}
+recorded later-lap medians:              {'y60': -9.2, 'y80': -8.45, 'y100': -1.35, 'y120': 1.43, 'y140': 8.3, 'y_exit03': 9.3, 'y_min': -10.9}
+
+A. band onset shifted (metres, + = later), baseline table -> estimated change vs calibration:
+  onset -0.15: {'y_min': -22.6, 'y60': -19.5, 'y80': -14.8, 'y100': -10.3, 'y120': -7.3, 'y140': -1.5, 'y_exit03': 3.7, 'y_exit09': 5.3, 'y_exit_max': 5.4, 'head_exit09': 153.6, 'out_over': 5.4}   d(y_min) -1.7  d(y_exit03) -9.6
+  onset -0.10: {'y_min': -21.3, 'y60': -16.2, 'y80': -10.7, 'y100': -6.0, 'y120': -3.2, 'y140': 1.6, 'y_exit03': 7.0, 'y_exit09': 8.1, 'y_exit_max': 8.4, 'head_exit09': 153.8, 'out_over': 8.4}   d(y_min) -0.4  d(y_exit03) -6.3
+  onset -0.05: {'y_min': -21.0, 'y60': -12.8, 'y80': -6.7, 'y100': -1.8, 'y120': 0.9, 'y140': 4.7, 'y_exit03': 10.1, 'y_exit09': 11.0, 'y_exit_max': 11.3, 'head_exit09': 153.9, 'out_over': 11.3}   d(y_min) -0.1  d(y_exit03) -3.2
+  onset +0.05: {'y_min': -20.9, 'y60': -6.1, 'y80': 1.4, 'y100': 6.7, 'y120': 9.1, 'y140': 11.3, 'y_exit03': 16.5, 'y_exit09': 16.8, 'y_exit_max': 17.2, 'head_exit09': 154.2, 'out_over': 17.2}   d(y_min) +0.0  d(y_exit03) +3.2
+  onset +0.10: {'y_min': -20.9, 'y60': -2.6, 'y80': 5.5, 'y100': 11.0, 'y120': 13.2, 'y140': 14.7, 'y_exit03': 19.6, 'y_exit09': 19.7, 'y_exit_max': 20.3, 'head_exit09': 154.3, 'out_over': 20.3}   d(y_min) +0.0  d(y_exit03) +6.3
+  onset +0.15: {'y_min': -20.9, 'y60': 0.9, 'y80': 9.6, 'y100': 15.2, 'y120': 17.3, 'y140': 18.1, 'y_exit03': 22.8, 'y_exit09': 22.6, 'y_exit_max': 23.3, 'head_exit09': 154.4, 'out_over': 23.3}   d(y_min) +0.0  d(y_exit03) +9.5
+
+B. kappa_turn tail (points >= from_deg) shifted later by +by deg:
+  from 105 +3: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 5.0, 'y140': 6.6, 'y_exit03': 10.9, 'y_exit09': 9.1, 'y_exit_max': 11.1, 'head_exit09': 156.7, 'out_over': 11.1}   d(y_exit03) -2.4  d(y140) -1.4
+  from 105 +5: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 5.0, 'y140': 6.0, 'y_exit03': 9.5, 'y_exit09': 6.0, 'y_exit_max': 9.5, 'head_exit09': 158.4, 'out_over': 9.5}   d(y_exit03) -3.8  d(y140) -2.0
+  from 105 +8: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 4.9, 'y140': 5.5, 'y_exit03': 7.5, 'y_exit09': 1.6, 'y_exit_max': 7.6, 'head_exit09': 161.1, 'out_over': 7.6}   d(y_exit03) -5.8  d(y140) -2.5
+  from 110 +3: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 5.0, 'y140': 6.6, 'y_exit03': 10.9, 'y_exit09': 9.1, 'y_exit_max': 11.1, 'head_exit09': 156.7, 'out_over': 11.1}   d(y_exit03) -2.4  d(y140) -1.4
+  from 110 +5: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 5.0, 'y140': 6.0, 'y_exit03': 9.5, 'y_exit09': 6.0, 'y_exit_max': 9.5, 'head_exit09': 158.4, 'out_over': 9.5}   d(y_exit03) -3.8  d(y140) -2.0
+  from 110 +8: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 4.9, 'y140': 5.5, 'y_exit03': 7.5, 'y_exit09': 1.6, 'y_exit_max': 7.6, 'head_exit09': 161.1, 'out_over': 7.6}   d(y_exit03) -5.8  d(y140) -2.5
+
+C. tail raised, zero crossing kept at 153 (candidate tails):
+  tail_a: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 4.9, 'y140': 5.4, 'y_exit03': 7.0, 'y_exit09': 4.6, 'y_exit_max': 7.1, 'head_exit09': 155.5, 'out_over': 7.1}   d(y_exit03) -6.3  d(y140) -2.6  d(head_exit09) +1.4
+  tail_b: {'y_min': -20.9, 'y60': -9.4, 'y80': -2.6, 'y100': 2.5, 'y120': 4.9, 'y140': 5.0, 'y_exit03': 5.6, 'y_exit09': 3.1, 'y_exit_max': 5.8, 'head_exit09': 155.5, 'out_over': 5.8}   d(y_exit03) -7.7  d(y140) -3.0  d(head_exit09) +1.4

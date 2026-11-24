@@ -1,0 +1,1 @@
+{"enabled": true, "bias_us": -35.0, "hold_s": 0.9, "fade_s": 0.6, "note": "start-bias-r1 (2026-11-22): 35 us to the left for 0.9 s after the start hold, then faded to 0 over 0.6 s. Needs live_pid.py 0c158624 + start_bias.py. Delete this file (or enabled false) = off, no restart needed (read at each run start)."}

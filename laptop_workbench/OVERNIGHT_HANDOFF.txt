@@ -1,0 +1,17 @@
+2026-10-18 已授權夜間離線影片模型／算法比較及訓練。不碰舵機、馬達、UART、燒錄、車控服務。
+工作根目錄 D:/OneDrive/Desktop/自走車。
+正在執行：Python310 overnight_runner.py，exec session 93990，日誌 data/overnight.log。
+本機網站：Python312 server.py，exec session 38144，127.0.0.1:8093。第六分頁連到 /experiments.html。
+輸出：Orin_Interface_v1/laptop_workbench/data/experiments/night-20261018/report.json。
+原圖／weights／timestamp SHA256：source_audit.json、dataset_manifest.json、report.json。
+佇列：v4-640、v4-960、v3-640、v5-focus02、v5-focus03、OpenCV，然後 TinyUNet／Fast-SCNN-inspired 各最多30epoch或25分鐘從零訓練。每模型分析全跑道2476與直線84影格，A/B/C三路徑。影格每30張存比較圖，全部路徑存JSON。
+訓練：train63/val15時間分段，無檔案雜湊重複；不是獨立泛化集。新模型從零與原v4/v5繼承預訓練非等量條件。Fast-SCNN-inspired不是官方原架構。既有一張部分漏標保留不修改。
+Orin docker隔離單張比對完成：同圖同v4同Ultra8.4.174，torch本機2.6.0 vs Orin2.10.0，640 FP32有5/921600像素不同。結果parity.json，不能宣稱環境完全相同。
+追蹤工作：讀report和log，刷新 python Orin_Interface_v1/laptop_workbench/finalize_experiment.py。運作正常時保持安靜。
+全部完成後檢查8組驗證、16組影片結果、2份新模型訓練歷史/權重、錯誤、影格數與網頁可讀。用瀏覽器實際切模型／來源／滑桿、看疊圖。完整完成後通知使用者報告連結和限制，停用本次追蹤。
+若process停止且非completed，檢查錯誤、修復後用 --resume，保留已完成結果。Python絕對路徑 C:/Users/User/AppData/Local/Programs/Python/Python310/python.exe。可用Start-Process -WindowStyle Hidden啟動，stdout/stderr寫不同新log。不要同時啟動兩個runner。
+--resume會載入已有report，跳過已評分和影片；完成30epoch的小模型會載入checkpoint，未完成則重新從零訓練本次候選，不更改舊模型。若某job失敗已修復需保留原錯誤紀錄並寫修復說明；不要因歷史errors存在而不停重跑。
+腳本修改於第一個runner啟動後加入resume，因此目前process尚無resume功能但不影響正常首輪。不要為了載入resume而中斷正常運算。
+禁止只依路徑出現率宣稱正確或安全；待實機項目為候選Orin整段一致性／效能、獨立場景、幾何輪角速度與閉環控制，不進行實車。
+
+2026-10-18 03:26 驗收完成：8組模型、16組影片共20480影格、2個新候選各30epoch；無錯誤。原影片/時間戳/資料集/v4 SHA256保留，acceptance.json通過。瀏覽器驗證候選切換、直線/全跑道、時間軸及疊圖。報告 /experiments.html 已完成，追蹤將停用。

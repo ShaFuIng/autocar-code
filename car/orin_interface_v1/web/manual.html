@@ -1,0 +1,245 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orin 手動駕駛</title><style>
+body{margin:0;background:#101923;color:#e8eef6;font:16px system-ui}header,main{padding:24px 32px}header{display:flex;justify-content:space-between;border-bottom:1px solid #334353}a,button{background:#223447;color:#e8eef6;border:1px solid #476079;border-radius:8px;padding:10px 16px;cursor:pointer}a{text-decoration:none}.grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}.panel{background:#172431;padding:22px;border-radius:12px;margin-bottom:20px}img{width:100%;border-radius:8px}input{background:#223447;color:#e8eef6;border:1px solid #476079;border-radius:6px;padding:8px;width:100px}input[type=checkbox]{width:auto}button:disabled{opacity:.4;cursor:not-allowed}.danger{background:#923e3e}.muted{color:#a6b8ca}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:14px 0}strong{font-size:24px}pre{white-space:pre-wrap;max-height:300px;overflow:auto}#message{min-height:2em}kbd{background:#223447;padding:4px 8px;border-radius:4px}
+
+#driveViewport{position:relative;outline:3px solid #476079;border-radius:10px;overflow:hidden;aspect-ratio:16/9;background:#081119;cursor:crosshair;touch-action:none}
+#driveViewport.captured{outline-color:#71d4ba;box-shadow:0 0 0 5px #71d4ba22}
+#camera{width:100%;height:100%;display:block;object-fit:contain}
+.hudTop{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;gap:8px;align-items:flex-start;pointer-events:none}
+.hudBox{background:#081119df;padding:8px 12px;border-radius:8px;font-size:14px}.hudTop button{pointer-events:auto}
+.keyHints{margin-top:8px;display:flex;gap:5px}.keyHints kbd{border:1px solid #657589}.keyHints kbd.pressed{background:#176c54;color:white;border-color:#71d4ba}
+.drivePad{position:absolute;bottom:10px;left:10px;display:grid;grid-template-columns:repeat(3,auto);gap:5px}.drivePad button{padding:8px 12px;touch-action:none;user-select:none;background:#142737e8}.drivePad button.pressed{background:#176c54}.drivePad #forward{grid-column:2}.drivePad #leftSteer{grid-row:2;grid-column:1}.drivePad #reverse{grid-row:2;grid-column:2}.drivePad #rightSteer{grid-row:2;grid-column:3}
+#zero{position:absolute;right:10px;bottom:10px;background:#142737e8}#previewMetrics{font-variant-numeric:tabular-nums}select{max-width:100%}
+@media(max-width:1100px){.grid{grid-template-columns:1fr}header,main{padding:16px}.hudBox{font-size:12px}.drivePad button{padding:6px 10px}}
+
+/* File links need normal layout boxes; inline anchor padding overlapped rows. */
+.grid>div{min-width:0}
+.recordActions{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.sessionPicker{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:end;margin:16px 0}
+.sessionPicker label{display:flex;flex-direction:column;gap:8px;min-width:0}
+#sessionSelect{box-sizing:border-box;width:100%;min-width:0;background:#223447;color:#e8eef6;border:1px solid #476079;border-radius:8px;padding:10px 12px;font:inherit;text-overflow:ellipsis}
+#downloads{display:grid;gap:10px;margin:16px 0;min-width:0}
+#downloads:empty{display:none}
+#downloads a{display:block;box-sizing:border-box;max-width:100%;overflow-wrap:anywhere;line-height:1.5}
+#downloads br{display:none}
+#recordState{overflow-wrap:anywhere;line-height:1.6}
+@media(max-width:650px){.sessionPicker{grid-template-columns:minmax(0,1fr)}.sessionPicker button{justify-self:start}}
+</style><header><strong>手動駕駛 · 跑道資料收集</strong><a href="/">返回操作台</a></header><main><div class="grid"><div><section class="panel"><h2>即時相機</h2><label>筆電預覽 <select id="previewRate"><option value="0">關閉預覽（現場目視）</option><option value="1">1 FPS</option><option value="2">2 FPS</option><option value="5" selected>5 FPS</option><option value="10">10 FPS</option></select></label><p class="muted">只影響筆電預覽流量，不更改 Orin 相機取像與錄影。關閉時請在車旁目視操作；相機健康與通訊失聯保護仍有效。</p><div id="driveViewport" tabindex="0" role="application" aria-label="點擊進入鍵盤駕駛；點擊區外退出"><canvas id="camera" width="960" height="540" aria-label="車載即時影像"></canvas><div class="hudTop"><div class="hudBox"><div id="keyboardState" aria-live="polite">點擊畫面進入鍵盤駕駛</div><div id="driveHud">動力 0 / 0% · 轉向 —</div><div class="keyHints"><kbd id="keyW">W ↑</kbd><kbd id="keyA">A ←</kbd><kbd id="keyS">S ↓</kbd><kbd id="keyD">D →</kbd></div></div><button id="hudStop" class="danger">停止 Esc</button></div><div class="drivePad"><button id="forward">↑ W</button><button id="reverse">↓ S</button><button id="leftSteer">← A</button><button id="rightSteer">D →</button></div><button id="zero">動力立即歸零 ␣</button></div><p id="previewMetrics" class="muted">等待影像串流</p><p id="cameraState" class="muted">讀取中</p></section><section class="panel"><h2>本次資料</h2><p id="recordState">尚未錄影</p><div class="recordActions"><button id="recordToggle" disabled>開始錄影</button></div><div class="sessionPicker"><label for="sessionSelect">選擇錄影／測試紀錄<select id="sessionSelect"></select></label><button id="files">查看所選檔案</button></div><div id="downloads" aria-label="本次紀錄可下載檔案"></div><p class="muted">影片保存在 Orin；約 10 FPS MJPEG AVI。影格與控制紀錄另存時間戳；不是舵機角度實測。</p></section></div><div><section class="panel"><h2>駕駛授權</h2><p id="connection">連線中</p><p id="inputHealth" class="muted">控制心跳：尚未啟用</p><button id="linkTest">連線測試 30 秒（不啟動車輛）</button><p id="linkResult" class="muted">可在不按實體啟動鍵的情況下測試。</p><strong id="state">—</strong><p id="firmware"></p><p id="output">右／左 PWM：—</p><p id="steering">舵機設定：—</p><p id="encoder">編碼器右／左：—</p><label><input id="areaClear" type="checkbox">已確認周圍無人及障礙，實體急停可立即操作</label><p><label><input id="recordOnStart" type="checkbox" checked>啟用手動模式時開始錄影</label></p><div class="row"><button id="enable">啟用手動模式並定位至中心</button><button id="stop" class="danger">停止並鎖定（Esc）</button></div><p id="enableHint" class="muted">實車授權獨立於模擬任務；先確認環境，再按網頁啟用。</p><p id="message" aria-live="polite">確認相機與車況後，按網頁啟用即可；支援的韌體不需實體 START。</p></section><section class="panel"><h2>直行校準</h2><div class="row"><label>中心 µs <input id="center" type="number" step="1" value="1460"></label><button id="centerMinus">−5 µs</button><button id="centerPlus">＋5 µs</button></div><p id="limits" class="muted"></p><div class="row"><label>右輪 PWM %（負＝反轉） <input id="right" type="number" min="-50" max="50" step="1" value="10"></label><button id="rightMinus">−1</button><button id="rightPlus">＋1</button><button id="rightFlip" title="正轉／反轉">正⇄反</button></div><div class="row"><label>左輪 PWM %（負＝反轉） <input id="left" type="number" min="-50" max="50" step="1" value="10"></label><button id="leftMinus">−1</button><button id="leftPlus">＋1</button><button id="leftFlip" title="正轉／反轉">正⇄反</button></div><p class="muted" id="wheelDirHint">正值＝W 前進方向，負值＝反轉；S 會把兩輪一起反向。可以一輪正轉、一輪反轉（需韌體 mixed_direction_version 1；舊韌體會回 MIXED_DIRECTION）。行駛中改變某一輪的正反向會被拒絕，請先停車；韌體也要求該輪停 0.5 秒才換向。</p><div class="row"><label>加速時間 秒 <input id="accelTime" type="number" min="0" max="5" step="0.1" value="2"></label><label>鬆油門減速時間 秒 <input id="decelTime" type="number" min="0" max="5" step="0.1" value="1"></label></div><p class="muted">0 秒表示直接設定 PWM（保留韌體毫秒級漸增）；大於 0 的時間表示 PWM 從零升至設定上限、或從設定上限降至零的時間，不是實際車速或煞停時間。</p><div class="row"><button id="recenter">轉向逐步回中心 C</button></div><div class="row"><label>轉向速度 µs／秒 <input id="steerRate" type="number" min="50" max="800" step="1" value="300"></label></div><p class="muted">數值越大，按住 A／D 轉向及按 C 回中心越快。建議先用 300；可在 50～800 間調整。這是指令變化速度，並非實測轉角；左右行程仍受限位保護。</p><div class="row"><button id="apply">套用本次</button><button id="save">套用並保存下次預設</button><button id="restore">回復本次開始設定</button></div><p id="saved" class="muted"></p><p id="settingsDraft" role="status">直接輸入為草稿；按套用本次或保存後生效。</p><p class="muted">保存中心為 Orin 共用值：03 校準、04 手動啟用／回中心及後續使用共用設定的操作都會使用。手動運行中先套用本次，結束後 BMduino 同步保存版本。保存不會主動送回中心指令。開機最初的 1360 µs 回正仍是韌體固定值；02 純模擬資料獨立保存。</p><details><summary>設定保存紀錄</summary><label>每頁 <select id="settingsCount"><option>10</option><option>20</option><option>50</option></select> 筆</label><button id="settingsPrev">上一頁</button><button id="settingsNext">下一頁</button><span id="settingsPage"></span><div id="settingsHistory" style="max-height:280px;overflow:auto;white-space:pre-wrap"></div></details><p class="muted">微調即時套用；放開油門後會持續減速一段時間，空白鍵立即歸零。中心逐步調整，行駛中單次中心變更最多 20 µs。限位沿用操作台設定。</p></section></div></div><section class="panel"><h2>鍵盤／按住按鈕操作</h2><p><kbd>W</kbd> 前進　<kbd>S</kbd> 後退　<kbd>A</kbd> 左轉　<kbd>D</kbd> 右轉　<kbd>＋／－</kbd> 同步微調兩輪動力　<kbd>C</kbd> 轉向回中心　<kbd>空白</kbd> 動力立即歸零　<kbd>Esc</kbd> 停止鎖定</p><p>先點擊相機畫面，看到綠色外框後使用 WASD 或 ↑↓←→；點擊區外，動力歸零並退出鍵盤駕駛。可在右側微調後再點入畫面，不需重新實體啟動。</p><p class="muted">放開 W／S 依設定時間降低動力；放開 A／D 保持轉向，C 逐步回中心。A／D 同時按住以最後按下者優先；W／S 同時按住減速，換向先停輪。空白鍵及點擊操作區外立即將動力歸零。輸入數字時不接受駕駛按鍵。切分頁、視窗失焦、相機或通訊失聯會停止鎖定，回來不自動恢復。PWM 歸零不等於已驗證的煞車。</p><details><summary>完整狀態</summary><pre id="raw"></pre></details></section></main>
+<script>
+const el=id=>document.getElementById(id),owner=Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('');
+let lastStartError='';
+let runId=null,lastRun=null,lastStatus=null,inputBusy=false,sequence=0,settingsBusy=false,dirty=false,initialConfig=null,blocked=false,keyboardCaptured=false;
+let hardZero=false,centerRequested=false,steerPreference='d';
+const keys=new Set(),pointers=new Map(),heldCodes=new Map();
+const keyMap={KeyW:"w",ArrowUp:"w",KeyS:"s",ArrowDown:"s",KeyA:"a",ArrowLeft:"a",KeyD:"d",ArrowRight:"d"};
+const viewport=el("driveViewport");
+let inputRttMs=null,inputFailures=0,linkTesting=false;
+const active=r=>r&&['preparing','running','stopping'].includes(r.status);
+const editable=e=>!!e&&(e.isContentEditable||['INPUT','TEXTAREA','SELECT'].includes(e.tagName));
+async function httpPost(action,payload,signal){const r=await fetch('/api/manual/'+action,{method:'POST',cache:'no-store',signal,priority:'high',headers:{'Content-Type':'application/json','X-Orin-Control':'1'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok||!d.ok){const reason=d.reason||'操作失敗';if(action!=='diagnostic')diagnostic('page_error',action+' HTTP '+r.status+': '+reason);const labels={'Confirm clear operating area':'請先勾選「已確認周圍無人及障礙」','Check synchronized settings, ESTOP and web-start authorization':'請確認急停已釋放、設定同步，再按網頁啟用','Wait for both wheels to stop':'請等待兩輪停止','Live camera required before driving':'請等待即時相機恢復','Please refresh the manual page (Ctrl+F5)':'請按 Ctrl+F5 更新頁面'};const error=Error(labels[reason]||reason);error.status=r.status;throw error}return d}
+// Dedicated socket: video fetches and HTTP status never carry driving inputs.
+let controlSocket=null,controlReady=false,controlToken=null,wsId=0,lastAckAt=0,lastAckSample=null;
+const wsPending=new Map();
+function controlFailure(reason){
+ controlReady=false;controlToken=null;
+ for(const p of wsPending.values()){clearTimeout(p.timer);p.reject(Error(reason))}wsPending.clear();
+ if(runId)stopDriving('CONTROL_SOCKET_LOST');
+}
+function connectControl(){
+ const socket=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host+'/api/manual/ws');controlSocket=socket;
+ socket.onmessage=e=>{
+  if(socket!==controlSocket)return;
+  let d;try{d=JSON.parse(e.data)}catch{socket.close();return}
+  const now=performance.now();controlToken=d.freshness;lastAckAt=now;controlReady=true;
+  if(d.type==='hello')return;
+  const pending=wsPending.get(d.id);if(!pending)return;
+  clearTimeout(pending.timer);wsPending.delete(d.id);
+  const rtt=now-pending.started;lastAckSample={id:d.id,rtt_ms:rtt,server_processing_ms:d.server_processing_ms,transport_and_browser_ms:Math.max(0,rtt-(d.server_processing_ms||0)),receive_gap_ms:d.receive_gap_ms};
+  inputRttMs=Math.round(rtt);
+  if(d.ok)pending.resolve(d);else{const error=Error(d.reason||'控制失敗');error.status=409;pending.reject(error)}
+ };
+ socket.onclose=()=>{if(socket!==controlSocket)return;controlFailure('控制 WebSocket 中斷');setTimeout(connectControl,1000)};
+ socket.onerror=()=>socket.close();
+}
+function controlRequest(action,payload={},extra={}){
+ if(!controlReady||controlSocket?.readyState!==WebSocket.OPEN)return Promise.reject(Error('控制 WebSocket 尚未連線'));
+ if(controlSocket.bufferedAmount>8192||wsPending.size>=16||performance.now()-lastAckAt>800){controlSocket.close();controlFailure('控制通道壅塞或確認逾時');return Promise.reject(Error('控制通道壅塞或確認逾時'))}
+ const id=++wsId,started=performance.now();
+ return new Promise((resolve,reject)=>{
+  const timer=setTimeout(()=>{if(!wsPending.has(id))return;wsPending.delete(id);reject(Error('控制確認超過 800 ms'));controlSocket.close();controlFailure('控制確認逾時')},800);
+  wsPending.set(id,{resolve,reject,timer,started});
+  try{controlSocket.send(JSON.stringify({id,action,payload,freshness:controlToken,client_send_ms:started,buffered_bytes:controlSocket.bufferedAmount,last_ack:lastAckSample,...extra}))}
+  catch(e){clearTimeout(timer);wsPending.delete(id);reject(e);controlSocket.close();controlFailure('控制傳送失敗')}
+ });
+}
+async function post(action,payload,signal){
+ if(action==='diagnostic')return httpPost(action,payload,signal);
+ if(action==='stop'){
+  try{return await controlRequest(action,payload)}catch{return httpPost(action,payload,signal)}
+ }
+ return controlRequest(action,payload);
+}
+let expectedProbe=performance.now()+200;
+function controlProbe(){
+ const now=performance.now(),lag=Math.max(0,now-expectedProbe);expectedProbe=now+200;
+ if(controlReady&&!linkTesting)controlRequest('probe',{}, {timer_lag_ms:lag}).catch(()=>{});
+ setTimeout(controlProbe,200);
+}
+connectControl();setTimeout(controlProbe,200);
+function config(){for(const id of ['center','right','left','steerRate','accelTime','decelTime'])if(String(el(id).value).trim()===''||!Number.isFinite(Number(el(id).value)))throw Error('請完整填寫數值，空白不會當作 0');{const r=Number(el('right').value),l=Number(el('left').value);if(!Number.isInteger(r)||!Number.isInteger(l)||Math.abs(r)>50||Math.abs(l)>50)throw Error('輪胎 PWM 須為 -50～50 的整數');}return {center_us:Number(el('center').value),right_pct:Number(el('right').value),left_pct:Number(el('left').value),steer_rate_us_s:Number(el('steerRate').value),accel_seconds:Number(el('accelTime').value),decel_seconds:Number(el('decelTime').value)}}
+function fill(c){el('center').value=c.center_us;el('right').value=c.right_pct;el('left').value=c.left_pct;el('steerRate').value=c.steer_rate_us_s??300;el('accelTime').value=c.accel_seconds??2;el('decelTime').value=c.decel_seconds??1}
+let editVersion=0;
+async function apply(save=false){if(settingsBusy)return;settingsBusy=true;const version=editVersion;try{const d=await post('settings',{...config(),save,owner,run_id:runId});dirty=true;if(version===editVersion){fill(d.config);el('settingsDraft').textContent=save?'已保存：中心為全站實車共用值。':'已套用本次，尚未保存為預設。'}lastHistoryAt=-Infinity;el('message').textContent=save?'設定已保存並留下紀錄；中心同步至共用設定。':'已套用本次設定。'}catch(e){el('message').textContent=e.message}finally{settingsBusy=false}}
+el('apply').onclick=()=>apply();el('save').onclick=()=>apply(true);el('restore').onclick=()=>{if(initialConfig){fill(initialConfig);apply()}};
+for(const [id,field,delta] of [['centerMinus','center',-5],['centerPlus','center',5],['rightMinus','right',-1],['rightPlus','right',1],['leftMinus','left',-1],['leftPlus','left',1]])el(id).onclick=()=>{if(settingsBusy)return;el(field).value=Math.max(-50,Math.min(50,Number(el(field).value)+delta));dirty=true;editVersion++;apply()};for(const [id,field] of [['rightFlip','right'],['leftFlip','left']])el(id).onclick=()=>{if(settingsBusy)return;el(field).value=-Number(el(field).value)||0;dirty=true;editVersion++;apply()};   /* wheel-pwm-signed-r1 */
+for(const id of ['center','right','left','steerRate','accelTime','decelTime'])el(id).oninput=()=>{dirty=true;editVersion++;el('settingsDraft').textContent='有未套用／未保存的輸入；不會自動送到車上。'};
+function axes(){const steering=keys.has(steerPreference)?steerPreference:keys.has('a')?'a':keys.has('d')?'d':null;return {direction:blocked?0:Number(keys.has('w'))-Number(keys.has('s')),steer:steering==='d'?1:steering==='a'?-1:0,hard_zero:hardZero,center:centerRequested}}
+function withDeadline(controller,ms,operation){
+ let timer;const deadline=new Promise((_,reject)=>{timer=setTimeout(()=>{controller.abort();reject(Error('請求超過 '+ms+' ms'))},ms)});
+ return Promise.race([operation,deadline]).finally(()=>clearTimeout(timer));
+}
+let diagnosticBusy=false,lastDiagnosticAt=-Infinity;
+function diagnostic(event,detail='',extra={}){
+ if(diagnosticBusy||performance.now()-lastDiagnosticAt<1000)return;
+ diagnosticBusy=true;lastDiagnosticAt=performance.now();
+ const c=new AbortController();withDeadline(c,800,post('diagnostic',{owner,event,detail:String(detail).slice(0,400),...extra},c.signal)).catch(()=>{}).finally(()=>{diagnosticBusy=false});
+}
+window.addEventListener('error',e=>diagnostic('page_error',e.message||'JavaScript error'));
+window.addEventListener('unhandledrejection',e=>diagnostic('page_error',String(e.reason?.message||e.reason)));
+async function sendInput(event="HEARTBEAT"){
+ if(!runId||document.hidden)return;
+ const id=runId;
+ try{await post('input',{owner,run_id:id,seq:++sequence,...axes(),event});if(runId===id)inputFailures=0}
+ catch(e){if(runId===id){inputFailures++;el('message').textContent='控制意圖未確認：'+e.message;diagnostic('input_error',e.message,{failures:inputFailures});stopDriving('CONTROL_SOCKET_LOST')}}
+}
+function inputTick(){sendInput();setTimeout(inputTick,200)}inputTick();
+async function stopDriving(reason='BUTTON_STOP',explicit=false){keyboardCaptured=false;clearKeys();blocked=true;paintControls();const id=runId;runId=null;if(!id&&!explicit)return;try{await post('stop',{reason,owner,run_id:id});el('message').textContent='已要求停止並鎖定；確認環境後可再按網頁啟用，不會自動恢復。'}catch(e){el('message').textContent='停止未確認；請按實體急停。'}}
+function clearKeys(){keys.clear();pointers.clear();heldCodes.clear()}
+function zero(){clearKeys();blocked=true;hardZero=true;centerRequested=false;paintControls();sendInput('SPACE_ZERO')}
+el('stop').onclick=()=>stopDriving('BUTTON_STOP',true);el('hudStop').onclick=()=>stopDriving('BUTTON_STOP',true);el('zero').onclick=zero;
+function centerSteering(){if(!canDrive())return;heldCodes.forEach((k,c)=>{if(k==='a'||k==='d')heldCodes.delete(c)});pointers.forEach((k,c)=>{if(k==='a'||k==='d')pointers.delete(c)});centerRequested=true;syncKeys();sendInput('CENTER')}
+el('recenter').onclick=centerSteering;
+el('enable').onclick=async()=>{try{lastStartError='';if(linkTesting)throw Error('請先等連線測試完成');if(!controlReady)throw Error('等待控制 WebSocket 連線');if(!el('areaClear').checked)throw Error('請先勾選「已確認周圍無人及障礙，實體急停可立即操作」');if(!previewFresh())throw Error('等待即時影像恢復後再啟用');clearKeys();keyboardCaptured=false;blocked=false;hardZero=false;centerRequested=false;sequence=0;inputRttMs=null;inputFailures=0;initialConfig=config();const d=await post('start',{control_version:2,owner,...config(),record:el('recordOnStart').checked,area_clear:el('areaClear').checked});runId=d.run_id;dirty=true;sendInput();el('message').textContent='手動模式準備中；沒有按住行車鍵不會走。'}catch(e){lastStartError='啟用失敗：'+e.message;el('message').textContent=lastStartError;diagnostic('page_error',lastStartError)}};
+function canDrive(){return runId&&lastRun?.id===runId&&lastRun.status==='running'&&lastStatus?.vehicle?.state==='MANUAL'}
+function syncKeys(){keys.clear();for(const key of heldCodes.values())keys.add(key);for(const key of pointers.values())keys.add(key);paintControls()}
+function paintControls(){
+ viewport.classList.toggle('captured',keyboardCaptured);viewport.setAttribute('aria-label',keyboardCaptured?'鍵盤駕駛中；點擊區外退出':'點擊進入鍵盤駕駛');
+ el('keyboardState').textContent=keyboardCaptured?'鍵盤已接管 · WASD / ↑↓←→':canDrive()?'點擊畫面進入鍵盤駕駛':'先啟用手動模式，再點擊畫面';
+ for(const [key,id] of [['w','forward'],['s','reverse'],['a','leftSteer'],['d','rightSteer']]){el(id).classList.toggle('pressed',keys.has(key));el('key'+key.toUpperCase()).classList.toggle('pressed',keys.has(key))}
+}
+function enterKeyboard(){
+ if(!canDrive()||!previewFresh()){el('message').textContent=lastStartError||'請先按「啟用手動模式並定位至中心」，再點入駕駛操作區。';return}
+ clearKeys();blocked=true;hardZero=true;centerRequested=false;keyboardCaptured=true;viewport.focus({preventScroll:true});paintControls();sendInput('CONTROL_AREA_ENTER');
+}
+function exitKeyboard(event='CONTROL_AREA_EXIT'){
+ if(!keyboardCaptured&&!keys.size&&!pointers.size)return;
+ keyboardCaptured=false;clearKeys();blocked=true;hardZero=true;centerRequested=false;paintControls();sendInput(event);
+ el('message').textContent='已退出鍵盤駕駛，動力立即歸零、轉向保持；點回畫面可繼續。';
+}
+viewport.onpointerdown=e=>{if(!e.target.closest?.('button')){e.preventDefault();enterKeyboard()}};
+viewport.addEventListener('focusout',e=>{if(!viewport.contains(e.relatedTarget))exitKeyboard()});
+document.addEventListener('pointerdown',e=>{if(!viewport.contains(e.target))exitKeyboard()});
+document.addEventListener('keydown',e=>{
+ const code=e.code||({w:'KeyW',s:'KeyS',a:'KeyA',d:'KeyD',' ':'Space',c:'KeyC',Escape:'Escape'}[e.key]||e.key);
+ if(code==='Escape'){e.preventDefault();stopDriving('ESC_STOP',true);return}
+ if(e.ctrlKey||e.metaKey||e.altKey){exitKeyboard();return}
+ const key=keyMap[code],shortcut=['Space','KeyC','Equal','Minus','NumpadAdd','NumpadSubtract'].includes(code);
+ if(!keyboardCaptured||editable(e.target)||(!key&&!shortcut))return;
+ e.preventDefault(); // Suppress scrolling even for repeats or while state updates arrive.
+ if(e.repeat||!canDrive())return;
+ if(code==='Space'){zero();return}
+ if(code==='KeyC'){centerSteering();return}
+ if(key){if(['w','s'].includes(key)){blocked=false;hardZero=false}else{centerRequested=false;steerPreference=key}heldCodes.set(code,key);syncKeys();sendInput('KEY_DOWN');return}
+ const delta=['Minus','NumpadSubtract'].includes(code)?-1:1;el('right').value=Math.max(0,Math.min(50,Number(el('right').value)+delta));el('left').value=Math.max(0,Math.min(50,Number(el('left').value)+delta));apply();
+});
+document.addEventListener('keyup',e=>{const code=e.code||({w:'KeyW',s:'KeyS',a:'KeyA',d:'KeyD'}[e.key]||e.key);if(keyMap[code]){if(keyboardCaptured)e.preventDefault();heldCodes.delete(code);syncKeys();sendInput('KEY_UP')}});
+document.addEventListener('focusin',e=>{if(editable(e.target))exitKeyboard('INPUT_FIELD')});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopDriving('PAGE_HIDDEN');streamController?.abort()}});
+window.addEventListener('blur',()=>stopDriving('WINDOW_BLUR'));window.addEventListener('pagehide',()=>{stopDriving('PAGE_EXIT');streamController?.abort()});
+for(const [id,key] of [['forward','w'],['reverse','s'],['leftSteer','a'],['rightSteer','d']]){
+ const button=el(id);button.onpointerdown=e=>{if(!canDrive()||!previewFresh())return;e.preventDefault();keyboardCaptured=true;if(['w','s'].includes(key)){blocked=false;hardZero=false}else{centerRequested=false;steerPreference=key}viewport.focus({preventScroll:true});pointers.set(e.pointerId,key);syncKeys();button.setPointerCapture(e.pointerId);sendInput('POINTER')};
+ const release=e=>{pointers.delete(e.pointerId);syncKeys();sendInput('POINTER')};button.onpointerup=release;button.onpointercancel=release;button.onlostpointercapture=release;
+}
+el('recordToggle').onclick=async()=>{try{await post('record',{owner,run_id:runId,record:!lastRun?.recording})}catch(e){el('message').textContent=e.message}};
+el('files').onclick=async()=>{const session=el('sessionSelect').value||lastRun?.id;if(!session)return;try{const r=await fetch('/api/manual/files/'+session);if(!r.ok)throw Error('讀取檔案失敗');const files=await r.json();el('downloads').replaceChildren();for(const f of files){const a=document.createElement('a');a.href='/api/manual/file/'+session+'/'+f.name;a.textContent=f.name+' ('+Math.round(f.size/1024)+' KB)';a.download=f.name;el('downloads').append(a,document.createElement('br'))}}catch(e){el('message').textContent=e.message}};
+let lastHistoryAt=-Infinity,cachedHistory=[];
+let settingsRows=[],settingsPage=0;
+function renderSettingsHistory(){const n=Number(el('settingsCount').value)||10;settingsPage=Math.max(0,Math.min(settingsPage,Math.ceil(settingsRows.length/n)-1));el('settingsHistory').textContent=settingsRows.slice(settingsPage*n,(settingsPage+1)*n).map(r=>{const c=r.config;return new Date(r.saved_at).toLocaleString()+' · 共用中心 '+c.center_us+' µs（原 '+r.before.center_us+'） · 左/右 '+c.left_pct+'/'+c.right_pct+'% · 轉向 '+c.steer_rate_us_s+' µs/s · 加/減速 '+c.accel_seconds+'/'+c.decel_seconds+' 秒 · 設定 v'+r.profile.revision}).join('\n\n')||'尚無此功能上線後的保存紀錄；原設定仍保留。';el('settingsPage').textContent=' '+(settingsPage+1)+' / '+Math.max(1,Math.ceil(settingsRows.length/n));el('settingsPrev').disabled=settingsPage===0;el('settingsNext').disabled=(settingsPage+1)*n>=settingsRows.length}
+el('settingsCount').onchange=()=>{settingsPage=0;renderSettingsHistory()};el('settingsPrev').onclick=()=>{settingsPage--;renderSettingsHistory()};el('settingsNext').onclick=()=>{settingsPage++;renderSettingsHistory()};
+async function poll(){try{
+ const refreshHistory=performance.now()-lastHistoryAt>5000;
+ const r=await fetch('/api/manual/status'+(refreshHistory?'':'?compact=1'),{cache:'no-store',priority:'low'});if(!r.ok)throw Error('資料不可用');const d=await r.json();if(d.settings_history){settingsRows=d.settings_history;renderSettingsHistory()}if(d.history){cachedHistory=d.history;lastHistoryAt=performance.now()}else d.history=cachedHistory;lastRun=d.current;lastStatus=d.vehicle;const v=lastStatus.vehicle;
+ const diag=lastRun?.input_diagnostics;el('inputHealth').textContent='WebSocket '+(controlReady?'已連線':'未連線')+'：回應 '+(inputRttMs===null?'—':inputRttMs+' ms')+(lastAckSample?'；伺服器 '+lastAckSample.server_processing_ms.toFixed(1)+' ms；傳輸與瀏覽器 '+lastAckSample.transport_and_browser_ms.toFixed(1)+' ms':'')+'；連續未確認 '+inputFailures+'；接收最大間隔 '+(diag?diag.max_gap_ms+' ms':'—')+(lastRun?.reason?'；停止原因 '+lastRun.reason:'');
+ el('raw').textContent=JSON.stringify(d,null,2);el('state').textContent=v?.state||'—';el('firmware').textContent='韌體：'+(v?.fw||'未收到')+'；需要 '+d.firmware_required;
+ el('connection').textContent=lastStatus.uart_error||'UART 更新距今 '+lastStatus.uart_age_s.toFixed(2)+' 秒';
+ el('output').textContent='BMduino PWM（0～255）：'+(v?v.motor_a.pwm_command+' / '+v.motor_b.pwm_command:'—')+(lastRun?'；動力指令 '+lastRun.command.right+' / '+lastRun.command.left+'%':'');
+ el('steering').textContent='舵機：'+(v?.steer_output_enabled===true?v.steer_us_command+' µs（指令）':v?.steer_output_enabled===false?'輸出關閉':'輸出狀態未知／關閉未確認');el('encoder').textContent='編碼器右／左：'+(v?v.enc_a.delta+' / '+v.enc_b.delta:'—');
+ const fresh=lastStatus.uart_age_s<1&&!lastStatus.uart_error&&lastStatus.camera_age_s<1&&!lastStatus.camera_error;
+ el('enable').disabled=!controlReady||!el('areaClear').checked||linkTesting||active(lastRun)||!(v?.state==='READY'||(v?.state==='LOCKED'&&v?.web_manual_start===true))||v?.pins?.D11!==1||v?.fw!==d.firmware_required||!fresh||!previewFresh()||!lastStatus.servo_settings_synced;
+ el('enableHint').textContent=!controlReady?'控制 WebSocket 尚未連線':!el('areaClear').checked?'請先確認現場環境':linkTesting?'連線測試進行中':active(lastRun)?'手動模式已啟用':!fresh?'相機或 UART 資料過期':!lastStatus.servo_settings_synced?'等待共用舵機設定同步':v?.pins?.D11!==1?'實體急停尚未釋放':!(v?.state==='READY'||(v?.state==='LOCKED'&&v?.web_manual_start===true))?'目前狀態不允許啟用':v?.fw!==d.firmware_required?'韌體版本不相符':!previewFresh()?'等待預覽影格；可選關閉預覽並現場目視':'可按下方啟用；啟用後按住 W 才會前進';
+ el('stop').disabled=!active(lastRun);el('recordToggle').disabled=!runId||lastRun?.status!=='running';el('recordToggle').textContent=lastRun?.recording?'停止錄影':'開始錄影';el('recordState').textContent=lastRun?(lastRun.recording?'錄影中 · ':'')+lastRun.id+' · '+lastRun.status+' '+lastRun.reason:'尚未開始';
+ const limits=v?.servo_profile;el('limits').textContent=limits?'行程 '+limits.min_us+'～'+limits.max_us+' µs':'等待限位';el('saved').textContent='保存：中心 '+d.defaults.center_us+' µs；右／左 '+d.defaults.right_pct+' / '+d.defaults.left_pct+'%；轉向 '+d.defaults.steer_rate_us_s+' µs／秒；加速／減速 '+d.defaults.accel_seconds+' / '+d.defaults.decel_seconds+' 秒';
+ const selected=el('sessionSelect').value;el('sessionSelect').replaceChildren();for(const item of [d.current,...d.history].filter((x,i,a)=>x&&a.findIndex(v=>v?.id===x.id)===i)){const option=document.createElement('option');option.value=item.id;option.textContent=item.created_at+' · '+item.status+' · '+item.id.slice(0,8);el('sessionSelect').append(option)}if(selected)el('sessionSelect').value=selected;if(!dirty)fill(d.defaults);if(runId&&lastRun?.id===runId&&!active(lastRun)){runId=null;keyboardCaptured=false;clearKeys();el('message').textContent='已停止：'+lastRun.reason}
+ if(runId&&!fresh)stopDriving('CAMERA_OR_UART_STALE');
+ el('driveHud').textContent=lastRun?'動力 '+lastRun.command.right+' / '+lastRun.command.left+'% · 轉向 '+(v?.steer_us_command||'—')+' µs':'動力 0 / 0% · 轉向 —';paintControls();
+ el('cameraState').textContent=lastStatus.camera_error||'相機正常，更新距今 '+lastStatus.camera_age_s.toFixed(2)+' 秒';
+}catch(e){el('connection').textContent='操作台連線中斷';clearKeys();stopDriving('STATUS_CONNECTION_LOST')}finally{setTimeout(poll,300)}}poll();
+let streamController=null,streamEpoch=0,decodeBusy=false,pendingJpeg=null,lastRenderedAt=null,streamStartedAt=0,renderTimes=[],streamError='等待串流',streamFailures=0;
+let previewRate=5;
+try{const saved=Number(localStorage.getItem('orin-preview-rate'));if(localStorage.getItem('orin-preview-rate')!==null&&[0,1,2,5,10].includes(saved))previewRate=saved}catch{}
+el('previewRate').value=String(previewRate);
+el('previewRate').onchange=()=>{previewRate=Number(el('previewRate').value);try{localStorage.setItem('orin-preview-rate',String(previewRate))}catch{}streamEpoch++;streamController?.abort();pendingJpeg=null;lastRenderedAt=null;el('camera').style.visibility=previewRate?'visible':'hidden';streamError=previewRate?'等待新影格':'預覽已關閉：現場目視操作';};
+el('camera').style.visibility=previewRate?'visible':'hidden';
+function previewFresh(){return previewRate===0?!!(lastStatus&&!lastStatus.camera_error&&lastStatus.camera_age_s<1&&lastStatus.uart_age_s<1):lastRenderedAt!==null&&performance.now()-lastRenderedAt<Math.max(1000,2000/previewRate)}
+function appendBytes(a,b){const out=new Uint8Array(a.length+b.length);out.set(a);out.set(b,a.length);return out}
+function headerEnd(bytes){for(let i=0;i+3<bytes.length;i++)if(bytes[i]===13&&bytes[i+1]===10&&bytes[i+2]===13&&bytes[i+3]===10)return i;return -1}
+async function renderLatest(){
+ if(decodeBusy)return;decodeBusy=true;
+ try{while(pendingJpeg){const packet=pendingJpeg;pendingJpeg=null;const bitmap=await createImageBitmap(new Blob([packet.bytes],{type:'image/jpeg'}));try{if(packet.epoch!==streamEpoch)continue;const canvas=el('camera');if(canvas.width!==bitmap.width||canvas.height!==bitmap.height){canvas.width=bitmap.width;canvas.height=bitmap.height}canvas.getContext('2d').drawImage(bitmap,0,0);lastRenderedAt=performance.now();streamFailures=0;renderTimes=renderTimes.filter(t=>lastRenderedAt-t<2000);renderTimes.push(lastRenderedAt);streamError=null;}finally{bitmap.close()}}}
+ catch(e){streamError='影像解碼失敗';diagnostic('preview_error',e.message)}
+ finally{decodeBusy=false}
+}
+async function camera(){
+ if(document.hidden||previewRate===0){setTimeout(camera,250);return}
+ const epoch=++streamEpoch,controller=new AbortController();streamController=controller;streamStartedAt=performance.now();
+ const deadline=setTimeout(()=>controller.abort(),2000);
+ try{const r=await fetch('/camera.jpg?t='+Date.now(),{cache:'no-store',priority:'low',signal:controller.signal});if(!r.ok)throw Error('預覽影格不可用');const bytes=new Uint8Array(await r.arrayBuffer());if(epoch===streamEpoch&&previewRate){pendingJpeg={bytes,epoch};await renderLatest()}}
+ catch(e){if(epoch===streamEpoch&&previewRate){streamError='預覽失敗：'+e.message;diagnostic('preview_error',e.message)}}
+ finally{clearTimeout(deadline);controller.abort();if(streamController===controller)streamController=null;setTimeout(camera,Math.max(0,1000/Math.max(previewRate,1)-(performance.now()-streamStartedAt)))}
+}
+function previewMetrics(){
+ const now=performance.now(),age=lastRenderedAt===null?null:(now-lastRenderedAt)/1000;
+ const times=renderTimes.filter(t=>now-t<2000),fps=times.length>1&&age<1?(times.length-1)*1000/(times.at(-1)-times[0]):0;
+ el('previewMetrics').textContent=(previewRate===0?'預覽已關閉（相機仍在 Orin 運作）':streamError||'預覽正常，要求 '+previewRate+' FPS')+' · 顯示 '+fps.toFixed(1)+' FPS · 最新畫面 '+(age===null?'尚未收到':age.toFixed(1)+' 秒前')+' · Orin '+(lastStatus?.preview_fps??'—')+' FPS';
+ if(runId&&!previewFresh())stopDriving('PREVIEW_LOST');
+ if(streamController&&now-streamStartedAt>1500&&(age===null||age>Math.max(1.5,2/Math.max(previewRate,1))))streamController.abort();
+ setTimeout(previewMetrics,200)
+}
+async function runLinkTest(){
+ if(linkTesting||active(lastRun)||runId){el('linkResult').textContent='請先停止駕駛再測試';return}
+ linkTesting=true;el('linkTest').disabled=true;el('enable').disabled=true;
+ const started=performance.now();let previous=started,seq=0,failures=0,maxRtt=0,maxGap=0,maxTimerLag=0,expectedTick=started;const failureReasons={};
+ function measureTimer(){if(!linkTesting)return;const now=performance.now();maxTimerLag=Math.max(maxTimerLag,now-expectedTick);expectedTick=now+200;setTimeout(measureTimer,200)}measureTimer();
+ try{
+  while(performance.now()-started<30000&&!document.hidden){
+   const now=performance.now();maxGap=Math.max(maxGap,now-previous);previous=now;const c=new AbortController();
+   try{
+    await controlRequest('probe',{seq:++seq},{timer_lag_ms:maxTimerLag});
+    maxRtt=Math.max(maxRtt,performance.now()-now);
+   }catch(e){failures++;failureReasons[e.message]=(failureReasons[e.message]||0)+1;el('linkResult').textContent='測試請求失敗：'+e.message}
+   el('linkResult').textContent='測試中 '+Math.min(30,Math.floor((performance.now()-started)/1000))+'/30 秒；請求 '+seq+'；失敗 '+failures+'；最大回應 '+Math.round(maxRtt)+' ms；請求起點最大間隔 '+Math.round(maxGap)+' ms；頁面排程最大延遲 '+Math.round(maxTimerLag)+' ms';
+   await new Promise(resolve=>setTimeout(resolve,200));
+  }
+  const detail=document.hidden?'頁面隱藏，測試提前結束':'30 秒測試完成';
+  diagnostic('finished',detail+' '+JSON.stringify(failureReasons),{seq,failures,max_rtt_ms:Math.round(maxRtt),loop_gap_ms:Math.round(maxGap),timer_lag_ms:Math.round(maxTimerLag)});
+  el('linkResult').textContent=detail+'；請求 '+seq+'，失敗 '+failures+'，最大回應 '+Math.round(maxRtt)+' ms，計時最大間隔 '+Math.round(maxGap)+' ms。'+(failures?'失敗原因：'+JSON.stringify(failureReasons)+'。':'')+'WebSocket 紀錄保存在 Orin；不會啟用車輛。';
+ }finally{linkTesting=false;el('linkTest').disabled=false}
+}
+el('linkTest').onclick=runLinkTest;
+camera();previewMetrics();
+</script><section id="firstFaultPanel" style="margin:16px;padding:16px;border:1px solid #aaa"><h3>第一故障與 I²C 診斷</h3><p id="firstFaultSummary">讀取中</p><pre id="firstFaultDetail" style="white-space:pre-wrap"></pre></section>
+<script>
+(function(){async function readFault(){try{const r=await fetch('/api/status');if(!r.ok)throw Error(r.status);const d=await r.json(),v=d.vehicle||{},f=d.fault_diagnostics||{},s=f.snapshot;document.getElementById('firstFaultSummary').textContent=`韌體診斷版本 ${v.fault_diagnostics_version??'未提供'} · I²C 累計 ${v.i2c_errors??'未知'} · UART 資料年齡 ${d.uart_age_s??'未知'} 秒`;document.getElementById('firstFaultDetail').textContent=JSON.stringify({第一故障:s?.first_fault??'尚未收到故障快照',引發停止:s?.initiating_stop??null,首次I2C:s?.first_i2c??null,最近I2C:s?.last_i2c??f.last_i2c??null,最近事件:f.last_event??null},null,2)}catch(e){document.getElementById('firstFaultSummary').textContent='診斷讀取失敗：'+e.message}finally{setTimeout(readFault,document.hidden?5000:1500)}}readFault()})();
+</script>
+</html>
+

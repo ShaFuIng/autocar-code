@@ -1,0 +1,18 @@
+step01_left34 [A] brake_zones.json 3b857976（退 8ff9c0ea）；lap_speed.json 44872cbf（退 97ae42e1）
+step02_c1in38 [A] brake_zones.json 79bd0e2f（退 3b857976）；lap_speed.json 43c3c216（退 44872cbf）
+step03_crest33 [A] lap_speed.json 05a06e7b（退 43c3c216）
+step04_c4_64 [B] lap_speed.json dc11718c（退 05a06e7b）
+step05_post46 [B] upper_wide.json cc9bc0fe（退 8b548a99）
+step06_left38 [C] brake_zones.json 616615fb（退 79bd0e2f）；lap_speed.json 9f338686（退 dc11718c）
+step07_c1in42 [C] brake_zones.json 4db1d51e（退 616615fb）；lap_speed.json 0a77e5fd（退 9f338686）
+step08_crest36 [C] lap_speed.json 8f81890c（退 0a77e5fd）
+step09_c4_70 [C] lap_speed.json c5633601（退 8f81890c）
+step10_min28 [D] speed_adapt.json 40af85cc（退 578ac6d9）
+step11_rate120 [E] lap_speed.json 14b63be6（退 c5633601）
+step12_c2br33 [F] brake_zones.json 1b638bde（退 4db1d51e）；lap_speed.json c60cc821（退 14b63be6）
+step13_bottom40 [F] brake_zones.json e44626e7（退 1b638bde）
+step14_tail170 [F] brake_zones.json 58b46cfd（退 e44626e7）
+restart/R_B1 lap_speed.json 31bea9f3
+restart/R_B2a lap_speed.json 0177319b
+restart/R_B2 lap_speed.json 565518b9
+restart/R_ramp200 lap_speed.json fd6b5adf

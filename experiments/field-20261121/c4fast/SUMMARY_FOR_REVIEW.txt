@@ -1,0 +1,94 @@
+c4fast-20261121 — 彎 4 後半段提速候選（離線；未上車；本工作沒有對 Orin 做任何寫入）
+基底＝車上現況 experiments/orin-web-snapshot-20261121c（lap_speed.py 3ad2272b、lap_speed.json 77ffbe32、speed_adapt.json 774d8f9c、brake_zones.json d29d5595）。
+
+一、彎 4 這一段的油門現在怎麼決定（讀程式＋紀錄）
+  1. speed_adapt（speed-adapt-r18）：彎內多數格是 LOW（CURVE_AHEAD／ERROR_LARGE）或 MID；curve_pwm_by 把這些格的目標換成 c4＝48。
+     STABLE／HIGH 時目標是 max_pwm 50。speed_adapt 自己的輸出不超過 hard_cap 50。→ 所以現在是 48（偶爾 50）。
+  2. 落地後前段：speed_adapt 帶 landing 鍵（landing_pwm 33、3 s）＋brake_zones「slope bottom -> curve 4」上限 31（DOWN+2.3..3.8）；
+     bottom_owner 範圍到彎道地圖 after_down idx0 FLOOR（實測 LAND8+3.0～3.5 m）。本候選不動這一段。
+  3. 要超過 50 只有 lap_speed 的位置區（主直線等 100 區用的那一套）：它在 speed_adapt 之後把油門「往上抬」到區的 pwm（60 PWM/s），
+     之後的上限（上層、brake zones、speed guard）照常壓在它後面。lap_speed 的錨點＝lap_pos 的地標事件名（有 d_cross）：
+     DOWN、LAND8、C4e 等都可用；LAND8 由俯仰判定，這 13 圈都有。
+  4. lap_speed 不抬的條件（與彎 4 相關者）：speed_adapt 仍帶 landing 鍵；level LOW 且該區沒有 allow_low（allow_low＝路徑造成的 LOW
+     〔CURVE_AHEAD／ERROR_LARGE／STEERING_LARGE／ERROR_RATE_LARGE〕且非 weave_slow 時仍可抬）；|影像誤差| > err_guard（預設 0.30）；
+     |舵量−中心| > steer_guard_us（預設 250）；|俯仰| > 5°；route 不是 WAIT_CLIMB。被擋的那一格直接回到 speed_adapt 的值（不漸降）。
+  5. 區與區之間：第一個符合的區生效；carry 不跨區 → 換區那一格從 speed_adapt 的值（≤50）重新以 60 PWM/s 爬升。
+     down_rate_pwm_s（80）只在「上一格抬到的值高於新區目標」時漸降。
+  6. 下坡超速防護：只在 down tail 期間待命；這 13 圈最後一次待命位置 LAND8+3.10～3.50 m，待命期間（LAND8≥2.5 m）輪速最高 5310 cps（觸發 6800）。
+  7. 歷史：lap_speed.json 的 note 記載 11-16 曾有彎 4 區（DOWN+6.4..10.0、油門 42），因 run 1e69「出彎轉過頭（1.2～1.35 m/s）」與 7af0 第 4 圈而移除。
+     之後才有彎 4 帶狀控制、c4_exit（11-20）、彎 4 油門 48。
+
+二、候選（只改設定：web/lap_speed.json，每輪開跑讀，免重啟）
+  on/lap_speed.step58.json、on/lap_speed.step70.json：以車上 77ffbe32 為底，只多一個區（放在四個「A」100 區之後、50 區之前，索引 4）＋一段 note：
+    anchor LAND8、from_m 3.4、to_m 9.0、pwm 58（或 70）、allow_low true、err_guard 0.6、steer_guard_us 300
+  - 起點 3.4 m：在 bottom_owner 範圍之後；車控用的是上一格的 lap_pos（已由紀錄的 rel_m 驗證），landing 鍵仍在時也會被擋。
+    實際開始抬油門的位置 13 圈為 LAND8+3.41～3.61 m。
+  - 終點 9.0 m：LAND8→C4e 為 7.2～7.6 m，所以會一路蓋到 C4e+0.8 m，主直線 100 區（排在前面）在那裡接手。
+  - err_guard 0.6：後半段 |e| P90 0.44～0.59、最大 0.47～0.69；13 圈只有 2 圈有格超過 0.6（5.6%、8.8%）。0.5／0.7 的對照在 proof/B_open_probe70_*.txt。
+  其餘 lap_speed.json 內容與順序不變（已用程式比對）。
+
+  選用（需重啟一次，預設關）：candidate/lap_speed.py af31a1c2＝車上 3ad2272b 只多一個鍵 carry_up（缺＝逐格相同）；
+    on/lap_speed.step58_carry.json／step70_carry.json＝上面兩檔＋"carry_up": true。作用：換到「目標更高」的區時沿用上一格抬到的值
+    （彎 4 區 58／70 → 主直線 100），不再先回到 speed_adapt 的值。車上是舊程式時這個鍵會被忽略（等於純 step 檔）。
+    是否值得為它重啟見第六節。
+
+三、驗證（只用三輪：run-e1b4、run-b93e、run-9934，共 17,893 格、13 個完整彎 4）
+  方法（tools/emul.py）：不是 live_pid 重播。把車上真的 lap_speed.py（LapSpeed.apply）用紀錄的每一格餵進去：speed_adapt 的油門、
+    影像誤差、舵量、路線、俯仰、lap_pos（里程、地標事件）。之後紀錄中的其他上限（brake zone 等）照原樣再壓一次。
+    沒有模擬：speed_adapt 內部油門被抬到 ≤50 後對後續格的影響（只差 0～2 PWM、且在區內被蓋掉）、車的任何反應（閉迴路）。
+    沒有用完整重播工具的理由：本候選只改 lap_speed.json，這一層的輸入全部在紀錄裡；完整重播（合成 IMU）對實車油門只有 59～76% 相同
+    （c1preload 的 fidelity），比不上直接餵紀錄。
+  E. 模擬器對實車紀錄（車上設定）：proof/E_emulation_fidelity.txt —— 有 lap_speed 紀錄的 6,046 格：區與 rel_m 100% 相同、
+     擋／不擋的判定只有 1 格不同；油門值 66～67% 完全相同、最大差 4.2 PWM（爬升時的時間基準不同）。
+  B. 候選對車上設定（同一模擬器兩側）：proof/B_open_step58.txt、B_open_step70.txt
+       TOTAL frames 17893 | PWM changed 1225 | changed outside the window (LAND8+3.0 .. C4e+3.2) 0 | lowered 0
+     每圈油門有差的範圍：LAND8+3.41～3.61 m 起，到 C4e+0.82～1.02 m 止（13 圈）。區內被擋：13 圈中 1 圈 8 格（ERROR）、1 圈 1 格（ROUTE）。
+     LAND8≥3.4 m 的平均油門：46.6～48.1 → step70 64.5～68.5（step58 見檔）。
+     舵量：這一層不輸出舵量；gain_schedule 的 k 在油門 ≥34.4 時已在下限 0.57，所以開迴路下舵量命令 0 格改變（依程式推得，沒有另外重播）。
+  C. 交接處逐格曲線：proof/C_handover_trace.txt（e1b4 第 2 圈）。到 C4e+0.99 m 為 58／70，換區那一格回到 48，之後與現況完全同一條曲線
+     （該圈出彎還有 2 格被主直線區以 LOW／ERROR_RATE_LARGE 擋下，這是現況就有的）。＝「出彎後先掉回 48 再升」在純設定版避不掉。
+  A. 選用程式（proof/A_carry_up.txt，模組層級，不是 live_pid 重播）：鍵缺時新舊模組 53,679 格（3 輪 × 3 種設定）log 與油門逐格相同；
+     開啟後只在 C4e+0.8～2 m 改變 151 格（另 1 格在 C2e+5 m），沒有任何一格變低；被 LOW 擋的格照樣掉回 48。
+
+四、粗估（一階模型，開迴路；proof/B_open_*.txt 的 MODEL 行）
+  模型：dv/dt＝(k·v_ss(油門)−v)/τ；v_ss≤50 用車上 speed_guard 的油門→輪速表、>50 用實測比例（55／60／65／70%＝50% 的 1.034／1.057／1.079／1.098，
+        100%＝6492 cps）；τ 加速 0.405 s、減速 0.631 s（車上表）；k 每圈對編碼器擬合（中位 1.02）。模型對編碼器的均方根誤差中位 0.136 m/s
+        （編碼器 5 Hz，本身就粗），所以下面是量級，不是預測值。
+              LAND8+2.0～C4e+3.0 省下的時間（13 圈）      C4e 處車速
+    step58    中位 0.25 s（0.23～0.28）                     +0.09 m/s
+    step70    中位 0.41 s（0.38～0.47）                     +0.15 m/s（模型約 1.21→1.35）
+  主直線尾端／進下一個彎 1（proof/D_risk.txt 第 3 節）：模型在 C4e+3.0 m 新舊只差 0.01 m/s、C4e+6.0 與 9.0 m 相同（1.47、1.30）
+    → 依模型，進彎 1 的車速不變。閉迴路未驗。
+
+五、風險（數據在 proof/D_risk.txt）
+  1. 舵量餘裕（後半段，13 圈）：舵量−中心最大 187～248 µs（中位 213；右極限＝中心＋575），沒有一格超過 250；|e| P90 0.44～0.59；轉速標準差 5.4～11.3 dps。
+     註：steer_guard_us 300 之下，這些圈沒有格會因舵量被擋；若實車舵量超過 300，該格會直接掉回 48（油門會一格一格跳）。
+  2. 出彎後 C4e+0～3 m（13 圈，現況）：誤差平均 −0.02～+0.17、最小 −0.20、最大 +0.51；轉速標準差 8.2～13.7 dps、最大 |gz| 16～31 dps。
+     提速後這裡會不會變大，離線驗不到。11-16 的前例（第一節 7）是在 1.2～1.35 m/s 出彎轉過頭；step70 的模型出彎車速約 1.35 m/s。
+  3. 下坡超速防護：13 圈在 LAND8+3.10～3.50 m 後已不待命，待命期間輪速最高 5310 cps（觸發 6800）；區從 3.4 m 開始、0.2～0.4 s 才到目標 → 依紀錄不會碰到，未實車驗。
+  4. 下一圈落地：區在 C4e+0.8 m 結束，之後油門曲線與現況逐格相同（純設定版）；speed_adapt 內部值最多被帶到 50。依程式不影響下一圈，未實車驗。
+  5. 模擬器不是完整重播：見第三節方法。區內 speed_adapt 若因車速變高而更常判 ERROR／ERROR_RATE，被擋的比例會比這裡多。
+  6. 油門 70 的實際車速增益小：平地穩態 70% 只比 50% 快約 10%；效益主要來自彎內約 4 m 與出彎初速，量級 0.25／0.4 s（模型）。
+
+六、上車步驟（都需當次授權；本檔不含任何車端動作）
+  純設定（建議）：車靜止、無輪次時，核對車上 web/lap_speed.json＝77ffbe32 → 備份 → 放上 on/lap_speed.step58.json（存成 lap_speed.json）。
+    每輪開跑讀，不用重啟、不用重載模型。先跑 step58 一輪（3～4 圈），看第七節的指標；通過再換 step70。
+  選用 carry_up：另換 web/lap_speed.py＝candidate/lap_speed.py（核對車上＝3ad2272b）＋對應的 *_carry.json，重啟 orin-dashboard 一次。
+    只省「換區那 0.15～0.4 s 的 48」，而且出彎被 LOW 擋的格照樣會掉；建議先不做，等純設定版實測出彎沒問題再考慮。
+  退回：lap_speed.json 放回 77ffbe32（等於刪掉那個區）；程式放回 3ad2272b＋重啟。
+
+七、實車要看的指標與「該退」的判準
+  看：proposal.lap_speed.zone 以「c4 back half」開頭的格（區有沒有生效、blocked 的原因與比例）；彎 4 時間（現況 6.3～6.8 s）；
+      後半段 |e| P90（現況約 0.51）與舵量−中心最大值（現況 ≤248）；出彎後 C4e+0～3 m 誤差範圍（現況 −0.20～+0.51）與 |gz| 最大（現況 ≤31 dps）；
+      主直線 100 區油門 ≥95 的比例（現況約 73～80%）；進下一個彎 1 的誤差峰值與命令峰值（現況後續圈約 0.72／1790）；
+      speed_guard.dh 有沒有出現 TRIGGER；彎 4 外線淨空（arc_lat clr_out）。
+  退：出彎後誤差最小值低於 −0.4 或 |gz| 明顯高於 31 dps 的圈出現 2 次以上；舵量−中心超過 300（區被擋、油門跳動）成為常態；
+      speed_guard TRIGGER；彎 4 外線淨空比現況明顯變差；任何一圈在彎 4 或主直線失控。step70 不過就留在 step58。
+  （以上判準是依現況分布訂的觀察線，不是驗證過的安全門檻。）
+
+八、沒有驗到的事
+  閉迴路的一切（車速真的變多少、走線、出彎擺動、主直線、彎 1 入彎）；完整 live_pid 重播（本工作用模組層級模擬，理由見第三節）；
+  carry_up 程式在車上的行為；電池電壓對油門 70 的影響。
+
+檔案：on/（step58、step70、step58_carry、step70_carry）、candidate/lap_speed.py、tools/emul.py、tools/analyse.py、proof/（A_carry_up、B_open_*、
+  C_handover_trace、D_risk、E_emulation_fidelity、probes/）、MANIFEST.sha256。

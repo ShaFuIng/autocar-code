@@ -1,0 +1,10 @@
+c3 front lag 0.15 s: curvature = 0.160 * (cmd +38)  r 0.85  n 1665 | per pass gain median 0.163 (p10 0.119 p90 0.180), mean cmd +131 mean curvature 27.1
+c3 front lag 0.20 s: curvature = 0.161 * (cmd +36)  r 0.84  n 1665 | per pass gain median 0.164 (p10 0.117 p90 0.180), mean cmd +131 mean curvature 27.0
+c3 front lag 0.25 s: curvature = 0.159 * (cmd +41)  r 0.84  n 1665 | per pass gain median 0.161 (p10 0.121 p90 0.176), mean cmd +131 mean curvature 27.4
+c3 front lag 0.30 s: curvature = 0.149 * (cmd +53)  r 0.77  n 1665 | per pass gain median 0.147 (p10 0.115 p90 0.166), mean cmd +131 mean curvature 27.4
+c3 front lag 0.35 s: curvature = 0.137 * (cmd +71)  r 0.72  n 1665 | per pass gain median 0.140 (p10 0.105 p90 0.155), mean cmd +131 mean curvature 27.6
+c4       lag 0.15 s: curvature = 0.146 * (cmd +38)  r 0.70  n 2988 | per pass gain median 0.145 (p10 0.096 p90 0.179), mean cmd +124 mean curvature 23.6
+c4       lag 0.20 s: curvature = 0.148 * (cmd +35)  r 0.69  n 2988 | per pass gain median 0.144 (p10 0.110 p90 0.180), mean cmd +124 mean curvature 23.5
+c4       lag 0.25 s: curvature = 0.158 * (cmd +27)  r 0.76  n 2988 | per pass gain median 0.157 (p10 0.121 p90 0.191), mean cmd +124 mean curvature 23.7
+c4       lag 0.30 s: curvature = 0.150 * (cmd +35)  r 0.70  n 2988 | per pass gain median 0.151 (p10 0.118 p90 0.173), mean cmd +124 mean curvature 23.7
+c4       lag 0.35 s: curvature = 0.130 * (cmd +60)  r 0.63  n 2988 | per pass gain median 0.129 (p10 0.084 p90 0.160), mean cmd +124 mean curvature 23.9

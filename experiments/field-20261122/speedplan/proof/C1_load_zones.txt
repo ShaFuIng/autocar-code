@@ -1,0 +1,380 @@
+== base（快照 c）
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 40.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS None                                                    | BZ curve 1 after the slop cap 32.0
+  C4e   +10.6 | LS None                                                    | BZ curve 1 after the slop cap 32.0
+  C1s+   +0.2 | LS None                                                    | BZ curve 1 after the slop cap 32.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS None                                                    | BZ None
+  C2e    +9.0 | LS None                                                    | BZ curve 3 entry (11-19 f cap 30.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 30.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 27            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 58           | BZ None
+== step01_left34
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 40.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS None                                                    | BZ curve 1 after the slop cap 32.0
+  C4e   +10.6 | LS None                                                    | BZ curve 1 after the slop cap 32.0
+  C1s+   +0.2 | LS None                                                    | BZ curve 1 after the slop cap 32.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 34             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 34             | BZ curve 3 entry (11-19 f cap 34.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 34.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 27            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 58           | BZ None
+== step02_c1in38
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 40.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 3(C4e) rel 9.60 pwm 38             | BZ curve 1 after the slop cap 38.0
+  C4e   +10.6 | LS curve 1 entry bridge 3(C4e) rel 10.60 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1s+   +0.2 | LS curve 1 entry bridge 3(C4e) rel 10.94 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 34             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 34             | BZ curve 3 entry (11-19 f cap 34.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 34.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 27            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 58           | BZ None
+== step03_crest33
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 40.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 3(C4e) rel 9.60 pwm 38             | BZ curve 1 after the slop cap 38.0
+  C4e   +10.6 | LS curve 1 entry bridge 3(C4e) rel 10.60 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1s+   +0.2 | LS curve 1 entry bridge 3(C4e) rel 10.94 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 34             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 34             | BZ curve 3 entry (11-19 f cap 34.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 34.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 33            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 58           | BZ None
+== step04_c4_64
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 40.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 3(C4e) rel 9.60 pwm 38             | BZ curve 1 after the slop cap 38.0
+  C4e   +10.6 | LS curve 1 entry bridge 3(C4e) rel 10.60 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1s+   +0.2 | LS curve 1 entry bridge 3(C4e) rel 10.94 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 34             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 34             | BZ curve 3 entry (11-19 f cap 34.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 34.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 33            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 64           | BZ None
+== step05_post46
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 3(C4e) rel 9.60 pwm 38             | BZ curve 1 after the slop cap 38.0
+  C4e   +10.6 | LS curve 1 entry bridge 3(C4e) rel 10.60 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1s+   +0.2 | LS curve 1 entry bridge 3(C4e) rel 10.94 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 34             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 34             | BZ curve 3 entry (11-19 f cap 34.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 34.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 33            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 64           | BZ None
+== step06_left38
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 3(C4e) rel 9.60 pwm 38             | BZ curve 1 after the slop cap 38.0
+  C4e   +10.6 | LS curve 1 entry bridge 3(C4e) rel 10.60 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1s+   +0.2 | LS curve 1 entry bridge 3(C4e) rel 10.94 pwm 38            | BZ curve 1 after the slop cap 38.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 33            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 64           | BZ None
+== step07_c1in42
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 33            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 64           | BZ None
+== step08_crest36
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 64           | BZ None
+== step09_c4_70
+  speed_adapt min/mid/max 24/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== step10_min28
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 60.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== step11_rate120
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS None                                                    | BZ curve 2 entry (11-16 f cap 30.0
+  C1e   +12.4 | LS None                                                    | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== step12_c2br33
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 36.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== step13_bottom40
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 40.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== step14_tail170
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ None
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 40.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== restart\R_B1
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ None
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 40.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== restart\R_B2
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ None
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 40.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== restart\R_B2a
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ None
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 40.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None
+== restart\R_ramp200
+  speed_adapt min/mid/max 28/30.0/50.0  upper_wide on True post_pwm 46.0 turn_pwm 30.0 err None  lap_speed rate 120.0
+  C4e    +5.0 | LS A main straight 100 (C(C4e) rel 5.00 pwm 100            | BZ None
+  C4e    +9.6 | LS curve 1 entry bridge 4(C4e) rel 9.60 pwm 42             | BZ None
+  C4e   +10.6 | LS curve 1 entry bridge 4(C4e) rel 10.60 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1s+   +0.2 | LS curve 1 entry bridge 4(C4e) rel 10.94 pwm 42            | BZ curve 1 after the slop cap 42.0
+  C1e   +11.0 | LS curve 2 entry bridge 3(C1e) rel 11.00 pwm 33            | BZ curve 2 entry (11-16 f cap 33.0
+  C1e   +12.4 | LS curve 2 entry bridge 3(C1e) rel 12.40 pwm 33            | BZ None
+  C2e    +3.0 | LS A circle straight 100 (C2e) rel 3.00 pwm 100            | BZ circle-crossing guard  cap 100.0
+  C2e    +6.0 | LS circle straight (C2e+0(C2e) rel 6.00 pwm 50             | BZ circle-crossing guard  cap 100.0
+  C2e    +7.0 | LS left bend -> curve 3 e(C2e) rel 7.00 pwm 38             | BZ None
+  C2e    +9.0 | LS left bend -> curve 3 e(C2e) rel 9.00 pwm 38             | BZ curve 3 entry (11-19 f cap 38.0
+  C2e   +10.6 | LS None                                                    | BZ curve 3 entry (11-19 f cap 38.0
+  C3s    +1.0 | LS c3 front 48 (C3s+0.3..(C3s) rel 1.00 pwm 48             | BZ None
+  C3s    +5.0 | LS None                                                    | BZ curve 3 tail (runC 11- cap 28.0
+  C3s    +6.6 | LS None                                                    | BZ None
+  RAMP   +1.0 | LS A ramp 100 (RAMP+0.3..(RAMP) rel 1.00 pwm 100           | BZ None
+  RAMP   +3.0 | LS crest (RAMP+2.3 .. +4.(RAMP) rel 3.00 pwm 36            | BZ ramp last metre cap 40 cap 50.0
+  LAND8  +1.0 | LS None                                                    | BZ slope bottom -> curve  cap 40.0
+  LAND8  +5.0 | LS c4 back half 58 (LAND8(LAND8) rel 5.00 pwm 70           | BZ None

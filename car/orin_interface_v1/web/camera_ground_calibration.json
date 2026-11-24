@@ -1,0 +1,152 @@
+{
+ "version": "camera-ground-20261109-r2",
+ "date": "2026-11-09",
+ "camera_pose": "current fixed view (user, 2026-11-09 evening)",
+ "image_size": [
+  640,
+  360
+ ],
+ "homography_image_to_ground_cm": [
+  [
+   -0.15814323671781763,
+   -0.0054270402019372475,
+   53.299599488926496
+  ],
+  [
+   -0.010394124797423627,
+   -0.01821740515439466,
+   -71.54463499234244
+  ],
+  [
+   -0.0003437155985005508,
+   -0.01013832954490162,
+   1.0
+  ]
+ ],
+ "inverse": [
+  [
+   -6.060871011288123,
+   -4.360389869867953,
+   11.079495791691533
+  ],
+  [
+   0.28516895890952215,
+   -1.1397205672121693,
+   -96.74028327101132
+  ],
+  [
+   0.0008079209743217071,
+   -0.013053596713316504,
+   0.023023323458479482
+  ]
+ ],
+ "ground_frame": "x cm right of lane centre (lane inner width 46 cm), z cm forward from front-tyre foremost edge",
+ "input": "tape centres at 50/80/100/120 cm at both white lines (100 cm transparent tape added after validation); endpoints at V4 white-line inner edge of snapshot tapes4",
+ "fit": {
+  "rmse_cm": 1.0870433074212775,
+  "max_cm": 1.8874304064182608,
+  "residual_cm": [
+   [
+    -0.57717562128013,
+    -0.36112566572211335
+   ],
+   [
+    0.5110875661016756,
+    1.0498674949449054
+   ],
+   [
+    0.05799554601953716,
+    1.0744903246938549
+   ],
+   [
+    0.39972364746312294,
+    -1.844617723196592
+   ],
+   [
+    0.5113235872401667,
+    -0.8449936489478205
+   ],
+   [
+    -1.2263030895281766,
+    0.31759434180264634
+   ],
+   [
+    0.06425111016926266,
+    0.11820400637444095
+   ],
+   [
+    0.25909866261206815,
+    0.49057009261176177
+   ]
+  ]
+ },
+ "leave_one_out_cm": {
+  "50": [
+   48.0,
+   54.1
+  ],
+  "80": [
+   81.3,
+   77.3
+  ],
+  "100": [
+   98.8,
+   100.5
+  ],
+  "120": [
+   121.6,
+   122.6
+  ]
+ },
+ "validation_100cm": {
+  "note": "r1 (50/80/120 only) predicted the 100 cm tape at 98.8/100.5 cm before it was included in r2",
+  "left": 98.8,
+  "right": 100.5
+ },
+ "independent_checks": {
+  "baseline_lane_edges_row_xleft_xright_z": [
+   [
+    145,
+    -22.1,
+    22.9,
+    137.8
+   ],
+   [
+    175,
+    -23.2,
+    23.6,
+    90.9
+   ],
+   [
+    205,
+    -24.2,
+    23.8,
+    67.9
+   ],
+   [
+    235,
+    -23.9,
+    23.9,
+    54.2
+   ],
+   [
+    265,
+    -23.8,
+    24.0,
+    45.1
+   ]
+  ],
+  "bottom_row_z_cm": 29.6,
+  "user_nearest_visible_cm": 27
+ },
+ "valid_range_cm": [
+  30,
+  140
+ ],
+ "note": "160 cm tape too thin to detect reliably; beyond ~140 cm one pixel is several cm. Flat ground only (not ramp/upper/downhill). Recheck camera with baseline_edges.json before use.",
+ "snapshots": {
+  "baseline": "baseline/raw.jpg",
+  "calibration": "tapes4/raw.jpg"
+ },
+ "previous": "camera-ground-20261109-r1 (50/80/120 only)"
+}

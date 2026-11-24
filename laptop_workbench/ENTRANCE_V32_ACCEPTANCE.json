@@ -1,0 +1,74 @@
+{
+  "job": "8e65b7bc19a3403cafccaad50b770645",
+  "frames": 1760,
+  "worker_mismatch_frames": [],
+  "opencv": "4.11.0",
+  "hardware_output": false,
+  "unit_tests": 3,
+  "baseline_v31_sha256": "461b104e8bc626f8f9de0d24e3aaad9559eff9992872e93ba11d6e6eee637f12",
+  "baseline_K_sha256": "081a50dae7a8d7124e4e43f9f68c54886be51c21b8c8080865512bd68d7569e1",
+  "regression": {
+    "(23.0, 24.0)": {
+      "changed_frames": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        238
+      ],
+      "median_delta_px": 1.081481883727065,
+      "max_delta_px": 22.058307596535997
+    },
+    "(65.0, 82.0)": {
+      "changed_frames": [
+        661,
+        687,
+        688,
+        692,
+        698,
+        701,
+        702,
+        705,
+        709,
+        714,
+        717,
+        789,
+        790,
+        794,
+        796,
+        810,
+        817,
+        819
+      ],
+      "median_delta_px": 0.0,
+      "max_delta_px": 37.54049326832137
+    },
+    "(102.0, 120.0)": {
+      "changed_frames": [
+        1049,
+        1058,
+        1064,
+        1065,
+        1066,
+        1067,
+        1068,
+        1069,
+        1082,
+        1085,
+        1086,
+        1087,
+        1088,
+        1091,
+        1093
+      ],
+      "median_delta_px": 0.0,
+      "max_delta_px": 34.20235451629924
+    }
+  },
+  "empty_new_A": 0,
+  "empty_integrated_K": 0,
+  "focus_96_4_96_8": "far ramp pair rejected; near single boundary with historical width; not ground truth",
+  "orin_deployed": false
+}

@@ -1,0 +1,14 @@
+test_already_above_target_untouched (test_preload.T.test_already_above_target_untouched) ... ok
+test_guards (test_preload.T.test_guards) ... ok
+test_key_absent_is_the_car_module (test_preload.T.test_key_absent_is_the_car_module) ... ok
+test_not_on_later_laps_or_after_a_landmark (test_preload.T.test_not_on_later_laps_or_after_a_landmark) ... ok
+test_one_step_and_targets (test_preload.T.test_one_step_and_targets) ... ok
+test_other_releases_still_run (test_preload.T.test_other_releases_still_run) ... ok
+test_pause_resume_rebuilds_the_controller (test_preload.T.test_pause_resume_rebuilds_the_controller) ... ok
+test_triggers_once_and_ramps (test_preload.T.test_triggers_once_and_ramps) ... ok
+test_wrapped_pid (test_preload.T.test_wrapped_pid) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.008s
+
+OK

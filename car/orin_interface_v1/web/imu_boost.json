@@ -1,0 +1,15 @@
+{
+ "enabled": true,
+ "uphill_pwm": 25,
+ "on_deg": 5.0,
+ "off_deg": 3.0,
+ "hold_s": 0.2,
+ "max_age_s": 0.3,
+ "flat_pitch_deg": 1.0,
+ "downhill_pwm": null,
+ "downhill_on_deg": 8.0,
+ "cap_pwm": 25,
+ "latest_path": "/home/jetson/orin_interface_v1/logs/imu/latest.json",
+ "note": "2026-11-05 new MPU6050 chip (imu-logger-r5, no accel calibration): flat_pitch_deg -0.7 -> 2.6 (car still on the flat track facing forward 15:44: 2.54 / 2.63; same spot turned left 90 deg: 1.95, floor tilt). 2026-11-02 r5: uphill_pwm 20 -> 25 (user: uphill 25-30, speed-adapt gives 30 when steady). 2026-11-02: flat_pitch_deg 1.66 -> -0.7 after the 9 cm rear wheels (stationary on the track: -0.71..-0.69). r2 2026-11-01: on 5 / off 3 deg, hold 0.2 s, PWM rate 10/s (899318f1 ramp-entry stall and 15->20 jump); downhill PWM off until downhill data exists",
+ "pwm_rate": 10.0
+}

@@ -1,0 +1,13 @@
+car lap_speed.json 77ffbe32      e1b4 frames  6857 | frames with a lap_speed log  2332 | log + PWM identical  6857 | different 0
+car lap_speed.json 77ffbe32      b93e frames  5434 | frames with a lap_speed log  1819 | log + PWM identical  5434 | different 0
+car lap_speed.json 77ffbe32      9934 frames  5602 | frames with a lap_speed log  1895 | log + PWM identical  5602 | different 0
+c4fast step70 637c8f9c           e1b4 frames  6857 | frames with a lap_speed log  2816 | log + PWM identical  6857 | different 0
+c4fast step70 637c8f9c           b93e frames  5434 | frames with a lap_speed log  2190 | log + PWM identical  5434 | different 0
+c4fast step70 637c8f9c           9934 frames  5602 | frames with a lap_speed log  2288 | log + PWM identical  5602 | different 0
+c3front s2_48 2d340b41           e1b4 frames  6857 | frames with a lap_speed log  2461 | log + PWM identical  6857 | different 0
+c3front s2_48 2d340b41           b93e frames  5434 | frames with a lap_speed log  1931 | log + PWM identical  5434 | different 0
+c3front s2_48 2d340b41           9934 frames  5602 | frames with a lap_speed log  2005 | log + PWM identical  5602 | different 0
+straightfast A2 (no new keys)    e1b4 frames  6857 | frames with a lap_speed log  2332 | log + PWM identical  6857 | different 0
+straightfast A2 (no new keys)    b93e frames  5434 | frames with a lap_speed log  1819 | log + PWM identical  5434 | different 0
+straightfast A2 (no new keys)    9934 frames  5602 | frames with a lap_speed log  1895 | log + PWM identical  5602 | different 0
+TOTAL frames 71572 identical 71572 different 0 all_identical True

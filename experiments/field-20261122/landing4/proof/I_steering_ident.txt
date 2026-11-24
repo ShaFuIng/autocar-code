@@ -1,0 +1,19 @@
+  landing x 0..1.6 m tau 0.10 s: gain 0.160 deg/m per us, zero at centre -16 us, r2 0.54, n 740
+  landing x 0..1.6 m tau 0.15 s: gain 0.176 deg/m per us, zero at centre -1 us, r2 0.64, n 740
+  landing x 0..1.6 m tau 0.20 s: gain 0.186 deg/m per us, zero at centre +8 us, r2 0.68, n 740
+  landing x 0..1.6 m tau 0.25 s: gain 0.187 deg/m per us, zero at centre +10 us, r2 0.66, n 740
+  landing x 0..1.6 m tau 0.30 s: gain 0.175 deg/m per us, zero at centre +3 us, r2 0.55, n 740
+  landing x 0..1.6 m tau 0.35 s: gain 0.160 deg/m per us, zero at centre -8 us, r2 0.43, n 740
+  lower slope x -1.2..-0.1 m tau 0.10 s: gain 0.107 deg/m per us, zero at centre -25 us, r2 0.34, n 491
+  lower slope x -1.2..-0.1 m tau 0.15 s: gain 0.127 deg/m per us, zero at centre -14 us, r2 0.43, n 491
+  lower slope x -1.2..-0.1 m tau 0.20 s: gain 0.140 deg/m per us, zero at centre -10 us, r2 0.44, n 491
+  lower slope x -1.2..-0.1 m tau 0.25 s: gain 0.140 deg/m per us, zero at centre -12 us, r2 0.39, n 491
+  lower slope x -1.2..-0.1 m tau 0.30 s: gain 0.129 deg/m per us, zero at centre -19 us, r2 0.32, n 491
+  lower slope x -1.2..-0.1 m tau 0.35 s: gain 0.121 deg/m per us, zero at centre -24 us, r2 0.26, n 491
+  curve 4 x 2.0..4.5 m tau 0.10 s: gain 0.160 deg/m per us, zero at centre -25 us, r2 0.52, n 1325
+  curve 4 x 2.0..4.5 m tau 0.15 s: gain 0.166 deg/m per us, zero at centre -19 us, r2 0.59, n 1325
+  curve 4 x 2.0..4.5 m tau 0.20 s: gain 0.165 deg/m per us, zero at centre -21 us, r2 0.61, n 1325
+  curve 4 x 2.0..4.5 m tau 0.25 s: gain 0.162 deg/m per us, zero at centre -25 us, r2 0.60, n 1325
+  curve 4 x 2.0..4.5 m tau 0.30 s: gain 0.149 deg/m per us, zero at centre -38 us, r2 0.54, n 1325
+  curve 4 x 2.0..4.5 m tau 0.35 s: gain 0.134 deg/m per us, zero at centre -58 us, r2 0.45, n 1325
+best: (0.2, 0.18610257823591222, 7.6662516286829145, 0.6845020336842611, 740) (0.2, 0.14013079061659484, -10.015644969008996, 0.4429750610030718, 491) (0.2, 0.16481055128670954, -21.263830081642922, 0.6077253630159906, 1325)

@@ -1,0 +1,35 @@
+S1. PWM-100 zones, recorded frames of e1b4, b93e, 9934 (complete laps only). Car config lap_speed.json 77ffbe32 / speed_adapt.json 774d8f9c.
+    class = the rule that kept the frame below 100. deficit = sum((100 - PWM) * dt) in PWM*s; share of the deficit ~ share of the lost time.
+
+== zone main (C4e), 10 passes, 1097 frames | zone time median 4.59 s, distance 6.34 m | model, counted only up to the zone end: all-100 inside the zone would save median 0.08 s per pass (min 0.06 max 0.17; model rms vs encoder 0.140 m/s, k 0.99); speed at the zone end 1.43 -> 1.43 m/s
+   class                                           frames  %frames  %deficit     s/pass
+   RAMP after zone entry                              138    12.6%     54.2%      0.042
+   RAMP after LOW:ERROR_RATE_LARGE                     96     8.8%     34.7%      0.027
+   RAMP after LOW:ERROR_RATE_LARGE+weave               22     2.0%      7.3%      0.006
+   BLOCK LOW:ERROR_RATE_LARGE                           6     0.5%      3.3%      0.003
+   BLOCK LOW:ERROR_RATE_LARGE+weave                     1     0.1%      0.6%      0.000
+   FULL                                               834    76.0%      0.0%      0.000
+   speed_adapt (level, reason, weave_slow) inside the zone: ('HIGH', 'STABLE', True) 37%, ('HIGH', 'STABLE', False) 37%, ('MID', 'STABLE_PENDING', False) 16%, ('MID', 'STABLE_PENDING', True) 6%, ('MID', 'ERROR_RATE', False) 3%, ('LOW', 'ERROR_RATE_LARGE', False) 1%, ('MID', 'ERROR', False) 0%, ('MID', 'ERROR_RATE', True) 0%
+
+== zone diag (C1e), 10 passes, 1224 frames | zone time median 5.33 s, distance 7.18 m | model, counted only up to the zone end: all-100 inside the zone would save median 0.17 s per pass (min 0.06 max 0.32; model rms vs encoder 0.154 m/s, k 1.00); speed at the zone end 1.38 -> 1.43 m/s
+   class                                           frames  %frames  %deficit     s/pass
+   RAMP after zone entry                              203    16.6%     38.9%      0.068
+   RAMP after LOW:ERROR_RATE_LARGE+weave              140    11.4%     30.8%      0.054
+   RAMP after ERR_GUARD                                46     3.8%     12.1%      0.021
+   BLOCK ERR_GUARD                                     32     2.6%     11.5%      0.020
+   BLOCK LOW:ERROR_RATE_LARGE+weave                    21     1.7%      6.7%      0.012
+   FULL                                               782    63.9%      0.0%      0.000
+   speed_adapt (level, reason, weave_slow) inside the zone: ('HIGH', 'STABLE', True) 36%, ('HIGH', 'STABLE', False) 28%, ('MID', 'STABLE_PENDING', True) 14%, ('MID', 'STABLE_PENDING', False) 12%, ('MID', 'ERROR', True) 2%, ('LOW', 'ERROR_RATE_LARGE', True) 2%, ('MID', 'ERROR_RATE', False) 2%, ('LOW', 'ERROR_RATE_LARGE', False) 1%
+
+== zone circle (C2e), 10 passes, 805 frames | zone time median 3.39 s, distance 4.42 m | model, counted only up to the zone end: all-100 inside the zone would save median 0.14 s per pass (min 0.11 max 0.27; model rms vs encoder 0.148 m/s, k 0.99); speed at the zone end 1.28 -> 1.42 m/s
+   class                                           frames  %frames  %deficit     s/pass
+   RAMP after zone entry                              231    28.7%     50.3%      0.073
+   RAMP after LOW:ERROR_RATE_LARGE+weave              142    17.6%     34.0%      0.049
+   BLOCK LOW:ERROR_RATE_LARGE+weave                    40     5.0%     12.8%      0.018
+   BLOCK LOW:CURVE_AHEAD+weave                          8     1.0%      2.9%      0.004
+   FULL                                               384    47.7%      0.0%      0.000
+   speed_adapt (level, reason, weave_slow) inside the zone: ('HIGH', 'STABLE', True) 31%, ('HIGH', 'STABLE', False) 25%, ('MID', 'STABLE_PENDING', True) 18%, ('MID', 'STABLE_PENDING', False) 7%, ('LOW', 'ERROR_RATE_LARGE', True) 5%, ('MID', 'ERROR', False) 5%, ('MID', 'ERROR_RATE', True) 4%, ('MID', 'ERROR', True) 3%
+
+SUM of the three zone medians: 0.40 s per lap counted only up to each zone end (PWM 100 on every in-zone frame, entry ramp included)
+The speed carried past the zone end is not in this number; proof/E_candidates.txt counts the window up to the next curve entry (model and a model-free regression).
+s/pass in the tables = the zone-only figure split by the share of the PWM deficit; read them as proportions.

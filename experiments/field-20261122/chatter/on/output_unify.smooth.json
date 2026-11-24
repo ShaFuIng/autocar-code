@@ -1,0 +1,12 @@
+{
+ "revision": "output-unify-r1",
+ "enabled": true,
+ "method": "smooth",
+ "smooth_tau_s": 0.05,
+ "threshold_us": 10.0,
+ "rate_us_s": null,
+ "dt_max_s": 0.3,
+ "bypass_reasons": [],
+ "note": "B: first-order low-pass of the dispatched steering (0.05 s, time based), play compensation direction decided on the smoothed command with threshold 10 us; offsets right/left from play_comp.json (55/55). Bypass: lost-policy hold rows, WARMUP, dashed TURN, heading-hold TURN, start centring, uncompensated commands.",
+ "note_chatter_20261122": "chatter-20261122: optional. Code is already on the car (output_stage.py 7aa9716d + output_unify.py dbecc7f6 + live_pid unify_start since 11-17); this file alone switches it on at the next run start (no restart). Never run on the car. Open loop on 11-22 runs: play-comp flips c4 band 5.0->3.1/s, curve 2 6.0->4.2, landing 6.8->3.2, straights 2.0-2.5->1.7-2.0; every non-bypass command ~1 frame later (11-17: 63 % step lag +0.033 s). Delete = off."
+}

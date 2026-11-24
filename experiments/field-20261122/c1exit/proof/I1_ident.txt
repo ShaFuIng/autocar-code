@@ -1,0 +1,53 @@
+passes 34
+
+steering identification (frames with v > 0.6):  curvature[deg/m] = -gz/v = G * (u(t - lag) - zero)
+  pre-play command   lag 0.10: G 0.185 deg/m/us  zero at   -15 us  r 0.905  resid sd 10.3 deg/m  n 4573
+  pre-play command   lag 0.15: G 0.190 deg/m/us  zero at    -9 us  r 0.931  resid sd 8.8 deg/m  n 4573
+  pre-play command   lag 0.20: G 0.193 deg/m/us  zero at    -6 us  r 0.943  resid sd 8.1 deg/m  n 4573
+  pre-play command   lag 0.25: G 0.192 deg/m/us  zero at    -4 us  r 0.937  resid sd 8.4 deg/m  n 4573
+  pre-play command   lag 0.30: G 0.187 deg/m/us  zero at    -5 us  r 0.914  resid sd 9.8 deg/m  n 4573
+  sent, no play      lag 0.10: G 0.133 deg/m/us  zero at   -70 us  r 0.765  resid sd 15.6 deg/m  n 4573
+  sent, no play      lag 0.15: G 0.143 deg/m/us  zero at   -56 us  r 0.820  resid sd 13.8 deg/m  n 4573
+  sent, no play      lag 0.20: G 0.148 deg/m/us  zero at   -47 us  r 0.857  resid sd 12.5 deg/m  n 4573
+  sent, no play      lag 0.25: G 0.154 deg/m/us  zero at   -40 us  r 0.884  resid sd 11.3 deg/m  n 4573
+  sent, no play      lag 0.30: G 0.153 deg/m/us  zero at   -38 us  r 0.883  resid sd 11.4 deg/m  n 4573
+  sent, play 110     lag 0.10: G 0.180 deg/m/us  zero at   -17 us  r 0.895  resid sd 10.8 deg/m  n 4573
+  sent, play 110     lag 0.15: G 0.185 deg/m/us  zero at   -11 us  r 0.921  resid sd 9.4 deg/m  n 4573
+  sent, play 110     lag 0.20: G 0.187 deg/m/us  zero at    -7 us  r 0.932  resid sd 8.8 deg/m  n 4573
+  sent, play 110     lag 0.25: G 0.185 deg/m/us  zero at    -6 us  r 0.927  resid sd 9.1 deg/m  n 4573
+  sent, play 110     lag 0.30: G 0.180 deg/m/us  zero at    -7 us  r 0.904  resid sd 10.3 deg/m  n 4573
+  sent, play 130     lag 0.10: G 0.184 deg/m/us  zero at   -12 us  r 0.907  resid sd 10.2 deg/m  n 4573
+  sent, play 130     lag 0.15: G 0.188 deg/m/us  zero at    -7 us  r 0.928  resid sd 9.0 deg/m  n 4573
+  sent, play 130     lag 0.20: G 0.189 deg/m/us  zero at    -4 us  r 0.933  resid sd 8.7 deg/m  n 4573
+  sent, play 130     lag 0.25: G 0.187 deg/m/us  zero at    -3 us  r 0.922  resid sd 9.4 deg/m  n 4573
+  sent, play 130     lag 0.30: G 0.181 deg/m/us  zero at    -5 us  r 0.895  resid sd 10.8 deg/m  n 4573
+  sent, play 155     lag 0.10: G 0.189 deg/m/us  zero at    -6 us  r 0.917  resid sd 9.7 deg/m  n 4573
+  sent, play 155     lag 0.15: G 0.192 deg/m/us  zero at    -2 us  r 0.931  resid sd 8.9 deg/m  n 4573
+  sent, play 155     lag 0.20: G 0.191 deg/m/us  zero at    -0 us  r 0.929  resid sd 8.9 deg/m  n 4573
+  sent, play 155     lag 0.25: G 0.188 deg/m/us  zero at    -0 us  r 0.913  resid sd 9.9 deg/m  n 4573
+  sent, play 155     lag 0.30: G 0.181 deg/m/us  zero at    -3 us  r 0.883  resid sd 11.4 deg/m  n 4573
+
+camera error model A (free)  e = f(tb) + b*y + c*psi   n 3152  b 0.0218 /cm (+ = outside)  c 0.0105 /deg (+ = pointing out)  resid sd 0.093  R2 0.89
+   (arc_lat psi is noisy frame to frame -> the free c is biased low; the 11-17 geometry model gives 0.025 /cm and 0.037 /deg = look-ahead ~85 cm)
+camera error model B (tied)  e = f(tb) + b*(y + 85 cm * psi[rad])   b 0.0102 /cm -> c 0.0151 /deg   resid sd 0.101  R2 0.87
+  tb bin    f_A(tb)  f_B(tb) | median e   y    psi   n
+    -5-   5  +0.356   +0.336  | +0.38   -0.4  +2.9  23
+     5-  15  +0.515   +0.498  | +0.56   +0.7  +3.9  132
+    15-  25  +0.621   +0.605  | +0.65   +0.0  +2.6  153
+    25-  35  +0.621   +0.619  | +0.61   +0.2  -0.5  166
+    35-  45  +0.703   +0.700  | +0.59   -2.0  -4.9  177
+    45-  55  +0.727   +0.691  | +0.56   -4.5  -4.5  186
+    55-  65  +0.685   +0.610  | +0.53   -6.3  +0.5  188
+    65-  75  +0.756   +0.680  | +0.64   -6.0  +1.0  201
+    75-  85  +0.829   +0.743  | +0.68   -6.4  +0.9  155
+    85-  95  +0.868   +0.780  | +0.73   -6.8  +1.6  142
+    95- 105  +0.815   +0.733  | +0.72   -6.2  +2.9  119
+   105- 115  +0.736   +0.666  | +0.68   -4.3  +1.7  116
+   115- 125  +0.674   +0.619  | +0.52   -4.8  -1.7  130
+   125- 135  +0.578   +0.498  | +0.38   -7.9  -4.3  184
+   135- 145  +0.365   +0.233  | +0.18  -10.5  +5.0  414
+   145- 155  +0.128   +0.075  | +0.05   -3.7  +1.6  660
+
+C1e +0.9..3.6 s: 34 segments 2262 frames | c 0.0237 /deg  b 0.0357 /cm (= 0.062 per deg*m) | resid sd 0.030 (without the two terms 0.048)
+C4e +1.0..4.5 s: 34 segments 2991 frames | c 0.0216 /deg  b 0.0319 /cm (= 0.056 per deg*m) | resid sd 0.027 (without the two terms 0.054)
+C2e +1.2..3.2 s: 34 segments 1699 frames | c 0.0126 /deg  b 0.0352 /cm (= 0.061 per deg*m) | resid sd 0.048 (without the two terms 0.059)

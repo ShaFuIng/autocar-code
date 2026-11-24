@@ -1,0 +1,56 @@
+{
+ "enabled": true,
+ "delay_slack": {
+  "d0": 0.93,
+  "a": 0.61,
+  "b": 0.46,
+  "v_min": 0.2
+ },
+ "along_min_turn": false,
+ "pos_backup": {
+  "after_m": 2.9,
+  "max_m": 4.0,
+  "x_row": 139.0,
+  "max_pitch_deg": 3.0,
+  "min_lap": 1
+ },
+ "start_gate": {
+  "enabled": true,
+  "min_top_m": 2.2,
+  "min_open_m": 1.8,
+  "extrap_max_m": 0.3,
+  "confirm_s": null,
+  "gap_s": 0.25
+ },
+ "note": "upper-turn-r1 (upper-20261115): dash_route reads this at run start. delay_slack caps the r23 TURN_DELAYED delay at max(0, (d0 - a - b v) / v); along_min_turn keeps the TURN until 50 deg (dash-align-min) instead of ending it on an along dashed line. enabled false or file absent = dash-route-r27. pos_backup (dash-pos-backup-r1, dash-late-20261116): if the camera has not started the dashed TURN by lap_pos TOP + after_m (and < max_m, lap_pos anchored TOP and not lost, lap >= min_lap, |pitch| < max_pitch_deg), start it by position with target x_row (px at the control row); delete the key = camera only. start_gate (dash-start-r2, dash-start-20261117): a camera TURN start is refused while every available position measure says it is too early: lap_pos metres since TOP < min_top_m (needs pos_backup present so live_pid passes lap_pos) and metres since this route OPEN (own wheel-speed odometry) < min_open_m; confirm_s (null = off) asks the across rows to span >= confirm_s. Delete the key = dash-route-r27 start rule. white_rel (dash-white-rel-r1, light-adapt-20261118): before the dashed TURN the white threshold of the dash search is clip(median V of rows 100-174 + delta, v_min, v_max) when that median >= ref_on (else 185 as before); scope pre = after the turn unchanged. Delete the key = old threshold.",
+ "white_rel": {
+  "enabled": true,
+  "band": [
+   100,
+   175
+  ],
+  "pct": 50,
+  "delta": 30,
+  "ref_on": 165,
+  "v_min": 185,
+  "v_max": 235,
+  "scope": "pre"
+ },
+ "range_start": {
+  "enabled": true,
+  "a": 0.521,
+  "b": 0.46,
+  "v_ref": 0.78,
+  "v_lo": 0.4,
+  "v_hi": 1.0,
+  "r_max_cm": 160.0,
+  "g_max_deg": 80.0,
+  "tol_cm": 12.0,
+  "min_obs": 2,
+  "gap_s": 0.6,
+  "dr_max_s": 0.6
+ },
+ "turn_mask_rel": true,
+ "note_range": "dash-range-start-r1 + dash-turn-rel-r1 (dash-range-20261119): range_start = start the dashed TURN when the tracked across row is R0 = a + b v metres ahead of the front tyre (0.83 m at 0.78 m/s; range from the row fit through the ground homography; 2 consistent observations or one strong row; between observations by odometry); start_gate and pos_backup unchanged. turn_mask_rel = during the TURN the row fit uses the white_rel mask too (TURN steering no longer depends on how bright the far floor is). Use both together (R0 0.83 was set for the dark-day TURN steering that turn_mask_rel gives every day). Delete both keys = today's rule.",
+ "note_range_field": "11-19 field (run cdb0): a 0.471 -> 0.521 = start 5 cm earlier (user: arc slightly wide, mostly lands right of the dashed line then recentres)."
+}

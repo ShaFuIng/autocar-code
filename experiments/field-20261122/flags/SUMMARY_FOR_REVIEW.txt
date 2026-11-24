@@ -1,0 +1,121 @@
+field-20261122/flags 離線調查（2026-11-22 晚；未連車、未改既有資料夾）
+================================================================================
+資料：今天 92 輪 run-*-20261122/pid.jsonl（逐行串流，抽成精簡 pickle 後分析；pickle 已刪，重跑 tools/extract.py 可再產生）。
+程式：orin-web-snapshot-20261122c（live_pid.py b3267293、land4.py 25ebe9dd、lap_ff.py 80976389、arc2.json 等）。
+標記：【紀錄】＝已由紀錄證實；【程式】＝讀程式邏輯推得；【推測】＝未證實。
+
+────────────────────────────────────────
+A. 坡口「已回平」旗標為什麼提早立起（run-54cb 第 3 圈）
+────────────────────────────────────────
+結論
+- 【紀錄＋程式】原因是坡口處俯仰的一格回彈越過 −8 門檻，與 0.47 s 失線／WARMUP 無關、與 flat-dip-guard 無關。
+  逐格（live_pid 用的 dash_route.pitch_rel_deg；proof/54cb_tail330.txt、A_54cb_masks_mouth.png）：
+    frame_seq 55615  dpr −2.00   route OPEN
+    frame_seq 55616  dpr −8.18   route DONE → dpr<−5：down_until=now+4（down_tail 開、land4 進 SLOPE）；dpr<−8：down_steep=True、_ds_t0=now
+    frame_seq 55617  dpr −7.95   ≥−8 且 down_steep 且 down_level_t0 為 None → live_pid 2137 行 down_level_t0=now
+                                 → 同一格 land4 看到 down_level 非 None → SLOPE→LAND（x 0.0），之後一直留在 LAND（狀態鎖住）
+    frame_seq 55619  dpr −12.75  <−8 → 2136 行把 down_level_t0 清回 None（旗標只存在 0.058 s），但 land4 已鎖在 LAND
+  flat_dip_guard 只在 route WAIT_CLIMB 時作用，這幾格 route 是 OPEN/DONE，紀錄中無 flat_dip_guard 欄位＝沒改值。
+  down_tail 在 55616 之前不曾開（坡口前 4 s 俯仰都在 −0.8～+1.9），所以「更早有 down_steep 沒清掉」不成立。
+- 【紀錄】imu_boost 記的 −9.55 與 dash_route 的 −7.95 在同一格不同，是因為兩者在同一格內各自讀 IMU 檔、讀到不同樣本
+  （dash_route imu_age 0.017 s、imu_boost 讀到 imu_t 5057.0552 的較新樣本）。IMU 序列實際是 −8.18 → −7.95 → −9.55 → −14.2，
+  也就是有一個樣本回彈 0.23°。主對話「imu_boost 俯仰單調」的觀察正確，但它不是 live_pid 判旗標用的那個值。
+- 【紀錄】重建方法已驗證：用紀錄的 dash_route 俯仰＋路段換圈重設重播 2118～2150 行，重建的 down_level_t0 與紀錄
+  downhill_release.level_s 全部 92 輪吻合（最大差 0.5 ms）（tests/test_down_level.py）。
+
+發生率（tools/flagsim.py、margin.py；proof/A_episodes.json、A_margin.json）
+- 【紀錄】今天 104 次下坡，旗標「立起又被清掉」只有 54cb 第 3 圈 1 次；其餘 103 次都只在真正落地立一次：
+  陡坡開始→回平 1.92～2.18 s（54cb 那圈的真正落地 2.56 s）、坡口距離 2.04～2.37 m。46c9 第 2 圈下坡沒有回平（該輪在坡上結束）。
+- 【紀錄】接近失誤：第一格 <−8 之後，下一格常停在 −8 附近（坡口的俯仰平台）。104 次中有 7 次下一格離 −8 不到 1°
+  （beb1 L1 −8.09、3197 L4 −8.16、3197 L6 −8.32、d60e L3 −8.48、d60e L4 −8.55、18fc L5 −8.86、54cb L3 −7.95），全部都在第一個陡坡格的下一格。
+  ＝這是系統性的「坡口平台＋單一門檻無遲滯」，只是今天只有 1 次真的越線。
+
+假旗標還會影響哪些層（land4 防護擋住之後）
+- 【紀錄】54cb 55617 那一格另有 bottom_owner（LIMIT、since 0）與 bottom_guide（TRACK、s 0）出現，只此一格；下一格旗標清掉就消失。
+- 【程式】各層：
+  · land4：唯一會「鎖住」的消費者（SLOPE→LAND 不回頭）→這次出事的就是它。snapshot c 的 land_min_m 1.2／land_min_s 1.0 會擋。
+  · bottom_owner.scope：t_land 變 None 即結束（STEEP），真正落地時以新 t_land 重開 → 只影響 1 格。
+  · bottom_guide.landing：坡口那格先鎖住里程與航向，真正落地 t_land 不同→重新鎖 → 自我修正；期間其動作都要求 bo.active 且旗標非 None → 不作用。
+  · _bm_t0／_bm_yaw0：坡口那格取了坡口航向，旗標清掉後保留到真正落地才重取。坡上期間用它的層：bottom_map（_lx_bottom_map 要 not downhill，坡上 downhill 為真→不作用）、
+    lap_ff4／arc2 land 的 yaw_land_imu（觸發要 eligible＝旗標非 None 或 not downhill，坡上只有那一格成立，且 lap_pos 窗不在坡口→不觸發）、bottom_owner 失線（要 active）。
+    → 推得不會用到錯的坡口航向；但這是讀程式，未重播。
+  · downhill（release）：要旗標持續 0.8 s，那次只 0.058 s → 沒放開下坡規則。
+  · lap_pos 的 DOWN／LAND8：自有俯仰判定，LAND8 要俯仰 >−8 持續 0.2 m → 1 格回彈不會觸發；彎 4 帶狀（lap_ff4）與 brake_zones／lap_speed 的 LAND8 錨都來自 lap_pos → 不受影響。
+  · brake_zones slope_end：要俯仰回到 −5 以上 → −7.95 不觸發。speed_adapt landing：以 DOWNHILL 格（俯仰）計 → 不受影響。
+  · bottom_right 判定（live_pid 503）、downhill_speed「LEVEL」跳過、arc2.pre（停用中）landed：只那 1 格。
+  ＝擋住 land4 之後，其他層在同樣情況下推得只有 1 格的效果、不會延續；但仍建議從源頭修，避免日後新層再鎖住這個旗標。
+
+候選（根本修法）：down-level-guard-r1
+- candidate/patch_down_level.py：對 snapshot c 的 live_pid.py（必須是 b3267293）打 2 處補丁，每個錨點都必須剛好比對 1 次否則不寫檔。
+  輸出 candidate/live_pid.py（dc7e3108，本機編譯通過）。改動：
+  (1) 2137 行條件多一個 `and self._dl_ok(now)`（原條件為假時不呼叫）；
+  (2) 新方法 _dl_ok：每輪讀一次 web/down_level.json；有 min_steep_s 時，陡坡開始（既有的 _ds_t0）後未滿該秒數就不立回平旗標，並在 vision.down_level_guard 記錄；
+      檔案／鍵缺／值 null＝每次回 True＝原行為。被擋下後若俯仰一直在 −8 以上，會在滿 min_steep_s 後的第一格補設（延後，不會漏）。
+- on/down_level.json：min_steep_s 0.5（門檻依據：正常 1.92 s 以上，彈跳 0.03 s；0.5 兩邊都有大餘裕；非已驗證安全值）。
+- 測試 tests/test_down_level.py（測的是檔案中真正的程式文字：harness.py 從 live_pid.py 抽出旗標區塊與 _dl_ok 執行），194 項全過（proof/A_test_down_level_all.txt）：
+  · 合成：重現 54cb；候選擋下該格並記錄；真正落地格不變；長時間 >−8 時約 0.5 s 補設；無檔／鍵缺／null＝原程式。
+  · 紀錄（92 輪、170,274 格）：候選無檔／鍵缺與原程式 (down_tail, down_steep, down_level_t0) 逐格相同；
+    min_steep_s 0.5 時與原程式不同的只有 54cb 第 3 圈 frame_seq 55617 一格（旗標不立），其餘全同。
+- 上車：換 live_pid.py＋重啟一次（依規則先核對車況、卸載模型）＋放 web/down_level.json。退回＝刪 down_level.json（下一輪生效）或放回 b3267293＋重啟。
+  可與現有 land4 防護並存（雙保險）。閉迴路未驗：54cb 那圈若旗標不立，之後的坡上／落地由正常流程接手是推得的，未實車。
+
+對主對話先前說法的更正
+- 「推測與 2.3 s 前的影格中斷＋WARMUP 有關」→ 不成立；原因是坡口俯仰回彈（見上）。
+- 「進坡口（俯仰 −2→−8）時 land4 進 SLOPE 只有 1 格」→ 正確，觸發格是 frame_seq 55617（dash_route −7.95）。
+
+────────────────────────────────────────
+B. 「0.43 秒沒有影格」＋WARMUP
+────────────────────────────────────────
+結論
+- 【紀錄】那段不是沒有影格：frame_seq 55567～55581 連續 15 格、間隔約 33 ms、推論時間正常（model 19～24 ms、path 16～25 ms，
+  僅 55580 path 39 ms、55581 queue 5.4 ms），control_age 50～80 ms。是「有影格但路徑無效」：vision.valid False，
+  road_state.reason JUNCTION_NO_TARGET（junction BASELINE_INVALID、pairing SINGLE_SIDE_NO_SUPPORTED_PAIR），只剩左線 4～14 點、
+  遮罩像素 4817→1865。車控走 UPPER_SINGLE_HOLD（upper_single 保持）。
+- 【紀錄】遮罩拼圖 proof/B_54cb_masks_55560_55586.png：前幾格近處還有最後一格虛線的白塊，它出畫面後近處全黑，只剩遠處左右兩條往坡口收斂的邊線
+  ＝上層漏斗區（車道寬 92→54 cm）近處沒有白線可看，路徑在控制列找不到目標。這與 11-21 run-c981「上層轉彎後直線白線太少、JUNCTION_NO_TARGET」同一現象。
+- 【程式】WARMUP：失線列不呼叫 PID 控制器，回到有效格時控制器自己的時間差 0.47 s > max_gap 0.4 → INVALID_OR_STALE_TIME → reset（積分 i=0、微分 d=0、last=中心）→
+  live_pid 2174 行重算一次 → 回 WARMUP，該格用 hold 的最近指令（warmup_hold）。這是設計行為。
+- 【紀錄＋程式】WARMUP 不碰 down_until／down_steep／down_level_t0；54cb 那次 WARMUP 時俯仰 +0.58、下坡窗未開 → 與 A 無關。
+
+今天的發生次數（tools/gaps.py；proof/B_gaps.json、B_gaps_summary.txt）
+- 【紀錄】真正的影格中斷（consumed 間隔 >0.15 s 或 frame_seq 跳號 >4）：92 輪 0 次。
+- 【紀錄】上層直線 DASHe+1.3～2.3 m 的 UPPER_SINGLE_HOLD 失線列（≥0.2 s）：37 次（20 輪），長 0.20～0.82 s；其中 20 次 ≥0.4 s 接 WARMUP。
+  以約 104 次上層通過計，約 36% 有、約 19% 接 WARMUP。54cb L3 的 0.40 s 屬典型，不是特例。
+- 【紀錄】另：坡口前 DASHe+3.3 m 有 8 次「1 格 PID_HOLD 後接 WARMUP」（有效格間隔只 0.1 s，不是時間差造成；推測該格控制器回 NO_PATH／INVALID_ERROR 而 reset，未查）。
+- 其他接 WARMUP 的失線列：下坡／落地 103 次（正常的落地丟線）、彎 3 8、彎 4 7、虛線轉彎 3、坡道 2、彎 2 1。WARMUP 共 244 格，其中 92 格是各輪起跑第一格。
+- 還缺的紀錄：路徑無效的「為何」已有（JUNCTION_NO_TARGET＋遮罩），缺的是原始影像（看是否反光／實際白線位置）。若要再查，建議只記錄欄位：
+  失線列期間每 5 格存一次原圖縮圖，或在 upper_single 的 info 記 lane 近列的左右線點數與 x。不建議為此改控制。
+
+────────────────────────────────────────
+C. 彎 3 控制層有一圈沒啟動（run-2728 第 3 次彎 3）
+────────────────────────────────────────
+結論
+- 【紀錄＋程式】原因是觸發窗太窄：arc2.json c3 觸發條件為 lap_pos anchor C3s 且 since_anchor_m 在 win_m [0.0, 0.6]（lap_ff.py 483 行）。
+  lap_pos 的 since_anchor_m 只隨里程更新（約 0.2 m 一階，紀錄中同值連續 4～5 格），C3s 確認後第一次看到的值落在 0.52～0.69 m。
+  2728 第 3 圈第一個值是 0.61 → 已超過 0.6，下一階 0.80 → 整個彎 3 不觸發。那 26 格「TOP」是 c3 尾段子層（c3-tail-r1，x 4.98～5.8 m）自己記的，不是主層。
+- 【紀錄】今天 105 次彎 3（層有開的輪）未觸發 13 次（12%）：014e L4、18fc L6、1eab L2／L4、2728 L3、3197 L3／L7、46c9 L1、65ea L2、8350 L1、beb1 L2、d60e L2、ff42 L2。
+  第一個 since 值：觸發的 92 次 0.52～0.60（中位約 0.58），未觸發的 13 次 0.60～0.69（0.60 有 2 次未觸發、9 次觸發＝四捨五入邊界）。13 次在 0.6～1.0 m 內都有 PROPOSAL_ONLY 有效格。
+- 【紀錄】其他帶狀層：彎 1（lap_ff c1，22 次，19:33 之後）未觸發 0；彎 2（c2，107 次）未觸發 0（結束原因 ANGLE 38、MAX_M 69）；彎 4（lap_ff4，102 次）未觸發 0（全部 ANGLE）。
+  彎 3 已觸發者結束原因多為 MAX_M＋PITCH 取消（坡道），屬正常。沒有發現中途異常取消。（proof/C_curves.json、C_curves_summary.txt）
+
+候選（只換設定）
+- on/arc2.c3win10.json：以 snapshot c 的 arc2.json 為底，只改 c3.win_m [0.0, 0.6]→[0.0, 1.0]，另加說明鍵 c3.note_win_flags（逐鍵比對：只此兩處）。
+  注意這是改既有值，不是「新鍵、鍵缺＝現況」的形式；退回＝win_m 改回 [0.0, 0.6]。arc2.json 依流水帳屬免重啟（每輪讀）。
+- 【程式】已觸發的 92 次不會改變（下限不變、since 單調增加，觸發仍在同一格）；13 次會改在 since 0.60～0.89 m 觸發。
+  觸發時 d_land＝D−x 仍回推到 C3s 位置、航向參考（yaw_ref anchor）回推到地標處 → 剖面以地標為零點，只是前 0.0～0.3 m 的 ramp 起點較晚。
+  未做逐格重播（c3 層需要 lap_pos／IMU 航向等完整輸入），閉迴路未驗。
+- 同樣的量化風險理論上也存在於彎 4（win [-0.3,1.0]）等，但今天 0 次失誤，不改。
+
+────────────────────────────────────────
+最不確定的地方
+1. A 候選的 0.5 s 門檻只用今天 104 次下坡定（正常 ≥1.92 s）；若日後坡上中段出現 ≥0.5 s 的俯仰回升（11-04 舊紀錄寫過坡中最多 0.64 s 高於 −8），仍會在坡中立旗標——那屬另一種情況，此候選不處理（land4 防護仍在）。
+2. A 中「其他層只受 1 格影響」是讀程式推得（54cb 紀錄只證實 bottom_owner／bottom_guide 那 1 格），_bm_yaw0 在坡上期間保持坡口值未被使用這點未重播證明。
+3. C 的 13 次放寬後一定會觸發、且晚 0.1～0.3 m 觸發不會造成不同的彎 3 行為，是程式推得；需實車一輪看 arc2_c3 是否每圈都有 RAMP／HOLD 及 x_trig。
+另：B 的「近處沒有白線」來自模型遮罩，不是原圖；遮罩少線也可能是模型漏判（沒有原圖無法區分）。
+
+檔案
+- tools/：extract.py（抽精簡欄位到 tmp/*.pkl）、flagsim.py（旗標重播）、margin.py、gaps.py、curves.py、masks.py（遮罩拼圖）、tail54.py。
+- proof/：54cb_tail160/330.txt、A_episodes.json、A_margin.json、A_flagsim_log.txt、A_test_down_level_all.txt、A_54cb_masks_mouth.png、
+  B_gaps.json、B_gaps_summary.txt、B_54cb_masks_55560_55586.png、C_curves.json、C_curves_summary.txt。
+- candidate/：patch_down_level.py、live_pid.py（dc7e3108）。on/：down_level.json、arc2.c3win10.json。tests/：harness.py、test_down_level.py（需先跑 tools/extract.py 產生 tmp/）。
+- MANIFEST.sha256。

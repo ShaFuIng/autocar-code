@@ -1,0 +1,18 @@
+curve-2 exit, runs e0cd / 6f61 / c6f3 (14 passes): order of the error excursions after the first C2e frame, integral, heading still to turn
+ run lap | e at C2e | e max in 0..1.0 s (t) | e min in 0.6..3.0 s (t) | mean e 1.5..3.0 s | integral us at C2e / +1.5 s / +3.0 s | heading turned after C2e (deg) | pre min / max 0..2.5 s
+ e0cd 1 | -0.01 | +0.10 (0.77 s) | -0.28 (2.01 s) | -0.20 |  40 /  38 /  26 |  11.9 |  -39 /  +38
+ e0cd 2 | +0.04 | +0.15 (0.33 s) | -0.26 (2.82 s) | -0.17 |  40 /  38 /  28 |  11.7 |  -35 /  +57
+ e0cd 3 | +0.13 | +0.27 (0.67 s) | -0.23 (2.08 s) | -0.14 |  40 /  39 /  30 |  13.7 |  -29 / +102
+ e0cd 4 | +0.26 | +0.30 (0.57 s) | -0.37 (2.98 s) | -0.20 |  40 /  39 /  27 |  13.6 |  -28 / +103
+ 6f61 1 | +0.17 | +0.25 (0.47 s) | -0.33 (1.97 s) | -0.21 |  40 /  38 /  25 |   9.8 |  -64 /  +89
+ 6f61 2 | +0.26 | +0.28 (0.37 s) | -0.32 (2.58 s) | -0.21 |  40 /  37 /  24 |   8.5 |  -45 /  +80
+ 6f61 3 | +0.23 | +0.30 (0.28 s) | -0.21 (1.99 s) | -0.15 |  40 /  38 /  29 |  10.4 |  -33 /  +93
+ 6f61 4 | +0.25 | +0.27 (0.07 s) | -0.32 (1.51 s) | -0.13 |  40 /  33 /  27 |   2.3 |  -44 /  +61
+ 6f61 5 | +0.30 | +0.30 (0.00 s) | -0.30 (1.76 s) | -0.16 |  40 /  37 /  27 |   5.8 |  -47 /  +89
+ 6f61 6 | +0.21 | +0.34 (0.83 s) | -0.26 (2.21 s) | -0.14 |  40 /  40 /  31 |  17.6 |  -61 / +111
+ c6f3 1 | +0.20 | +0.28 (0.41 s) | -0.43 (2.06 s) | -0.18 |  40 /  37 /  27 |  11.6 | -104 /  +75
+ c6f3 2 | +0.01 | +0.11 (0.93 s) | -0.21 (2.27 s) | -0.15 |  40 /  39 /  30 |   9.3 |  -26 /  +75
+ c6f3 3 | +0.21 | +0.29 (0.13 s) | -0.26 (2.11 s) | -0.14 |  40 /  39 /  30 |  16.7 |  -54 /  +90
+ c6f3 4 | +0.28 | +0.28 (0.10 s) | -0.22 (2.77 s) | -0.17 |  40 /  37 /  26 |   5.2 |  -25 /  +86
+medians: e at C2e +0.21 | e max +0.28 at 0.39 s | e min -0.27 at 2.10 s | mean e 1.5..3.0 s -0.17 | integral 40 / 38 / 27 us | heading after C2e 11.0 deg
+the positive excursion comes first (the last ~10 deg are still to turn after the band), the negative one follows and is held while the integral is still +30..+40 us (x right gain 1.45 x gain schedule 0.57 = +25..+33 us right, balanced by P at e ~ -0.15)

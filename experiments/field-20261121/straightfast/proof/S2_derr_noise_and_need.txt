@@ -1,0 +1,66 @@
+S2. derr (speed_adapt: |e - e_earlier| / dt) inside the three PWM-100 zones; runs e1b4, b93e, 9934. rate_indep.json: {"enabled": true, "nominal_dt": 0.105, "nominal_dt_open": 0.15, "w_cap": 2.0, "w_quantum": 0.0}
+
+(a) derr distribution per zone (all in-zone frames) and on frames with |e| < 0.10
+  main   n 1428 | frame dt median 0.036 s | |delta e| per frame median 0.006 p90 0.023 p99 0.064 | derr median 0.14 p90 0.49 p99 1.19 | derr > 0.8: 3.6%  > 1.2: 0.8%
+         |e| < 0.10: n 1068 | derr median 0.13 p90 0.47 p99 1.29 | > 0.8: 3.8%  > 1.2: 1.1%  (rate_indep on: derr is taken against the newest earlier sample >= 0.0525 s old, about 2 frames / 0.07 s back; derr 1.2 = the error moved ~0.09 in 0.07 s)
+  diag   n 1597 | frame dt median 0.036 s | |delta e| per frame median 0.009 p90 0.035 p99 0.097 | derr median 0.18 p90 0.66 p99 1.67 | derr > 0.8: 7.3%  > 1.2: 3.3%
+         |e| < 0.10: n 1017 | derr median 0.17 p90 0.57 p99 1.48 | > 0.8: 5.1%  > 1.2: 2.0%  (rate_indep on: derr is taken against the newest earlier sample >= 0.0525 s old, about 2 frames / 0.07 s back; derr 1.2 = the error moved ~0.09 in 0.07 s)
+  circle n 1062 | frame dt median 0.036 s | |delta e| per frame median 0.011 p90 0.038 p99 0.125 | derr median 0.24 p90 0.87 p99 2.09 | derr > 0.8: 11.3%  > 1.2: 5.8%
+         |e| < 0.10: n  455 | derr median 0.22 p90 0.79 p99 1.78 | > 0.8: 9.7%  > 1.2: 5.3%  (rate_indep on: derr is taken against the newest earlier sample >= 0.0525 s old, about 2 frames / 0.07 s back; derr 1.2 = the error moved ~0.09 in 0.07 s)
+
+(b) derr vs the IMU yaw rate (|gz| low-passed 0.25 s), all three zones
+  correlation derr ~ |gz_lp|: 0.25 ; derr ~ |gz| raw: 0.19 ; derr ~ |e|: 0.18
+  frames with derr > 1.2 (n 127): |gz_lp| median 3.0 p90 9.1 dps, |e| median 0.11 p90 0.28
+  frames with derr <= 0.8 (n 3798): |gz_lp| median 2.0 p90 6.4 dps, |e| median 0.08 p90 0.19
+  |gz_lp| over all in-zone frames: median 2.0 p90 6.7 p99 15.4 max 20.2 dps ; |e|: median 0.08 p90 0.20 p99 0.36 max 0.55
+
+(c) block events (first blocked frame after >= 5 unblocked in-zone frames): 41 ; control = 95 full-throttle frames in the same zones (every 30th frame of a full run)
+  BLOCK LOW:ERROR_RATE_LARGE+weave     n  32 | |e| 0.3 s before 0.13, at the event 0.13, mean / max in the next 1.0 s 0.15 / 0.27 | next-1-s max |e| > 0.30: 14, > 0.45: 3 | gz sd before 7.3 -> after 5.9 dps
+  BLOCK LOW:ERROR_RATE_LARGE           n   4 | |e| 0.3 s before 0.10, at the event 0.05, mean / max in the next 1.0 s 0.08 / 0.15 | next-1-s max |e| > 0.30: 0, > 0.45: 0 | gz sd before 10.4 -> after 6.3 dps
+  BLOCK ERR_GUARD                      n   4 | |e| 0.3 s before 0.20, at the event 0.32, mean / max in the next 1.0 s 0.22 / 0.33 | next-1-s max |e| > 0.30: 3, > 0.45: 0 | gz sd before 5.5 -> after 6.1 dps
+  BLOCK LOW:CURVE_AHEAD+weave          n   1 | |e| 0.3 s before 0.14, at the event 0.25, mean / max in the next 1.0 s 0.19 / 0.40 | next-1-s max |e| > 0.30: 1, > 0.45: 0 | gz sd before 5.6 -> after 3.6 dps
+  ALL block events                     n  41 | |e| 0.3 s before 0.13, at the event 0.14, mean / max in the next 1.0 s 0.15 / 0.27 | next-1-s max |e| > 0.30: 18, > 0.45: 3 | gz sd before 7.4 -> after 5.9 dps
+  control (full throttle, no block)    n  95 | |e| 0.3 s before 0.09, at the event   - , mean / max in the next 1.0 s 0.10 / 0.17 | next-1-s max |e| > 0.30: 12, > 0.45: 2 | gz sd before 5.2 -> after 5.0 dps
+
+  per event (zone, position, class, |e| at the event, derr, |gz_lp|, PWM minimum in the next second, max |e| in the next second):
+   e1b4 diag   since  6.32 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.03 derr 2.05 gz_lp  1.3  pwm min  44  max|e| after 0.20
+   e1b4 diag   since  7.17 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.20 derr 3.18 gz_lp  5.2  pwm min  44  max|e| after 0.18
+   e1b4 circle since  3.75 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.19 derr 1.43 gz_lp  2.9  pwm min  44  max|e| after 0.22
+   e1b4 circle since  4.17 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.04 derr 1.28 gz_lp  6.4  pwm min  30  max|e| after 0.50
+   e1b4 circle since  4.46 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.07 derr 2.14 gz_lp  7.4  pwm min  24  max|e| after 0.50
+   e1b4 main   since  1.25 m  BLOCK LOW:ERROR_RATE_LARGE         |e| 0.06 derr 1.91 gz_lp 13.2  pwm min  48  max|e| after 0.21
+   e1b4 main   since  1.99 m  BLOCK LOW:ERROR_RATE_LARGE         |e| 0.06 derr 1.50 gz_lp  5.5  pwm min  48  max|e| after 0.21
+   e1b4 diag   since  5.83 m  BLOCK ERR_GUARD                    |e| 0.33 derr 1.48 gz_lp  0.2  pwm min  32  max|e| after 0.40
+   e1b4 main   since  2.34 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.02 derr 1.47 gz_lp  6.6  pwm min  48  max|e| after 0.13
+   e1b4 diag   since  4.33 m  BLOCK ERR_GUARD                    |e| 0.31 derr 0.69 gz_lp  0.0  pwm min  46  max|e| after 0.30
+   e1b4 diag   since  4.91 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.21 derr 1.42 gz_lp  3.0  pwm min  47  max|e| after 0.29
+   e1b4 diag   since  6.53 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.05 derr 1.54 gz_lp  9.6  pwm min  43  max|e| after 0.28
+   e1b4 diag   since  7.08 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.06 derr 1.95 gz_lp 16.6  pwm min  48  max|e| after 0.12
+   e1b4 circle since  3.96 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.08 derr 1.26 gz_lp  2.5  pwm min  46  max|e| after 0.25
+   e1b4 circle since  4.54 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.13 derr 1.51 gz_lp  2.7  pwm min  46  max|e| after 0.12
+   b93e diag   since  6.56 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.12 derr 1.37 gz_lp  1.3  pwm min  47  max|e| after 0.12
+   b93e circle since  3.86 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.14 derr 1.95 gz_lp  0.9  pwm min  48  max|e| after 0.20
+   b93e diag   since  1.77 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.04 derr 1.49 gz_lp  4.9  pwm min  47  max|e| after 0.05
+   b93e diag   since  5.95 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.30 derr 1.57 gz_lp  2.7  pwm min  37  max|e| after 0.34
+   b93e diag   since  2.34 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.03 derr 1.26 gz_lp  2.2  pwm min  47  max|e| after 0.14
+   b93e circle since  3.70 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.10 derr 1.45 gz_lp  3.2  pwm min  40  max|e| after 0.38
+   b93e circle since  4.27 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.38 derr 1.95 gz_lp  5.9  pwm min  40  max|e| after 0.38
+   b93e diag   since  5.17 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.06 derr 1.32 gz_lp  3.0  pwm min  40  max|e| after 0.35
+   b93e diag   since  5.75 m  BLOCK ERR_GUARD                    |e| 0.32 derr 0.93 gz_lp  2.6  pwm min  40  max|e| after 0.35
+   b93e diag   since  6.57 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.13 derr 1.82 gz_lp  1.7  pwm min  47  max|e| after 0.17
+   b93e circle since  4.99 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.30 derr 2.23 gz_lp  1.8  pwm min  24  max|e| after 0.62
+   b93e main   since  1.51 m  BLOCK LOW:ERROR_RATE_LARGE         |e| 0.04 derr 1.93 gz_lp 10.8  pwm min  48  max|e| after 0.11
+   9934 diag   since  6.23 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.05 derr 1.61 gz_lp  3.3  pwm min  42  max|e| after 0.23
+   9934 diag   since  6.80 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.19 derr 3.49 gz_lp  1.6  pwm min  42  max|e| after 0.23
+   9934 circle since  4.21 m  BLOCK LOW:CURVE_AHEAD+weave        |e| 0.25 derr 0.69 gz_lp  3.9  pwm min  35  max|e| after 0.40
+   9934 diag   since  6.05 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.23 derr 1.57 gz_lp  0.4  pwm min  30  max|e| after 0.36
+   9934 circle since  2.28 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.20 derr 1.38 gz_lp 11.3  pwm min  47  max|e| after 0.17
+   9934 circle since  3.65 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.04 derr 1.27 gz_lp  3.7  pwm min  44  max|e| after 0.32
+   9934 circle since  4.18 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.22 derr 1.21 gz_lp  6.7  pwm min  44  max|e| after 0.32
+   9934 circle since  4.71 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.17 derr 2.31 gz_lp  1.7  pwm min  45  max|e| after 0.35
+   9934 circle since  2.72 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.11 derr 1.23 gz_lp  6.0  pwm min  47  max|e| after 0.11
+   9934 circle since  4.11 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.02 derr 1.54 gz_lp  7.1  pwm min  45  max|e| after 0.33
+   9934 circle since  4.65 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.21 derr 1.34 gz_lp  0.0  pwm min  47  max|e| after 0.33
+   9934 diag   since  6.25 m  BLOCK ERR_GUARD                    |e| 0.31 derr 0.32 gz_lp  2.0  pwm min  47  max|e| after 0.29
+   9934 circle since  3.85 m  BLOCK LOW:ERROR_RATE_LARGE+weave   |e| 0.11 derr 1.27 gz_lp  1.9  pwm min  47  max|e| after 0.36
+   9934 main   since  1.72 m  BLOCK LOW:ERROR_RATE_LARGE         |e| 0.03 derr 1.37 gz_lp  5.6  pwm min  48  max|e| after 0.07

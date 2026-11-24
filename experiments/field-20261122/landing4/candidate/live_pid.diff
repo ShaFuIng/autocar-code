@@ -1,0 +1,75 @@
+--- "/d/OneDrive/Desktop/\350\207\252\350\265\260\350\273\212/Orin_Interface_v1/laptop_workbench/data/experiments/orin-web-snapshot-20261121c/live_pid.py"	2026-11-21 16:16:52.000000000 +0800
++++ cand/live_pid.py	2026-11-22 12:40:26.802046700 +0800
+@@ -584,6 +584,7 @@
+             self.clatch=(lambda c_:crest_latch.CrestLatch(c_) if c_ else None)(crest_latch.load_config()) if crest_latch is not None else None   # crest-latch-r1: crest_latch.json once per run (absent / enabled not true -> None = old behaviour, no extra reads)
+             self.lff=self._lff_new();self.lff4=self._lff4_new();self.arc2=self._arc2_new()   # lap-ff-c4-r1 (curve4-ff-20261116): lap_ff.json 'c4' absent / disabled -> None; lap-ff-r1: reads lap_ff.json once per run (absent / enabled false -> None, the layer does not run)
+             self.ctrim=self._ctrim_new()   # curve-trim-r1: reads curve_trim.json once per run (absent / enabled false -> None, the layer does not run)
++            self.land4=self._l4_new()   # land4-r1 (field-20261122/landing4): reads land4.json once per run (absent / enabled false / no stage -> None, nothing runs)
+             self.alat=self._alat_new()   # arc-lat-r1: reads arc_lat.json once per run (absent / enabled false -> None, the layer does not run)
+             self._sc=single_centre.start(self,params['center_us']) if single_centre is not None else None   # single-centre-r1: reads single_centre.json once per run; off resets the module state (nothing changed); on rewrites the per-run lap_ff / lap_ff4 / arc2 / bottom_guide configs: straight points -> center_us, absolute caps -> center_us + (cap - 1480)
+             self.stuck=stuck_stop.StuckStop.from_file() if stuck_stop is not None else None   # stuck-stop-r1: reads stuck_stop.json once per run (enabled false / missing / invalid -> None = never called, no read, no log)
+@@ -1424,6 +1425,48 @@
+                 if st!=float(proposal['steer_us']):b=proposal['steer_us'];proposal['steer_us']=st;F.owner=segment_ctx.owner_after(F.owner,'arc2_pre',b,proposal)
+         except Exception as e:proposal['arc2_pre']=dict(revision='arc2-pre-r1',reason='ERROR',error=type(e).__name__)
+     # speed-adapt-r1 group: faster while the normal path is stable, base PWM otherwise. One try around the group (as before).
++    # ---- land4-r1 (field-20261122/landing4, offline candidate): slope + landing steered on the absolute heading of the upper straight (land4.py / land4.json).
++    # self.land4 None (json absent / disabled) -> none of these is called: no IMU / MCU / clock read is added.
++    def _l4_new(self):
++        try:
++            import land4
++            return land4.Land4.from_file()
++        except Exception:return None
++    def _l4_step(self,F,p,valid):   # one frame (valid / WARMUP / lost): reads the IMU and the MCU status only on the upper straight, the slope and the landing
++        L=self.land4;ctx=F.ctx;rp=self.run['parameters']
++        up=bool(valid and ctx.hh_active(p));yaw=gz=enc=ms=None
++        if L.wants_imu(up,ctx.down_tail):
++            if getattr(self,'heading',None) is not None:
++                tn=time.monotonic()
++                try:yaw=float(self.heading._yaw(tn))
++                except Exception:yaw=None
++                try:gz=float(self.heading._gz(tn))
++                except Exception:gz=None
++            try:
++                v_=(self.manual.state() or {}).get('vehicle') or {};b_=v_.get('enc_b') or {}
++                if 'forward' in b_ and 'reverse' in b_:enc=int(b_['forward'])-int(b_['reverse']);ms=v_.get('ms')
++            except Exception:enc=ms=None
++        ls=None
++        try:ls=(self.hold.last_sent(F.now) or {}).get('steer_us') if getattr(self,'hold',None) is not None else None
++        except Exception:ls=None
++        return L.step(F.now,bool(valid and p.get('reason')=='PROPOSAL_ONLY'),p.get('image_error'),yaw,gz,enc,ms,getattr(self,'_cm_speed',None),up,bool(ctx.down_tail),ctx.down_level,
++                      p['steer_us'],float(rp['center_us']),float(rp['min_us']),float(rp['max_us']),ls)
++    def _L_land4(self,F):   # valid / WARMUP frames: last steering writer before the upper-single override (the chain value is its input)
++        p=F.p
++        try:
++            st,inf=self._l4_step(F,p,True)
++            if inf is not None:
++                p['land4']=inf
++                if st!=float(p['steer_us']):p['steer_us']=st
++        except Exception as e:p['land4']=dict(revision='land4-r1',reason='ERROR',error=type(e).__name__)
++    def _l4_lost(self,F,lp):   # lost frames: same law without the camera term (after every other lost-frame hook)
++        try:
++            st,inf=self._l4_step(F,lp,False)
++            if inf is not None:
++                b=lp['steer_us'];lp=dict(lp,land4=inf)
++                if st!=float(b):lp['steer_us']=st;F.owner=segment_ctx.owner_after(F.owner,'land4_lost',b,lp)
++        except Exception as e:lp=dict(lp,land4=dict(revision='land4-r1',reason='ERROR',error=type(e).__name__))
++        return lp
+     def _ctrim_new(self):   # curve-trim-r1: built once per run in start(); curve_trim.json absent / enabled false / broken = None (layer off)
+         try:return curve_trim.build() if curve_trim is not None else None
+         except Exception:return None
+@@ -2084,6 +2127,7 @@
+                             if getattr(self,'bown',None) is not None and self.bown.on:lp=self._bo_lost(F,lp)   # bottom-owner-r2: gyro rate hold inside the bottom scope
+                             if getattr(self,'bguide',None) is not None and self.bguide.on:lp=self._bg_lost(F,lp)   # bottom-guide-r1 (a): distance-based heading-profile hold where the r2 rate hold acts
+                             if getattr(self,'arc2',None) is not None and getattr(self.arc2.get('land'),'lost_on',False):lp=self._a2_lost(F,lp)   # land-smooth-20261120: lost frame in the arc2 approach window (no land.approach.lost key -> not called)
++                            if getattr(self,'land4',None) is not None:lp=self._l4_lost(F,lp)   # land4-r1: slope / landing heading law on lost frames (land4.json absent -> not called)
+                             if getattr(self,'stuck',None) is not None and self._stuck_check(lp):continue   # stuck-stop-r1 (lost-line rows)
+                             if not self._pid_send(dict(owner=self.owner,run_id=self.run['id'],seq=seq,target_us=lp['steer_us'],pwm=lp['pwm'],observation_context=vision_context(self.run['id'],seq,self.latest,lp)),lp):continue   # manual-end-r1; play-single-r1: hold-type frame, compensated at the output stage
+                             self.hold.sent(now,lp['steer_us'],lp['pwm']);self._b2_tag(lp,F)   # segment-ctx-r1 log
+@@ -2207,6 +2251,7 @@
+     _SL('lap_ff4',lambda s,F:getattr(s,'lff4',None) is not None,LivePID._L_lap_ff4),
+     _SL('arc2_land',lambda s,F:getattr(s,'arc2',None) is not None and s.arc2['land'] is not None,LivePID._L_arc2_land),   # arc2-r1 A: after lap_ff4, before bottom_guide   # lap-ff-c4-r1: after bottom_owner, before bottom_guide (absent -> not run)
+     _SL('bottom_guide',lambda s,F:getattr(s,'bguide',None) is not None and s.bguide.on,LivePID._L_bottom_guide),   # bottom-guide-r1: landing latch / distance log (no command change)
++    _SL('land4',lambda s,F:getattr(s,'land4',None) is not None,LivePID._L_land4),   # land4-r1: absent / disabled -> not run
+     _SL('upper_single_final',lambda s,F:F.usv is not None,LivePID._L_upper_single_final),
+     _SL('i_ramp',lambda s,F:getattr(s,'iramp',None) is not None and F.p.get('reason')!='WARMUP',LivePID._L_i_ramp))   # i-ramp-r1: integral state only (no steer write); absent json -> skipped
+ 

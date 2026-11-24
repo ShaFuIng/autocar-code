@@ -1,0 +1,25 @@
+{
+  "state": "prepared_not_deployed",
+  "release": "k-shared-lane-test-r1",
+  "archive": "k-shared-lane-test-r1.zip",
+  "archive_sha256": "b9f1ff6479d120b8b39bdd1f6cbc3b40546fcd80962672a145e7e9c21287dcf7",
+  "files": 20,
+  "validation": {
+    "release": "k-shared-lane-test-r1",
+    "state": "prepared_not_deployed",
+    "frames": 1760,
+    "worker_protocol_parity": true,
+    "path_and_mode_parity": true,
+    "original_registry_preserved": true,
+    "preview_only": true,
+    "real_pid_connected": false,
+    "orin_connected": false,
+    "hardware_output": false,
+    "model_inference": false,
+    "opencv": "4.11.0",
+    "numpy": "2.1.2",
+    "mean_saved_mask_worker_ms": 47.51477272677055
+  },
+  "package_hash_verified": true,
+  "remote_backup_created": false
+}

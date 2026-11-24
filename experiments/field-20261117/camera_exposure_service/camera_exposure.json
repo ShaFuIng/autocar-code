@@ -1,0 +1,2 @@
+{"enabled": true, "period_s": 3, "controls": {"exposure_auto": 1, "exposure_absolute": 300, "gamma": 300},
+ "note": "2026-11-17 manual 30 ms + gamma 300 = 30 fps. enabled false = service does nothing (then set exposure_auto 3 by hand, or re-plug the camera, to go back to auto)."}

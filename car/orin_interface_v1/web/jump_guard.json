@@ -1,0 +1,1 @@
+{"min_prev_s": 0.2, "note": "jump-guard-minprev-r1 (2026-11-22): the error-jump guard holds only when the error has been >= 0.8 for at least 0.2 s before it drops. Needs live_pid.py with the patch. Delete this file = guard as before (read at each run start)."}

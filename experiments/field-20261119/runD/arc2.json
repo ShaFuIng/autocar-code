@@ -1,0 +1,735 @@
+{
+ "revision": "arc2-r1",
+ "enabled": true,
+ "note": "arc2-20261116 offline candidate. land (A) / blind (D) / c3 (C) each switchable with its own enabled; file absent or enabled false = no arc2 layer.",
+ "land": {
+  "enabled": true,
+  "kappa_table": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.4,
+    25.0
+   ],
+   [
+    0.58,
+    29.7
+   ],
+   [
+    0.68,
+    33.2
+   ],
+   [
+    0.78,
+    33.2
+   ],
+   [
+    0.87,
+    33.8
+   ],
+   [
+    0.96,
+    37.8
+   ],
+   [
+    1.04,
+    36.3
+   ],
+   [
+    1.13,
+    32.1
+   ],
+   [
+    1.22,
+    23.1
+   ],
+   [
+    1.31,
+    18.1
+   ],
+   [
+    1.41,
+    12.5
+   ],
+   [
+    1.5,
+    6.6
+   ],
+   [
+    1.6,
+    5.4
+   ],
+   [
+    1.69,
+    5.2
+   ],
+   [
+    1.79,
+    10.5
+   ],
+   [
+    1.9,
+    16.2
+   ],
+   [
+    2.0,
+    20.1
+   ],
+   [
+    2.1,
+    23.3
+   ],
+   [
+    2.2,
+    28.2
+   ],
+   [
+    2.31,
+    32.0
+   ],
+   [
+    2.41,
+    34.8
+   ],
+   [
+    2.51,
+    35.2
+   ],
+   [
+    2.61,
+    34.8
+   ],
+   [
+    2.7,
+    34.0
+   ],
+   [
+    2.8,
+    33.4
+   ],
+   [
+    2.9,
+    32.4
+   ],
+   [
+    2.99,
+    29.7
+   ],
+   [
+    99.0,
+    30.0
+   ]
+  ],
+  "x_bend": 0.3,
+  "turn_ref": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.33,
+    0.0
+   ],
+   [
+    0.43,
+    1.5
+   ],
+   [
+    0.54,
+    4.7
+   ],
+   [
+    0.64,
+    8.4
+   ],
+   [
+    0.74,
+    11.7
+   ],
+   [
+    0.85,
+    15.7
+   ],
+   [
+    0.95,
+    19.8
+   ],
+   [
+    1.05,
+    23.6
+   ],
+   [
+    1.16,
+    29.2
+   ],
+   [
+    1.26,
+    33.4
+   ],
+   [
+    1.37,
+    36.7
+   ],
+   [
+    1.47,
+    37.5
+   ],
+   [
+    1.57,
+    40.1
+   ],
+   [
+    1.78,
+    39.8
+   ],
+   [
+    1.99,
+    40.9
+   ],
+   [
+    2.19,
+    43.5
+   ],
+   [
+    2.4,
+    49.7
+   ],
+   [
+    2.61,
+    57.6
+   ],
+   [
+    2.81,
+    63.9
+   ]
+  ],
+  "k_head": 2.0,
+  "head_lim": 40.0,
+  "x_end": 2.3,
+  "hand_m": 0.5,
+  "note_B": "slope-arc-r1 B (slope-arc-20261116): band centre re-timed to the clean landings (33 clean of 78 current-geometry passes, 11-14 3cf4 .. 11-16 7af0). kappa_table = the clean passes' median command (pre-compensation steer, smoothed 0.15 m) expressed as the curvature this layer's formula needs (kappa = (pre - c_eff) * g(v)) and placed at x + v*lead_s, so with lead_s 0.25 the centre reproduces the clean command: ~1680-1720 from the first LAND8 frame to x 0.85 (s 0.6), down to ~1520 at x 1.3-1.5 (near-straight L2), back to ~1670 from x 2.1 (arc). Equivalent to the clean curvature profile (first bend from s +0.15, peak 47-50 deg/m at s 0.7-0.8, near-straight s 1.2-1.5, arc 28-34 deg/m from s 2.0) advanced by the measured 0.35-0.45 m command lead and scaled by the measured command/curvature ratio. x = lap_pos metres since the LAND8 crossing = (s_seam + 0.22) / 0.967. m_hi 90 -> 60 (upper = clean median + 60 ~ clean p75; it is what cuts the press-type catch-up at 1780 to ~1760-1780), m_lo 90 with the inside-yield. turn_ref = clean median heading turned since the seam (old table lagged it 12-18 deg -> head -50..-80 us on every arc2-era pass, PID cut by 140-200 us). k_head 4 -> 2 / head_lim 80 -> 40 (_bm_yaw0 offset ~20 deg in 7 of 17 arc2-era passes). x_bend 0.85 -> 0.3 (floor from the first LAND8 frame). x_end 2.0 -> 2.3.",
+  "m_hi": 60.0,
+  "approach": {
+   "enabled": true,
+   "anchor": "DOWN",
+   "x0": 1.5,
+   "x1": 3.0,
+   "target_us": 0.0,
+   "max_rel_us": 60.0,
+   "e_min": -0.2,
+   "max_age_s": 0.25,
+   "hold_m": 0.3,
+   "comp": {
+    "right_us": 55.0,
+    "left_us": 55.0,
+    "threshold_us": 15.0
+   },
+   "note": "landing-20261119 approach: lap_pos DOWN+1.5 m .. LAND8 (about the last 0.6 m / 0.5 s of the slope). Raises the pre-compensation command to the smallest value whose sent command (play_comp emulated with comp = play_comp.json values; keep them equal) is >= straight_us (closest candidate to it), never above straight_us + 60 (scan out/approach_scan.txt: target 40 / cap 130 held the sent command at median +102 us through play_comp's no-fall hold = too much right), never lowers it; camera near error < -0.2 -> no action. Ends when lap_pos switches to LAND8; the last floor is kept for hold_m 0.3 m after LAND8 (only raises; a higher land-band command is kept). Delete or enabled false = off."
+  }
+ },
+ "blind": {
+  "enabled": true,
+  "x0": 5.0,
+  "x1": 8.0,
+  "ref_from": 3.8,
+  "note": "window C1e+5.0..8.0 m (+0.5 m fade): 853c lap 3 swing starts at 5.55 m, |de|>=0.3 jumps of 72 passes at 6.5-7.8 m (853c also 9.9); heading settled by C1e+3.5 m (heading(3.5..8 m) p50 -0.5..+1.6 deg); reference = mean IMU heading over 3.8..5.0 m",
+  "r2": {
+   "enabled": true,
+   "x0": 4.8,
+   "in_m": 0.2,
+   "x1": 7.5,
+   "out_m": 0.3,
+   "ref_m": 0.8,
+   "ref_late_m": 0.4,
+   "swing_deg": 4.0,
+   "swing_gz": 12.0,
+   "late_deg": 2.5,
+   "agree_deg": 4.0,
+   "cam_ref_m": 1.5,
+   "cam_lim_deg": 2.5,
+   "cam_min_n": 6,
+   "k_psi": 10.0,
+   "k_gz": 1.2,
+   "ki": 8.0,
+   "i_lim": 25.0,
+   "i_gate_deg": 3.0,
+   "i_gate_gz": 15.0,
+   "lim_us": 150.0,
+   "max_step_us": 60.0,
+   "k_cam": 100.0,
+   "trim_us": 36.0,
+   "tau_s": 0.5,
+   "trim_from": 3.3,
+   "jump_e": 0.08,
+   "cons_s": 0.15,
+   "cons_e": 0.2,
+   "max_dev_deg": 12.0,
+   "lost_age_s": 1.0,
+   "note": "blind-v-r2 (blind-v-20261119, offline candidate): V crossing after curve 1 with the circle-crossing r4 rules. Camera owns C1e+0..4.8 m; heading hold C1e+4.8..7.5 m (0.2 m blend in, 0.3 m blend out -> camera alone from 7.8 m; curve-2 brake zone from 9.8 m). Measured (133 passes 11-16..11-18): single-line / fallback-corridor frames C1e+4.75..7.25 m, camera lateral bias |p90| > 3 cm 5.5..7.5 m. Reference = distance-weighted IMU heading over the last 0.8 m before 4.8 m (swing -> last 0.4 m; else no hold), then corrected by the camera lateral slope over 3.3..4.8 m (two lines, clean), within +-2.5 deg: the plain heading reference is ~+1.0..1.4 deg left of the lane (the car is still settling from curve 1), which made r1 drift 10-17 cm left on 11-18. k_psi 10 / k_gz 1.2 / ki 8 (+-25 us, hold only), camera trim +-36 us from consistent frames, |dpsi| > 12 deg -> released. No map fallback. PWM untouched. Lost frames are not handled (live_pid calls the lost hook only for blind_c2). Delete the r2 key (or enabled false) = r1.",
+   "win_to_x0": true,
+   "log_miss": true,
+   "note_miss": "blind-v-miss-20261119: win_to_x0 = reference-window coverage measured to x0 (lap_pos 5 Hz steps of ~0.29 m at 1.44 m/s left only two levels in the 0.8 m window -> no reference -> no hold on aabb laps 2-4); log_miss = one NOREF record when no reference. Needs arc2.py 42d00b0d. Delete both keys = before."
+  }
+ },
+ "c3": {
+  "enabled": true,
+  "anchors": [
+   [
+    "C3s",
+    0.0
+   ]
+  ],
+  "yaw_ref": "anchor",
+  "win_m": [
+   0.0,
+   0.6
+  ],
+  "kappa_table": [
+   [
+    -0.075,
+    34.8
+   ],
+   [
+    0.175,
+    32.0
+   ],
+   [
+    0.425,
+    12.8
+   ],
+   [
+    0.675,
+    12.0
+   ],
+   [
+    0.925,
+    13.6
+   ],
+   [
+    1.175,
+    20.8
+   ],
+   [
+    1.425,
+    40.4
+   ],
+   [
+    1.675,
+    49.6
+   ],
+   [
+    1.925,
+    40.4
+   ],
+   [
+    2.175,
+    36.4
+   ],
+   [
+    2.425,
+    24.4
+   ],
+   [
+    2.675,
+    14.0
+   ],
+   [
+    2.925,
+    8.8
+   ],
+   [
+    3.175,
+    15.6
+   ],
+   [
+    3.425,
+    16.0
+   ],
+   [
+    3.675,
+    27.2
+   ],
+   [
+    3.925,
+    40.0
+   ],
+   [
+    4.175,
+    35.2
+   ],
+   [
+    4.425,
+    34.8
+   ],
+   [
+    4.675,
+    53.2
+   ],
+   [
+    4.925,
+    0.0
+   ],
+   [
+    5.175,
+    0.0
+   ],
+   [
+    5.425,
+    0.0
+   ],
+   [
+    5.675,
+    0.0
+   ],
+   [
+    5.925,
+    0.0
+   ],
+   [
+    6.175,
+    0.0
+   ]
+  ],
+  "frac": 0.7,
+  "cap_us": 1750.0,
+  "delay_m": 0.0,
+  "ramp_m": 0.3,
+  "end_deg": 999.0,
+  "max_m": 6.2,
+  "fade_m": 0.4,
+  "pitch_max": 3.0,
+  "cancel_fade_m": 0.3,
+  "check_m": 1.5,
+  "min_turn_deg": 5.0,
+  "e_cancel": -9.0,
+  "cancel_after_m": 0.0,
+  "prof_turn": [
+   [
+    0,
+    0.0
+   ],
+   [
+    0.25,
+    8.7
+   ],
+   [
+    0.5,
+    16.7
+   ],
+   [
+    0.75,
+    19.9
+   ],
+   [
+    1.0,
+    22.9
+   ],
+   [
+    1.25,
+    26.3
+   ],
+   [
+    1.5,
+    31.5
+   ],
+   [
+    1.75,
+    41.6
+   ],
+   [
+    2.0,
+    54.0
+   ],
+   [
+    2.25,
+    64.1
+   ],
+   [
+    2.5,
+    73.2
+   ],
+   [
+    2.75,
+    79.3
+   ],
+   [
+    3.0,
+    82.8
+   ],
+   [
+    3.25,
+    85.0
+   ],
+   [
+    3.5,
+    88.9
+   ],
+   [
+    3.75,
+    92.9
+   ],
+   [
+    4.0,
+    99.7
+   ],
+   [
+    4.25,
+    109.7
+   ],
+   [
+    4.5,
+    118.5
+   ],
+   [
+    4.75,
+    127.2
+   ],
+   [
+    5.0,
+    140.5
+   ],
+   [
+    5.25,
+    152.9
+   ],
+   [
+    5.5,
+    167.3
+   ],
+   [
+    5.75,
+    174.9
+   ],
+   [
+    6.0,
+    180.4
+   ],
+   [
+    6.25,
+    185.4
+   ],
+   [
+    6.5,
+    192.7
+   ]
+  ],
+  "ahead_lo": 10.0,
+  "ahead_hi": 20.0,
+  "yield_e": [
+   -0.15,
+   0.1
+  ],
+  "yield_rate": 0.25,
+  "max_drop_us": 60.0,
+  "rearm_m": 20.0,
+  "max_age_s": 0.25,
+  "note": "kappa = median turn-vs-distance of 70 curve-3 passes (11-14..11-16) in 0.25 m bins since the lap_pos C3s crossing, shifted 0.2 m earlier (plant lead); frac 0.7 keeps the floor below the median; turn since C3s already ~38 deg at the crossing (C3s is late: gyro onset 0.85 m before it)",
+  "note_c3_tail": "c3-tail-20261119 step0: kappa_table x >= 4.925 m -> 0 (was 49.6 .. 20.0): the floor no longer holds the ~20 deg/m turn on the E2 straight before the ramp-foot corner (median floor push there +21 us, up to +100).",
+  "top": {
+   "enabled": true,
+   "anchor": "C3s",
+   "e_release": 0.8,
+   "ahead_min_deg": -10.0,
+   "max_down_us": 25.0,
+   "max_up_us": 150.0,
+   "min_rel_us": 0.0,
+   "max_age_s": 0.25,
+   "table": [
+    [
+     4.95,
+     1760.0
+    ],
+    [
+     5.15,
+     1640.0
+    ],
+    [
+     5.35,
+     1600.0
+    ],
+    [
+     5.85,
+     1600.0
+    ]
+   ],
+   "note": "c3-tail-r1 (c3-tail-20261119, offline candidate): position top for the curve-3 tail straight E2 (C3s+~5.2..5.9 m, between the last flat bend B4 and the ramp-foot corner). Final command of the c3 layer <= interp(table, x) inside the table range (x = lap_pos m since C3s), lowered <= max_down_us / frame, returned <= max_up_us / frame; flat eligible frames only (pitch > 3 deg = ramp foot = no top); released for the pass when near error >= e_release or the car is ahead_min_deg behind prof_turn. Never raises the command. Needs lap_ff.py c3-tail-r1 (0f739ce5). Delete the top key (or enabled false) = off."
+  }
+ },
+ "note_slope_arc": "slope-arc-20261116: + 'pre' (A, needs arc2.py SlopePre + live_pid stage arc2_pre) and 'land' re-timed (B, json only).",
+ "blind_c2": {
+  "enabled": true,
+  "anchor": "C2e",
+  "ref_anchor": "C1e",
+  "ref_win": [
+   4.0,
+   9.0
+  ],
+  "ref_min_n": 3,
+  "ref_off_deg": -204.7,
+  "x0": 2.6,
+  "x1": 5.8,
+  "in_m": 0.3,
+  "out_m": 0.5,
+  "trim_from": 1.2,
+  "straight_us": 1513.0,
+  "k_psi": 10.0,
+  "k_gz": 1.5,
+  "k_cam": 100.0,
+  "trim_us": 50.0,
+  "tau_s": 0.5,
+  "jump_e": 0.25,
+  "lim_us": 150.0,
+  "max_step_us": 60.0,
+  "max_age_s": 0.25,
+  "max_dev_deg": 12.0,
+  "note": "c2-blind-r1 (c2-crossing-20261117 offline candidate, NOT deployed): circle crossing lap_pos C2e+2.6..5.8 m (+0.5 m fade; the crossing lines disturb the estimate at C2e+3.0..5.5, left bend at C2e+6.8). Heading reference = mean IMU heading over C1e+4..9 m (diagonal straight) - 204.7 deg (median turn diagonal -> circle straight, 67 passes, IQR 203.8..205.7 = p10..p90; the exit heading itself is still 2-6 deg left at C2e+0.4..1.0, so the exit heading is NOT used). Camera trim = low-passed near error measured on C2e+1.2..2.6 m (two lines, clean), held in the window (k_cam 100 us/unit, +-50). |heading - reference| > 12 deg -> released for the rest of the window. Delete the key = off.",
+  "r4": {
+   "enabled": true,
+   "x0": 3.3,
+   "in_m": 0.2,
+   "x1": 5.3,
+   "out_m": 0.3,
+   "ref_m": 0.8,
+   "ref_late_m": 0.4,
+   "swing_deg": 4.0,
+   "swing_gz": 12.0,
+   "late_deg": 2.5,
+   "agree_deg": 4.0,
+   "k_psi": 12.0,
+   "k_gz": 1.2,
+   "ki": 10.0,
+   "i_lim": 25.0,
+   "i_gate_deg": 3.0,
+   "i_gate_gz": 15.0,
+   "lim_us": 150.0,
+   "max_step_us": 60.0,
+   "k_cam": 100.0,
+   "trim_us": 36.0,
+   "tau_s": 0.5,
+   "trim_from": 2.3,
+   "jump_e": 0.08,
+   "cons_s": 0.15,
+   "cons_e": 0.2,
+   "max_dev_deg": 12.0,
+   "lost_age_s": 1.0,
+   "cam_ref_m": null,
+   "note": "blind-r4 (blind4-20261117, offline candidate): camera owns C2e+0..3.3 m; heading hold only C2e+3.3..5.3 m (+0.2 m blend in, 0.3 m blend out -> camera alone from 5.6 m, 1.2 m before the left bend). Reference = distance-weighted IMU heading over the last 0.8 m before 3.3 m (swing -> last 0.4 m -> C1e map reference; > 4 deg from the map -> map). k_psi 12 / k_gz 1.2 (blind3 v3b level), small integral ki 10 / +-25 us only in the hold (reset every window), camera trim +-36 us from consistent frames only. Delete the r4 key (or enabled false) = r1 (or v2 if a v2 block is present).",
+   "win_to_x0": true,
+   "log_miss": true,
+   "note_miss": "blind-v-miss-20261119: win_to_x0 = reference-window coverage measured to x0 (lap_pos 5 Hz steps of ~0.29 m at 1.44 m/s left only two levels in the 0.8 m window -> no reference -> no hold on aabb laps 2-4); log_miss = one NOREF record when no reference. Needs arc2.py 42d00b0d. Delete both keys = before."
+  }
+ },
+ "note_landing_r2": "landing-20261119 (offline candidate, NOT deployed): needs arc2.py with landing-r2 (LandExt / pre-r2). pre (r1 block + r2) and land.approach added; everything else = car arc2.json 94518ce2.",
+ "pre": {
+  "enabled": false,
+  "anchor": "DOWN",
+  "x0": 1.0,
+  "x1": 2.55,
+  "in_m": 0.15,
+  "ref_win": [
+   -1.85,
+   -0.3
+  ],
+  "ref_min_n": 3,
+  "prof": [
+   [
+    1.0,
+    -1.2
+   ],
+   [
+    1.16,
+    -2.0
+   ],
+   [
+    1.26,
+    -4.1
+   ],
+   [
+    1.37,
+    -5.9
+   ],
+   [
+    1.47,
+    -7.2
+   ],
+   [
+    1.57,
+    -8.4
+   ],
+   [
+    1.68,
+    -9.0
+   ],
+   [
+    1.78,
+    -10.1
+   ],
+   [
+    1.88,
+    -11.0
+   ],
+   [
+    2.6,
+    -11.0
+   ]
+  ],
+  "k_us_deg": 12.0,
+  "db_deg": 0.5,
+  "lim_right_us": 80.0,
+  "lim_left_us": 30.0,
+  "max_step_us": 30.0,
+  "note": "slope-arc-r1 A (slope-arc-20261116): x = lap_pos metres since the DOWN crossing (seam ~ x 2.40: lap DOWN is 0.12 m before the pitch DOWN, DOWN->seam 2.20 m centre odometer, lap odometer = centre / 0.967). Reference = median lap_pos yaw over DOWN-1.85..DOWN-0.3 (upper straight), latched at the first DOWN frame. prof = clean-landing median heading relative to that reference (right negative): -2 deg at 1.2 m before the seam -> -11 deg at 0.5 m before (press passes reach only -7.5). bias = clip(12 us/deg * deadband0.5(psi - target), -30, +80), fade-in 0.15 m, <= 30 us/frame both ways, inserted before yaw_inner on valid frames of the downhill tail; ends at the landing (down_level) or x 2.55 (bias ramps out). Remove the block or enabled false = off.",
+  "r2": {
+   "enabled": true,
+   "heading": "imu",
+   "gap_m": 0.35,
+   "max_err_deg": 12.0,
+   "lim_right_us": 40.0,
+   "k_us_deg": 8.0,
+   "db_deg": 1.0,
+   "max_step_us": 20.0,
+   "min_n": 3,
+   "x0": 1.0,
+   "x1": 2.55,
+   "prof": [
+    [
+     1.0,
+     -3.3
+    ],
+    [
+     1.2,
+     -4.5
+    ],
+    [
+     1.4,
+     -5.6
+    ],
+    [
+     1.6,
+     -6.6
+    ],
+    [
+     1.8,
+     -8.6
+    ],
+    [
+     2.0,
+     -9.8
+    ],
+    [
+     2.2,
+     -10.2
+    ],
+    [
+     2.6,
+     -10.2
+    ]
+   ],
+   "note": "landing-20261119 pre-r2: heading from the IMU trace the land stage records (lap_pos yaw drifted 4.8-7.7 deg over frame gaps at the slope top: d2af lap 2 / 973e lap 1 / 0f91 lap 3); right-only bias clip(8 us/deg * deadband1(psi - target), 0, +40); prof = median of the 18 clean landings of 11-18 (IMU heading vs the upper-deck median, x = lap_pos m since DOWN); |psi - target| > 12 deg -> no action. Delete r2 = r1 (which pushes left; do not use)."
+  }
+ },
+ "note_pre_field": "11-19 evening: + pre (slope pre-turn r2, landing-20261119; right-only 0..+40 us from IMU heading on the last ~1.4 m of the slope). land-out-20261119: outward landings (16/49) arrive ~4 deg left of the others.",
+ "note_runD": "11-19 runD: pre (slope pre-turn r2) off: 7 of 11 landings outside the outer line with it on (aabb/e81e/709c) vs 1 of 5 on d2c7 and 16 of 49 before; no improvement seen. enabled true = back on."
+}

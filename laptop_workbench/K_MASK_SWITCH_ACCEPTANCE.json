@@ -1,0 +1,18 @@
+{
+  "frames": 1760,
+  "worker_mismatch_frames": [],
+  "opencv": "4.11.0",
+  "hardware_output": false,
+  "job": "2ccdaa21fd0b464e8e5e38a854b0770f",
+  "unit_tests": 7,
+  "suspect_always_A": true,
+  "K_requires_reference": true,
+  "curve_23_4_equals_A": true,
+  "original_K_empty": 701,
+  "candidate_empty": 0,
+  "remaining": [
+    "97.3秒與142秒額外接管",
+    "第二路口121.4秒接回偏晚"
+  ],
+  "deployed_orin": false
+}

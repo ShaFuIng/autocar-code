@@ -1,0 +1,39 @@
+C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\lib\_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\lib\_function_base_impl.py:3038: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+1. existing candidates speed_adapt.c3_36 / c3_40 (curve_pwm_by c3 32 -> 36 / 40), MODEL
+   c3 36: frames changed from x +0.00..+0.82 (first) to +3.84..+4.47 (last) | time saved x -1..6 m median 0.26 s | speed at x 4.3: +0.067 (max +0.083), at 4.8: +0.044 (max +0.083) m/s
+   c3 40: frames changed from x +0.00..+0.82 (first) to +3.84..+4.47 (last) | time saved x -1..6 m median 0.52 s | speed at x 4.3: +0.145 (max +0.168), at 4.8: +0.116 (max +0.160) m/s
+   (the last changed frame is where the C2e-anchored tail zone cap 28 starts: C2e+14.7 m = x 3.8..4.5 depending on the lap, the corner peak is at x 4.66..5.11)
+
+2. margins in the front part (x 0.6..3.3 m), per lap: max |steer - centre| us, |image error| P90 / max, frames over err 0.6, speed m/s; yaw-rate sd
+   e1b4 L1  steer max 202  |e| P90 0.31 max 0.35  frames > 0.6: 0 of 58  speed 1.03  gz sd 12  inner clearance min -13.9 cm
+   e1b4 L2  steer max 198  |e| P90 0.48 max 0.51  frames > 0.6: 0 of 63  speed 1.03  gz sd 8  inner clearance min -6.2 cm
+   e1b4 L3  steer max 223  |e| P90 0.42 max 0.44  frames > 0.6: 0 of 57  speed 1.05  gz sd 15  inner clearance min -16.1 cm
+   e1b4 L4  steer max 237  |e| P90 0.51 max 0.54  frames > 0.6: 0 of 59  speed 1.04  gz sd 9  inner clearance min -7.2 cm
+   b93e L1  steer max 197  |e| P90 0.44 max 0.45  frames > 0.6: 0 of 58  speed 1.03  gz sd 10  inner clearance min -13.3 cm
+   b93e L2  steer max 201  |e| P90 0.43 max 0.45  frames > 0.6: 0 of 61  speed 1.03  gz sd 9  inner clearance min -9.3 cm
+   b93e L3  steer max 257  |e| P90 0.60 max 0.66  frames > 0.6: 7 of 63  speed 1.02  gz sd 14  inner clearance min -15.0 cm
+   9934 L1  steer max 219  |e| P90 0.47 max 0.57  frames > 0.6: 0 of 65  speed 1.01  gz sd 13  inner clearance min -13.8 cm
+   9934 L2  steer max 196  |e| P90 0.39 max 0.40  frames > 0.6: 0 of 61  speed 1.01  gz sd 11  inner clearance min -17.6 cm
+   9934 L3  steer max 154  |e| P90 0.42 max 0.46  frames > 0.6: 0 of 66  speed 1.02  gz sd 3  inner clearance min -10.0 cm
+
+3. the corner against its entry speed, per lap: speed at x 4.3 (interpolated odometer +-0.25 s), then in x 4.3..5.5: max image error, frames with |e| >= 0.95,
+   max command - centre (proposal) and sent, frames with the proposal >= centre+400, min yaw rate dps, min inner clearance cm (arc_lat), speed at x 5.5
+   e1b4 L1  v(4.3) 1.03 | e max 0.97, sat frames 2 | cmd max +391, sent max +438, frames >= +400:  0 | gz min  -71 | clr_in min  -5.9 | v(5.5) 0.87
+   e1b4 L2  v(4.3) 1.09 | e max 1.00, sat frames 8 | cmd max +397, sent max +450, frames >= +400:  0 | gz min  -76 | clr_in min   0.9 | v(5.5) 1.05
+   e1b4 L3  v(4.3) 1.06 | e max 0.82, sat frames 0 | cmd max +370, sent max +425, frames >= +400:  0 | gz min  -70 | clr_in min  -3.1 | v(5.5) 1.01
+   e1b4 L4  v(4.3) 1.05 | e max 1.00, sat frames 8 | cmd max +397, sent max +452, frames >= +400:  0 | gz min  -73 | clr_in min   0.2 | v(5.5) 1.02
+   b93e L1  v(4.3) 0.99 | e max 0.94, sat frames 0 | cmd max +387, sent max +439, frames >= +400:  0 | gz min  -71 | clr_in min  -6.1 | v(5.5) 0.97
+   b93e L2  v(4.3) 1.07 | e max 1.00, sat frames 6 | cmd max +399, sent max +453, frames >= +400:  0 | gz min  -75 | clr_in min  -3.1 | v(5.5) 0.95
+   b93e L3  v(4.3) 1.10 | e max 0.98, sat frames 1 | cmd max +397, sent max +445, frames >= +400:  0 | gz min  -78 | clr_in min  -3.3 | v(5.5) 0.98
+   9934 L1  v(4.3) 1.06 | e max 1.00, sat frames 7 | cmd max +396, sent max +447, frames >= +400:  0 | gz min  -73 | clr_in min  -7.2 | v(5.5) 0.97
+   9934 L2  v(4.3) 1.07 | e max 1.00, sat frames 9 | cmd max +396, sent max +451, frames >= +400:  0 | gz min  -76 | clr_in min   1.3 | v(5.5) 1.01
+   9934 L3  v(4.3) 1.13 | e max 1.00, sat frames 6 | cmd max +399, sent max +449, frames >= +400:  0 | gz min  -68 | clr_in min  -2.5 | v(5.5) 0.94
+   correlation of the entry speed with max error            r = +0.28 (n=10)
+   correlation of the entry speed with max command          r = +0.38 (n=10)
+   correlation of the entry speed with frames >= +400       r = +nan (n=10)
+   correlation of the entry speed with min yaw rate         r = -0.24 (n=10)
+   correlation of the entry speed with min inner clearance  r = +0.44 (n=10)
+   entry speed x 4.3 over the 10 laps: min 0.99 median 1.07 max 1.13 m/s

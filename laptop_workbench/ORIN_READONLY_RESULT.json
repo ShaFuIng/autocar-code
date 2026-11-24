@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "port": 8000,
+      "login_protected": true,
+      "page_status": 200,
+      "page_bytes": 27310
+    },
+    {
+      "port": 8091,
+      "login_protected": true,
+      "page_status": 200,
+      "page_bytes": 12157
+    }
+  ],
+  "telemetry": {
+    "uart_age_s": 0.09,
+    "uart_error": null,
+    "camera_age_s": 0.09,
+    "camera_error": null,
+    "servo_settings_synced": true,
+    "motor_busy": false
+  },
+  "vehicle": {
+    "fw": "orin-v1.4.1-manual",
+    "state": "LOCKED",
+    "reason": "BOOT_LOCK",
+    "generation": 1,
+    "web_manual_start": true,
+    "throttle_limit_pct": 25,
+    "pca_ok": true,
+    "i2c_errors": 0,
+    "voltage_v": null,
+    "current_a": null,
+    "speed_mps": null,
+    "motor_a": {
+      "pwm_command": 0,
+      "target": 0,
+      "dir": 0,
+      "wanted_dir": 0
+    },
+    "motor_b": {
+      "pwm_command": 0,
+      "target": 0,
+      "dir": 0,
+      "wanted_dir": 0
+    }
+  },
+  "recording": {
+    "ok": true,
+    "current": null
+  },
+  "camera_snapshot": {
+    "status": 200,
+    "bytes": 4972,
+    "jpeg": true
+  }
+}

@@ -1,0 +1,12 @@
+[Unit]
+Description=Orin read-only vehicle dashboard
+
+[Service]
+ExecStart=/usr/bin/sg dialout -c "/usr/bin/python3 %h/orin_interface_v1/web/server.py"
+Restart=on-failure
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+Environment=ORIN_BIND=10.130.227.240
+
+[Install]
+WantedBy=default.target

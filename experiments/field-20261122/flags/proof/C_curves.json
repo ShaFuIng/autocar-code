@@ -1,0 +1,7740 @@
+[
+{
+"run": "014e",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 117,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "014e",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 123,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 167,
+"x_trig": 0.568,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.568,
+"c3s_first_since": 0.57
+},
+{
+"run": "014e",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 161,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 160,
+"x_trig": -0.016,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.016
+},
+{
+"run": "014e",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "014e",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 123,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.582,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.582,
+"c3s_first_since": 0.58
+},
+{
+"run": "014e",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 163,
+"FADE": 11,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 170,
+"x_trig": -0.26,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.26
+},
+{
+"run": "014e",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 114,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 122,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "014e",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 128,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 168,
+"x_trig": 0.59,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.59,
+"c3s_first_since": 0.59
+},
+{
+"run": "014e",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 167,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 162,
+"x_trig": -0.235,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.235
+},
+{
+"run": "014e",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 115,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "014e",
+"lap": 4,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 27
+},
+"ends": [],
+"n_pass": 178,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.6
+},
+{
+"run": "014e",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 4,
+"HOLD": 158,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 154,
+"x_trig": -0.244,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.244
+},
+{
+"run": "1377",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 81,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 67,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.889
+},
+{
+"run": "18fc",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 108,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "18fc",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 128,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 175,
+"x_trig": 0.572,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.572,
+"c3s_first_since": 0.57
+},
+{
+"run": "18fc",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 164,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 159,
+"x_trig": -0.186,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.186
+},
+{
+"run": "18fc",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 107,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 117,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "18fc",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 133,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 178,
+"x_trig": 0.579,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.579,
+"c3s_first_since": 0.58
+},
+{
+"run": "18fc",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 158,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 154,
+"x_trig": -0.183,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.183
+},
+{
+"run": "18fc",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 118,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "18fc",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 130,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 181,
+"x_trig": 0.584,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.584,
+"c3s_first_since": 0.58
+},
+{
+"run": "18fc",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 157,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 152,
+"x_trig": 0.04,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.04
+},
+{
+"run": "18fc",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 112,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 112,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "18fc",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 117,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 180,
+"x_trig": 0.589,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.589,
+"c3s_first_since": 0.59
+},
+{
+"run": "18fc",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 163,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 154,
+"x_trig": -0.181,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.181
+},
+{
+"run": "18fc",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 116,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "18fc",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 127,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 169,
+"x_trig": 0.587,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.587,
+"c3s_first_since": 0.59
+},
+{
+"run": "18fc",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 155,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": -0.125,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.125
+},
+{
+"run": "18fc",
+"lap": 6,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 114,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 119,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "18fc",
+"lap": 6,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 22
+},
+"ends": [],
+"n_pass": 180,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.69
+},
+{
+"run": "18fc",
+"lap": 6,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 157,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 152,
+"x_trig": -0.203,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.203
+},
+{
+"run": "1cd7",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 84,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 65,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.822
+},
+{
+"run": "1cd7",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 113,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "1eab",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 106,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 106,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "1eab",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 127,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.59,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.59,
+"c3s_first_since": 0.59
+},
+{
+"run": "1eab",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 149,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 145,
+"x_trig": -0.089,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.089
+},
+{
+"run": "1eab",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 114,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 103,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "1eab",
+"lap": 2,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 25
+},
+"ends": [],
+"n_pass": 161,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.63
+},
+{
+"run": "1eab",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 150,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 146,
+"x_trig": -0.18,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.18
+},
+{
+"run": "1eab",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 103,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "1eab",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 123,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 163,
+"x_trig": 0.579,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.579,
+"c3s_first_since": 0.58
+},
+{
+"run": "1eab",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 147,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": -0.027,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.027
+},
+{
+"run": "1eab",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 106,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 105,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "1eab",
+"lap": 4,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 17
+},
+"ends": [],
+"n_pass": 182,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.61
+},
+{
+"run": "1eab",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 145,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 141,
+"x_trig": -0.162,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.162
+},
+{
+"run": "2728",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 112,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 121,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "2728",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 126,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 158,
+"x_trig": 0.591,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.591,
+"c3s_first_since": 0.59
+},
+{
+"run": "2728",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 150,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": 0.209,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.209
+},
+{
+"run": "2728",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 117,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 107,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "2728",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 125,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.581,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.581,
+"c3s_first_since": 0.58
+},
+{
+"run": "2728",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 156,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 153,
+"x_trig": -0.184,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.184
+},
+{
+"run": "2728",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 114,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 114,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "2728",
+"lap": 3,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 26
+},
+"ends": [],
+"n_pass": 172,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.61
+},
+{
+"run": "2728",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 4,
+"HOLD": 154,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.276,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.276
+},
+{
+"run": "2728",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 108,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "2728",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 129,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 178,
+"x_trig": 0.536,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.536,
+"c3s_first_since": 0.54
+},
+{
+"run": "2728",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 159,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.196,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.196
+},
+{
+"run": "2b72",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 81,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 65,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 1.014
+},
+{
+"run": "3197",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 115,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 138,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 184,
+"x_trig": 0.569,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.569,
+"c3s_first_since": 0.57
+},
+{
+"run": "3197",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 155,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 155,
+"x_trig": -0.005,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.005
+},
+{
+"run": "3197",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 106,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 135,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 183,
+"x_trig": 0.578,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.578,
+"c3s_first_since": 0.58
+},
+{
+"run": "3197",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 168,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 163,
+"x_trig": -0.294,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.294
+},
+{
+"run": "3197",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 118,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 3,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 25
+},
+"ends": [],
+"n_pass": 169,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.66
+},
+{
+"run": "3197",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 152,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 153,
+"x_trig": -0.03,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.03
+},
+{
+"run": "3197",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 122,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 111,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 136,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 171,
+"x_trig": 0.576,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.576,
+"c3s_first_since": 0.58
+},
+{
+"run": "3197",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 159,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 152,
+"x_trig": -0.261,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.261
+},
+{
+"run": "3197",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 111,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 137,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 178,
+"x_trig": 0.576,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.576,
+"c3s_first_since": 0.58
+},
+{
+"run": "3197",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 158,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 155,
+"x_trig": -0.243,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.243
+},
+{
+"run": "3197",
+"lap": 6,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 108,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 103,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 6,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 133,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 178,
+"x_trig": 0.586,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.586,
+"c3s_first_since": 0.59
+},
+{
+"run": "3197",
+"lap": 6,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 154,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": -0.228,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.228
+},
+{
+"run": "3197",
+"lap": 7,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 7,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 24
+},
+"ends": [],
+"n_pass": 178,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.63
+},
+{
+"run": "3197",
+"lap": 7,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 153,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 153,
+"x_trig": -0.273,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.273
+},
+{
+"run": "3197",
+"lap": 8,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 115,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 114,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3197",
+"lap": 8,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 135,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 164,
+"x_trig": 0.583,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.583,
+"c3s_first_since": 0.58
+},
+{
+"run": "3197",
+"lap": 8,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 158,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 153,
+"x_trig": -0.215,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.215
+},
+{
+"run": "3f22",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 78,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 64,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.932
+},
+{
+"run": "3fd4",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 115,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 109,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "3fd4",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 126,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.566,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.566,
+"c3s_first_since": 0.57
+},
+{
+"run": "3fd4",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 156,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 151,
+"x_trig": -0.277,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.277
+},
+{
+"run": "3fd4",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 16,
+"HOLD": 114,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 125,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "3fd4",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 134,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 174,
+"x_trig": 0.58,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.58,
+"c3s_first_since": 0.58
+},
+{
+"run": "3fd4",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 153,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.249,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.249
+},
+{
+"run": "46c9",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 117,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 109,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "46c9",
+"lap": 1,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 21
+},
+"ends": [],
+"n_pass": 165,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.63
+},
+{
+"run": "46c9",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 162,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 159,
+"x_trig": 0.237,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.237
+},
+{
+"run": "46c9",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 107,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "46c9",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 123,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 175,
+"x_trig": 0.584,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.584,
+"c3s_first_since": 0.58
+},
+{
+"run": "4bbe",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 112,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 117,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "4bbe",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 123,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 167,
+"x_trig": 0.579,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.579,
+"c3s_first_since": 0.58
+},
+{
+"run": "4bbe",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 146,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": 0.225,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.225
+},
+{
+"run": "4bbe",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 106,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 111,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "4bbe",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 126,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.595,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.595,
+"c3s_first_since": 0.59
+},
+{
+"run": "4bbe",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 148,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 143,
+"x_trig": -0.191,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.191
+},
+{
+"run": "4bbe",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 109,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 102,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "4bbe",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 125,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 175,
+"x_trig": 0.593,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.593,
+"c3s_first_since": 0.59
+},
+{
+"run": "4bbe",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 145,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 141,
+"x_trig": -0.099,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.099
+},
+{
+"run": "4bbe",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 110,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "4bbe",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 126,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 152,
+"x_trig": 0.588,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.588,
+"c3s_first_since": 0.59
+},
+{
+"run": "4bbe",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 149,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": 0.227,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.227
+},
+{
+"run": "4bbe",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 111,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 125,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "4bbe",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 125,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.59,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.59,
+"c3s_first_since": 0.59
+},
+{
+"run": "4bbe",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 144,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 144,
+"x_trig": 0.027,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.027
+},
+{
+"run": "54cb",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 93,
+"FADE": 9,
+"END": 1,
+"RAMP": 12
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 64,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.89
+},
+{
+"run": "54cb",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 138,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "54cb",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 128,
+"FADE": 11,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.571,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.571,
+"c3s_first_since": 0.57
+},
+{
+"run": "54cb",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 3,
+"HOLD": 152,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": -0.297,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.297
+},
+{
+"run": "54cb",
+"lap": 2,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 89,
+"FADE": 9,
+"END": 1,
+"RAMP": 13
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 86,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 1.081
+},
+{
+"run": "54cb",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 140,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "54cb",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 126,
+"FADE": 11,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 167,
+"x_trig": 0.581,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.581,
+"c3s_first_since": 0.58
+},
+{
+"run": "54cb",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 144,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 140,
+"x_trig": -0.037,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.037
+},
+{
+"run": "54cb",
+"lap": 3,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 88,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 68,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.907
+},
+{
+"run": "54cb",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 137,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 108,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "54cb",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 128,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 159,
+"x_trig": 0.588,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.588,
+"c3s_first_since": 0.59
+},
+{
+"run": "65ea",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 127,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 113,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "65ea",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 66,
+"FADE": 5,
+"END": 1,
+"TOP": 19
+},
+"ends": [
+[
+null,
+"PITCH"
+]
+],
+"n_pass": 177,
+"x_trig": 0.57,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.57,
+"c3s_first_since": 0.57
+},
+{
+"run": "65ea",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 168,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 163,
+"x_trig": -0.084,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.084
+},
+{
+"run": "65ea",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 112,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "65ea",
+"lap": 2,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 25
+},
+"ends": [],
+"n_pass": 175,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.69
+},
+{
+"run": "65ea",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 169,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 166,
+"x_trig": -0.174,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.174
+},
+{
+"run": "65ea",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 111,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "65ea",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 47,
+"FADE": 5,
+"END": 1,
+"TOP": 20
+},
+"ends": [
+[
+null,
+"PITCH"
+]
+],
+"n_pass": 171,
+"x_trig": 0.575,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.575,
+"c3s_first_since": 0.58
+},
+{
+"run": "65ea",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 168,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 169,
+"x_trig": -0.009,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.009
+},
+{
+"run": "65ea",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 112,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "65ea",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 75,
+"FADE": 5,
+"END": 1,
+"TOP": 20
+},
+"ends": [
+[
+null,
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.575,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.575,
+"c3s_first_since": 0.58
+},
+{
+"run": "65ea",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 168,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 165,
+"x_trig": -0.021,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.021
+},
+{
+"run": "65ea",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 107,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 107,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "65ea",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 73,
+"FADE": 5,
+"END": 1,
+"TOP": 24
+},
+"ends": [
+[
+null,
+"PITCH"
+]
+],
+"n_pass": 164,
+"x_trig": 0.572,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.572,
+"c3s_first_since": 0.57
+},
+{
+"run": "65ea",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 165,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 162,
+"x_trig": 0.063,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.063
+},
+{
+"run": "69d9",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 110,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 114,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "69d9",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 72
+},
+"ends": [],
+"n_pass": 150,
+"x_trig": 0.594,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.594,
+"c3s_first_since": 0.59
+},
+{
+"run": "6f61",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 110,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 114,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "6f61",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 129,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 169,
+"x_trig": 0.575,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.575,
+"c3s_first_since": 0.57
+},
+{
+"run": "6f61",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 2,
+"HOLD": 159,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.253,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.253
+},
+{
+"run": "6f61",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 108,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "6f61",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 113,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+]
+],
+"n_pass": 151,
+"x_trig": 0.592,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.592,
+"c3s_first_since": 0.59
+},
+{
+"run": "6f61",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 149,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 144,
+"x_trig": -0.167,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.167
+},
+{
+"run": "6f61",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 110,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 121,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "6f61",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 120,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 161,
+"x_trig": 0.582,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.582,
+"c3s_first_since": 0.58
+},
+{
+"run": "6f61",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 149,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 145,
+"x_trig": -0.261,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.261
+},
+{
+"run": "6f61",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 113,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 123,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "6f61",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 119,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 149,
+"x_trig": 0.595,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.595,
+"c3s_first_since": 0.6
+},
+{
+"run": "6f61",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 148,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 144,
+"x_trig": -0.173,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.173
+},
+{
+"run": "6f61",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "6f61",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 127,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 157,
+"x_trig": 0.587,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.587,
+"c3s_first_since": 0.59
+},
+{
+"run": "6f61",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 148,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": 0.003,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.003
+},
+{
+"run": "6f61",
+"lap": 6,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 110,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 119,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "6f61",
+"lap": 6,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 124,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 157,
+"x_trig": 0.587,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.587,
+"c3s_first_since": 0.59
+},
+{
+"run": "6f61",
+"lap": 6,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 147,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 143,
+"x_trig": -0.056,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.056
+},
+{
+"run": "7658",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 121,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "7658",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 112,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 181,
+"x_trig": 0.585,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.585,
+"c3s_first_since": 0.58
+},
+{
+"run": "7658",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 138,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 139,
+"x_trig": -0.0,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.0
+},
+{
+"run": "7658",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 108,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "7658",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 124,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 164,
+"x_trig": 0.578,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.578,
+"c3s_first_since": 0.58
+},
+{
+"run": "7658",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 147,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": 0.21,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.21
+},
+{
+"run": "7658",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 109,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 103,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "7658",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 126,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 161,
+"x_trig": 0.576,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.576,
+"c3s_first_since": 0.58
+},
+{
+"run": "7658",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 4,
+"HOLD": 151,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": -0.275,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.275
+},
+{
+"run": "8350",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 103,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 109,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "8350",
+"lap": 1,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 22
+},
+"ends": [],
+"n_pass": 176,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.61
+},
+{
+"run": "8350",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 162,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 157,
+"x_trig": -0.277,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.277
+},
+{
+"run": "8350",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 116,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "8350",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 129,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.58,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.58,
+"c3s_first_since": 0.58
+},
+{
+"run": "8350",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 160,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": -0.171,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.171
+},
+{
+"run": "8350",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 120,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 104,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "8350",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 123,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 168,
+"x_trig": 0.585,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.585,
+"c3s_first_since": 0.58
+},
+{
+"run": "8350",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 160,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": -0.133,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.133
+},
+{
+"run": "8350",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 116,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 101,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "8350",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 131,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 172,
+"x_trig": 0.577,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.577,
+"c3s_first_since": 0.58
+},
+{
+"run": "8350",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 159,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 159,
+"x_trig": -0.251,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.251
+},
+{
+"run": "84f2",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 120,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "84f2",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 116,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+]
+],
+"n_pass": 183,
+"x_trig": 0.593,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.593,
+"c3s_first_since": 0.59
+},
+{
+"run": "84f2",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 158,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 154,
+"x_trig": -0.008,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.008
+},
+{
+"run": "84f2",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 121,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "84f2",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 130,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 177,
+"x_trig": 0.577,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.577,
+"c3s_first_since": 0.58
+},
+{
+"run": "84f2",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 153,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.24,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.24
+},
+{
+"run": "84f2",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 108,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "84f2",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 126,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.579,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.579,
+"c3s_first_since": 0.58
+},
+{
+"run": "84f2",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 156,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 151,
+"x_trig": -0.208,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.208
+},
+{
+"run": "84f2",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 115,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 125,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "84f2",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 124,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 158,
+"x_trig": 0.578,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.578,
+"c3s_first_since": 0.58
+},
+{
+"run": "84f2",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 155,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": -0.194,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.194
+},
+{
+"run": "9af6",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 9
+},
+"ends": [],
+"n_pass": 78,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "9af6",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 113,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 123,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "9af6",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 125,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 165,
+"x_trig": 0.586,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.586,
+"c3s_first_since": 0.59
+},
+{
+"run": "9af6",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 153,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 144,
+"x_trig": -0.073,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.073
+},
+{
+"run": "9af6",
+"lap": 2,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 97,
+"FADE": 9,
+"END": 1,
+"RAMP": 12
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 70,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.872
+},
+{
+"run": "9af6",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 109,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 113,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "9af6",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 124,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 149,
+"x_trig": 0.592,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.592,
+"c3s_first_since": 0.59
+},
+{
+"run": "9af6",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 153,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.034,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.034
+},
+{
+"run": "9af6",
+"lap": 3,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 89,
+"FADE": 9,
+"END": 1,
+"RAMP": 15
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 66,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 1.058
+},
+{
+"run": "9af6",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 114,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 113,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "9af6",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 124,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 152,
+"x_trig": 0.589,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.589,
+"c3s_first_since": 0.59
+},
+{
+"run": "9af6",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 146,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.031,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.031
+},
+{
+"run": "9af6",
+"lap": 4,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 90,
+"FADE": 8,
+"END": 1,
+"RAMP": 13
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 69,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.846
+},
+{
+"run": "9af6",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 113,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 107,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "9af6",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 123,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 157,
+"x_trig": 0.597,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.597,
+"c3s_first_since": 0.6
+},
+{
+"run": "9af6",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 160,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": 0.236,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.236
+},
+{
+"run": "9af6",
+"lap": 5,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 88,
+"FADE": 9,
+"END": 1,
+"RAMP": 14
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 74,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.914
+},
+{
+"run": "9af6",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 107,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 117,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "9af6",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 124,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.599,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.599,
+"c3s_first_since": 0.6
+},
+{
+"run": "9af6",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 159,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": -0.035,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.035
+},
+{
+"run": "9af6",
+"lap": 6,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 26
+},
+"ends": [],
+"n_pass": 26,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.844
+},
+{
+"run": "a392",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 107,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 106,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "a392",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 125,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.586,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.586,
+"c3s_first_since": 0.59
+},
+{
+"run": "a392",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 3,
+"HOLD": 154,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 150,
+"x_trig": -0.231,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.231
+},
+{
+"run": "b23a",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 79,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 65,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.923
+},
+{
+"run": "b619",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 83,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 65,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.834
+},
+{
+"run": "beb1",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 121,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "beb1",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 131,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 177,
+"x_trig": 0.572,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.572,
+"c3s_first_since": 0.57
+},
+{
+"run": "beb1",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 159,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 159,
+"x_trig": -0.073,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.073
+},
+{
+"run": "beb1",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 109,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 118,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "beb1",
+"lap": 2,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 17
+},
+"ends": [],
+"n_pass": 172,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.6
+},
+{
+"run": "beb1",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 166,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 155,
+"x_trig": -0.217,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.217
+},
+{
+"run": "beb1",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 116,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "beb1",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 130,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 169,
+"x_trig": 0.594,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.594,
+"c3s_first_since": 0.59
+},
+{
+"run": "beb1",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 159,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 155,
+"x_trig": -0.158,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.158
+},
+{
+"run": "beb1",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 111,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "beb1",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 126,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 173,
+"x_trig": 0.579,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.579,
+"c3s_first_since": 0.58
+},
+{
+"run": "beb1",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 167,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 162,
+"x_trig": -0.263,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.263
+},
+{
+"run": "beb1",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 111,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "beb1",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 123,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 164,
+"x_trig": 0.584,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.584,
+"c3s_first_since": 0.58
+},
+{
+"run": "beb1",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 162,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 157,
+"x_trig": -0.177,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.177
+},
+{
+"run": "c6f3",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 109,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "c6f3",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 128,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 180,
+"x_trig": 0.575,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.575,
+"c3s_first_since": 0.58
+},
+{
+"run": "c6f3",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 3,
+"HOLD": 152,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": -0.283,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.283
+},
+{
+"run": "c6f3",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 105,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 109,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "c6f3",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 122,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 180,
+"x_trig": 0.593,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.593,
+"c3s_first_since": 0.59
+},
+{
+"run": "c6f3",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 144,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 143,
+"x_trig": 0.004,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.004
+},
+{
+"run": "c6f3",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 116,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 100,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "c6f3",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 120,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 175,
+"x_trig": 0.595,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.595,
+"c3s_first_since": 0.59
+},
+{
+"run": "c6f3",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 144,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 144,
+"x_trig": 0.03,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.03
+},
+{
+"run": "c6f3",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 115,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 124,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "c6f3",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 125,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 161,
+"x_trig": 0.598,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.598,
+"c3s_first_since": 0.6
+},
+{
+"run": "c6f3",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 141,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 140,
+"x_trig": -0.009,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.009
+},
+{
+"run": "c7be",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 114,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 123,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 110,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 114,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 122,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 171,
+"x_trig": 0.584,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.584,
+"c3s_first_since": 0.58
+},
+{
+"run": "ccf1",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 152,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": -0.268,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.268
+},
+{
+"run": "ccf1",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 119,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 122,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 158,
+"x_trig": 0.595,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.595,
+"c3s_first_since": 0.6
+},
+{
+"run": "ccf1",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 4,
+"HOLD": 146,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 142,
+"x_trig": -0.194,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.194
+},
+{
+"run": "ccf1",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 104,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 108,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 122,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 171,
+"x_trig": 0.586,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.586,
+"c3s_first_since": 0.59
+},
+{
+"run": "ccf1",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 150,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": 0.208,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.208
+},
+{
+"run": "ccf1",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 111,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 104,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 120,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 165,
+"x_trig": 0.598,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.598,
+"c3s_first_since": 0.6
+},
+{
+"run": "ccf1",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 153,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.165,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.165
+},
+{
+"run": "ccf1",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 115,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 95,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 122,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 175,
+"x_trig": 0.599,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.599,
+"c3s_first_since": 0.6
+},
+{
+"run": "ccf1",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 3,
+"HOLD": 154,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.3,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.3
+},
+{
+"run": "ccf1",
+"lap": 6,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 106,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "ccf1",
+"lap": 6,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 129,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 174,
+"x_trig": 0.517,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.517,
+"c3s_first_since": 0.52
+},
+{
+"run": "ccf1",
+"lap": 6,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 148,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 143,
+"x_trig": 0.407,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.407
+},
+{
+"run": "d60e",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 102,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 111,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "d60e",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 127,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 182,
+"x_trig": 0.584,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.584,
+"c3s_first_since": 0.58
+},
+{
+"run": "d60e",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 142,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 143,
+"x_trig": 0.039,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.039
+},
+{
+"run": "d60e",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 116,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 106,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "d60e",
+"lap": 2,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 21
+},
+"ends": [],
+"n_pass": 141,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.63
+},
+{
+"run": "d60e",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 143,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": 0.21,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.21
+},
+{
+"run": "d60e",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 124,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 107,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "d60e",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 125,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 179,
+"x_trig": 0.586,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.586,
+"c3s_first_since": 0.59
+},
+{
+"run": "d60e",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 149,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.034,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.034
+},
+{
+"run": "d60e",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 111,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 116,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "d60e",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 126,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 177,
+"x_trig": 0.591,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.591,
+"c3s_first_since": 0.59
+},
+{
+"run": "d60e",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 153,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.031,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.031
+},
+{
+"run": "d60e",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 116,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 114,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "d60e",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 125,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 165,
+"x_trig": 0.593,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.593,
+"c3s_first_since": 0.59
+},
+{
+"run": "d60e",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 157,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.232,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.232
+},
+{
+"run": "e0cd",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 117,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 121,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e0cd",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 116,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 172,
+"x_trig": 0.595,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.595,
+"c3s_first_since": 0.59
+},
+{
+"run": "e0cd",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 146,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": 0.203,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.203
+},
+{
+"run": "e0cd",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 117,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 126,
+"x_trig": null,
+"anchor": null,
+"kind": "POS",
+"x_first": 0.0
+},
+{
+"run": "e0cd",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 121,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 166,
+"x_trig": 0.589,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.589,
+"c3s_first_since": 0.59
+},
+{
+"run": "e0cd",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 160,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.202,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.202
+},
+{
+"run": "e0cd",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 110,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e0cd",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 122,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 177,
+"x_trig": 0.594,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.594,
+"c3s_first_since": 0.59
+},
+{
+"run": "e0cd",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 149,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 144,
+"x_trig": -0.026,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.026
+},
+{
+"run": "e0cd",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 109,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 105,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e0cd",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 119,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 147,
+"x_trig": 0.594,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.594,
+"c3s_first_since": 0.59
+},
+{
+"run": "e0cd",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 147,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 146,
+"x_trig": -0.071,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.071
+},
+{
+"run": "e69d",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 93,
+"FADE": 9,
+"END": 1,
+"RAMP": 13
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 71,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.897
+},
+{
+"run": "e69d",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 5,
+"HOLD": 126,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 117,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e69d",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 128,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 168,
+"x_trig": 0.569,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.569,
+"c3s_first_since": 0.57
+},
+{
+"run": "e69d",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 158,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.107,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.107
+},
+{
+"run": "e69d",
+"lap": 2,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 87,
+"FADE": 9,
+"END": 1,
+"RAMP": 14
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 73,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 1.072
+},
+{
+"run": "e69d",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 117,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 111,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e69d",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 123,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+null,
+"PITCH"
+],
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 169,
+"x_trig": 0.587,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.587,
+"c3s_first_since": 0.59
+},
+{
+"run": "e69d",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 11,
+"HOLD": 154,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": 0.195,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.195
+},
+{
+"run": "e69d",
+"lap": 3,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 95,
+"FADE": 9,
+"END": 1,
+"RAMP": 14
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 76,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.834
+},
+{
+"run": "e69d",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 118,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 108,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e69d",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 125,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 170,
+"x_trig": 0.586,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.586,
+"c3s_first_since": 0.59
+},
+{
+"run": "e69d",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 155,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": -0.141,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.141
+},
+{
+"run": "e69d",
+"lap": 4,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 99,
+"FADE": 10,
+"END": 1,
+"RAMP": 14
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 75,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.839
+},
+{
+"run": "e69d",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 130,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 111,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e69d",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 126,
+"FADE": 5,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 167,
+"x_trig": 0.587,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.587,
+"c3s_first_since": 0.59
+},
+{
+"run": "e69d",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 153,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 147,
+"x_trig": -0.009,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.009
+},
+{
+"run": "e69d",
+"lap": 5,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 89,
+"FADE": 9,
+"END": 1,
+"RAMP": 15
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 60,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 1.074
+},
+{
+"run": "e69d",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 129,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 105,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "e69d",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 130,
+"FADE": 11,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 169,
+"x_trig": 0.598,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.598,
+"c3s_first_since": 0.6
+},
+{
+"run": "e69d",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 7,
+"HOLD": 153,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 148,
+"x_trig": -0.119,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.119
+},
+{
+"run": "e69d",
+"lap": 6,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 20
+},
+"ends": [],
+"n_pass": 20,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.844
+},
+{
+"run": "fd22",
+"lap": 1,
+"curve": "curve1",
+"trig": true,
+"states": {
+"HOLD": 85,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 66,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.897
+},
+{
+"run": "ff42",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 115,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 115,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff42",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 124,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 169,
+"x_trig": 0.583,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.583,
+"c3s_first_since": 0.58
+},
+{
+"run": "ff42",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 156,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 152,
+"x_trig": -0.04,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.04
+},
+{
+"run": "ff42",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 113,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff42",
+"lap": 2,
+"curve": "curve3",
+"trig": false,
+"states": {
+"TOP": 15
+},
+"ends": [],
+"n_pass": 177,
+"x_trig": null,
+"anchor": null,
+"kind": null,
+"x_first": null,
+"c3s_first_since": 0.67
+},
+{
+"run": "ff42",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 3,
+"HOLD": 164,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 154,
+"x_trig": -0.24,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.24
+},
+{
+"run": "ff42",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 115,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 109,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff42",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 125,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 161,
+"x_trig": 0.583,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.583,
+"c3s_first_since": 0.58
+},
+{
+"run": "ff42",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 156,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": 0.104,
+"anchor": "DOWN",
+"kind": null,
+"x_first": 0.104
+},
+{
+"run": "ff42",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 115,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 101,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff42",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 118,
+"FADE": 4,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 174,
+"x_trig": 0.6,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.6,
+"c3s_first_since": 0.6
+},
+{
+"run": "ff42",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 9,
+"HOLD": 150,
+"FADE": 8,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 149,
+"x_trig": 0.227,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.227
+},
+{
+"run": "ff94",
+"lap": 1,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 112,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 112,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff94",
+"lap": 1,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 127,
+"FADE": 3,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 176,
+"x_trig": 0.584,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.584,
+"c3s_first_since": 0.58
+},
+{
+"run": "ff94",
+"lap": 1,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 6,
+"HOLD": 162,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 157,
+"x_trig": -0.056,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.056
+},
+{
+"run": "ff94",
+"lap": 2,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 12,
+"HOLD": 120,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 120,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff94",
+"lap": 2,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 130,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 160,
+"x_trig": 0.576,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.576,
+"c3s_first_since": 0.58
+},
+{
+"run": "ff94",
+"lap": 2,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 8,
+"HOLD": 153,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 156,
+"x_trig": 0.213,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.213
+},
+{
+"run": "ff94",
+"lap": 3,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 13,
+"HOLD": 113,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 108,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff94",
+"lap": 3,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 124,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 171,
+"x_trig": 0.582,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.582,
+"c3s_first_since": 0.58
+},
+{
+"run": "ff94",
+"lap": 3,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 2,
+"HOLD": 166,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 157,
+"x_trig": -0.269,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.269
+},
+{
+"run": "ff94",
+"lap": 4,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 14,
+"HOLD": 114,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+null
+]
+],
+"n_pass": 119,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff94",
+"lap": 4,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 123,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 163,
+"x_trig": 0.59,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.59,
+"c3s_first_since": 0.59
+},
+{
+"run": "ff94",
+"lap": 4,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 152,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 157,
+"x_trig": -0.151,
+"anchor": "DOWN",
+"kind": null,
+"x_first": -0.151
+},
+{
+"run": "ff94",
+"lap": 5,
+"curve": "curve2",
+"trig": true,
+"states": {
+"RAMP": 15,
+"HOLD": 114,
+"FADE": 10,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 119,
+"x_trig": null,
+"anchor": null,
+"kind": "FAR",
+"x_first": 0.0
+},
+{
+"run": "ff94",
+"lap": 5,
+"curve": "curve3",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 108,
+"FADE": 6,
+"END": 1
+},
+"ends": [
+[
+"MAX_M",
+"PITCH"
+]
+],
+"n_pass": 175,
+"x_trig": 0.593,
+"anchor": "C3s",
+"kind": null,
+"x_first": 0.593,
+"c3s_first_since": 0.59
+},
+{
+"run": "ff94",
+"lap": 5,
+"curve": "curve4",
+"trig": true,
+"states": {
+"RAMP": 10,
+"HOLD": 146,
+"FADE": 9,
+"END": 1
+},
+"ends": [
+[
+"ANGLE",
+null
+]
+],
+"n_pass": 151,
+"x_trig": 0.248,
+"anchor": "LAND8",
+"kind": null,
+"x_first": 0.248
+}
+]

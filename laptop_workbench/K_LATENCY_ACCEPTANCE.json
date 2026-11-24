@@ -1,0 +1,89 @@
+{
+  "version": "k-latency-20261024-r1",
+  "deployed": true,
+  "comparison": {
+    "frames": 372,
+    "different": [],
+    "before_ms": 97.65976112904569,
+    "candidate_ms": 84.10715818011937,
+    "cache_hits": 315,
+    "remote": "/home/jetson/orin_interface_v1/offline_experiments/k_latency_20261024"
+  },
+  "before_stream": {
+    "frames": 163,
+    "max_control_age_s": 0.24328000900004554,
+    "max_result_gap_s": 0.18655675199988764,
+    "max_latest_age_before_update_s": 0.4166887259998475
+  },
+  "after_stream": {
+    "frames": 210,
+    "max_control_age_s": 0.20362978699995438,
+    "max_result_gap_s": 0.14368715999989945,
+    "max_latest_age_before_update_s": 0.3358794220002892
+  },
+  "recording": {
+    "ok": true,
+    "current": {
+      "id": "14ded31be9ea4a25909db5e1cae1c038",
+      "mode": "record_only",
+      "status": "stopped",
+      "created_at": "2026-10-24T08:08:38.869976+00:00",
+      "path": "/home/jetson/orin_interface_v1/logs/record_only/14ded31be9ea4a25909db5e1cae1c038",
+      "frames": 167,
+      "nominal_fps": 10,
+      "reason": "USER_STOP",
+      "motion_labels": false,
+      "ended_at": "2026-10-24T08:08:58.895629+00:00"
+    }
+  },
+  "pipeline": {
+    "version": 1,
+    "captured": 770,
+    "control_published": 770,
+    "preview_published": 372,
+    "recording_submitted": 167,
+    "recording_processed": 167,
+    "recording_dropped": 0,
+    "recording_stale_session": 0,
+    "recording_errors": 0,
+    "recording_write_max_ms": 81.74034300009225,
+    "control_publish_max_gap_s": 0.07418317300016497,
+    "control_encode_ms": 5.252347999885387,
+    "control_publish_age_s": 0.005531327000426245,
+    "control_seq": 770,
+    "recording_queue_depth": 0
+  },
+  "backup": "/home/jetson/orin_interface_v1/backups/k_latency_20261024_160814",
+  "files": {
+    "web/live_model_worker.py": "37a525075633bd14f41be3e061c1579b7d556c3a2b12d4c12a934388f6917d5b",
+    "web/live_pid.py": "3ddcb6ce82aaf4a5b58e41eb1824b0614e9edaae8766f8cdfe3f99ba13b2dfb8",
+    "web/k_lane_runtime/junction_k.py": "3efa2ff09de92e80f593f111970b0a0f34fdafd9df7c3eb5f77e08582f685160",
+    "web/k_lane_runtime/junction_k_mask.py": "0b3750ad2d2d51dd8288696755ab499164da8286be1f1fdbaaa3d943d0f06ef3",
+    "web/k_lane_runtime/temporal_lane.py": "a3917af3a1f27bcf5969a86f1a81f4d66373ff060a5e3f7daca89e5c4cc70313"
+  },
+  "service": "MainPID=46184\nActiveState=active\n",
+  "final_state": {
+    "vehicle": "LOCKED",
+    "motors": [
+      0,
+      0
+    ],
+    "pid": "idle",
+    "recording": "stopped"
+  },
+  "thresholds_unchanged": true,
+  "k_switch_logic_unchanged": true,
+  "pid_started": false,
+  "motor_commands_sent": false,
+  "tests": [
+    "100-frame detector exact match",
+    "372-frame full K exact path/quality/validity/diagnostic match",
+    "blocked preview does not block control messages",
+    "motion reuse only for identical frame pair"
+  ],
+  "limitations": [
+    "20-second stationary recording with live recognition, not a driving test",
+    "Timing is measured, not a guaranteed worst-case bound",
+    "Stationary measurements are separate runs; same-input speed comparison is 372-frame replay"
+  ]
+}

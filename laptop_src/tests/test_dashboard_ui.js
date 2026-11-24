@@ -1,0 +1,46 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const path=require('node:path');
+const html=fs.readFileSync(path.join(__dirname,'../web/index.html'),'utf8');
+const elements=new Map([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],{value:'',disabled:false,textContent:'',style:{},classList:{toggle(){}},setAttribute(){},setPointerCapture(){}}]));
+elements.get('stepSize').value='10';
+for(const [id,value] of [['motorWheel','both'],['motorDirection','forward'],['motorRight','10'],['motorLeft','10'],['motorSeconds','5'],['motorWarmup','1'],['motorLabel','10% first']])elements.get(id).value=value;
+elements.get('motorEqual').checked=true;elements.get('wheelsRaised').checked=true;
+
+const requests=[];let delayed=false,resolveCommand;
+const context={console,Math,Number,JSON,Error,AbortController,clearTimeout(){},crypto:{getRandomValues(x){return x.fill(1)}},setTimeout(){},location:{hostname:'test'},document:{getElementById(id){assert(elements.has(id),'Missing UI element '+id);return elements.get(id)},addEventListener(){}},fetch(url,options){if(!options)return new Promise(()=>{});const body=JSON.parse(options.body);requests.push({url,body});if(delayed)return new Promise(resolve=>{resolveCommand=resolve});return Promise.resolve({ok:true,json:async()=>url==='/api/motor/start'?{ok:true,run_id:'c'.repeat(32)}:url.endsWith('/settings')?{ok:true,profile:{revision:2,min_us:body.min_us,center_us:body.center_us,max_us:body.max_us}}:{ok:true,generation:3}})}};
+vm.createContext(context);vm.runInContext(html.match(/<script>([\s\S]*?)<\/script>/)[1],context);
+const state={uart_age_s:.05,uart_error:null,servo_settings:{revision:1,min_us:1010,center_us:1460,max_us:1810},servo_settings_synced:true,vehicle:{fw:'orin-v1.3.0-bench',servo_calibration:true,state:'READY',generation:3,pins:{D11:1},steer_output_enabled:true,steer_us_command:1460,ms:500}};
+async function main(){
+ context.servoStatus(structuredClone(state));
+ elements.get('centerUs').value='1470';elements.get('centerUs').oninput();
+ await elements.get('saveSettings').onclick();
+ assert.equal(requests.length,1);assert.equal(requests[0].url,'/api/servo/settings');assert.equal(requests[0].body.center_us,1470);assert.equal(requests[0].body.expected_revision,1);
+ context.servoStatus(structuredClone(state));
+ delayed=true;const first=elements.get('plus').onclick();
+ assert(elements.get('plus').disabled);await elements.get('plus').onclick();assert.equal(requests.length,2);
+ resolveCommand({ok:true,json:async()=>({ok:true,generation:3,servo_us:1470,status_ms:600})});await first;
+ context.servoStatus(structuredClone(state));assert.match(elements.get('pulseLabel').textContent,/1470/);
+ const second=elements.get('plus').onclick();assert.equal(requests.length,3);assert.equal(requests[2].body.action,'step');assert.equal(requests[2].body.delta,10);
+ resolveCommand({ok:true,json:async()=>({ok:true,generation:3,servo_us:1480,status_ms:700})});await second;
+ const off=structuredClone(state);off.servo_settings={revision:2,min_us:1010,center_us:1470,max_us:1810};off.vehicle.steer_output_enabled=false;off.vehicle.ms=800;context.servoStatus(off);
+ delayed=false;assert.equal(elements.get('needle').style.display,'none');assert.match(elements.get('pulseLabel').textContent,/未知/);
+ const before=requests.length;await elements.get('initialize').onclick();assert.equal(requests.length,before);
+ elements.get('firstPulse').value='499';elements.get('firstPulse').oninput();assert(elements.get('initialize').disabled);
+ elements.get('firstPulse').value='1340';elements.get('firstPulse').oninput();assert(!elements.get('initialize').disabled);
+ await elements.get('initialize').onclick();assert.equal(requests.at(-1).body.us,1340);
+ const stale=structuredClone(state);stale.uart_age_s=5;context.servoStatus(stale);assert.equal(elements.get('needle').style.display,'none');
+ context.servoStatus(structuredClone(state));assert.equal(elements.get('needle').style.display,'');
+ assert.equal(requests.filter(x=>x.url==='/api/motor/start').length,0);
+ await elements.get('motorStart').onclick();
+ const started=requests.findLast(x=>x.url==='/api/motor/start');assert.equal(started.url,'/api/motor/start');assert.equal(started.body.seconds,5);assert.equal(started.body.right_pct,10);assert.equal(started.body.left_pct,10);assert.equal(started.body.wheels_raised,true);assert.match(started.body.owner,/^[0-9a-f]{32}$/);
+ const locked=structuredClone(state);locked.vehicle.state='LOCKED';locked.vehicle.web_calibration_start=true;context.servoStatus(locked);
+ assert.equal(elements.get('enableSwitch').disabled,false);
+ elements.get('enableSwitch').onclick();await Promise.resolve();await Promise.resolve();
+ assert.equal(requests.at(-1).body.action,'enable');assert.equal(requests.at(-1).body.us,undefined);
+ locked.vehicle.state='FAULT';context.servoStatus(locked);assert.equal(elements.get('enableSwitch').disabled,true);
+ console.log('Motor UI: no automatic start; explicit start sends finite duration, PWM, raised-wheel confirmation and page owner');
+ console.log('Dashboard UI: save without movement, stale-status handling, pending-click guard and explicit first pulse, unknown-position display passed');
+}
+main().catch(e=>{console.error(e);process.exitCode=1});

@@ -1,0 +1,57 @@
+{
+ "revision": "curve-trim-r1",
+ "enabled": true,
+ "note": "curve-trim-r1 (curves-20261120 offline candidate, NOT deployed). Needs live_pid.py with the curve-trim hook + curve_trim.py (restart once). table = [lap_pos metres since the anchor, trim us]; trim lowers the right-curve command (>= centre + min_rel_us); released for the pass at near >= e_release. Delete this file (or enabled false) = off, no restart needed.",
+ "curves": {
+  "c1": {
+   "enabled": true,
+   "anchor": "C1s",
+   "table": [
+    [
+     0.4,
+     0.0
+    ],
+    [
+     0.8,
+     30.0
+    ],
+    [
+     2.3,
+     30.0
+    ],
+    [
+     2.6,
+     0.0
+    ]
+   ],
+   "e_release": 0.9,
+   "min_rel_us": 60.0,
+   "fade_us": 6.0
+  },
+  "c3": {
+   "enabled": false,
+   "anchor": "C3s",
+   "table": [
+    [
+     0.8,
+     0.0
+    ],
+    [
+     1.1,
+     30.0
+    ],
+    [
+     3.9,
+     30.0
+    ],
+    [
+     4.15,
+     0.0
+    ]
+   ],
+   "e_release": 0.9,
+   "min_rel_us": 60.0,
+   "fade_us": 6.0
+  }
+ }
+}

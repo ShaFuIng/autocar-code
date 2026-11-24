@@ -1,0 +1,18 @@
+{
+ "enabled": true,
+ "amb_one_side": true,
+ "corridor_cal_h_max": 110.0,
+ "fallback_cont_px": null,
+ "outside_handback": true,
+ "outside_handback_px": 120.0,
+ "outside_handback_side": true,
+ "outside_handback_hist_n": 3,
+ "outside_handback_hist_px": 120.0,
+ "note": "crossings-worker-r1 as on the car (amb_one_side only) + curve3-handback-r1 (curve3-20261115, offline candidate): outside_handback with side + history restrictions (px 120). Read by the worker at each model load. | slope-width-r1 (slope-20261115): while the worker IMU pitch <= -8 the single-line width ratio starts at 0.85 and follows the two-line ratios seen on this slope at 1.0/s; afterwards the normal width memory continues from that value. null / absent = old behaviour. Read at model load.",
+ "slope_width": {
+  "pitch_deg": -8.0,
+  "ratio": 0.85,
+  "rate_per_s": 1.0
+ },
+ "note_cal_h": "2026-11-18: corridor_cal_h_max 110 (runs 0f91/d2af: corridor offset +135..150 px after a landing)"
+}

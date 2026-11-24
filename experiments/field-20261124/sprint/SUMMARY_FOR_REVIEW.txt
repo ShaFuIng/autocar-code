@@ -1,0 +1,142 @@
+直線衝刺模式（field-20261124/sprint）— 離線候選，未上車、未實跑
+=====================================================================
+全程只動筆電上這個資料夾；沒有連車、沒有呼叫工作台 /vehicle、沒有啟停任何服務，mobile_service／快照／AGENTS.md 都沒改。
+以下「實車」數字全部來自 11-23 既有紀錄；衝刺本身沒有任何實車驗證。
+
+一、結論（設計重點）
+--------------------
+1. lap_speed.json 做不到第 0 圈全油門：lap_speed 區只在「本圈已通過錨點地標」後才作用（lap_speed.py 74-79 crossing()、81-89 zone_at()），
+   第 0 圈彎 1 前 lap_pos 的事件清單是空的。throttle_cap.py 13 行：50 以上只有 lap_speed 區或 speed_adapt（hard_cap）能下。
+   → 起跑直線唯一的免重啟作法＝speed_adapt.json 的 hard_cap／max_pwm 調成 100（HIGH 等級＝路徑穩定時全油門）。
+2. 但 speed_adapt 是整圈共用 → 必須在衝刺結束點加一個「起跑起算」的 brake_zones 上限區，從那裡到本輪結束一律 ≤50，
+   否則 HIGH 100 會出現在彎道等任何穩定段。所以衝刺模式下「衝刺之後整輪上限 50」（像油門上限 50 時的跑法，不是比賽設定）。
+3. 衝刺模式改的檔與鍵（只有這些）：
+   speed_adapt.json：hard_cap 50→100、max_pwm 50.0→100.0、up_rate 30.0→60.0，加一個記錄鍵 sprint_mode（含原值 orig、起點、參數）。
+   brake_zones.json：zones 尾端加 1～2 個 "sprint": true 的起跑區：
+     after-cap：起跑後 D−3.44 m（back 7 → 6.75 m）到 100000 m，cap 50
+     finish（選用）：起跑後 finish_m 到 100000 m，cap 0（油門歸零滑停）
+   lap_pos／lap_ff／start_bias：不動（沿用手機「起點位置」對該起點的設定；back>2.5 m 起步左舵本來就關）。
+4. 為什麼免重啟（快照 20261123d 程式）：
+   - live_pid.py 575 行每輪 start() 都新建 SpeedAdapt()（→ speed_adapt.load_config() 讀 speed_adapt.json，speed_adapt.py 68-74）
+     與 brake_zones.BrakeZones()（→ brake_zones.load_config()，brake_zones.py 33-37）。
+   - speed_adapt.load_config 用 c.update(file)，多的 sprint_mode 鍵不影響計算，會寫進 pid.jsonl 起跑標頭（live_pid.py 597 speed_adapt=dict(self.speed.c…)）＝紀錄看得出這輪是衝刺。
+   - brake_zones 的 anchor 'start'＝本輪起跑後的後輪里程（brake_zones.py 46-53、99-104），第 0 圈就有效。
+   - 起跑上限（manual_drive 拒收超過起跑值的指令）：SpeedAdapt.ceiling 取 max(max_pwm, throttle_cap 100)=100（speed_adapt.py 129-135），與現況相同。
+5. 手機頁「直線衝刺」：一顆開／關鈕＋選填「自動停車距離」。開＝依目前起點寫衝刺檔；關＝拿掉衝刺痕跡、逐位元回原檔。
+
+二、第 0 圈 PWM 鏈逐項檢查（衝刺時哪些會擋）
+------------------------------------------
+順序（speed_policy.py 93-122）：speed_adapt.step → upper_wide → lap_speed（只升）→ lane/upper cap → brake_zones → speed_guard。
+- speed_adapt 自己的門檻＝衝刺的防護，不另設：|誤差|>0.25、舵偏>200 µs、誤差變化率>0.8 → MID（目標 30）；>0.45／350／1.2 或遠端>0.6 → LOW。
+  降速受 down_rate 30 PWM/s 限制（speed_adapt.py 236），一兩格雜訊只會從 100 小降再爬回，不會掉回 50（比 lap_speed r1 的「擋一格就退回」溫和）。
+  依據：往後 6 m、無起步左舵的 3 輪（cbc4／2932／bc08）整條起跑直線 speed_adapt 都是 STABLE/HIGH，誤差 −0.12～+0.13、舵偏多在 ±40 µs（一格 −50）。
+  有左舵的 2 輪（2fa1／f8d4）誤差到 +0.33～+0.42 → MID 30 → 所以衝刺要求起步左舵關（起點 ≥2.6 m）。
+  100 油門下主直線（6 輪 14 次，C4e+1.5～7.3）|誤差| P90 0.09～0.30、最大 0.36；舵偏 P90 21～57 µs、最大 76 → 大多在 STEADY 門檻內。
+- lap_speed：第 0 圈彎 1 前不作用（見一-1）；two_level 等鍵無關。
+- brake_zones：現有第 1 圈起跑區（back 7：起跑後 8.55～10.25 m cap 36）照常；fallback_max_pitch_deg 4：俯仰 >4° 的格不受起跑區上限（brake_zones.py 102-103）。
+- 俯仰：50 油門起步時加速度讓俯仰讀到最高 4.4°（cbc4）；100 起步可能 >5° → speed_adapt 視為上坡格：改用 uphill_up_rate 60、uphill_stable_s 0、LOW 變 MID（speed_adapt.py 181、193-195），都不會降油門。
+  減速時若 <−5° 會被當 DOWNHILL（目標 10、立即）＝只會更慢；<−8° 再回 >−5° 會設 slope_end 錨（只影響 fallback 區，全是上限＝只會更慢）。11-23 主直線 100→50 減速最低 −1.5～−2.2°。
+- gain_schedule（轉向增益隨 speed_adapt.cur）：k=max(0.57, 19.6/pwm)，PWM ≥34 都是 0.57 → 100 與 50 相同，轉向增益不變。
+- stuck_stop（stop 模式）：表上限 49.8 以上夾在 5450 cps，條件「速度 <15% 期望值持續 1 s」；起步 up_rate 60 讓車更早動（PWM ~33 就動），風險比現在低。
+- speed_guard：只有下坡護欄與紀錄，起跑直線不作用。
+- WARMUP 格不套 brake_zones（speed_policy.py 119）；失線保持格用 speed_adapt.safe_pwm（24）。
+- 起步爬升速率：up_rate 60（＝lap_speed rate_pwm_s 60、uphill_up_rate 60，車上已在用）。30→100 約 1.2 s。可在 service.json "sprint": {"up_rate": …} 改（30～120）。
+  代價：up_rate 是整輪共用，衝刺後的各段（≤50 範圍）爬升也變快；30＝只改 hard_cap/max_pwm（模型慢約 0.17 s）。
+
+三、全油門結束點（煞車）
+----------------------
+- 預設在彎 1 起點（C1s）前 3.44 m（＝D−3.44，back 7 → 起跑後 6.75 m），參數 brake_before_c1s_m（2.0～6.0）。
+- 依據：第 2 圈起的正常圈，主直線 100 區就在 C4e+7.3＝C1s−3.44 結束，之後 80 PWM/s 降到 50、C1s 前約 1.1～1.4 m cap 42。
+  6 輪（ce19／5f69／9dba／b541／cb0f／ed3d）14 次：100 區平均 1.42～1.45 m/s，進彎 1（C1s+0～0.6 m，編碼器 0.4 s 視窗）1.11～1.30 m/s，全部無失敗。
+- 衝刺第 0 圈：同一位置「瞬間」降到 50（比正常圈的 0.6 s 漸降更早減速），C1s 前 1.64 m 起還有第 1 圈起跑區 cap 36（比正常圈的 42 更低、更早）
+  → 進彎車速 ≤ 正常圈。一階模型（speed_guard tau 0.405／0.631 s，穩態 50＝1.245、100＝1.44 m/s）：C1s 前 1.64 m 1.27 m/s、C1s 1.07 m/s（現況第 0 圈同 1.07）。
+  起點實際比填的遠＝更保守；比填的近 >0.25 m（已內建少報 0.25）才會晚煞。
+- 減速度參考：油門 15 持續 0.4 s 掉 0.27 m/s（11-19 run-dc2b）；正常圈 100→50 漸降段 C4e+7.3～8.3 平均 1.24～1.34 m/s。
+
+四、預期時間（第 0 圈直線，back 7）
+--------------------------------
+- 現況實測（往後 6 m 無左舵 3 輪）：從 PWM>0 到起跑後 6.75 m 用 6.57～6.64 s；直線段平均 1.22～1.26 m/s（50 油門）。
+- 模型（同上，現況重現 6.47 s，比實測快約 0.1～0.15 s）：衝刺（up_rate 60）到 6.75 m 約 5.77 s → 省約 0.7 s；到 C1s 省約 0.8 s。
+  up_rate 30：省約 0.5 s；up_rate 100：再多約 0.07 s。保守說：直線約省 0.5～0.8 s（約 8～12%），最高速 1.44 m/s 只比 50 的 1.25 快約 15%。
+- 開迴路重播（proof/replay_lap0.py：車上 speed_adapt.py／brake_zones.py 原程式＋衝刺檔，餵 cbc4／bc08 紀錄）：
+  PWM 起跑後約 0.6 m 過 64、1.0～1.2 m 到 100；起跑後 5.75 m（back 6 的結束點）降 50；彎 1 前 cap 36 與現況同位置；彎 1 內 44 與紀錄同。
+  重播裡 3.2～3.7 m（cbc4）／5.6 m（bc08）各有一次 MID 小降（100→85～93），正常檔重播也有、但紀錄沒有＝重播近似誤差（車速不跟著變）。結果在 proof/replay_*.txt。
+
+五、自動停車（選用）
+------------------
+- 用現有機制只能做到「起跑起算 cap 0」：起跑後 finish_m 起油門歸零、車滑行停下，本輪不會自己結束（方向盤照常），停住後仍要按「停止本輪」。
+  不是硬停：WARMUP 格不套上限、失線保持格會給 24（見二）。停在直線上看得到線時兩者都不會發生，但不能保證。
+- 滑行距離沒有實測：參考 11-21 run-4a78 落地後油門 5 持續 0.9 s，1.3→0.3 m/s（約 1.1 m/s²）→ 從 1.44 m/s 約 1.0～1.3 m、1.3 s。
+  因此 finish_m 上限＝D−1.3（back 7 → 8.9 m），下限 1 m；finish 早於煞車點時就是全油門到終點線。
+- 真正「結束本輪」只有起跑請求的 seconds（live_pid.py 539、594、728 → PID_DURATION_COMPLETE）＝時間制、不是距離制，本候選沒做（要另改手機服務起跑內容）；
+  距離制的結束本輪需要改車控程式，做不到就沒做。
+
+六、起點 7 m
+-----------
+- 7 m＝起點規則可用範圍上限（start_cfg BACK_MAX 7）。D＝3.44+7−0.25＝10.19 m；skip_after_by.C1s 9.0 照規則加；C1s 太早被忽略的窗口 3 m（lap_pos.json window_m）。
+- 實測只到往後 6 m（D 9.19，5 輪：C1s 都在 s≈0 判定）；7 m 沒跑過。起點平台航向取 0.3～1.3 m（base0_m），衝刺時正在加速（推測不影響陀螺儀積分，未驗）。
+
+七、手機服務候選（mobile_service_candidate/，r6a 全樹＋修改；不含 access.log、__pycache__、_backup_r5_20261123）
+---------------------------------------------------------------------------------------------------------
+新增／修改檔（sha256）：
+  sprint_cfg.py      2b0f2ef59995af0e3d18e66f4b4f6dc6a316fc7e137f3e5212c45073e137fe66  新：規則、狀態判斷、寫入（備份／順序／失敗回復）
+  server.py          6f3ac8a8b8dc85eb25f756cee8088225cba7f8e8856fc69c09292e17130aebb2  r7：GET /api/sprint、POST /api/sprint/set {on, finish_m}；status 加 sprint
+  start_cfg.py       6e661f7de66af18a4f60d50a9d401d8910278c3abc9f056e79ce87ae4eed66f7  start_zones() 跳過 "sprint" 區（沒有衝刺區時結果不變）
+  web/sprint.js      863f1d8a53eaec5354b56149391f3e6d182f53fe19f551c9d1ea47ddc502e29e  新：頁面邏輯
+  web/index.html     a3a5107c7636551c26ad289d57af99d4e4018f08653499c9e0024838094d8fda  紅色橫幅＋「直線衝刺」區塊
+  web/model.mjs      d19de0e53e667c5f33b0f8f276f62dc3b1f25862e8f80c3f371cdda2178da631  SPRINT_* 中文說明
+  web/start.js       aaf28904e4dccfee24b908a58d7e1a671463cd6940a64e99d10f4ebbeaf793f5  衝刺開啟時起點按鈕停用
+  web/style.css      68b98905e98f3ef114a941c9454ada84b3a9451006f709289ace79ccf92bf175  衝刺樣式
+  test_sprint.py     ef1e0ad886618fa6cd319c5cde3903b8f1315ea3b346a6356252b4f333fc77d4  新測試
+  test_start.py      766ab842e5d2df438c843ed73137c9924bfd72436f32bde4a2202a02440752d3  只改實驗資料夾的尋找路徑、版本字串 r6→r7
+其餘檔（app.js、race.js、repair.js、test_server.py、test_level.py、start_params.json、service.json、README.md…）與 r6a 逐位元相同。
+安全規則（照 start_cfg 模式）：
+- 只在沒有輪次（非行駛／暫停）、問得到車控時能開關；圈數賽起跑模式開啟中拒絕（RACE_ARMED）。
+- 開啟條件：起點設定一致、起點 ≥2.6 m（起步左舵關）；自動停車距離 0.1 m 一格、1～D−1.3 m。
+- 寫入：先算好並自我檢查（只允許衝刺鍵改變）→ 備份兩檔到 backups/sprintcfg_<時間>/ → .tmp＋fsync → 依安全順序取代 → 讀回比對；失敗放回原檔。
+  開＝先寫 brake_zones（加上限，單獨存在無害）再寫 speed_adapt；關＝先 speed_adapt 再 brake_zones → 任何中斷都不會留下「100 沒有上限區」。
+- 半套／對不上（SPRINT_PARTIAL／SPRINT_INCONSISTENT，例如斷電、手改起點）：手機「起跑」被拒（新門檻；具體失效＝speed_adapt 100 沒有 after-cap 時彎道也會給 100），
+  「關閉直線衝刺」一律可用、會清乾淨回原檔。
+- 衝刺開啟中：改起點／重建參考被拒（SPRINT_ON）；圈數賽起跑模式拒絕開啟、綠燈觸發時也再檢查一次（不會以衝刺設定比賽起跑）。
+- 頁面明顯標示：頂端固定紅色橫幅「直線衝刺模式 開啟中」、起跑鈕變紅且文字改「直線衝刺起跑（全油門）」、按起跑會再跳確認框、圈數賽按鈕隱藏。
+- 衝刺關閉時：所有既有端點行為同 r6（狀態多一個 sprint 欄位；服務版本字串 r7）。
+- service.json 可選 "sprint": {brake_before_c1s_m, up_rate, after_cap_pwm, max_pwm, coast_m, min_back_m, finish_min_m}，超出範圍用預設。
+- 本機以假車控跑頁面（手機寬 375 px）看過：開／關、橫幅、起跑鈕、起點鎖定都正確，無橫向捲動。Android 實機未看。
+
+八、測試（筆電）
+--------------
+- 候選資料夾：python -B -m unittest test_sprint test_start test_server test_level → 61 項，60 過、1 失敗。
+  唯一失敗＝test_server.test_start_and_stop 期待 start_params 版本 154，實際檔是 155；原 r6a 資料夾複本跑 47 項也是同一項失敗＝既有、與本次無關。
+- 新增 test_sprint 14 項全過：規則數字、自動停車輸入、service.json 參數；快照 20261123d 判定為關閉；
+  無衝刺區時候選 start_cfg 對起點 0～7 m（71 個值）寫出的位元組與車上 r6a start_cfg 完全相同；
+  起點 0／2.5（拒絕）／2.6／7 m 開→關逐位元回原檔（含 finish）、最後回起點 0 m＝車上原檔；只改衝刺鍵；寫入順序；第 1／2 次取代失敗回復；
+  斷電半套兩種狀態判為 PARTIAL 且關閉可清；手改起點判 INCONSISTENT；HTTP：行駛／暫停／比賽模式／車控不通都拒絕、半套時起跑被拒、關閉後起跑照常轉送。
+- tools/mksprint.py：以快照 20261123d 產生 out/back7.0、out/back7.0_finish8.0（normal＝手機起點 7 m 的結果，sprint＝再開衝刺；--off 可還原，已驗逐位元相同）。
+- 「衝刺關閉時車上什麼都沒變」：本次沒有任何檔上車；車上 speed_adapt.json 398336af…、brake_zones.json 88f87724…（＝快照 20261123d）。
+  衝刺關閉＝這兩檔逐位元等於開之前（測試證明），車控讀到的內容完全相同。
+
+九、產生的設定（back 7.0，基底＝快照 20261123d；sprint 檔內容固定、可重現）
+-------------------------------------------------------------------
+  out/back7.0/normal：lap_pos 7358b1c9、brake_zones 7532d099、lap_ff f88bec01、start_bias 35bc1f07、speed_adapt 398336af
+  out/back7.0/sprint：brake_zones 5375926b、speed_adapt 4e18e828（其餘同 normal）
+  out/back7.0_finish8.0/sprint：brake_zones 4a607797、speed_adapt aabcbcc0
+  （完整 sha256 在各 MANIFEST.txt。正式使用時由手機頁在車上產生，不需手動複製這些檔。）
+
+十、上車步驟（給主對話；每步需當次授權）
+--------------------------------------
+1. 確認沒有輪次、比賽起跑模式關閉；核對車上 mobile_service 檔＝r6a（server.py 等與筆電 Orin_Interface_v1/mobile_service 相同雜湊）。
+2. 把候選的 sprint_cfg.py、server.py、start_cfg.py、web/sprint.js、web/index.html、web/model.mjs、web/start.js、web/style.css
+   放 Orin 暫存資料夾 → 核對雜湊（上表）→ python3 -m py_compile → 原檔備份到 ~/orin_interface_v1/backups/mobile_r7_<時間>/ → 複製進 ~/orin_interface_v1/mobile_service/。
+   （測試檔可不放。不要帶 access.log。）
+3. 只重啟 orin-mobile（不動 orin-dashboard）。打開手機頁：直線衝刺顯示「關閉（正常）」、python3 sprint_cfg.py status 回 on false。
+4. 使用：先在「起點位置」設 7.0（或實際量到的值）→「直線衝刺」開啟（可填自動停車距離）→ 車擺好 → 起跑。用完按「關閉直線衝刺」回正常。
+5. 退回：手機頁關閉衝刺（或 sprintcfg_ 備份放回兩檔）；手機服務退回＝備份的 r6a 檔放回＋重啟 orin-mobile。
+
+十一、未驗證／風險
+-----------------
+- 沒有任何實車：100 油門靜止起步（打滑、俯仰讀數、轉向）沒跑過；7 m 起點沒跑過（只到 6 m）；新舵機在起跑直線 100 油門沒跑過（主直線 100 有）。
+- 時間增益是模型＋既有紀錄推估（0.5～0.8 s），重播是開迴路。
+- 衝刺後整輪上限 50（坡道上俯仰 >4° 的格例外，行為接近正常 100 模式的坡道；lap_pos 失效時坡道可能到 100）——建議衝刺後過彎 1 就手動停。
+- 自動停車是軟停、滑行距離未量、上限值依推估。
+- up_rate 60 影響衝刺後整輪的爬升速度（≤50 範圍）。
+- 使用者兩個未定問題（終點位置、自動或手動停）都做成參數：預設手動停、全油門到彎 1 前 3.44 m。

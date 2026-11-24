@@ -1,0 +1,10 @@
+ok  t1_patch_reproducible                    1 checks
+ok  t2_key_absent_identical                  144 checks
+ok  t3_step1_band_owns                       86 checks
+ok  t4_own_lo                                3 checks
+ok  t5_v_ref                                 3 checks
+ok  t6_start_anchor                          5 checks
+ok  t7_exit_hold_ends_by_distance            4 checks
+ok  t8_c2_untouched_by_c1_steps              120 checks
+ok  t9_configs_only_differ_in_listed_keys    264 checks
+ALL PASSED: 9 tests, 630 checks

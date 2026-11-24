@@ -1,0 +1,22 @@
+curve1 passes(層有開的輪) 22 未觸發 0
+   結束原因 {(('MAX_M', None),): 19, (): 3}
+curve2 passes(層有開的輪) 107 未觸發 0
+   結束原因 {(('ANGLE', None),): 38, (('MAX_M', None),): 69}
+curve3 passes(層有開的輪) 105 未觸發 13
+    014e lap 4 {'TOP': 27} 0.6
+    18fc lap 6 {'TOP': 22} 0.69
+    1eab lap 2 {'TOP': 25} 0.63
+    1eab lap 4 {'TOP': 17} 0.61
+    2728 lap 3 {'TOP': 26} 0.61
+    3197 lap 3 {'TOP': 25} 0.66
+    3197 lap 7 {'TOP': 24} 0.63
+    46c9 lap 1 {'TOP': 21} 0.63
+    65ea lap 2 {'TOP': 25} 0.69
+    8350 lap 1 {'TOP': 22} 0.61
+    beb1 lap 2 {'TOP': 17} 0.6
+    d60e lap 2 {'TOP': 21} 0.63
+    ff42 lap 2 {'TOP': 15} 0.67
+   結束原因 {(('MAX_M', 'PITCH'),): 74, (('MAX_M', None), ('MAX_M', 'PITCH')): 6, ((None, 'PITCH'), ('MAX_M', 'PITCH')): 5, ((None, 'PITCH'),): 6, (): 1}
+curve4 passes(層有開的輪) 102 未觸發 0
+   結束原因 {(('ANGLE', None),): 102}
+C3s 第一格 since 分布（觸發/未觸發）: [(0.6, True, 'ff42', 4), (0.61, False, '1eab', 4), (0.61, False, '2728', 3), (0.61, False, '8350', 1), (0.63, False, '1eab', 2), (0.63, False, '3197', 7), (0.63, False, '46c9', 1), (0.63, False, 'd60e', 2), (0.66, False, '3197', 3), (0.67, False, 'ff42', 2), (0.69, False, '18fc', 6), (0.69, False, '65ea', 2)]

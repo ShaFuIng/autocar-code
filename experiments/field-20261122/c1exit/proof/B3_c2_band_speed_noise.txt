@@ -1,0 +1,5 @@
+curve-2 band (full authority, runs 6f61 / c6f3): the profile follows the per-frame wheel speed (5 Hz encoder)
+frames with band tb 62..118 (kappa_turn constant 42.4 there, so every change of prof_us comes from the speed used for the gain table)
+6f61: 161 frames | band speed min 0.97 median 1.02 max 1.41 sd 0.069 | prof_us - centre: min +258 median +263 max +326 sd 11.3 | frame-to-frame |d prof| median 2.4 p90 6.8 max 64 | share of the command step variance explained by the profile step: 51%
+c6f3: 112 frames | band speed min 0.97 median 1.03 max 1.39 sd 0.098 | prof_us - centre: min +257 median +264 max +326 sd 16.8 | frame-to-frame |d prof| median 2.8 p90 59.2 max 65 | share of the command step variance explained by the profile step: 72%
+the throttle is constant (32) in this stretch and the median band speed is 1.02 m/s; the encoder count arrives at 5 Hz, so the speed estimate steps every ~0.2 s.

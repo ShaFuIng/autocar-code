@@ -1,0 +1,102 @@
+0. shadow mode (step0_shadow: track_only, both stages off): 35176 frames, dispatched steering + PWM identical to the off replay on 35176
+   frames with a shadow command logged: 1984
+1. step1_slope          frames 35176 | PWM identical 35176 | dispatched steering changed on 1315 frames
+1. step2_slope_land     frames 35176 | PWM identical 35176 | dispatched steering changed on 1988 frames
+1. step3_early_c4band   frames 35176 | PWM identical 35176 | dispatched steering changed on 2635 frames
+1. step3_only_json      frames 35176 | PWM identical 35176 | dispatched steering changed on 720 frames
+
+2. frames whose dispatched steering differs from the off replay, by position (all 24 passes); outside = not within mouth-0.3 s .. landing+3.5 m of any pass
+   step1_slope          {'slope': 1277, 'x<1.2': 38}
+   step2_slope_land     {'slope': 1278, 'x<1.2': 581, '1.2-1.5': 123, '1.5-2.8': 6}
+   step3_early_c4band   {'slope': 1278, 'x<1.2': 581, '1.2-1.5': 144, '1.5-2.8': 598, '2.8-3.5': 34}
+   step3_only_json      {'1.2-1.5': 85, '1.5-2.8': 597, '2.8-3.5': 34, 'x<1.2': 4}
+
+3. slope mouth, first 0.5 s (pre-compensation command - centre): car log | land4 (step1 replay)
+   run lap  max e   | car: max / min / largest step | land4: max / min / largest step | land4 state
+   e1b4 1   0.94  |  +517 /  -131 /  495 |   +37 /  -284 /   73 | SLOPE   <-- false error
+   e1b4 2   0.60  |  +165 /   -68 /   70 |   +30 /   -79 /   54 | SLOPE 
+   e1b4 3   0.16  |    +7 /   -88 /   74 |   +63 /   -47 /   56 | SLOPE 
+   e1b4 4   0.63  |   +63 /  -112 /  112 |  +129 /   +33 /   40 | SLOPE 
+   e1b4 5   0.66  |    +0 /   -91 /   91 |   +42 /   -33 /   62 | SLOPE 
+   65ea 1   0.92  |  +257 /  -117 /  106 |   +79 /   -67 /   72 | SLOPE   <-- false error
+   65ea 2   0.33  |   +61 /   -54 /   78 |   +11 /   -70 /   46 | SLOPE 
+   65ea 3   0.26  |   +83 /  -165 /  110 |  +118 /   -51 /   84 | SLOPE 
+   65ea 4   0.27  |   +52 /   -47 /   56 |   +32 /   -36 /   53 | SLOPE 
+   65ea 5   0.32  |   +82 /   -20 /  102 |   +44 /   -23 /   54 | SLOPE 
+   3197 1   0.35  |   +94 /    -3 /   69 |   -13 /  -279 /   63 | SLOPE 
+   3197 2   0.29  |   +60 /   -42 /   60 |   +12 /   -73 /   70 | SLOPE 
+   3197 3   0.27  |   +40 /   -96 /   68 |   +66 /   -23 /   40 | SLOPE 
+   3197 4   0.24  |   +43 /  -104 /   69 |   +56 /    -9 /   28 | SLOPE 
+   3197 5   0.26  |  +248 /  -163 /  384 |    +9 /  -101 /   48 | SLOPE 
+   3197 6   0.27  |   +25 /  -112 /  112 |   +73 /    -5 /   67 | SLOPE 
+   3197 7   1.00  |  +478 /  -300 /  389 |   +28 /   -96 /   43 | SLOPE   <-- false error
+   3197 8   0.25  |    +0 /  -165 /  160 |   +35 /   -45 /   65 | SLOPE 
+   8350 1   0.23  |   +11 /   -92 /  103 |   +56 /  -273 /   69 | SLOPE 
+   8350 2   0.28  |   +26 /   -91 /  117 |   +60 /    -9 /   70 | SLOPE 
+   8350 3   0.33  |   +45 /   -29 /   74 |   +55 /   -60 /   58 | SLOPE 
+   8350 4   0.98  |  +300 /  -126 /  300 |   +39 /   -10 /   49 | SLOPE   <-- false error
+   46c9 1   0.60  |   +68 /   -43 /   68 |   +77 /  -268 /   81 | SLOPE 
+   46c9 2   1.00  |  +300 /  -298 /  494 |    +8 /  -149 /   50 | SLOPE   <-- false error
+
+4. 46c9 lap 2 (the failure), frames from the mouth: pitch, camera error | car pre-comp command (owner) | land4 step1 command (open loop: the car had already been turned by the real command)
+   -0.05 s pitch   -2.6 e -0.34 | car  1476.4 (upper_single) | land4 SLOPE psi 1.18 th 0.0 cam 0.0 -> 1476.9
+   +0.00 s pitch   -8.7 e  1.00 | car  1775.0 (down_straight) | land4 SLOPE psi 1.01 th 0.0 cam 0.0 -> 1474.4
+   +0.05 s pitch  -10.2 e -0.17 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi 0.81 th 0.0 cam 0.0 -> 1482.6
+   +0.08 s pitch  -13.9 e -0.11 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi 0.42 th 0.0 cam 0.0 -> 1473.4
+   +0.13 s pitch  -16.3 e -0.31 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi -1.55 th 0.0 cam 0.0 -> 1455.3
+   +0.17 s pitch  -15.7 e -0.04 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi -1.91 th 0.0 cam 0.0 -> 1405.0
+   +0.22 s pitch  -15.1 e -0.06 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi -3.52 th 0.0 cam 0.0 -> 1391.5
+   +0.25 s pitch  -15.9 e -0.08 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi -5.91 th 0.0 cam 0.0 -> 1375.5
+   +0.31 s pitch  -15.7 e -0.17 | car  1775.0 (jump_guard, jump_guard hold) | land4 SLOPE psi -7.22 th 0.0 cam 0.0 -> 1364.4
+   +0.35 s pitch  -15.6 e -0.19 | car  1280.7 (downhill_speed) | land4 SLOPE psi -9.97 th 0.0 cam 0.0 -> 1341.7
+   +0.39 s pitch  -16.1 e -0.24 | car  1262.3 (downhill_speed) | land4 SLOPE psi -12.95 th 3.2 cam 3.2 -> 1325.8
+   +0.42 s pitch  -15.4 e -0.32 | car  1232.2 (downhill_speed) | land4 SLOPE psi -15.83 th 3.5 cam 3.5 -> 1331.7
+   +0.47 s pitch  -15.9 e -0.42 | car  1176.9 (downhill_speed) | land4 SLOPE psi -18.6 th 3.84 cam 3.84 -> 1335.1
+   +0.50 s pitch  -15.5 e -0.57 | car  1175.0 (down_straight) | land4 SLOPE psi -21.31 th 4.44 cam 4.46 -> 1336.6
+   +0.55 s pitch  -15.8 e -0.49 | car  1175.0 (down_straight) | land4 SLOPE psi -24.04 th 4.9 cam 4.99 -> 1339.0
+
+5. landing (23 passes), pre-compensation command - centre at x (m since the landing): car log | land4 step2 replay (open loop)
+   run lap | x0.0 car/new x0.2 car/new x0.4 car/new x0.6 car/new x0.8 car/new x1.0 car/new x1.2 car/new x1.4 car/new | psi-th at 0 / 0.5 / 1.0 | cam deg min..max | glitch deg | largest step car / new (x<=1.5) | online x err max (m)
+   e1b4 1 | +210/ +28 +108/+260 +240/+260 +240/+260 +240/+226 +171/+107 +123/+106  +84/ +89 | -2.1 / +9.5 / +8.5 | -3.1..+4.5 | +0.0 | 244 /  68 | 0.23
+   e1b4 2 |  -40/ +55 +192/+179 +240/+260 +240/+183 +225/+135  +30/  -3  -83/ +18  +20/ +32 | -0.8 / -5.1 / -7.5 | -0.6..+2.1 | +0.0 | 106 /  68 | 0.08
+   e1b4 3 | +241/ +82  +71/+152 +211/+260 +240/+249 +240/+240 +190/+143 +114/ +83 +114/ +90 | +1.0 / -0.0 / +2.5 | -1.6..+2.2 | +0.0 | 126 /  99 | 0.07
+   e1b4 4 | +196/ +51 +199/+152 +240/+153 +229/+134 +101/ +45  -57/  +4  -75/ +34  +71/ +67 | +1.0 / -8.1 / -10.7 | -4.0..+3.1 | +0.0 | 118 /  73 | 0.09
+   e1b4 5 | +207/+141 +240/+175 +240/+158 +207/+132 +136/ +86   +2/ +33  -42/ +46  +89/ +98 | +4.5 / -8.7 / -8.4 | -4.0..+2.3 | +0.0 |  80 /  58 | 0.11
+   65ea 1 |  +36/ +95 +231/+224 +240/+217 +240/+201 +238/+175  +95/ +33  -35/ -30 -135/-101 | +1.3 / -0.7 / -4.4 | -1.6..+1.7 | +0.0 | 119 /  54 | 0.09
+   65ea 2 | +103/  -6 +106/+124 +221/+239 +240/+260 +240/+260 +211/+205 +138/+136  +97/+109 | -1.1 / +1.7 / +2.6 | -5.9..-0.2 | +0.0 |  82 /  70 | 0.16
+   65ea 3 |  -92/ +20 +157/+150 +196/+207 +240/+198 +186/+143 +132/ +58 +144/ +50  +94/ +83 | -5.0 / -5.6 / -4.0 | -1.1..+3.0 | +0.0 | 106 /  79 | 0.09
+   65ea 4 | +226/ +62  +93/+243 +240/+260 +240/+260 +240/+236 +238/+164 +132/ +90  -35/  +7 | +0.2 / +4.8 / +8.6 | -4.4..+1.6 | +0.0 | 205 /  91 | 0.16
+   65ea 5 |  +52/ +66 +147/+180 +200/+260 +240/+252 +240/+207 +186/+112 +131/ +67  +74/ +32 | -3.7 / -0.5 / +3.3 | -4.5..+2.2 | +0.0 | 166 /  82 | 0.11
+   3197 1 | +263/ +31 +152/+161 +240/+239 +240/+204 +240/+128  +79/  +4 -112/ -89 -179/-113 | -1.4 / +0.3 / -10.0 | -1.1..+4.0 | +0.0 | 207 /  67 | 0.05
+   3197 2 | +270/ +95 +185/+150 +218/+228 +240/+229 +239/+182  +91/+118  +51/ +21  -52/ +49 | +1.3 / -1.4 / -2.6 | -0.3..+1.3 | +0.0 | 187 /  93 | 0.06
+   3197 3 | +215/ +63 +109/+162 +225/+260 +240/+252 +240/+221 +182/+157 +105/ +55  +32/ +70 | -2.5 / +0.2 / +0.9 | -1.1..+0.8 | +0.0 | 131 /  60 | 0.08
+   3197 4 |  +33/ +41 +221/+182 +240/+220 +240/+188 +197/+133  +75/ +37   +3/ +51  +12/ +79 | +0.6 / -4.9 / -5.8 | +0.4..+1.7 | +0.0 | 137 /  72 | 0.07
+   3197 5 | +139/+103 +187/+184 +240/+195 +235/+167 +154/+113  +30/ +73  +25/ +80 +132/+106 | +4.8 / -6.3 / -8.2 | -3.8..+2.5 | +0.0 |  72 /  75 | 0.08
+   3197 6 | +126/ +70 +192/+224 +214/+216 +215/+182 +113/+102  +16/ +76  -19/ +99  +99/ +99 | +3.3 / -4.8 / -6.7 | -3.9..+3.0 | +0.0 | 101 /  78 | 0.11
+   3197 7 | +165/+103 +197/+223 +240/+260 +240/+176 +174/+111  +29/  +3  -92/ +16  +19/ +30 | +7.7 / -1.8 / -9.3 | -6.2..+2.2 | +0.0 | 110 /  73 | 0.09
+   3197 8 |  +98/ +27 +175/ +76 +139/+117 +140/+132  +36/ +99  +41/ +82  -14/ +65  +71/ +77 | +0.2 / -12.7 / -6.5 | -2.9..+5.5 | +0.0 |  89 /  49 | 0.08
+   8350 1 | +147/ +83 +233/+202 +240/+173 +198/+170 +113/+107  +25/ +69  -35/ +53  +19/ +33 | +5.9 / -4.8 / -6.9 | -3.2..+3.0 | +0.0 |  73 /  60 | 0.07
+   8350 2 | +153/ +85 +213/+234 +240/+206 +240/+187 +166/+126   +4/ +15  -59/ +38  +25/ +33 | +3.9 / -4.6 / -6.6 | -3.5..+2.1 | +0.0 |  77 /  80 | 0.08
+   8350 3 |  +55/+130 +240/+201 +240/+221 +240/+220 +196/+120  +54/ +28  -25/ +40  +90/ +94 | +2.3 / -2.6 / -6.4 | -2.3..+0.7 | +0.0 | 120 /  60 | 0.08
+   8350 4 |  +52/+116 +194/+202 +240/+255 +240/+251 +204/+175 +123/ +79  +64/ +94  +20/ +87 | +0.9 / +0.4 / +0.1 | -2.1..+1.3 | +0.0 | 136 /  60 | 0.09
+   46c9 1 | +184/ +91 +210/+252 +180/+260 +204/+246 +189/+183 +189/+105  -18/ +28  -49/ -35 | -0.6 / -0.9 / -0.4 | -0.7..+3.8 | +0.0 | 157 /  80 | 0.06
+   median  | +147/ +70 +192/+182 +240/+228 +240/+201 +197/+135  +79/ +73  -14/ +51  +32/ +70
+   sd      |   94/  36   49/  43   25/  40   23/  42   56/  56   79/  57   82/  46   77/  59
+   largest frame-to-frame step x<=1.5: car median 119 max 244 us | land4 median 72 max 99 us
+   heading error psi - th of the RECORDED trajectories against the table (deg): x 0.0: mean +0.9 sd 3.0 | x 0.5: mean -2.5 sd 4.6 | x 1.0: mean -3.4 sd 5.5
+   online x (encoder + speed extrapolation) minus the offline interpolated x: |err| median 0.053 P90 0.090 max 0.229 m (n 706)
+   passes with a yaw glitch removed: 0 of 23 ()
+
+6. step 3 (curve-4 band from 1.2 m, arc2 landing band ends 1.2..1.5 m): pre-comp command - centre in x bins, median [P10..P90] over the 23 landings
+   x bin      car log            step2 replay       step3 replay       step3_only_json replay | band state ON share (step3) | largest step car / step2 / step3
+   1.0-1.2   +39 [ -50..+171]   +53 [  +7..+118]   +53 [  +7..+118]   +48 [ -45..+154] |   0% | 114 /  63 /  63
+   1.2-1.5   +47 [ -91..+126]   +61 [ -44..+105]   +61 [  -2..+114]   +49 [ -74..+117] |  50% | 185 /  73 /  61
+   1.5-1.9  +117 [ -32..+140]  +112 [ -29..+133]   +88 [ +26..+117]   +88 [ +26..+118] |  95% |  89 / 246 / 225
+   1.9-2.3  +124 [ +65..+139]  +122 [ +65..+138]  +100 [ +54..+136]  +100 [ +54..+136] |  96% |  65 / 221 / 212
+   2.3-2.8  +129 [ +92..+196]  +130 [ +90..+202]  +133 [ +77..+202]  +133 [ +77..+202] | 100% |  55 /  46 /  91
+   2.8-3.5  +132 [+103..+210]  +131 [+101..+215]  +131 [+101..+211]  +131 [+101..+211] | 100% |  63 /  60 /  60
+   step 3: curve-4 band fully on (w = 1) at x 1.44..1.82 m (median 1.66, n 23); car today 2.63..2.94 (median 2.79)
+   step 3: land4 handed over (END) at x 1.32..1.64 m (median 1.48, n 23)
+
+7. land4 pass states in the step2 replay: {'SLOPE': 24}
+   frames with a land4 record outside the 24 slope passes (mouth-0.3 s .. landing+3.5 m): 0

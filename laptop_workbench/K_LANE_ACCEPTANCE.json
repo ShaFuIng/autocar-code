@@ -1,0 +1,19 @@
+{
+  "job": "f7e170a0869d4fdd8632575997f39a4a",
+  "frames": 1760,
+  "worker_mismatch_frames": [],
+  "opencv": "4.11.0",
+  "hardware_output": false,
+  "unit_tests": 6,
+  "entries": [
+    71.4,
+    108.9
+  ],
+  "empty": 0,
+  "focus_97_3_A": true,
+  "focus_142_A": true,
+  "curve_23_4_unchanged": true,
+  "suspect_preserves_A": true,
+  "baseline_sha256": "c73decee9052c9c1bd0a12764d06ee1a680e0876a6b90b16504df43b8719a1c6",
+  "orin_deployed": false
+}

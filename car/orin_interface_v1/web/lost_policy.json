@@ -1,0 +1,74 @@
+{
+ "revision": "lost-policy-r1",
+ "groups": [
+  {
+   "name": "blind",
+   "rows": [
+    "UPPER_SINGLE_HOLD",
+    "LANE_BLIND_HOLD",
+    "HEADING_BLIND"
+   ]
+  },
+  {
+   "name": "pid_hold",
+   "rows": [
+    "PID_HOLD"
+   ]
+  },
+  {
+   "name": "downhill",
+   "rows": [
+    "DOWNHILL_HOLD"
+   ]
+  },
+  {
+   "name": "lost",
+   "rows": [
+    "LOST_HEADING"
+   ]
+  }
+ ],
+ "mods": {
+  "UPPER_SINGLE_HOLD": [
+   "hold_pwm",
+   "turn_pwm",
+   "down_straight",
+   "crossing_hold"
+  ],
+  "LANE_BLIND_HOLD": [
+   "hold_pwm",
+   "turn_pwm",
+   "down_straight",
+   "crossing_hold"
+  ],
+  "HEADING_BLIND": [
+   "hold_pwm",
+   "turn_pwm",
+   "down_straight",
+   "crossing_hold"
+  ],
+  "PID_HOLD": [
+   "hold_pwm",
+   "downhill_clamp",
+   "turn_pwm",
+   "as_pid_hold",
+   "downhill_gz_if_downhill",
+   "down_straight",
+   "crossing_hold"
+  ],
+  "DOWNHILL_HOLD": [
+   "bottom_map",
+   "bottom_curve",
+   "downhill_gz_hold",
+   "down_straight"
+  ],
+  "LOST_HEADING": [
+   "hold_pwm",
+   "turn_pwm",
+   "crossing_hold"
+  ]
+ },
+ "lost_turn_us": 200.0,
+ "downhill_hold_max_s": 3.0,
+ "downhill_hold_left_us": 150.0
+}

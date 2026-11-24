@@ -1,0 +1,5 @@
+9934           frames  5660/ 5660  commands identical  5660  reads  5660  all=True  unexpected=0  expected=0  loop_err=(None, None)
+9284           frames  5975/ 5975  commands identical  5975  reads  5975  all=True  unexpected=0  expected=0  loop_err=(None, None)
+69a8           frames   240/  240  commands identical   240  reads   240  all=True  unexpected=0  expected=0  loop_err=(None, None)
+bab2           frames  2958/ 2958  commands identical  2958  reads  2958  all=True  unexpected=0  expected=0  loop_err=(None, None)
+TOTAL frames 14833 identical 14833 read-order identical 14833 all_cases_identical True stops_identical True any_unexpected False

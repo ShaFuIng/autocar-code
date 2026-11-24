@@ -1,0 +1,1 @@
+{"enabled": true, "bias_us": -40.0, "hold_s": 2.4, "fade_s": 0.8, "note": "start-bias-r1 (2026-11-22 14:0x): 40 us left for 2.4 s after the start hold (= until ~2.7 s after the start), faded to 0 over 0.8 s (ends ~1 s before curve 1). Short starts 11-22: while the bias is on the car runs straight; it turned right as soon as a 0.9 s bias ended. Delete this file = off."}

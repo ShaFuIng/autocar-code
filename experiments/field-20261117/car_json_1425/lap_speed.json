@@ -1,0 +1,28 @@
+{
+ "revision": "lap-speed-r1",
+ "enabled": true,
+ "rate_pwm_s": 60.0,
+ "err_guard": 0.3,
+ "steer_guard_us": 250.0,
+ "level_deg": 5.0,
+ "carry_s": 0.5,
+ "zones": [
+  {
+   "name": "main straight (C4e+0.8 .. +8.0; the curve-1 brake zone DOWN+18.4 = ~C4e+8.5 still caps after it)",
+   "anchor": "C4e",
+   "from_m": 0.8,
+   "to_m": 8.0,
+   "pwm": 50
+  },
+  {
+   "name": "circle straight (C2e+0.5 .. +6.3; the crossing cap 45 C2e+0.3..6.7 still applies; left bend at C2e+6.8)",
+   "anchor": "C2e",
+   "from_m": 0.5,
+   "to_m": 6.3,
+   "pwm": 45,
+   "err_guard": 0.4
+  }
+ ],
+ "note": "lap65-20261115 stage C1 (first conservative profile). Per-run read. Rollback: enabled false or delete the file. | 11-16 field: curve-4 zone (DOWN+6.4..10.0 at 42) removed after run 1e69 (exit over-rotation at 1.2-1.35 m/s) and 7af0 lap 4.",
+ "note_c2x": "c2-crossing-20261117: circle-straight zone err_guard 0.30 -> 0.40 (the single-line offset on the circle straight is +0.26..+0.37 on settled exits, 47f2 / 2161; speed_adapt ERROR at 0.25 then cut 45 -> 28). LOW (ERROR_LARGE >= 0.45) still blocks. Back out: delete err_guard in that zone."
+}

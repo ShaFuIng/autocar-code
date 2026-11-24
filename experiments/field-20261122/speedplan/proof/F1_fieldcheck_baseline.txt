@@ -1,0 +1,122 @@
+==================================================================================================================================
+run-e69d 圈時 L1 59.70／L2 58.97／L3 59.32／L4 58.74／L5 58.65
+  彎1入口＋彎1
+     L2 T 5.64 v@C1s+0.0 1.04 emax 0.83 e99 0 in -3 out -3 st +312 gz -57
+     L3 T 6.04 v@C1s+0.0 1.02 emax 0.81 e99 0 in -6 out -5 st +333 gz -62
+     L4 T 5.92 v@C1s+0.0 1.03 emax 0.84 e99 0 in -8 out -3 st +346 gz -59
+     L5 T 5.85 v@C1s+0.0 1.05 emax 0.89 e99 0 in -6 out -4 st +348 gz -64
+  彎2入口＋彎2
+     L1 T 7.30 v@C2s+0.0 0.96 emax 0.88 e99 0 in -9 out 8 st +379 gz -72
+     L2 T 6.93 v@C2s+0.0 0.98 emax 0.98 e99 0 in -4 out 8 st +435 gz -80
+     L3 T 6.91 v@C2s+0.0 0.96 emax 1.00 e99 9 in -3 out 5 st +402 gz -75
+     L4 T 7.11 v@C2s+0.0 0.95 emax 1.00 e99 11 in -6 out 3 st +400 gz -70
+     L5 T 6.95 v@C2s+0.0 0.99 emax 0.97 e99 0 in -9 out 6 st +426 gz -71
+  左彎→彎3入口
+     L1 T 4.79 v@C3s+0.0 0.93 emax 0.78 e99 0 in -6 out 8 st -250 gz -36
+     L2 T 5.30 v@C3s+0.0 0.95 emax 0.65 e99 0 in -5 out 8 st +304 gz -42
+     L3 T 5.36 v@C3s+0.0 0.93 emax 0.72 e99 0 in -5 out 6 st +352 gz -51
+     L4 T 5.08 v@C3s+0.0 0.95 emax 0.67 e99 0 in -8 out 7 st +320 gz -45
+     L5 T 5.05 v@C3s+0.0 0.92 emax 0.78 e99 0 in -5 out 4 st +425 gz -62
+  彎3前段
+     L1 T 3.92 v@C3s+2.0 1.22 emax 0.56 e99 0 in -9 out 8 st +223 gz -39
+     L2 T 3.88 v@C3s+2.0 1.24 emax 0.65 e99 0 in -8 out 8 st +304 gz -49
+     L3 T 3.91 v@C3s+2.0 1.25 emax 0.81 e99 0 in -8 out 2 st +272 gz -51
+     L4 T 3.90 v@C3s+2.0 1.25 emax 0.72 e99 0 in -8 out 1 st +320 gz -45
+     L5 T 3.88 v@C3s+2.0 1.24 emax 0.58 e99 0 in -11 out 5 st +250 gz -62
+  彎3拐角＋尾段
+     L1 T 2.84 v@C3s+4.3 1.07 emax 0.92 e99 0 in -13 out 11 st +494 gz -71
+     L2 T 2.26 v@C3s+4.3 1.07 emax 1.00 e99 3 in -12 out 10 st +515 gz -69
+     L3 T 2.65 v@C3s+4.3 1.07 emax 0.98 e99 0 in -7 out 7 st +532 gz -72
+     L4 T 2.43 v@C3s+4.3 1.08 emax 0.94 e99 0 in -16 out 11 st +501 gz -72
+     L5 T 2.71 v@C3s+4.3 1.08 emax 1.00 e99 8 in -12 out 11 st +512 gz -67
+  坡頂→虛線轉彎
+     L1 T 4.80 v@DASHs+0.0 0.86 emax 0.65 e99 0 in — out — st -548 gz -8
+     L2 T 4.24 v@DASHs+0.0 0.91 emax 0.67 e99 0 in — out — st -592 gz -8
+     L3 T 4.43 v@DASHs+0.0 0.92 emax 0.65 e99 0 in — out — st -574 gz -9
+     L4 T 4.28 v@DASHs+0.0 0.88 emax 0.67 e99 0 in — out — st -595 gz -10
+     L5 T 4.24 v@DASHs+0.0 0.87 emax 0.70 e99 0 in — out — st -582 gz -9
+  轉彎後直線→坡口
+     L1 T 4.01 v@DOWN+0.0 0.95 emax 0.71 e99 0 in — out — st +143 gz -11
+     L2 T 3.39 v@DOWN+0.0 0.98 emax 0.64 e99 0 in — out — st +143 gz -19
+     L3 T 3.35 v@DOWN+0.0 0.87 emax 1.00 e99 2 in — out — st +136 gz -14
+     L4 T 3.36 v@DOWN+0.0 0.98 emax 0.59 e99 0 in — out — st +137 gz -16
+     L5 T 3.53 v@DOWN+0.0 0.98 emax 0.78 e99 0 in — out — st -175 gz -16
+  落地0-1.5
+     L1 T 1.33 v@LAND8+1.5 1.08 emax 0.90 e99 0 in 4 out 3 st +315 gz -45
+     L2 T 1.37 v@LAND8+1.5 1.09 emax 0.76 e99 0 in -1 out 7 st +312 gz -54
+     L3 T 1.32 v@LAND8+1.5 1.10 emax 0.88 e99 0 in 2 out 7 st +304 gz -68
+     L4 T 1.26 v@LAND8+1.5 1.11 emax 0.84 e99 0 in -10 out 6 st +315 gz -55
+     L5 T 1.25 v@LAND8+1.5 1.11 emax 0.84 e99 0 in 6 out 3 st +315 gz -53
+  彎4後半
+     L1 T 3.54 v@C4e+0.0 1.30 emax 0.62 e99 0 in -7 out 2 st +268 gz -41
+     L2 T 3.07 v@C4e+0.0 1.32 emax 0.55 e99 0 in -3 out 8 st +253 gz -43
+     L3 T 3.19 v@C4e+0.0 1.34 emax 0.75 e99 0 in 2 out 0 st +260 gz -46
+     L4 T 3.28 v@C4e+0.0 1.33 emax 0.70 e99 0 in 1 out 4 st +260 gz -47
+     L5 T 3.62 v@C4e+0.0 1.32 emax 0.67 e99 0 in -6 out 0 st +290 gz -45
+  主直線前3m
+     L1 T 2.26 v@C4e+3.0 1.42 emax 0.40 e99 0 in 5 out 2 st +143 gz -28
+     L2 T 2.32 v@C4e+3.0 1.37 emax 0.39 e99 0 in -3 out 3 st +167 gz -32
+     L3 T 2.33 v@C4e+3.0 1.29 emax 0.51 e99 0 in 2 out 1 st +150 gz -34
+     L4 T 2.28 v@C4e+3.0 1.35 emax 0.49 e99 0 in 1 out 4 st +116 gz -32
+     L5 T 2.30 v@C4e+3.0 1.38 emax 0.40 e99 0 in 5 out 3 st +156 gz -28
+==================================================================================================================================
+run-9af6 圈時 L1 59.79／L2 59.80／L3 59.16／L4 58.83／L5 59.06
+  彎1入口＋彎1
+     L2 T 5.81 v@C1s+0.0 1.07 emax 0.90 e99 0 in -4 out -2 st +331 gz -62
+     L3 T 5.68 v@C1s+0.0 1.03 emax 0.89 e99 0 in -4 out -3 st +329 gz -61
+     L4 T 5.35 v@C1s+0.0 1.07 emax 0.81 e99 0 in 2 out -3 st +315 gz -59
+     L5 T 5.86 v@C1s+0.0 1.11 emax 0.71 e99 0 in -4 out -4 st +336 gz -56
+  彎2入口＋彎2
+     L1 T 7.98 v@C2s+0.0 0.91 emax 0.96 e99 0 in -5 out 4 st +395 gz -67
+     L2 T 7.98 v@C2s+0.0 0.95 emax 0.94 e99 0 in -1 out 1 st +430 gz -61
+     L3 T 7.53 v@C2s+0.0 0.95 emax 0.94 e99 0 in -5 out 5 st +398 gz -67
+     L4 T 7.62 v@C2s+0.0 0.96 emax 1.00 e99 13 in -4 out 2 st +449 gz -79
+     L5 T 7.18 v@C2s+0.0 0.96 emax 0.82 e99 0 in -1 out 4 st +383 gz -67
+  左彎→彎3入口
+     L1 T 4.63 v@C3s+0.0 0.99 emax 0.63 e99 0 in -10 out 9 st +292 gz -44
+     L2 T 4.84 v@C3s+0.0 0.96 emax 0.66 e99 0 in -9 out 8 st +315 gz -46
+     L3 T 4.59 v@C3s+0.0 0.92 emax 0.77 e99 0 in -5 out 6 st +425 gz -71
+     L4 T 4.73 v@C3s+0.0 0.94 emax 0.73 e99 0 in -6 out 8 st +366 gz -53
+     L5 T 5.21 v@C3s+0.0 0.96 emax 0.76 e99 0 in -4 out 4 st +414 gz -62
+  彎3前段
+     L1 T 3.95 v@C3s+2.0 1.20 emax 0.49 e99 0 in -11 out 11 st +224 gz -44
+     L2 T 3.90 v@C3s+2.0 1.23 emax 0.66 e99 0 in -10 out 4 st +313 gz -46
+     L3 T 3.96 v@C3s+2.0 1.22 emax 0.89 e99 0 in -13 out -2 st +425 gz -71
+     L4 T 3.86 v@C3s+2.0 1.23 emax 0.71 e99 0 in -10 out 3 st +265 gz -53
+     L5 T 3.92 v@C3s+2.0 1.22 emax 0.76 e99 0 in -10 out 5 st +283 gz -62
+  彎3拐角＋尾段
+     L1 T 2.63 v@C3s+4.3 1.07 emax 0.96 e99 0 in -10 out 8 st +486 gz -72
+     L2 T 2.66 v@C3s+4.3 1.08 emax 0.92 e99 0 in -12 out 10 st +517 gz -75
+     L3 T 2.99 v@C3s+4.3 1.07 emax 1.00 e99 5 in -7 out -6 st +464 gz -91
+     L4 T 2.85 v@C3s+4.3 1.09 emax 1.00 e99 12 in -8 out 3 st +508 gz -69
+     L5 T 2.83 v@C3s+4.3 1.07 emax 1.00 e99 1 in -8 out 6 st +496 gz -77
+  坡頂→虛線轉彎
+     L1 T 4.56 v@DASHs+0.0 0.91 emax 0.85 e99 0 in — out — st -662 gz -6
+     L2 T 4.42 v@DASHs+0.0 0.87 emax 0.76 e99 0 in — out — st -651 gz -8
+     L3 T 4.37 v@DASHs+0.0 0.92 emax 0.75 e99 0 in — out — st -604 gz -6
+     L4 T 4.38 v@DASHs+0.0 0.91 emax 0.78 e99 0 in — out — st -672 gz -10
+     L5 T 4.26 v@DASHs+0.0 0.92 emax 0.69 e99 0 in — out — st -608 gz -12
+  轉彎後直線→坡口
+     L1 T 3.62 v@DOWN+0.0 0.99 emax 0.81 e99 0 in — out — st +130 gz -18
+     L2 T 3.39 v@DOWN+0.0 0.96 emax 0.71 e99 0 in — out — st +138 gz -17
+     L3 T 3.24 v@DOWN+0.0 1.01 emax 0.86 e99 0 in — out — st +145 gz -17
+     L4 T 3.39 v@DOWN+0.0 0.99 emax 0.75 e99 0 in — out — st +146 gz -22
+     L5 T 3.36 v@DOWN+0.0 0.97 emax 0.64 e99 0 in — out — st +144 gz -16
+  落地0-1.5
+     L1 T 1.34 v@LAND8+1.5 1.12 emax 0.96 e99 0 in 6 out 2 st +315 gz -52
+     L2 T 1.31 v@LAND8+1.5 1.11 emax 0.92 e99 0 in 8 out -2 st +308 gz -63
+     L3 T 1.22 v@LAND8+1.5 1.13 emax 0.80 e99 0 in 6 out 0 st +315 gz -60
+     L4 T 1.33 v@LAND8+1.5 1.11 emax 0.78 e99 0 in 3 out 2 st +310 gz -56
+     L5 T 1.32 v@LAND8+1.5 1.13 emax 1.00 e99 7 in 14 out -7 st +315 gz -69
+  彎4後半
+     L1 T 3.14 v@C4e+0.0 1.31 emax 0.64 e99 0 in -3 out 1 st +265 gz -48
+     L2 T 3.52 v@C4e+0.0 1.32 emax 0.63 e99 0 in 2 out 3 st +262 gz -44
+     L3 T 4.06 v@C4e+0.0 1.31 emax 0.76 e99 0 in -13 out 3 st +295 gz -52
+     L4 T 3.06 v@C4e+0.0 1.36 emax 0.57 e99 0 in -2 out 7 st +248 gz -47
+     L5 T 3.37 v@C4e+0.0 1.32 emax 0.73 e99 0 in -4 out -2 st +302 gz -49
+  主直線前3m
+     L1 T 2.28 v@C4e+3.0 1.30 emax 0.35 e99 0 in -4 out 6 st +141 gz -40
+     L2 T 2.25 v@C4e+3.0 1.40 emax 0.48 e99 0 in 8 out 0 st +150 gz -27
+     L3 T 2.25 v@C4e+3.0 1.42 emax 0.49 e99 0 in 11 out -1 st +146 gz -24
+     L4 T 2.27 v@C4e+3.0 1.34 emax 0.30 e99 0 in -6 out 4 st +132 gz -23
+     L5 T 2.30 v@C4e+3.0 1.39 emax 0.51 e99 0 in -5 out 1 st +188 gz -29

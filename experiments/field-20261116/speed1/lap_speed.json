@@ -1,0 +1,36 @@
+{
+ "revision": "lap-speed-r1",
+ "enabled": true,
+ "rate_pwm_s": 60.0,
+ "err_guard": 0.3,
+ "steer_guard_us": 250.0,
+ "level_deg": 5.0,
+ "carry_s": 0.5,
+ "zones": [
+  {
+   "name": "main straight (C4e+0.8 .. +8.0; the curve-1 brake zone DOWN+18.4 = ~C4e+8.5 still caps after it)",
+   "anchor": "C4e",
+   "from_m": 0.8,
+   "to_m": 8.0,
+   "pwm": 50
+  },
+  {
+   "name": "circle straight (C2e+0.5 .. +6.3; the crossing cap 45 C2e+0.3..6.7 still applies; left bend at C2e+6.8)",
+   "anchor": "C2e",
+   "from_m": 0.5,
+   "to_m": 6.3,
+   "pwm": 45
+  },
+  {
+   "name": "curve 4 after the bottom cap (DOWN+6.4 .. +10.0; C4e ~DOWN+9.9); curve-4 errors are 0.3-0.6 by geometry",
+   "anchor": "DOWN",
+   "from_m": 6.4,
+   "to_m": 10.0,
+   "pwm": 42,
+   "err_guard": 0.6,
+   "steer_guard_us": 350.0,
+   "allow_low": true
+  }
+ ],
+ "note": "lap65-20261115 stage C1 (first conservative profile). Per-run read. Rollback: enabled false or delete the file."
+}

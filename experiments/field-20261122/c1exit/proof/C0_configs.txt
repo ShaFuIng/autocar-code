@@ -1,0 +1,81 @@
+base lap_ff.json 052be3dc (lap_ff.car_052be3dc.json)   i_ramp.json b231aa8e (i_ramp.json)
+
+c1_step1_band/lap_ff.json  8c6ed2fe
+   curves.c1 (whole block; was enabled false, no band)
+   (differs from the base: curves.c1)
+
+c1_step2_exit_hold/lap_ff.json  23181a81
+   curves.c1 (whole block; was enabled false, no band)
+   curves.c1.band.own_lo_us -120
+   curves.c1.band.v_ref 1.10
+   curves.c1.band.end_deg 147 -> 400
+   curves.c1.max_m 4.6 -> 4.7
+   (differs from the base: curves.c1)
+
+c1_step3_lap1/lap_ff.json  958e58df
+   curves.c1 (whole block; was enabled false, no band)
+   curves.c1.band.own_lo_us -120
+   curves.c1.band.v_ref 1.10
+   curves.c1.band.end_deg 147 -> 400
+   curves.c1.max_m 4.6 -> 4.7
+   curves.c1.start {gap_m 3.2, win_m [-1.2, 1.0], ref_win [0.4, 1.8]}
+   (differs from the base: curves.c1)
+
+c2_step1_tail6/lap_ff.json  e61971b2
+   curves.c2.band.kappa_turn last two points [[178.0, 40.0], [198.0, 0.0]] -> [[184.0, 40.0], [204.0, 0.0]]
+   curves.c2.band.e_c_turn last three points [[180, 0.64], [198, 0.3], [210, 0.1]] -> [[186.0, 0.64], [204.0, 0.3], [216.0, 0.1]]
+   curves.c2.band.end_deg 196.0 -> 202.0
+   curves.c2.max_m 4.8 -> 5.8
+   (differs from the base: curves.c2)
+
+c2_step1_tail10/lap_ff.json  3726db61
+   curves.c2.band.kappa_turn last two points [[178.0, 40.0], [198.0, 0.0]] -> [[188.0, 40.0], [208.0, 0.0]]
+   curves.c2.band.e_c_turn last three points [[180, 0.64], [198, 0.3], [210, 0.1]] -> [[190.0, 0.64], [208.0, 0.3], [220.0, 0.1]]
+   curves.c2.band.end_deg 196.0 -> 206.0
+   curves.c2.max_m 4.8 -> 5.8
+   (differs from the base: curves.c2)
+
+c2_step2_exit_hold/lap_ff.json  2428abdd
+   curves.c2.band.kappa_turn last two points [[178.0, 40.0], [198.0, 0.0]] -> [[188.0, 40.0], [208.0, 0.0]]
+   curves.c2.band.e_c_turn last three points [[180, 0.64], [198, 0.3], [210, 0.1]] -> [[190.0, 0.64], [208.0, 0.3], [220.0, 0.1]]
+   curves.c2.band.end_deg 196.0 -> 206.0
+   curves.c2.max_m 4.8 -> 5.8
+   curves.c2.band.kappa_turn end [208, -1.1], [220, -15]
+   curves.c2.band.e_c_turn end -> 0.08 / [230, 0.05]
+   curves.c2.band.own_lo_us -120
+   curves.c2.band.v_ref 1.02
+   curves.c2.band.end_deg -> 400
+   curves.c2.max_m -> 6.1
+   (differs from the base: curves.c2)
+
+combo_c1_step1__c2_tail10/lap_ff.json  012ef943
+   curves.c1 (whole block; was enabled false, no band)
+   curves.c2.band.kappa_turn last two points [[178.0, 40.0], [198.0, 0.0]] -> [[188.0, 40.0], [208.0, 0.0]]
+   curves.c2.band.e_c_turn last three points [[180, 0.64], [198, 0.3], [210, 0.1]] -> [[190.0, 0.64], [208.0, 0.3], [220.0, 0.1]]
+   curves.c2.band.end_deg 196.0 -> 206.0
+   curves.c2.max_m 4.8 -> 5.8
+   (differs from the base: curves.c1)
+   (differs from the base: curves.c2)
+
+combo_c1_step3__c2_step2/lap_ff.json  259fee0c
+   curves.c1 (whole block; was enabled false, no band)
+   curves.c1.band.own_lo_us -120
+   curves.c1.band.v_ref 1.10
+   curves.c1.band.end_deg 147 -> 400
+   curves.c1.max_m 4.6 -> 4.7
+   curves.c1.start {gap_m 3.2, win_m [-1.2, 1.0], ref_win [0.4, 1.8]}
+   curves.c2.band.kappa_turn last two points [[178.0, 40.0], [198.0, 0.0]] -> [[188.0, 40.0], [208.0, 0.0]]
+   curves.c2.band.e_c_turn last three points [[180, 0.64], [198, 0.3], [210, 0.1]] -> [[190.0, 0.64], [208.0, 0.3], [220.0, 0.1]]
+   curves.c2.band.end_deg 196.0 -> 206.0
+   curves.c2.max_m 4.8 -> 5.8
+   curves.c2.band.kappa_turn end [208, -1.1], [220, -15]
+   curves.c2.band.e_c_turn end -> 0.08 / [230, 0.05]
+   curves.c2.band.own_lo_us -120
+   curves.c2.band.v_ref 1.02
+   curves.c2.band.end_deg -> 400
+   curves.c2.max_m -> 6.1
+   (differs from the base: curves.c1)
+   (differs from the base: curves.c2)
+
+i_ramp_c2e/i_ramp.json  af755f20
+   exit.C2e {start_m 0.3, end_m 3.0, tau_s 0.2} (same as exit.C1e)

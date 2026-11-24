@@ -1,0 +1,25 @@
+{
+  "job": {
+    "job": "646cf2918b6e4f2999e4930077ee7af9",
+    "state": "completed",
+    "duration_s": 30,
+    "created": 1792293294.4653792,
+    "record_id": "1990d71f48d442bf9acf6c60913847d5",
+    "started": 1792293294.6363626,
+    "recording": {
+      "id": "1990d71f48d442bf9acf6c60913847d5",
+      "mode": "record_only",
+      "status": "stopped",
+      "created_at": "2026-10-18T03:14:54.583820+00:00",
+      "path": "/home/jetson/orin_interface_v1/logs/record_only/1990d71f48d442bf9acf6c60913847d5",
+      "frames": 16,
+      "nominal_fps": 10,
+      "reason": "USER_STOP",
+      "motion_labels": false,
+      "ended_at": "2026-10-18T03:14:56.454432+00:00"
+    },
+    "finished": 1792293296.4599771
+  },
+  "concurrent_start_rejected": true,
+  "owned_early_stop_passed": true
+}

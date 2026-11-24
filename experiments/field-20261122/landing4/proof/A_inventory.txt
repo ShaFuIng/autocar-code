@@ -1,0 +1,85 @@
+== 上層直線末段（坡口前 1.5～0 m）　格數 813　有效格 76%
+   最後寫入舵量者： upper_single 76%、upper_single_hold 23%、warmup_hold 1%
+   有動作的層（占格數）： upper_single 99%
+   補償前舵量−中心 P10／中位／P90：-23／-6／18；實送−中心：-78／38／68
+   油門 P10／中位／P90：24／34／34；來源： 煞車區上限 34 70%、丟線列（沿用） 24%、speed_adapt STABLE 4%、speed_adapt ERROR_LARGE 1%、speed_adapt ERROR_RATE_LARGE 0%
+== 坡口（俯仰<-5 起～其後 0.4 m）　格數 241　有效格 96%
+   最後寫入舵量者： downhill_speed 71%、downhill_dlimit 12%、pid 5%、down_straight 4%、jump_guard 3%、warmup_hold 2%
+   有動作的層（占格數）： downhill_speed 91%、yaw_inner 62%、downhill_dlimit 12%、down_straight 4%、jump_guard 3%、downhill_dcap 2%、downhill_assist 1%、downhill_gz 0%
+   補償前舵量−中心 P10／中位／P90：-112／0／71；實送−中心：-162／3／116
+   油門 P10／中位／P90：10／10／15；來源： speed_adapt DOWNHILL 96%、丟線列（沿用） 4%
+== 坡上（坡口後 0.4～1.5 m）　格數 569　有效格 98%
+   最後寫入舵量者： downhill_speed 87%、downhill_dlimit 6%、downhill_gz 5%、down_straight 2%、warmup_hold 0%
+   有動作的層（占格數）： downhill_speed 98%、yaw_inner 70%、downhill_gz 7%、downhill_dlimit 6%、down_straight 2%
+   補償前舵量−中心 P10／中位／P90：-5／37／87；實送−中心：-55／75／138
+   油門 P10／中位／P90：10／10／10；來源： speed_adapt DOWNHILL 98%、丟線列（沿用） 2%
+== 坡末（坡口後 1.5 m～落地）　格數 444　有效格 64%
+   最後寫入舵量者： arc2_land 41%、down_straight 24%、downhill_speed 23%、arc2_land_lost 11%、warmup_hold 1%、downhill_gz 0%
+   有動作的層（占格數）： downhill_speed 64%、yaw_inner 46%、arc2_land 41%、down_straight 35%、arc2_land_lost 11%、downhill_dlimit 10%、downhill_gz 8%
+   補償前舵量−中心 P10／中位／P90：1／45／165；實送−中心：-54／76／220
+   油門 P10／中位／P90：10／10／10；來源： speed_adapt DOWNHILL 64%、丟線列（沿用） 36%
+== 落地 x 0～0.5　格數 233　有效格 89%
+   最後寫入舵量者： bottom_owner 36%、lap_ff4 24%、pid 23%、bottom_guide 6%、arc2_land 6%、warmup_hold 3%
+   有動作的層（占格數）： downhill_speed 89%、bottom_owner 42%、downhill_gz 28%、lap_ff4 27%、bottom_guide 6%、arc2_land 6%、arc2_land_lost 5%、downhill_dlimit 1%
+   彎 4 帶狀（lap_ff4.band）狀態： BEFORE_X0 87%
+   補償前舵量−中心 P10／中位／P90：55／204／240；實送−中心：61／255／295
+   油門 P10／中位／P90：10／31／31；來源： 煞車區上限 31 64%、丟線列（沿用） 11%、speed_adapt DOWNHILL 9%、speed_adapt ERROR_LARGE（落地規則） 6%、speed_adapt STABLE_PENDING（落地規則） 4%
+== 落地 x 0.5～1.0　格數 254　有效格 100%
+   最後寫入舵量者： bottom_owner 45%、pid 27%、arc2_land 14%、lap_ff4 7%、gain_schedule 7%
+   有動作的層（占格數）： downhill_speed 85%、downhill_gz 69%、bottom_owner 49%、arc2_land 14%、lap_ff4 7%、downhill_dlimit 1%、yaw_inner 0%
+   彎 4 帶狀（lap_ff4.band）狀態： BEFORE_X0 100%
+   補償前舵量−中心 P10／中位／P90：79／225／240；實送−中心：28／200／295
+   油門 P10／中位／P90：31／31／31；來源： 煞車區上限 31 94%、speed_adapt ERROR_RATE（落地規則） 3%、speed_adapt ERROR（落地規則） 2%、speed_adapt STABLE_PENDING（落地規則） 1%
+== 落地 x 1.0～1.5　格數 238　有效格 98%
+   最後寫入舵量者： lap_ff4 42%、arc2_land 33%、yaw_inner 12%、gain_schedule 11%、bottom_guide 1%、warmup_hold 1%
+   有動作的層（占格數）： lap_ff4 61%、yaw_inner 43%、arc2_land 33%、bottom_owner 4%、bottom_guide 1%、downhill_gz 1%、downhill_speed 1%
+   彎 4 帶狀（lap_ff4.band）狀態： BEFORE_X0 99%
+   補償前舵量−中心 P10／中位／P90：-60／46／143；實送−中心：-114／39／150
+   油門 P10／中位／P90：30／30／31；來源： 煞車區上限 31 47%、speed_adapt STABLE_PENDING（落地規則） 33%、speed_adapt ERROR_RATE（落地規則） 15%、speed_adapt ERROR（落地規則） 3%、丟線列（沿用） 2%
+== 落地 x 1.5～2.3　格數 432　有效格 99%
+   最後寫入舵量者： lap_ff4 76%、arc2_land 12%、yaw_inner 7%、gain_schedule 4%、bottom_guide 0%、warmup_hold 0%
+   有動作的層（占格數）： lap_ff4 88%、yaw_inner 38%、arc2_land 12%、bottom_owner 0%、bottom_guide 0%
+   彎 4 帶狀（lap_ff4.band）狀態： BEFORE_X0 99%、ON 1%
+   補償前舵量−中心 P10／中位／P90：5／123／139；實送−中心：-4／75／191
+   油門 P10／中位／P90：30／33／33；來源： speed_adapt STABLE_PENDING（落地規則） 36%、speed_adapt CURVE_AHEAD（落地規則） 34%、speed_adapt ERROR_RATE（落地規則） 8%、speed_adapt STABLE（落地規則） 8%、speed_adapt ERROR_RATE_LARGE（落地規則） 7%
+== 落地 x 2.3～2.8　格數 274　有效格 100%
+   最後寫入舵量者： lap_ff4 49%、gain_schedule 26%、arc2_land 24%、yaw_inner 1%
+   有動作的層（占格數）： lap_ff4 69%、arc2_land 24%、yaw_inner 9%
+   彎 4 帶狀（lap_ff4.band）狀態： ON 73%、BEFORE_X0 27%
+   補償前舵量−中心 P10／中位／P90：92／129／196；實送−中心：48／163／251
+   油門 P10／中位／P90：33／33／50；來源： speed_adapt CURVE_AHEAD（落地規則） 42%、speed_adapt ERROR_LARGE（落地規則） 36%、speed_adapt STABLE（落地規則） 14%、speed_adapt STABLE_PENDING（落地規則） 6%、speed_adapt ERROR_RATE（落地規則） 1%
+== 落地 x 2.8～3.5　格數 368　有效格 100%
+   最後寫入舵量者： lap_ff4 56%、gain_schedule 26%、curve_smooth 14%、arc2_land 3%、yaw_inner 1%
+   有動作的層（占格數）： lap_ff4 57%、curve_map 26%、yaw_inner 4%、curve_ff 3%、arc2_land 3%
+   彎 4 帶狀（lap_ff4.band）狀態： ON 100%
+   補償前舵量−中心 P10／中位／P90：103／132／210；實送−中心：49／87／238
+   油門 P10／中位／P90：30／33／42；來源： speed_adapt CURVE_AHEAD（落地規則） 34%、speed_adapt CURVE_AHEAD 33%、speed_adapt ERROR_LARGE（落地規則） 21%、speed_adapt ERROR_LARGE 11%、speed_adapt STABLE_PENDING 1%
+== 落地 x 3.5～5.0　格數 748　有效格 100%
+   最後寫入舵量者： lap_ff4 56%、curve_smooth 36%、yaw_inner 4%、gain_schedule 4%、curve_ff 0%
+   有動作的層（占格數）： curve_map 94%、lap_ff4 56%、curve_ff 14%、yaw_inner 13%
+   彎 4 帶狀（lap_ff4.band）狀態： ON 100%
+   補償前舵量−中心 P10／中位／P90：77／125／194；實送−中心：23／84／240
+   油門 P10／中位／P90：37／48／58；來源： speed_adapt CURVE_AHEAD 50%、speed_adapt ERROR_LARGE 27%、speed_adapt STABLE_PENDING 16%、speed_adapt STABLE 4%、speed_adapt ERROR 1%
+
+== 交接處的舵量不連續（補償前指令，相鄰兩格的差；每次下坡取一筆）
+  坡口：俯仰<-5 起 6 格內最大一步                      n 24　|差| 中位 107　P90 384　最大 511　（有號中位 -74）
+  坡上：有效↔丟線切換的最大一步                          n 14　|差| 中位  80　P90 367　最大 384　（有號中位 -52）
+  落地偵測後 8 格內最大一步                           n 23　|差| 中位 106　P90 215　最大 253　（有號中位 +82）
+  bottom_owner CAP→RAMP                    n 23　|差| 中位  20　P90  30　最大  62　（有號中位 -12）
+  彎 4 帶狀 BEFORE_X0→ON                      n 23　|差| 中位  14　P90  24　最大  55　（有號中位 +3）
+  arc2 落地帶狀結束（HANDED_OVER）                 n 23　|差| 中位  11　P90  25　最大  43　（有號中位 -1）
+  彎道地圖 FLOOR（bottom_owner 範圍結束）            n 23　|差| 中位   5　P90  20　最大  34　（有號中位 +2）
+
+== 各層交接位置 x（落地偵測後的公尺數，後輪編碼器內插）
+  bottom_owner CAP 結束→RAMP： 1.08～1.30（中位 1.18，n 23）
+  bottom_owner OPEN： 1.74～1.95（中位 1.80，n 23）
+  彎 4 帶狀開始作用（state ON）： 2.26～2.66（中位 2.45，n 23）
+  彎 4 帶狀全權（w=1）： 2.63～2.94（中位 2.79，n 23）
+  arc2 落地帶狀開始交還（HAND）： 2.17～2.66（中位 2.30，n 23）
+  arc2 落地帶狀結束（END）： 2.64～3.13（中位 2.86，n 23）
+  彎道地圖 FLOOR（＝bottom_owner 範圍結束、彎 4 專用油門開始）： 3.19～4.51（中位 3.32，n 23）
+  speed_adapt 落地規則結束（x>=1 之後第一個沒有 landing 欄的有效格）： 3.09～3.42（中位 3.20，n 23）
+  煞車區「坡底→彎 4」上限 31 結束（x>=0.5 之後第一個不被它夾住的有效格）： 0.65～1.75（中位 1.23，n 23）
+  油門 ≥45： 1.69～4.86（中位 3.60，n 23）
+
+  x 2.6～3.5 彎 4 帶狀 ON 的格 478，其中帶狀實際改動舵量 276 格（58%）

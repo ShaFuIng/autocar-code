@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "job": "f725cdca60fb48d19c9f2d000ff44a50",
+  "frames": 84,
+  "model_results": 168,
+  "eight_model_job": "0b0e37a9fc964b4893a60ccbd00d2787",
+  "eight_model_results": 88,
+  "persisted_review": true,
+  "concurrent_rejected": true,
+  "raw_snapshot_hash_verified": true,
+  "tests": 23,
+  "client_regressions": 7,
+  "hardware_commands": false,
+  "execution": "laptop GPU offline"
+}

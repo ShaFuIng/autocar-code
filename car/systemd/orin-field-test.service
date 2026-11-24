@@ -1,0 +1,7 @@
+[Unit]
+Description=Orin bounded field trial page (starts disarmed)
+[Service]
+WorkingDirectory=/home/jetson/orin_interface_v1/field_test
+ExecStart=/usr/bin/python3 /home/jetson/orin_interface_v1/field_test/server.py
+Restart=on-failure
+RestartSec=2

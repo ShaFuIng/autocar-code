@@ -1,0 +1,1 @@
+{"enabled": true, "start_m": 0.4, "end_m": 3.5, "cam_frac": 0.6, "min_turned_deg": 100.0, "release_err": 9.0, "fade_s": 0.5, "jump_de": 0.8, "jump_gap_s": 0.5, "jump_step": 0.4, "jump_step_s": 0.3, "term_cap_us": 40.0, "hold_gyro": {"k_gz": 4.0, "k_yaw": 10.0, "lim_us": 250.0, "max_s": 1.5}}

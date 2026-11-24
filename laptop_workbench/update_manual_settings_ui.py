@@ -1,0 +1,17 @@
+from pathlib import Path
+p=Path(__file__).resolve().parents[1]/'web/manual.html'
+s=p.read_text(encoding='utf-8')
+s=s.replace('id="center" type="number" step="5"','id="center" type="number" step="1"')
+s=s.replace('id="steerRate" type="number" min="50" max="800" step="50"','id="steerRate" type="number" min="50" max="800" step="1"')
+s=s.replace('<p id="saved" class="muted"></p>', '''<p id="saved" class="muted"></p><p id="settingsDraft" role="status">直接輸入為草稿；按套用本次或保存後生效。</p><p class="muted">保存中心為 Orin 共用值：03 校準、04 手動啟用／回中心及後續使用共用設定的操作都會使用。手動運行中先套用本次，結束後 BMduino 同步保存版本。保存不會主動送回中心指令。開機最初的 1360 µs 回正仍是韌體固定值；02 純模擬資料獨立保存。</p><details><summary>設定保存紀錄</summary><label>每頁 <select id="settingsCount"><option>10</option><option>20</option><option>50</option></select> 筆</label><button id="settingsPrev">上一頁</button><button id="settingsNext">下一頁</button><span id="settingsPage"></span><div id="settingsHistory" style="max-height:280px;overflow:auto;white-space:pre-wrap"></div></details>''')
+s=s.replace("async function apply(save=false){", "let editVersion=0;\nasync function apply(save=false){")
+s=s.replace("settingsBusy=true;try{const d=await post('settings',{...config(),save,owner,run_id:runId});dirty=true;fill(d.config);el('message').textContent=save?'設定已保存；下次啟用也會使用。':'已套用本次設定。'", "settingsBusy=true;const version=editVersion;try{const d=await post('settings',{...config(),save,owner,run_id:runId});dirty=true;if(version===editVersion){fill(d.config);el('settingsDraft').textContent=save?'已保存：中心為全站實車共用值。':'已套用本次，尚未保存為預設。'}lastHistoryAt=-Infinity;el('message').textContent=save?'設定已保存並留下紀錄；中心同步至共用設定。':'已套用本次設定。'")
+s=s.replace("el(id).oninput=()=>{dirty=true}","el(id).oninput=()=>{dirty=true;editVersion++;el('settingsDraft').textContent='有未套用／未保存的輸入；不會自動送到車上。'}")
+s=s.replace("el(field).value=Number(el(field).value)+delta;dirty=true;apply()", "el(field).value=Number(el(field).value)+delta;dirty=true;editVersion++;apply()")
+s=s.replace("function config(){return", "function config(){for(const id of ['center','right','left','steerRate','accelTime','decelTime'])if(el(id).value.trim()===''||!Number.isFinite(Number(el(id).value)))throw Error('請完整填寫數值，空白不會當作 0');return")
+s=s.replace('let lastHistoryAt=-Infinity,cachedHistory=[];', '''let lastHistoryAt=-Infinity,cachedHistory=[];
+let settingsRows=[],settingsPage=0;
+function renderSettingsHistory(){const n=Number(el('settingsCount').value)||10;settingsPage=Math.max(0,Math.min(settingsPage,Math.ceil(settingsRows.length/n)-1));el('settingsHistory').textContent=settingsRows.slice(settingsPage*n,(settingsPage+1)*n).map(r=>{const c=r.config;return new Date(r.saved_at).toLocaleString()+' · 共用中心 '+c.center_us+' µs（原 '+r.before.center_us+'） · 左/右 '+c.left_pct+'/'+c.right_pct+'% · 轉向 '+c.steer_rate_us_s+' µs/s · 加/減速 '+c.accel_seconds+'/'+c.decel_seconds+' 秒 · 設定 v'+r.profile.revision}).join('\\n\\n')||'尚無此功能上線後的保存紀錄；原設定仍保留。';el('settingsPage').textContent=' '+(settingsPage+1)+' / '+Math.max(1,Math.ceil(settingsRows.length/n));el('settingsPrev').disabled=settingsPage===0;el('settingsNext').disabled=(settingsPage+1)*n>=settingsRows.length}
+el('settingsCount').onchange=()=>{settingsPage=0;renderSettingsHistory()};el('settingsPrev').onclick=()=>{settingsPage--;renderSettingsHistory()};el('settingsNext').onclick=()=>{settingsPage++;renderSettingsHistory()};''')
+s=s.replace('const d=await r.json();if(d.history)', 'const d=await r.json();if(d.settings_history){settingsRows=d.settings_history;renderSettingsHistory()}if(d.history)')
+p.write_text(s,encoding='utf-8')

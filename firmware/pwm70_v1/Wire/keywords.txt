@@ -1,0 +1,21 @@
+#######################################
+# Syntax Coloring Map Wire
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Wire	KEYWORD1
+Wire1	KEYWORD1
+Wire2	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+beginTransmission	KEYWORD2
+endTransmission	KEYWORD2
+requestFrom	KEYWORD2
+onReceive	KEYWORD2
+onRequest	KEYWORD2
+

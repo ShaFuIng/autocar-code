@@ -1,0 +1,19 @@
+{
+ "revision": "xp-anchor-r1",
+ "enabled": true,
+ "pos_window": true,
+ "pos_corridor": true,
+ "pos_zone": true,
+ "k_m": 2.8,
+ "max_decide_m": 2.0,
+ "horizon_m": 10.0,
+ "ce_max_err_m": 2.0,
+ "ref_max_gz_dps": 20.0,
+ "ref_give_up_after_m": 1.9,
+ "note": "map-20261114 offline candidate, NOT deployed. Needs lap_pos.json enabled true (else every pass falls back to curve_map CURVE_END). enabled false / file missing = off (identical to live_pid e6cad710 + lap-pos log). Read once per run in start(). pos_window / pos_corridor / pos_zone: crossing_pass window, xp_corridor scope, crossing_source zone anchored at lap_pos C2e crossing + k_m (curve_map metres; the distances in crossing_pass.json / xp_corridor.json / crossing_source.json keep their meaning). max_decide_m: anchor only if lap_pos confirmed C2e within this distance. horizon_m: the anchor replaces CURVE_END events up to this distance after it. ce_max_err_m (null = off): a CURVE_END-anchored corridor is not armed when lap_pos puts that CURVE_END farther than this from C2e + k_m. ref_max_gz_dps (null = off): xp_corridor psi0 capture restarts while |gz| is larger; none by ref_give_up_after_m after the anchor = corridor off for the pass.",
+ "ce_veto_after_level_m": 4.5,
+ "ce_veto_level_deg": 180.0,
+ "ce_veto_window": true,
+ "ce_veto_corridor": true,
+ "note_r2": "verify-20261114 xp-anchor-r2 (offline candidate): a curve-2 CURVE_END more than ce_veto_after_level_m after turned_deg first reached ce_veto_level_deg is late; when that CURVE_END would anchor the pass (no lap_pos anchor), no window (ce_veto_window) / no corridor (ce_veto_corridor). 118 passes 11-10..11-14: 4.5 m catches 12 of 14 CURVE_ENDs > 4 m after the truth C2e (incl. 3cf4 L2, 1db9 L6, 51a0 L2), vetoes 2 others (CE +3.49 / +3.96). Keys absent = xp-anchor-r1."
+}

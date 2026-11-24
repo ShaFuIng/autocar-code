@@ -1,0 +1,19 @@
+# c1preload-20261121 MANIFEST (sha256)
+# base: orin-web-snapshot-20261121/i_ramp.py 760de37d... -> candidate/i_ramp.py ; orin-web-snapshot-20261121/i_ramp.json 40f86bbb... -> on/i_ramp.preload*.json (preload key added only) ; live_pid.py 800879c9 unchanged
+# base 760de37dcd06a8dd2d4f082c4f7324edc654aa3aadccc1fca18d1f1a17b2281a *../../orin-web-snapshot-20261121/i_ramp.py
+# base 40f86bbbf4c40cf4d7be487ef8e7bb1b3a4fcb80281d0caf6aac02b73acd50dc *../../orin-web-snapshot-20261121/i_ramp.json
+# base 800879c9f31d660537fa5eb8419697bdb852487572c5294d0fccec9cb7fb42d8 *../../orin-web-snapshot-20261121/live_pid.py
+b87eb8c9ad5a0f022745a49517a774d1dd27bf63aac84fe3331c6d91a8ab0761 *candidate/i_ramp.py
+5d5de5727b097f97b3a9d8fffa46cc06ace65326486e2af38484227dfe5c654c *on/i_ramp.preload15.json
+0781f8bfce0cafeac5f7f439311396ad5924e06e28c1de66c7d272300791eba8 *on/i_ramp.preload20.json
+f96a45fba791d087141b8e4907702ac25d46e9eca5ce5f02922eab08e2789866 *on/i_ramp.preload25.json
+9dd6df8da493429873926606fd95b7d6f8ea5b1bc89785ca8ac4c93ed650788a *patch_preload.py
+2375833bd6abbdaa79391b4e0d09a291c0737db0d3b5cef5fc688a02202ab9d9 *tests/test_preload.py
+e83f764dca27023e2619014d2d2559d40aabd8ffe4a2a8c6ddd6f67e9c97e8b1 *tools/b_table.py
+59906f932bac44f6cef135075d9bc402fff8fe5ca58c521820354426a93e11ae *tools/harness_common_append.txt
+afeba242745f7e5bea25115d153538b30221c0bde8dfa66ce9231a4e5affbb53 *proof/A_line.txt
+37f65671afaa5b94eae443c84bf43221fbdb9371234325f3b842763c88f7ec09 *proof/A_report.json
+6a5b7ec1a80a369c374ffc0980ec8f7ad2c36fcff7bf9aecf88b30ec14b9b6ba *proof/B_table.txt
+0ec7b532fadb9dc74a89108f35f50e80110718e94977f7f93927cc7603123d10 *proof/fidelity.txt
+c35047c905fc1126fa7582e62e00d84f5f3aba59589a556536a0cc8c88d6471a *proof/unit_tests.txt
+50c48040ff50bff9fd78e2eb792db939573624ce1773e89eade582a8743d92dd *SUMMARY_FOR_REVIEW.txt

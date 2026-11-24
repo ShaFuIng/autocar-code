@@ -1,0 +1,133 @@
+(a) lane heading T(x) (deg), its slope kT (deg/m over +-0.2 m), spread sd over 15 passes, base car heading / y medians
+  x -0.4  T  -10.0  kT  24.8  sd  1.9 | car h  -13.0  y  -4.0
+  x -0.1  T   -0.4  kT  37.8  sd  3.2 | car h   -4.1  y  -2.5
+  x +0.2  T   10.1  kT  25.0  sd  1.5 | car h    8.0  y  -1.4
+  x +0.5  T   15.7  kT  21.6  sd  1.7 | car h   20.8  y  -3.6
+  x +0.8  T   23.1  kT  22.5  sd  1.5 | car h   30.0  y  -7.0
+  x +1.1  T   28.5  kT  17.4  sd  3.0 | car h   34.3  y -10.9
+  x +1.4  T   36.5  kT  46.6  sd  4.8 | car h   41.5  y -15.2
+  x +1.7  T   52.8  kT  42.5  sd  3.2 | car h   50.3  y -14.4
+  x +2.0  T   64.4  kT  48.7  sd  3.1 | car h   61.2  y -13.5
+  x +2.3  T   79.7  kT  37.9  sd  2.3 | car h   73.4  y -11.2
+  x +2.6  T   86.4  kT   6.5  sd  2.9 | car h   84.7  y  -8.6
+  x +2.9  T   84.7  kT  -3.7  sd  3.7 | car h   92.3  y -10.9
+  x +3.2  T   86.2  kT  22.4  sd  2.8 | car h   96.3  y -16.4
+  x +3.5  T   99.3  kT  51.4  sd  4.6 | car h   99.0  y -17.3
+  x +3.8  T  112.6  kT  34.3  sd  1.9 | car h  104.1  y -17.3
+  x +4.1  T  121.8  kT  26.8  sd  3.4 | car h  113.7  y -13.1
+  x +4.4  T  126.4  kT   8.6  sd  3.7 | car h  123.7  y  -8.9
+  x +4.7  T  131.5  kT  54.7  sd  7.2 | car h  132.8  y  -9.9
+  x +5.0  T  159.7  kT  80.0  sd  6.3 | car h  145.3  y  -6.2
+  x +5.3  T  171.2  kT   1.9  sd  4.6 | car h  164.2  y  +2.1
+  x +5.6  T  168.5  kT   8.9  sd  2.0 | car h  182.0  y  +0.7
+  x +5.9  T  178.9  kT  65.0  sd  7.2 | car h  192.3  y -11.2
+  x +6.2  T  200.9  kT  30.9  sd  4.4 | car h  199.4  y -12.3
+(b) kinematic check: y re-integrated from x = 0.6 m with psi = T(x) - h(x), minus arc_lat y (cm) at 1.5 / 2.4 / 3.3 / 4.2 / 5.1 m; and psi_model - psi_arc_lat (deg) median
+  d60e  n 5  dy median  +1.7  -1.1  -1.8  +0.3  -3.8 | sd  1.9  3.2  7.2  7.0  7.7 | dpsi -1.0
+  84f2  n 4  dy median  -0.2  -2.5  -1.4  -3.5  -7.9 | sd  1.7  4.0  5.0  6.6 10.6 | dpsi -1.4
+  6f61  n 6  dy median  +1.8  +3.1  +1.9  +2.5  +8.3 | sd  2.4  4.5  6.9  7.7 11.4 | dpsi +0.3
+  ccf1  n 6  dy median  +3.0  +5.4 +11.0 +15.8 +18.8 | sd  2.0  3.7  5.4  7.8 10.5 | dpsi +1.3
+  c6f3  n 4  dy median  +1.2  +6.6  -3.8  -1.1  -5.5 | sd  3.9  8.6 11.5 15.8 15.9 | dpsi -0.7
+(c) steering plant, frames with C3s + 0.3 .. 4.4 m: curvature = G * (u_lagged + U0)
+  all runs  u=steer play   0  dead time 0.10 s lag 0.10 s: G 0.194 U0  +10  residual sd 8.3 deg/m  R2 0.76  n 2278
+  all runs  u=steer play   0  dead time 0.10 s lag 0.15 s: G 0.206 U0   +1  residual sd 8.3 deg/m  R2 0.76  n 2278
+  all runs  u=steer play   0  dead time 0.15 s lag 0.10 s: G 0.194 U0  +10  residual sd 8.3 deg/m  R2 0.76  n 2278
+  all runs  u=steer play   0  dead time 0.15 s lag 0.15 s: G 0.199 U0   +6  residual sd 9.0 deg/m  R2 0.72  n 2278
+  all runs  u=sent  play   0  dead time 0.10 s lag 0.10 s: G 0.127 U0  +84  residual sd 11.5 deg/m  R2 0.54  n 2278
+  all runs  u=sent  play   0  dead time 0.10 s lag 0.15 s: G 0.145 U0  +56  residual sd 10.5 deg/m  R2 0.62  n 2278
+  all runs  u=sent  play   0  dead time 0.15 s lag 0.10 s: G 0.137 U0  +68  residual sd 10.3 deg/m  R2 0.63  n 2278
+  all runs  u=sent  play   0  dead time 0.15 s lag 0.15 s: G 0.152 U0  +48  residual sd 9.6 deg/m  R2 0.67  n 2278
+  all runs  u=sent  play 110  dead time 0.10 s lag 0.10 s: G 0.192 U0  +12  residual sd 8.3 deg/m  R2 0.76  n 2278
+  all runs  u=sent  play 110  dead time 0.10 s lag 0.15 s: G 0.204 U0   +3  residual sd 8.3 deg/m  R2 0.76  n 2278
+  all runs  u=sent  play 110  dead time 0.15 s lag 0.10 s: G 0.191 U0  +12  residual sd 8.3 deg/m  R2 0.76  n 2278
+  all runs  u=sent  play 110  dead time 0.15 s lag 0.15 s: G 0.197 U0   +8  residual sd 9.0 deg/m  R2 0.72  n 2278
+  all runs  u=sent  play 130  dead time 0.10 s lag 0.10 s: G 0.197 U0   +8  residual sd 8.2 deg/m  R2 0.77  n 2278
+  all runs  u=sent  play 130  dead time 0.10 s lag 0.15 s: G 0.206 U0   +2  residual sd 8.5 deg/m  R2 0.75  n 2278
+  all runs  u=sent  play 130  dead time 0.15 s lag 0.10 s: G 0.193 U0  +11  residual sd 8.6 deg/m  R2 0.74  n 2278
+  all runs  u=sent  play 130  dead time 0.15 s lag 0.15 s: G 0.195 U0   +9  residual sd 9.5 deg/m  R2 0.68  n 2278
+  all runs  u=sent  play 155  dead time 0.10 s lag 0.10 s: G 0.204 U0   +3  residual sd 8.4 deg/m  R2 0.75  n 2278
+  all runs  u=sent  play 155  dead time 0.10 s lag 0.15 s: G 0.209 U0   -0  residual sd 9.1 deg/m  R2 0.71  n 2278
+  all runs  u=sent  play 155  dead time 0.15 s lag 0.10 s: G 0.195 U0   +9  residual sd 9.3 deg/m  R2 0.70  n 2278
+  all runs  u=sent  play 155  dead time 0.15 s lag 0.15 s: G 0.194 U0  +10  residual sd 10.4 deg/m  R2 0.62  n 2278
+  best: u=sent play 130 dead time 0.15 lag 0.05: G 0.189 U0 +14 sd 8.1 R2 0.77
+  d60e alone (u=steer, 0.10 / 0.15): G 0.191 U0  +13 sd 7.1 R2 0.72
+  84f2 alone (u=steer, 0.10 / 0.15): G 0.180 U0  +23 sd 7.5 R2 0.59
+  6f61 alone (u=steer, 0.10 / 0.15): G 0.196 U0   +6 sd 7.1 R2 0.76
+  ccf1 alone (u=steer, 0.10 / 0.15): G 0.209 U0   -2 sd 8.1 R2 0.81
+  c6f3 alone (u=steer, 0.10 / 0.15): G 0.224 U0   -8 sd 11.1 R2 0.78
+  x 0.3-1.2 (all runs, u=steer): G 0.177 U0  +27 sd 7.1 R2 0.66 n 548
+  x 1.2-2.4 (all runs, u=steer): G 0.186 U0  +35 sd 9.0 R2 0.61 n 640
+  x 2.4-3.3 (all runs, u=steer): G 0.205 U0  -11 sd 7.4 R2 0.82 n 439
+  x 3.3-4.4 (all runs, u=steer): G 0.212 U0  -11 sd 7.5 R2 0.83 n 651
+  x 4.4-5.6 (all runs, u=steer): G 0.182 U0   -2 sd 11.5 R2 0.69 n 736
+  speed 0.70-0.95 m/s: G 0.228 U0   +9 n 712 | lap_ff gain table g used by the band at these speeds: median 0.163
+  speed 0.95-1.08 m/s: G 0.249 U0   -7 n 601 | lap_ff gain table g used by the band at these speeds: median 0.157
+  speed 1.08-1.30 m/s: G 0.220 U0  -17 n 306 | lap_ff gain table g used by the band at these speeds: median 0.159
+(d) camera near error = F(x) + B*y + C*psi  (psi = T(x) - gyro heading; 0.3 m bins)
+  fit without c6f3: B 0.0173 /cm  C 0.0163 /deg  residual sd 0.131 | fit with all five runs: B 0.0213  C 0.0211  residual sd 0.141
+  c6f3 frames against the fit WITHOUT c6f3 (how well a table made the old way predicts a new path): residual by x bin (median; + = camera reads more than the model)
+    0.0-0.3  F +0.53 (all-run fit +0.53) | c6f3 err med +0.58  y  -1.2  psi  +2.5 | residual old-kind fit +0.03  all-run fit +0.02  n 31
+    0.3-0.6  F +0.42 (all-run fit +0.46) | c6f3 err med +0.46  y  -1.4  psi  -3.3 | residual old-kind fit +0.10  all-run fit +0.08  n 30
+    0.6-0.9  F +0.29 (all-run fit +0.35) | c6f3 err med +0.18  y  -4.4  psi  -5.0 | residual old-kind fit +0.08  all-run fit +0.07  n 30
+    0.9-1.2  F +0.43 (all-run fit +0.50) | c6f3 err med +0.23  y  -8.0  psi  -8.1 | residual old-kind fit +0.06  all-run fit +0.04  n 27
+    1.2-1.5  F +0.71 (all-run fit +0.79) | c6f3 err med +0.39  y -13.5  psi  -7.5 | residual old-kind fit +0.02  all-run fit +0.02  n 28
+    1.5-1.8  F +0.75 (all-run fit +0.81) | c6f3 err med +0.35  y -17.3  psi  -7.2 | residual old-kind fit +0.00  all-run fit +0.04  n 26
+    1.8-2.1  F +0.74 (all-run fit +0.77) | c6f3 err med +0.25  y -18.4  psi  -6.8 | residual old-kind fit -0.08  all-run fit -0.05  n 17
+    2.1-2.4  F +0.56 (all-run fit +0.56) | c6f3 err med +0.01  y -18.8  psi  +2.6 | residual old-kind fit -0.25  all-run fit -0.18  n 11
+    2.4-2.7  F +0.26 (all-run fit +0.28) | c6f3 err med -0.09  y -17.9  psi  +5.9 | residual old-kind fit -0.17  all-run fit -0.14  n 13
+    2.7-3.0  F +0.16 (all-run fit +0.26) | c6f3 err med +0.25  y -15.3  psi  +6.5 | residual old-kind fit +0.24  all-run fit +0.15  n 21
+    3.0-3.3  F +0.29 (all-run fit +0.47) | c6f3 err med +0.65  y -10.6  psi  +6.4 | residual old-kind fit +0.40  all-run fit +0.22  n 28
+    3.3-3.6  F +0.48 (all-run fit +0.64) | c6f3 err med +0.74  y  -7.5  psi  +2.4 | residual old-kind fit +0.35  all-run fit +0.22  n 30
+    3.6-3.9  F +0.52 (all-run fit +0.55) | c6f3 err med +0.39  y  -9.0  psi  -1.9 | residual old-kind fit +0.06  all-run fit +0.07  n 29
+    3.9-4.2  F +0.53 (all-run fit +0.52) | c6f3 err med -0.10  y -13.0  psi  -7.3 | residual old-kind fit -0.27  all-run fit -0.18  n 21
+    4.2-4.5  F +0.59 (all-run fit +0.58) | c6f3 err med -0.08  y -17.1  psi  -8.4 | residual old-kind fit -0.24  all-run fit -0.10  n 19
+    4.5-4.8  F +0.86 (all-run fit +0.87) | c6f3 err med +0.09  y -17.6  psi  -8.5 | residual old-kind fit -0.33  all-run fit -0.23  n 14
+    4.8-5.1  F +0.76 (all-run fit +0.72) | c6f3 err med +0.45  y -14.8  psi +11.9 | residual old-kind fit -0.22  all-run fit -0.16  n 17
+    5.1-5.4  F +0.51 (all-run fit +0.48) | c6f3 err med +0.54  y  -9.2  psi +13.5 | residual old-kind fit -0.00  all-run fit -0.01  n 24
+    5.4-5.7  F +0.52 (all-run fit +0.59) | c6f3 err med +0.53  y  -7.4  psi  +0.7 | residual old-kind fit +0.15  all-run fit +0.11  n 31
+    5.7-6.0  F +0.52 (all-run fit +0.63) | c6f3 err med +0.51  y  -6.5  psi  -0.8 | residual old-kind fit +0.16  all-run fit +0.09  n 34
+    6.0-6.3  F +0.29 (all-run fit +0.36) | c6f3 err med +0.60  y  -3.6  psi  +6.2 | residual old-kind fit +0.27  all-run fit +0.17  n 16
+(e) chain stand-in: final command = a + K * near error per 0.3 m bin (all runs; frames where the x-band share is 0 or absent)
+    0.0-0.3  cmd =    +1  +365 * e   residual sd   23 us  (err range +0.18 .. +0.74, n 194)
+    0.3-0.6  cmd =   +51  +234 * e   residual sd   10 us  (err range -0.20 .. +0.59, n 191)
+    0.6-0.9  cmd =   +52  +196 * e   residual sd    9 us  (err range -0.30 .. +0.45, n 165)
+    0.9-1.2  cmd =   +51  +158 * e   residual sd   13 us  (err range -0.30 .. +0.52, n 155)
+    1.2-1.5  cmd =   +34  +245 * e   residual sd   19 us  (err range -0.04 .. +0.59, n 144)
+    1.5-1.8  cmd =   +17  +334 * e   residual sd   19 us  (err range +0.23 .. +0.75, n 133)
+    1.8-2.1  cmd =    +9  +394 * e   residual sd   21 us  (err range +0.28 .. +0.86, n 136)
+    2.1-2.4  cmd =   +54  +309 * e   residual sd   21 us  (err range +0.03 .. +0.88, n 127)
+    2.4-2.7  cmd =   +91  +197 * e   residual sd   22 us  (err range -0.38 .. +0.70, n 124)
+    2.7-3.0  cmd =   +68  +203 * e   residual sd   14 us  (err range -0.49 .. +0.22, n 114)
+    3.0-3.3  cmd =   +58  +212 * e   residual sd   12 us  (err range -0.51 .. +0.38, n 125)
+    3.3-3.6  cmd =   +62  +230 * e   residual sd   17 us  (err range -0.34 .. +0.93, n 146)
+    3.6-3.9  cmd =   +55  +251 * e   residual sd   19 us  (err range -0.01 .. +0.70, n 154)
+    3.9-4.2  cmd =   +81  +231 * e   residual sd   20 us  (err range +0.12 .. +0.73, n 154)
+    4.2-4.5  cmd =   +31  +333 * e   residual sd   31 us  (err range -0.28 .. +0.99, n 152)
+    4.5-4.8  cmd =   +85  +296 * e   residual sd   40 us  (err range -0.21 .. +1.00, n 178)
+    4.8-5.1  cmd =   +69  +318 * e   residual sd   22 us  (err range +0.27 .. +1.00, n 180)
+    5.1-5.4  cmd =   +42  +358 * e   residual sd   23 us  (err range -0.04 .. +1.00, n 191)
+    5.4-5.7  cmd =   +46  +313 * e   residual sd   37 us  (err range -0.11 .. +1.00, n 191)
+    5.7-6.0  cmd =   +40  +306 * e   residual sd   26 us  (err range -0.08 .. +0.75, n 202)
+    6.0-6.3  cmd =   +44  +361 * e   residual sd   31 us  (err range -0.20 .. +1.00, n 205)
+    6.3-6.6  cmd =   +39  +401 * e   residual sd   47 us  (err range -0.27 .. +1.00, n 185)
+    6.6-6.9  cmd =   -30  +455 * e   residual sd   46 us  (err range +0.16 .. +1.00, n 149)
+(c2) curvature against the lagged command (dead time 0.10 s, lag 0.15 s), C3s + 0.3 .. 6.0 m, all runs
+   cmd  -50..  +0  n   64  cmd median   -12  curvature median  -6.0 (p25 -10.4 p75  -2.8) = -5.970 per us | c6f3 only:  -9.1 (n 31)
+   cmd   +0.. +40  n  188  cmd median   +29  curvature median   5.8 (p25   1.7 p75   9.4) = 0.205 per us | c6f3 only:   1.0 (n 33)
+   cmd  +40.. +80  n  406  cmd median   +62  curvature median  12.6 (p25   8.6 p75  16.9) = 0.203 per us | c6f3 only:   6.6 (n 46)
+   cmd  +80..+120  n  453  cmd median  +100  curvature median  21.9 (p25  17.4 p75  27.5) = 0.218 per us | c6f3 only:  21.7 (n 58)
+   cmd +120..+160  n  569  cmd median  +140  curvature median  29.0 (p25  23.0 p75  34.7) = 0.207 per us | c6f3 only:  28.6 (n 87)
+   cmd +160..+200  n  663  cmd median  +181  curvature median  35.0 (p25  27.7 p75  40.6) = 0.193 per us | c6f3 only:  38.2 (n 133)
+   cmd +200..+240  n  306  cmd median  +217  curvature median  42.3 (p25  34.6 p75  51.2) = 0.195 per us | c6f3 only:  48.6 (n 55)
+   cmd +240..+280  n  179  cmd median  +258  curvature median  50.1 (p25  39.6 p75  59.2) = 0.194 per us | c6f3 only:  56.3 (n 46)
+   cmd +280..+320  n  148  cmd median  +299  curvature median  53.4 (p25  45.7 p75  68.5) = 0.179 per us | c6f3 only:  65.3 (n 37)
+   cmd +320..+360  n  138  cmd median  +343  curvature median  70.4 (p25  50.6 p75  75.6) = 0.205 per us | c6f3 only: -
+   cmd +360..+420  n  164  cmd median  +376  curvature median  72.3 (p25  53.9 p75  77.0) = 0.192 per us | c6f3 only: -
+(d2) camera near error = F(x) + B_z*y + C_z*psi, all five runs: residual sd 0.135 (one B / C for the whole curve: 0.141)
+   zone 0.0-1.2 m: B 0.0375 per cm   C 0.0234 per deg
+   zone 1.2-2.4 m: B 0.0243 per cm   C 0.0179 per deg
+   zone 2.4-3.3 m: B 0.0284 per cm   C 0.0331 per deg
+   zone 3.3-4.5 m: B 0.0183 per cm   C 0.0174 per deg
+   zone 4.5-5.4 m: B 0.0172 per cm   C 0.0140 per deg
+   zone 5.4-6.6 m: B 0.0186 per cm   C 0.0203 per deg
+   c6f3 residual by 0.3 m bin (median): 0.0:+0.03 0.3:+0.03 0.6:+0.01 0.9:+0.00 1.2:+0.01 1.5:+0.03 1.8:-0.04 2.1:-0.16 2.4:-0.11 2.7:-0.06 3.0:+0.04 3.3:+0.25 3.6:+0.06 3.9:-0.23 4.2:-0.18 4.5:-0.31 4.8:-0.17 5.1:+0.02 5.4:+0.11 5.7:+0.10 6.0:+0.21

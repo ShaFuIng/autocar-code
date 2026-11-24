@@ -1,0 +1,9 @@
+[Unit]
+Description=Orin read-only field vision
+After=orin-field-test.service
+[Service]
+ExecStart=/usr/bin/docker run --rm --name orin-field-vision --network host --runtime nvidia --user 1000:1000 --cap-drop ALL --security-opt no-new-privileges:true --memory 4g --shm-size 512m -e USER=jetson -e LOGNAME=jetson -e HOME=/tmp -e PYTHONDONTWRITEBYTECODE=1 -e YOLO_CONFIG_DIR=/tmp/yolo -e TORCHINDUCTOR_CACHE_DIR=/tmp/torch -v /home/jetson/orin_interface_v1/field_test:/app:ro -v /home/jetson/orin_interface_v1/field_test/data:/data -v /home/jetson/orin_interface_v1/shadow_workbench:/tracker:ro -v /home/jetson/.config/orin_lab/token:/token:ro -v /home/jetson/orin_interface_v1/lab/notebooks/yolo26_sem_v4_trial/runs/trial01/weights:/weights:ro orin-notebook:v1 python3 /app/vision.py
+ExecStop=/usr/bin/docker stop -t 5 orin-field-vision
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10

@@ -1,0 +1,27 @@
+d60e diag   trips 5 frames  648 at100 52%  block events 16 (3.20/trip)  pos median 5.37  reasons {'ERROR/ERROR': 4, 'LOW/ERROR_RATE_LARGE': 12}
+d60e circle trips 5 frames  424 at100 56%  block events  8 (1.60/trip)  pos median 4.359999999999999  reasons {'LOW/ERROR_RATE_LARGE': 6, 'ERROR/ERROR': 1, 'LOW/CURVE_AHEAD': 1}
+d60e main   trips 5 frames  581 at100 83%  block events  1 (0.20/trip)  pos median 0.8  reasons {'LOW/ERROR_RATE_LARGE': 1}
+ccf1 diag   trips 6 frames  758 at100 64%  block events  8 (1.33/trip)  pos median 5.994999999999999  reasons {'LOW/ERROR_RATE_LARGE': 6, 'ERROR/ERROR': 2}
+ccf1 circle trips 6 frames  503 at100 40%  block events 19 (3.17/trip)  pos median 4.23  reasons {'LOW/ERROR_RATE_LARGE': 18, 'LOW/CURVE_AHEAD': 1}
+ccf1 main   trips 6 frames  694 at100 83%  block events  0 (0.00/trip)  pos median -  reasons {}
+6f61 diag   trips 6 frames  773 at100 64%  block events 11 (1.83/trip)  pos median 6.58  reasons {'LOW/ERROR_RATE_LARGE': 9, 'ERROR/ERROR': 2}
+6f61 circle trips 6 frames  520 at100 46%  block events 16 (2.67/trip)  pos median 4.23  reasons {'LOW/ERROR_RATE_LARGE': 14, 'LOW/CURVE_AHEAD': 2}
+6f61 main   trips 6 frames  695 at100 78%  block events  4 (0.67/trip)  pos median 1.0550000000000002  reasons {'LOW/ERROR_RATE_LARGE': 4}
+c6f3 diag   trips 4 frames  498 at100 81%  block events  3 (0.75/trip)  pos median 7.54  reasons {'ERROR/CURVE_AHEAD': 1, 'LOW/ERROR_RATE_LARGE': 2}
+c6f3 circle trips 4 frames  336 at100 42%  block events  9 (2.25/trip)  pos median 3.91  reasons {'LOW/ERROR_RATE_LARGE': 9}
+c6f3 main   trips 4 frames  467 at100 83%  block events  0 (0.00/trip)  pos median -  reasons {}
+7658 circle trips 4 frames  257 at100 55%  block events  5 (1.25/trip)  pos median 3.54  reasons {'REASON/None': 1, 'LOW/ERROR_RATE_LARGE': 4}
+7658 diag   trips 4 frames  399 at100 56%  block events  9 (2.25/trip)  pos median 6.91  reasons {'LOW/ERROR_RATE_LARGE': 5, 'ERROR/ERROR': 4}
+7658 main   trips 3 frames  346 at100 69%  block events  3 (1.00/trip)  pos median 5.48  reasons {'LOW/ERROR_RATE_LARGE': 3}
+2728 diag   trips 4 frames  513 at100 72%  block events  3 (0.75/trip)  pos median 6.5  reasons {'LOW/ERROR_RATE_LARGE': 2, 'ERROR/ERROR_RATE_LARGE': 1}
+2728 circle trips 4 frames  354 at100 45%  block events 12 (3.00/trip)  pos median 4.285  reasons {'LOW/ERROR_RATE_LARGE': 12}
+2728 main   trips 4 frames  468 at100 76%  block events  2 (0.50/trip)  pos median 3.21  reasons {'LOW/ERROR_RATE_LARGE': 2}
+9af6 diag   trips 5 frames  645 at100 73%  block events  6 (1.20/trip)  pos median 6.375  reasons {'ERROR/CURVE_AHEAD': 1, 'ERROR/ERROR': 4, 'LOW/ERROR_RATE_LARGE': 1}
+9af6 circle trips 5 frames  441 at100 51%  block events 13 (2.60/trip)  pos median 4.45  reasons {'LOW/ERROR_RATE_LARGE': 12, 'ERROR/ERROR': 1}
+9af6 main   trips 5 frames  574 at100 73%  block events  7 (1.40/trip)  pos median 1.57  reasons {'LOW/ERROR_RATE_LARGE': 2, 'ERROR/ERROR': 5}
+e69d diag   trips 5 frames  649 at100 73%  block events  3 (0.60/trip)  pos median 6.55  reasons {'LOW/ERROR_RATE_LARGE': 1, 'ERROR/ERROR_RATE_LARGE': 1, 'ERROR/ERROR': 1}
+e69d circle trips 5 frames  429 at100 50%  block events 15 (3.00/trip)  pos median 4.29  reasons {'LOW/ERROR_RATE_LARGE': 14, 'ERROR/ERROR': 1}
+e69d main   trips 5 frames  587 at100 72%  block events  8 (1.60/trip)  pos median 1.06  reasons {'ERROR/ERROR': 3, 'LOW/ERROR_RATE_LARGE': 5}
+54cb circle trips 4 frames  252 at100 50%  block events  7 (1.75/trip)  pos median 4.14  reasons {'REASON/None': 1, 'LOW/ERROR_RATE_LARGE': 6}
+54cb diag   trips 3 frames  384 at100 69%  block events  3 (1.00/trip)  pos median 5.93  reasons {'ERROR/ERROR': 3}
+54cb main   trips 2 frames  229 at100 67%  block events  2 (1.00/trip)  pos median 2.7  reasons {'LOW/ERROR_RATE_LARGE': 1, 'LOW/ERROR_LARGE': 1}

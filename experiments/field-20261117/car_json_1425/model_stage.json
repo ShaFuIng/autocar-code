@@ -1,0 +1,4 @@
+{
+ "cuda_graph": true,
+ "warm_fast": true
+}

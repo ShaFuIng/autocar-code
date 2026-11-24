@@ -1,0 +1,110 @@
+open-loop replay, curve 1 (harness; reference = the car's programs and that run's configs, new = the step). Lap 1 of each run is not evaluated here (see C5).
+Differences outside the windows in c6f3 / 6f61 are all in the last, unfinished curve-1 pass of the run (the run was stopped before C1e, so no window was opened for it).
+
+===== c1_step1_band (car program adcde919 / 3b74ddc4 + on/c1_step1_band/lap_ff.json) =====
+
+c6f3  tag c1s1  frames 5883
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +2.4  yes |   90    90  ANGLE 4.17 152 |  284 ->  229 | +224 -> +219,  30 ->  35,  22 ->  97 |  -40/ +59 ->  -31/ +42
+    3 | FAR    +nan    -0.6  yes |  111   108  MAX_M 5.40 150 |  185 ->  134 | +189 -> +238, 104 ->  46,  46 ->  86 |  -34/ +44 ->   +0/ +44
+    4 | FAR    +nan    -0.7  yes |  111   108  MAX_M 5.38 150 |  251 ->  154 | +206 -> +231, 148 ->  59,  98 ->  91 |   +6/ +59 ->   +6/ +75
+  frames with a different sent command: 321 of 5883; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 47; frames with a different throttle: 0
+    outside-window differences: 55.3 .. 57.0 s after the nearest earlier C1e; |difference| median 87.1 max 242.0 us
+
+6f61  tag c1s1  frames 8784
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +1.2  yes |  103   103  ANGLE 4.88 155 |  165 ->  133 | +241 -> +240,  56 ->  47,  25 ->  81 |  -43/ +27 ->  -19/ +27
+    3 | FAR    +nan    -1.6  yes |   88    85  ANGLE 4.42 150 |  353 ->  317 | +233 -> +227,  54 ->  30,  29 -> 101 |  -46/ +76 ->   -8/ +76
+    4 | FAR    +nan    -0.5  yes |   91    88  ANGLE 4.41 149 |  371 ->  367 | +210 -> +234,  58 ->  34,  38 ->  65 |  -18/ +94 ->  -17/ +94
+    5 | FAR    +nan    -1.4  yes |   98    93  ANGLE 4.61 147 |  307 ->  370 | +227 -> +225,  27 ->  37,  23 ->  91 |  -37/ +57 ->  -11/ +57
+    6 | FAR    +nan    -1.8  yes |  109   103  MAX_M 5.43 150 |  442 ->  418 | +229 -> +238, 102 ->  52,  50 ->  92 |  -24/ +88 ->  +11/ +70
+  frames with a different sent command: 491 of 8784; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 45; frames with a different throttle: 0
+    outside-window differences: 56.2 .. 57.9 s after the nearest earlier C1e; |difference| median 75.1 max 204.1 us
+
+e0cd  tag c1s1  frames 5969
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +1.4  yes |  107   107  ANGLE 5.16 151 |  412 ->  322 | +215 -> +226,  84 ->  44,  39 ->  89 |  -20/ +36 ->   +0/ +33
+    3 | FAR    +nan    +1.4  yes |   88    88  ANGLE 4.13 158 |  447 ->  357 | +212 -> +225,  78 ->  33,  35 ->  90 | -153/ +66 ->  -78/ +66
+    4 | FAR    +nan    -1.3  yes |  105   100  ANGLE 5.13 152 |  191 ->  303 | +246 -> +231,  34 ->  32,  25 ->  75 |  -47/ +34 ->  -21/ +31
+  frames with a different sent command: 538 of 5969; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 257; frames with a different throttle: 0
+    outside-window differences: 10.2 .. 1000000000.0 s after the nearest earlier C1e; |difference| median 23.7 max 204.6 us   (this run was driven with an older curve-2 / curve-4 lap_ff.json than the base of the step file: those parts differ too)
+
+1eab  tag c1s1  frames 5880
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +1.5  yes |  105   105  ANGLE 5.12 152 |  212 ->  174 | +189 -> +218, 110 ->  47,  78 ->  85 |  -52/ +40 ->   -1/ +40
+    3 | FAR    +nan    -0.9  yes |  107   103  ANGLE 5.14 151 |  393 ->  282 | +221 -> +237,  66 ->  43,  26 ->  87 |  -14/ +33 ->  -14/ +34
+    4 | FAR    +nan    +0.9  yes |  105   105  ANGLE 5.03 154 |  265 ->  278 | +219 -> +239, 104 ->  38,  52 ->  82 |  -22/ +67 ->  -19/ +52
+  frames with a different sent command: 934 of 5880; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 638; frames with a different throttle: 0
+    outside-window differences: 8.2 .. 1000000000.0 s after the nearest earlier C1e; |difference| median 18.6 max 151.6 us   (this run was driven with an older curve-2 / curve-4 lap_ff.json than the base of the step file: those parts differ too)
+
+4bbe  tag c1s1  frames 7289
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +2.3  yes |   99    99  ANGLE 4.92 152 |  365 ->  336 | +251 -> +225,  61 ->  42,  30 -> 104 |  -17/ +42 ->   -2/ +31
+    3 | FAR    +nan    +1.0  yes |  104   104  ANGLE 5.13 153 |  193 ->  118 | +229 -> +239, 109 ->  37,  43 ->  70 |  -25/ +46 ->  -19/ +39
+    4 | FAR    +nan    -0.4  yes |  108   106  ANGLE 5.01 151 |  316 ->  336 | +243 -> +220,  16 ->  41,  23 ->  79 |  -15/ +33 ->   +0/ +33
+    5 | FAR    +nan    +1.2  yes |  111   111  MAX_M 5.34 151 |  259 ->  153 | +200 -> +249, 118 ->  44, 102 ->  84 |   -9/ +51 ->   -9/ +46
+  frames with a different sent command: 1361 of 7289; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 966; frames with a different throttle: 0
+    outside-window differences: 8.2 .. 56.2 s after the nearest earlier C1e; |difference| median 20.2 max 241.3 us   (this run was driven with an older curve-2 / curve-4 lap_ff.json than the base of the step file: those parts differ too)
+
+TOTAL (runs driven with the base lap_ff.json 052be3dc: c6f3, 6f61) frames 14667, changed outside the windows 92
+
+===== c1_step2_exit_hold (candidate lap_ff.py ec52cb21 + on/c1_step2_exit_hold/lap_ff.json) =====
+
+c6f3  tag c1s2  frames 5883
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +2.4  yes |  118   118  MAX_M 5.64 155 |  284 ->  279 | +224 -> +217,  30 ->  26,  22 ->  37 |  -40/ +59 ->  -27/  +6
+    3 | FAR    +nan    -0.6  yes |  115   112  MAX_M 5.64 150 |  185 ->  117 | +189 -> +225, 104 ->  34,  46 ->  51 |  -34/ +44 ->  -23/ +44
+    4 | FAR    +nan    -0.7  yes |  116   113  MAX_M 5.63 151 |  251 ->  132 | +206 -> +233, 148 ->  39,  98 ->  42 |   +6/ +59 ->   +6/ +62
+  frames with a different sent command: 361 of 5883; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 47; frames with a different throttle: 0
+    outside-window differences: 55.3 .. 57.0 s after the nearest earlier C1e; |difference| median 62.4 max 188.4 us
+
+6f61  tag c1s2  frames 8784
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +1.2  yes |  117   117  MAX_M 5.60 154 |  165 ->  116 | +241 -> +238,  56 ->  42,  25 ->  30 |  -43/ +27 ->  -57/ +25
+    3 | FAR    +nan    -1.6  yes |  111   108  MAX_M 5.62 151 |  353 ->  310 | +233 -> +211,  54 ->  30,  29 ->  29 |  -46/ +76 ->  -13/ +42
+    4 | FAR    +nan    -0.5  yes |  114   111  MAX_M 5.61 153 |  371 ->  306 | +210 -> +224,  58 ->  28,  38 ->  42 |  -18/ +94 ->  -19/ +42
+    5 | FAR    +nan    -1.4  yes |  116   111  MAX_M 5.57 150 |  307 ->  291 | +227 -> +220,  27 ->  24,  23 ->  32 |  -37/ +57 ->  -10/ +38
+    6 | FAR    +nan    -1.8  yes |  109   103  MAX_M 5.43 150 |  442 ->  348 | +229 -> +226, 102 ->  35,  50 ->  37 |  -24/ +88 ->  +11/ +64
+  frames with a different sent command: 565 of 8784; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 44; frames with a different throttle: 0
+    outside-window differences: 56.2 .. 57.9 s after the nearest earlier C1e; |difference| median 82.1 max 209.8 us
+
+e0cd  tag c1s2  frames 5969
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +1.4  yes |  116   116  MAX_M 5.66 151 |  412 ->  203 | +215 -> +221,  84 ->  39,  39 ->  34 |  -20/ +36 ->   -9/ +25
+    3 | FAR    +nan    +1.4  yes |  116   116  MAX_M 5.58 153 |  447 ->  306 | +212 -> +221,  78 ->  27,  35 ->  40 | -153/ +66 -> -120/  +4
+    4 | FAR    +nan    -1.3  yes |  114   109  MAX_M 5.61 153 |  191 ->  149 | +246 -> +231,  34 ->  42,  25 ->  35 |  -47/ +34 ->  -51/ +14
+  frames with a different sent command: 581 of 5969; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 257; frames with a different throttle: 0
+    outside-window differences: 10.2 .. 1000000000.0 s after the nearest earlier C1e; |difference| median 22.1 max 200.7 us   (this run was driven with an older curve-2 / curve-4 lap_ff.json than the base of the step file: those parts differ too)
+
+1eab  tag c1s2  frames 5880
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +1.5  yes |  113   113  MAX_M 5.59 152 |  212 ->  150 | +189 -> +218, 110 ->  36,  78 ->  50 |  -52/ +40 ->  -44/ +35
+    3 | FAR    +nan    -0.9  yes |  116   112  MAX_M 5.63 150 |  393 ->  178 | +221 -> +230,  66 ->  34,  26 ->  43 |  -14/ +33 ->  -10/ +32
+    4 | FAR    +nan    +0.9  yes |  114   114  MAX_M 5.51 153 |  265 ->  123 | +219 -> +239, 104 ->  30,  52 ->  27 |  -22/ +67 ->  -29/ +50
+  frames with a different sent command: 952 of 5880; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 637; frames with a different throttle: 0
+    outside-window differences: 8.2 .. 1000000000.0 s after the nearest earlier C1e; |difference| median 18.5 max 151.6 us   (this run was driven with an older curve-2 / curve-4 lap_ff.json than the base of the step file: those parts differ too)
+
+4bbe  tag c1s2  frames 7289
+  lap | trigger  x_pred  tb@trig plat | band frames  own  end(why, x_m, tb) | last 1.2 s before C1e: peak sent old -> new | in curve tb 40..120: pre median old -> new, sd old -> new, max frame step old -> new | after C1e 0..1 s: pre min/max old -> new
+    1 | not triggered (anchor before the curve: None)
+    2 | FAR    +nan    +2.3  yes |  114   114  MAX_M 5.66 152 |  365 ->  319 | +251 -> +217,  61 ->  34,  30 ->  45 |  -17/ +42 ->  -15/ +27
+    3 | FAR    +nan    +1.0  yes |  113   113  MAX_M 5.62 152 |  193 ->  111 | +229 -> +233, 109 ->  33,  43 ->  48 |  -25/ +46 ->  -30/ +38
+    4 | FAR    +nan    -0.4  yes |  118   116  MAX_M 5.50 151 |  316 ->  150 | +243 -> +221,  16 ->  36,  23 ->  42 |  -15/ +33 ->  -12/ +31
+    5 | FAR    +nan    +1.2  yes |  116   116  MAX_M 5.59 152 |  259 ->  144 | +200 -> +231, 118 ->  34, 102 ->  44 |   -9/ +51 ->   -9/ +45
+  frames with a different sent command: 1388 of 7289; outside the c1 windows (-4.5 s .. +2.5 s around C1e): 965; frames with a different throttle: 0
+    outside-window differences: 8.2 .. 56.2 s after the nearest earlier C1e; |difference| median 20.2 max 241.3 us   (this run was driven with an older curve-2 / curve-4 lap_ff.json than the base of the step file: those parts differ too)
+
+TOTAL (runs driven with the base lap_ff.json 052be3dc: c6f3, 6f61) frames 14667, changed outside the windows 91
+
+===== summary over the flying-lap passes (both steps: the same 18 passes of c6f3 / 6f61 / e0cd / 1eab / 4bbe) =====
+c1_step1_band: 18 passes, all triggered by FAR | late peak sent: car median 296 max 447 (>=430: 2) -> step median 292 max 418 (>=430: 0) | tb 40..120 pre median: car 189..251 -> step 218..249 | sd in curve: car median 72 max 148 -> step median 42 max 59 | largest frame step: car median 36 max 102 -> step median 86 max 104 | 0..1 s after C1e swing (max-min): car median 80 max 219 -> step median 56 max 144
+c1_step2_exit_hold: 18 passes, all triggered by FAR | late peak sent: car median 296 max 447 (>=430: 2) -> step median 164 max 348 (>=430: 0) | tb 40..120 pre median: car 189..251 -> step 211..239 | sd in curve: car median 72 max 148 -> step median 34 max 42 | largest frame step: car median 36 max 102 -> step median 41 max 51 | 0..1 s after C1e swing (max-min): car median 80 max 219 -> step median 56 max 124

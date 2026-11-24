@@ -1,0 +1,95 @@
+==== chain alone (no x-band) = like runs d60e / 6f61
+  nominal                              y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  distance reads 0.15 m long           y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  distance reads 0.15 m short          y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  steering gain x 0.85                 y -19.3.. -3.2 | at 4.35 m y -10.4 psi  +5.1 | cmd   +9..+301, largest change in 0.3 m 128 | err max 0.78 | corner err max 0.72 | heading at 5.7 m 181
+  steering gain x 1.15                 y -24.9.. -7.0 | at 4.35 m y -11.6 psi  +3.4 | cmd  -19..+208, largest change in 0.3 m 124 | err max 0.56 | corner err max 0.50 | heading at 5.7 m 185
+  straight point +20 us                y -25.3.. -7.1 | at 4.35 m y -14.7 psi  +3.7 | cmd  -18..+199, largest change in 0.3 m 122 | err max 0.53 | corner err max 0.53 | heading at 5.7 m 183
+  straight point -20 us                y -20.7.. -4.6 | at 4.35 m y  -7.6 psi  +6.1 | cmd   -0..+293, largest change in 0.3 m 138 | err max 0.79 | corner err max 0.69 | heading at 5.7 m 185
+  start +6 deg more turned, 3 cm in    y -21.8.. -6.9 | at 4.35 m y -12.0 psi  +4.0 | cmd   -2..+268, largest change in 0.3 m 126 | err max 0.68 | corner err max 0.59 | heading at 5.7 m 183
+  start 6 deg less turned, 3 cm out    y -24.4.. -0.9 | at 4.35 m y -10.2 psi  +5.8 | cmd  -17..+234, largest change in 0.3 m 125 | err max 0.64 | corner err max 0.63 | heading at 5.7 m 185
+  heading reference +3 deg             y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  heading reference -3 deg             y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  arc_lat y reads 3 cm more outside    y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  arc_lat y reads 3 cm more inside     y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  arc_lat y missing                    y -23.0.. -6.4 | at 4.35 m y -11.1 psi  +4.9 | cmd   -9..+245, largest change in 0.3 m 122 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 184
+  camera off-model (c6f3 pattern)      y -19.4.. -6.4 | at 4.35 m y -13.5 psi  +5.1 | cmd  +36..+245, largest change in 0.3 m 128 | err max 0.66 | corner err max 0.61 | heading at 5.7 m 176
+  camera off-model (reversed)          y -26.7.. -6.4 | at 4.35 m y  -8.8 psi  +4.7 | cmd  -64..+286, largest change in 0.3 m 162 | err max 0.82 | corner err max 0.82 | heading at 5.7 m 192
+  80 scattered runs (start sd 4 deg / 3 cm, distance sd 0.08 m, gain sd 8 %%, straight point sd 12 us, heading reference sd 2 deg, arc_lat y bias sd 2 cm, camera off-model x N(0, 0.7), noise 0.06):
+     y min: median -22.8 worst -30.9 | y max: median -5.1 worst +5.9 | runs with y < -14: 79, y > +3: 1 | at 4.35 m: y -11.0 (p5 -16.4 p95 -3.9) psi +4.7 (p5 -0.2 p95 +8.9) | cmd max median +285 worst +396 | change in 0.3 m median 174 worst 306 | corner err max median 0.72 | heading 5.7 m median 185 (p5 176 p95 192)
+==== the car's table 2b81e9b2 (x-band r1) = like run c6f3
+  nominal                              y -16.7.. -6.4 | at 4.35 m y -13.3 psi  -0.7 | cmd  -28..+272, largest change in 0.3 m 181 | err max 0.50 | corner err max 0.54 | heading at 5.7 m 181
+  distance reads 0.15 m long           y -17.2.. -6.3 | at 4.35 m y -14.8 psi  +0.5 | cmd  +25..+259, largest change in 0.3 m 158 | err max 0.44 | corner err max 0.54 | heading at 5.7 m 181
+  distance reads 0.15 m short          y -15.5.. -6.4 | at 4.35 m y -11.5 psi  -3.3 | cmd  -45..+284, largest change in 0.3 m 221 | err max 0.55 | corner err max 0.54 | heading at 5.7 m 182
+  steering gain x 0.85                 y -11.6.. -5.7 | at 4.35 m y -10.4 psi  -0.2 | cmd  +14..+283, largest change in 0.3 m 168 | err max 0.60 | corner err max 0.64 | heading at 5.7 m 180
+  steering gain x 1.15                 y -20.8.. -7.0 | at 4.35 m y -16.1 psi  -1.5 | cmd  -52..+263, largest change in 0.3 m 186 | err max 0.41 | corner err max 0.46 | heading at 5.7 m 182
+  straight point +20 us                y -20.5.. -7.1 | at 4.35 m y -15.8 psi  -1.2 | cmd  -58..+260, largest change in 0.3 m 187 | err max 0.40 | corner err max 0.47 | heading at 5.7 m 181
+  straight point -20 us                y -12.9.. -5.7 | at 4.35 m y -10.8 psi  -0.3 | cmd   +2..+283, largest change in 0.3 m 175 | err max 0.59 | corner err max 0.61 | heading at 5.7 m 181
+  start +6 deg more turned, 3 cm in    y -14.9.. -8.1 | at 4.35 m y -14.5 psi  -1.7 | cmd   +6..+271, largest change in 0.3 m 164 | err max 0.53 | corner err max 0.53 | heading at 5.7 m 180
+  start 6 deg less turned, 3 cm out    y -19.1.. -0.9 | at 4.35 m y -12.1 psi  +0.3 | cmd  -60..+273, largest change in 0.3 m 198 | err max 0.49 | corner err max 0.56 | heading at 5.7 m 182
+  heading reference +3 deg             y -16.7.. -6.4 | at 4.35 m y -13.3 psi  -0.7 | cmd  -28..+272, largest change in 0.3 m 181 | err max 0.50 | corner err max 0.54 | heading at 5.7 m 181
+  heading reference -3 deg             y -16.7.. -6.4 | at 4.35 m y -13.3 psi  -0.7 | cmd  -28..+272, largest change in 0.3 m 181 | err max 0.50 | corner err max 0.54 | heading at 5.7 m 181
+  arc_lat y reads 3 cm more outside    y -16.7.. -6.4 | at 4.35 m y -13.3 psi  -0.7 | cmd  -28..+272, largest change in 0.3 m 181 | err max 0.50 | corner err max 0.54 | heading at 5.7 m 181
+  arc_lat y reads 3 cm more inside     y -16.7.. -6.4 | at 4.35 m y -13.3 psi  -0.7 | cmd  -28..+272, largest change in 0.3 m 181 | err max 0.50 | corner err max 0.54 | heading at 5.7 m 181
+  arc_lat y missing                    y -16.7.. -6.4 | at 4.35 m y -13.3 psi  -0.7 | cmd  -28..+272, largest change in 0.3 m 181 | err max 0.50 | corner err max 0.54 | heading at 5.7 m 181
+  camera off-model (c6f3 pattern)      y -16.7.. -6.4 | at 4.35 m y -16.6 psi  +0.8 | cmd  -47..+328, largest change in 0.3 m 219 | err max 0.61 | corner err max 0.56 | heading at 5.7 m 173
+  camera off-model (reversed)          y -16.7.. -6.4 | at 4.35 m y -10.0 psi  -2.2 | cmd  -15..+230, largest change in 0.3 m 163 | err max 0.67 | corner err max 0.67 | heading at 5.7 m 189
+  80 scattered runs (start sd 4 deg / 3 cm, distance sd 0.08 m, gain sd 8 %%, straight point sd 12 us, heading reference sd 2 deg, arc_lat y bias sd 2 cm, camera off-model x N(0, 0.7), noise 0.06):
+     y min: median -17.0 worst -23.8 | y max: median -5.8 worst +3.6 | runs with y < -14: 67, y > +3: 1 | at 4.35 m: y -13.5 (p5 -19.0 p95 -6.8) psi -1.0 (p5 -6.3 p95 +3.4) | cmd max median +286 worst +330 | change in 0.3 m median 222 worst 289 | corner err max median 0.65 | heading 5.7 m median 182 (p5 173 p95 190)
+==== step1_own_conservative
+  nominal                              y -12.4.. -4.5 | at 4.35 m y  -7.6 psi  +1.8 | cmd  +94..+161, largest change in 0.3 m  31 | err max 0.56 | corner err max 0.58 | heading at 5.7 m 185
+  distance reads 0.15 m long           y -17.3.. -6.5 | at 4.35 m y -10.7 psi  +1.1 | cmd  +98..+169, largest change in 0.3 m  42 | err max 0.41 | corner err max 0.55 | heading at 5.7 m 183
+  distance reads 0.15 m short          y -10.7.. +0.9 | at 4.35 m y  -4.6 psi  +2.2 | cmd  +86..+174, largest change in 0.3 m  44 | err max 0.69 | corner err max 0.64 | heading at 5.7 m 187
+  steering gain x 0.85                 y  -9.8.. +0.5 | at 4.35 m y  -5.1 psi  +1.6 | cmd +114..+194, largest change in 0.3 m  35 | err max 0.66 | corner err max 0.68 | heading at 5.7 m 183
+  steering gain x 1.15                 y -15.2.. -7.0 | at 4.35 m y  -9.5 psi  +1.5 | cmd  +83..+145, largest change in 0.3 m  30 | err max 0.48 | corner err max 0.51 | heading at 5.7 m 186
+  straight point +20 us                y -15.7.. -7.1 | at 4.35 m y -10.3 psi  +1.7 | cmd  +76..+141, largest change in 0.3 m  32 | err max 0.46 | corner err max 0.52 | heading at 5.7 m 185
+  straight point -20 us                y  -9.7.. -0.8 | at 4.35 m y  -5.0 psi  +1.9 | cmd +112..+189, largest change in 0.3 m  33 | err max 0.65 | corner err max 0.65 | heading at 5.7 m 185
+  start +6 deg more turned, 3 cm in    y -15.8.. -2.5 | at 4.35 m y  -7.9 psi  +1.1 | cmd  +74..+168, largest change in 0.3 m  55 | err max 0.58 | corner err max 0.57 | heading at 5.7 m 184
+  start 6 deg less turned, 3 cm out    y -13.2.. -0.9 | at 4.35 m y  -7.4 psi  +2.5 | cmd  +91..+162, largest change in 0.3 m  32 | err max 0.56 | corner err max 0.60 | heading at 5.7 m 185
+  heading reference +3 deg             y -11.3.. -1.1 | at 4.35 m y  -5.1 psi  +1.5 | cmd  +96..+164, largest change in 0.3 m  38 | err max 0.62 | corner err max 0.59 | heading at 5.7 m 186
+  heading reference -3 deg             y -15.1.. -6.4 | at 4.35 m y -10.2 psi  +2.1 | cmd  +93..+161, largest change in 0.3 m  30 | err max 0.50 | corner err max 0.58 | heading at 5.7 m 184
+  arc_lat y reads 3 cm more outside    y -14.6.. -6.4 | at 4.35 m y  -9.7 psi  +2.0 | cmd  +93..+161, largest change in 0.3 m  29 | err max 0.51 | corner err max 0.58 | heading at 5.7 m 184
+  arc_lat y reads 3 cm more inside     y -11.5.. -1.6 | at 4.35 m y  -5.5 psi  +1.6 | cmd  +95..+163, largest change in 0.3 m  37 | err max 0.61 | corner err max 0.59 | heading at 5.7 m 186
+  arc_lat y missing                    y -12.3.. -4.6 | at 4.35 m y  -7.6 psi  +2.0 | cmd  +93..+164, largest change in 0.3 m  32 | err max 0.56 | corner err max 0.59 | heading at 5.7 m 185
+  camera off-model (c6f3 pattern)      y -12.4.. -4.0 | at 4.35 m y  -8.2 psi  +2.7 | cmd  +99..+161, largest change in 0.3 m  36 | err max 0.56 | corner err max 0.57 | heading at 5.7 m 178
+  camera off-model (reversed)          y -12.7.. -4.9 | at 4.35 m y  -7.1 psi  +0.9 | cmd  +77..+206, largest change in 0.3 m  61 | err max 0.76 | corner err max 0.76 | heading at 5.7 m 192
+  80 scattered runs (start sd 4 deg / 3 cm, distance sd 0.08 m, gain sd 8 %%, straight point sd 12 us, heading reference sd 2 deg, arc_lat y bias sd 2 cm, camera off-model x N(0, 0.7), noise 0.06):
+     y min: median -14.2 worst -23.5 | y max: median -3.0 worst +8.1 | runs with y < -14: 43, y > +3: 5 | at 4.35 m: y -7.6 (p5 -13.3 p95 -2.3) psi +1.7 (p5 -0.7 p95 +3.6) | cmd max median +188 worst +371 | change in 0.3 m median 61 worst 191 | corner err max median 0.71 | heading 5.7 m median 186 (p5 178 p95 193)
+==== step2_own_standard
+  nominal                              y -11.3.. -2.3 | at 4.35 m y  -6.1 psi  +0.6 | cmd  +96..+170, largest change in 0.3 m  46 | err max 0.61 | corner err max 0.56 | heading at 5.7 m 185
+  distance reads 0.15 m long           y -15.8.. -5.7 | at 4.35 m y  -9.8 psi  -0.7 | cmd  +95..+168, largest change in 0.3 m  40 | err max 0.45 | corner err max 0.52 | heading at 5.7 m 182
+  distance reads 0.15 m short          y  -9.9.. +2.6 | at 4.35 m y  -2.6 psi  +1.8 | cmd  +70..+194, largest change in 0.3 m  67 | err max 0.77 | corner err max 0.65 | heading at 5.7 m 188
+  steering gain x 0.85                 y  -9.1.. +1.1 | at 4.35 m y  -4.4 psi  +1.1 | cmd +111..+204, largest change in 0.3 m  51 | err max 0.69 | corner err max 0.67 | heading at 5.7 m 183
+  steering gain x 1.15                 y -13.1.. -4.4 | at 4.35 m y  -7.5 psi  -0.0 | cmd  +77..+154, largest change in 0.3 m  45 | err max 0.55 | corner err max 0.50 | heading at 5.7 m 186
+  straight point +20 us                y -13.7.. -4.5 | at 4.35 m y  -8.0 psi  +0.3 | cmd  +72..+151, largest change in 0.3 m  43 | err max 0.54 | corner err max 0.51 | heading at 5.7 m 186
+  straight point -20 us                y  -8.9.. -0.1 | at 4.35 m y  -4.1 psi  +0.9 | cmd +114..+198, largest change in 0.3 m  49 | err max 0.68 | corner err max 0.63 | heading at 5.7 m 184
+  start +6 deg more turned, 3 cm in    y -14.2.. -0.5 | at 4.35 m y  -6.6 psi  +0.7 | cmd  +42..+190, largest change in 0.3 m  87 | err max 0.66 | corner err max 0.56 | heading at 5.7 m 185
+  start 6 deg less turned, 3 cm out    y -10.7.. -0.9 | at 4.35 m y  -5.5 psi  +0.5 | cmd  +97..+171, largest change in 0.3 m  30 | err max 0.58 | corner err max 0.56 | heading at 5.7 m 185
+  heading reference +3 deg             y -10.1.. +0.9 | at 4.35 m y  -3.8 psi  +0.7 | cmd  +76..+177, largest change in 0.3 m  60 | err max 0.69 | corner err max 0.59 | heading at 5.7 m 186
+  heading reference -3 deg             y -12.8.. -5.4 | at 4.35 m y  -8.3 psi  +0.5 | cmd +100..+164, largest change in 0.3 m  32 | err max 0.54 | corner err max 0.55 | heading at 5.7 m 184
+  arc_lat y reads 3 cm more outside    y -12.8.. -5.4 | at 4.35 m y  -8.3 psi  +0.5 | cmd +100..+164, largest change in 0.3 m  32 | err max 0.54 | corner err max 0.55 | heading at 5.7 m 184
+  arc_lat y reads 3 cm more inside     y -10.1.. +0.9 | at 4.35 m y  -3.8 psi  +0.7 | cmd  +76..+177, largest change in 0.3 m  60 | err max 0.69 | corner err max 0.59 | heading at 5.7 m 186
+  arc_lat y missing                    y -11.3.. -3.7 | at 4.35 m y  -6.2 psi  +0.9 | cmd  +95..+174, largest change in 0.3 m  52 | err max 0.60 | corner err max 0.57 | heading at 5.7 m 185
+  camera off-model (c6f3 pattern)      y -11.3.. -1.8 | at 4.35 m y  -6.7 psi  +1.8 | cmd  +96..+170, largest change in 0.3 m  46 | err max 0.61 | corner err max 0.55 | heading at 5.7 m 178
+  camera off-model (reversed)          y -11.3.. -2.7 | at 4.35 m y  -5.4 psi  -0.7 | cmd  +81..+217, largest change in 0.3 m  59 | err max 0.78 | corner err max 0.78 | heading at 5.7 m 192
+  80 scattered runs (start sd 4 deg / 3 cm, distance sd 0.08 m, gain sd 8 %%, straight point sd 12 us, heading reference sd 2 deg, arc_lat y bias sd 2 cm, camera off-model x N(0, 0.7), noise 0.06):
+     y min: median -12.6 worst -20.4 | y max: median -1.7 worst +6.9 | runs with y < -14: 30, y > +3: 10 | at 4.35 m: y -6.1 (p5 -11.7 p95 -1.0) psi +0.5 (p5 -2.1 p95 +2.4) | cmd max median +200 worst +381 | change in 0.3 m median 77 worst 256 | corner err max median 0.70 | heading 5.7 m median 186 (p5 177 p95 193)
+==== step3_own_prerotated
+  nominal                              y -11.3.. -2.3 | at 4.35 m y  -7.4 psi  -2.3 | cmd  +95..+179, largest change in 0.3 m  47 | err max 0.61 | corner err max 0.50 | heading at 5.7 m 183
+  distance reads 0.15 m long           y -15.8.. -5.6 | at 4.35 m y -11.9 psi  -3.7 | cmd  +93..+161, largest change in 0.3 m  37 | err max 0.45 | corner err max 0.47 | heading at 5.7 m 180
+  distance reads 0.15 m short          y  -9.9.. +2.5 | at 4.35 m y  -3.3 psi  -0.4 | cmd  +70..+195, largest change in 0.3 m  67 | err max 0.76 | corner err max 0.57 | heading at 5.7 m 186
+  steering gain x 0.85                 y  -9.1.. +1.1 | at 4.35 m y  -5.5 psi  -1.5 | cmd +115..+205, largest change in 0.3 m  51 | err max 0.69 | corner err max 0.60 | heading at 5.7 m 181
+  steering gain x 1.15                 y -13.1.. -4.4 | at 4.35 m y  -9.0 psi  -3.2 | cmd  +77..+163, largest change in 0.3 m  46 | err max 0.55 | corner err max 0.42 | heading at 5.7 m 183
+  straight point +20 us                y -13.7.. -4.4 | at 4.35 m y  -9.4 psi  -2.6 | cmd  +72..+163, largest change in 0.3 m  44 | err max 0.54 | corner err max 0.43 | heading at 5.7 m 183
+  straight point -20 us                y  -8.9.. -0.1 | at 4.35 m y  -5.4 psi  -2.0 | cmd +119..+199, largest change in 0.3 m  50 | err max 0.68 | corner err max 0.56 | heading at 5.7 m 182
+  start +6 deg more turned, 3 cm in    y -14.2.. -0.5 | at 4.35 m y  -8.0 psi  -2.2 | cmd  +42..+190, largest change in 0.3 m  88 | err max 0.66 | corner err max 0.50 | heading at 5.7 m 183
+  start 6 deg less turned, 3 cm out    y -10.7.. -0.9 | at 4.35 m y  -6.8 psi  -2.4 | cmd  +95..+183, largest change in 0.3 m  35 | err max 0.57 | corner err max 0.49 | heading at 5.7 m 183
+  heading reference +3 deg             y -10.1.. +0.9 | at 4.35 m y  -5.2 psi  -2.2 | cmd  +76..+183, largest change in 0.3 m  61 | err max 0.68 | corner err max 0.51 | heading at 5.7 m 184
+  heading reference -3 deg             y -12.8.. -5.4 | at 4.35 m y  -9.6 psi  -2.4 | cmd +104..+175, largest change in 0.3 m  35 | err max 0.54 | corner err max 0.49 | heading at 5.7 m 182
+  arc_lat y reads 3 cm more outside    y -12.8.. -5.4 | at 4.35 m y  -9.6 psi  -2.4 | cmd +104..+175, largest change in 0.3 m  35 | err max 0.54 | corner err max 0.49 | heading at 5.7 m 182
+  arc_lat y reads 3 cm more inside     y -10.1.. +0.9 | at 4.35 m y  -5.2 psi  -2.2 | cmd  +76..+183, largest change in 0.3 m  61 | err max 0.68 | corner err max 0.51 | heading at 5.7 m 184
+  arc_lat y missing                    y -11.3.. -3.7 | at 4.35 m y  -7.5 psi  -2.0 | cmd  +95..+181, largest change in 0.3 m  53 | err max 0.60 | corner err max 0.50 | heading at 5.7 m 183
+  camera off-model (c6f3 pattern)      y -11.3.. -1.8 | at 4.35 m y  -8.0 psi  -1.1 | cmd  +95..+170, largest change in 0.3 m  47 | err max 0.61 | corner err max 0.49 | heading at 5.7 m 176
+  camera off-model (reversed)          y -11.3.. -2.7 | at 4.35 m y  -6.7 psi  -3.6 | cmd  +87..+229, largest change in 0.3 m  53 | err max 0.73 | corner err max 0.73 | heading at 5.7 m 190
+  80 scattered runs (start sd 4 deg / 3 cm, distance sd 0.08 m, gain sd 8 %%, straight point sd 12 us, heading reference sd 2 deg, arc_lat y bias sd 2 cm, camera off-model x N(0, 0.7), noise 0.06):
+     y min: median -12.6 worst -20.5 | y max: median -1.6 worst +7.0 | runs with y < -14: 30, y > +3: 10 | at 4.35 m: y -7.5 (p5 -13.6 p95 -2.6) psi -2.4 (p5 -5.1 p95 -0.2) | cmd max median +209 worst +381 | change in 0.3 m median 76 worst 258 | corner err max median 0.63 | heading 5.7 m median 184 (p5 175 p95 191)

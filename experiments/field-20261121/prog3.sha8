@@ -1,0 +1,14 @@
+b9e34428 *arc2.py
+fae9502c *centre_estimator.py
+dbcb520f *curve_trim.py
+518b5c9c *gyro_hold.py
+38137557 *heading_hold.py
+fea2ec34 *imu_boost.py
+800879c9 *live_pid.py
+05bb0097 *manual_drive.py
+7aa9716d *output_stage.py
+405ac956 *pause_clock.py
+50ee5fba *pause_resume.py
+50e4f3e1 *server.py
+4534cec8 *speed_adapt.py
+a48fab55 *speed_policy.py

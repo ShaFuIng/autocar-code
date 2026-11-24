@@ -1,0 +1,23 @@
+test_01_config_off (__main__.T.test_01_config_off) ... D:\OneDrive\Desktop\ж█илио\Orin_Interface_v1\laptop_workbench\data\experiments\field-20261122\landing4\tests\test_land4.py:49: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\User\\AppData\\Local\\Temp\\tmp99je9jd3\\bad.json' mode='w' encoding='cp950'>
+  p = os.path.join(d, 'bad.json'); open(p, 'w').write('{not json'); self.assertIsNone(land4.load_config(p))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_02_idle_untouched (__main__.T.test_02_idle_untouched) ... ok
+test_03_no_reference_no_action (__main__.T.test_03_no_reference_no_action) ... ok
+test_04_slope_heading_sign (__main__.T.test_04_slope_heading_sign) ... ok
+test_05_mouth_spike_ignored (__main__.T.test_05_mouth_spike_ignored) ... ok
+test_06_camera_single_frame_and_limit (__main__.T.test_06_camera_single_frame_and_limit) ... ok
+test_07_landing_limits_and_step (__main__.T.test_07_landing_limits_and_step) ... ok
+test_08_hand_over_and_done (__main__.T.test_08_hand_over_and_done) ... ok
+test_09_despike (__main__.T.test_09_despike) ... ok
+test_09b_despike_cannot_run_away (__main__.T.test_09b_despike_cannot_run_away) ... ok
+test_10_stage_switches (__main__.T.test_10_stage_switches) ... ok
+test_11_lost_frames_and_no_imu (__main__.T.test_11_lost_frames_and_no_imu) ... ok
+test_12_odometer (__main__.T.test_12_odometer) ... ok
+test_13_window_closed (__main__.T.test_13_window_closed) ... ok
+test_14_first_command_starts_from_last_sent (__main__.T.test_14_first_command_starts_from_last_sent) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.029s
+
+OK

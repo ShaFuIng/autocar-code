@@ -1,0 +1,18 @@
+{
+ "enabled": true,
+ "revision": "upper-wide-r1",
+ "turn_pwm": 18,
+ "post_pwm": 33,
+ "post_up_rate": 30.0,
+ "post_err_max": 0.35,
+ "post_head_max_deg": 5.0,
+ "coast": {
+  "y_down_m": 3.45,
+  "v_down": 0.6,
+  "a": 0.18,
+  "margin_m": 0.3,
+  "pwm": 15.0,
+  "start_y_m": 0.8
+ },
+ "note": "field 11-15 proposal: accelerate only when aligned (heading within 5 deg, FOLLOW error <= 0.35); coast PWM 15 instead of 10; a 0.18 = start slowing earlier."
+}

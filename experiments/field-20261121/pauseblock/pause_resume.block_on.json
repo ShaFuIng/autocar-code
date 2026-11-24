@@ -1,0 +1,1 @@
+{"coast_max_m": 2.0, "coast_max_yaw_deg": 25.0, "upper_post_turn_resume": true, "allow_segment_cross": true, "refuse_pause_where_no_resume": true, "upper_post_pause_max_m": 2.0}

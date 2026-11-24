@@ -1,0 +1,2 @@
+#!/bin/sh
+exec python3 "$HOME/orin_interface_v1/tools/record_only.py" start

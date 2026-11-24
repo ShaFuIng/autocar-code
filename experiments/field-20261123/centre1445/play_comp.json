@@ -1,0 +1,7 @@
+{
+ "enabled": true,
+ "right_us": 25.0,
+ "left_us": 25.0,
+ "threshold_us": 15.0,
+ "note_newservo_20261123": "field 11-23 16:5x: new servo, play ~60 us on three runs (was 130) -> compensation 55 -> 25 each side. Back = 55 / 55 (9b7d9d56)."
+}

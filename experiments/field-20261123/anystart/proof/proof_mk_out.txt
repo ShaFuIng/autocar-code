@@ -1,0 +1,54 @@
+skip None D 2.5 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.53, -0.36) band (-0.3, -0.15, 18) band late>0.1m 18 misfire<-1.2 0
+skip None D 2.5 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.03, -0.82) band (-0.78, -0.47, 18) band late>0.1m 6 misfire<-1.2 0
+skip None D 2.5 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.52, -1.23) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 2.5 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.17, -1.67) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 2.5 err+2.0 n 18 locOK 0 bad [("['SKIPPED:C1s', 'SKIPPED:C1e', 'LOST:MISSED_C1e']", 12)] zone1 start rel C1s (-3.16, -2.72) band (-0.92, -0.63, 13) band late>0.1m 0 misfire<-1.2 0
+skip None D 3.44 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.07, 0.14) band (0.13, 0.25, 15) band late>0.1m 15 misfire<-1.2 0
+skip None D 3.44 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.68, -0.22) band (-0.45, -0.04, 18) band late>0.1m 18 misfire<-1.2 0
+skip None D 3.44 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.11, -0.78) band (-0.83, -0.47, 18) band late>0.1m 4 misfire<-1.2 0
+skip None D 3.44 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.63, -1.31) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 3.44 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.02, -1.77) band (-0.92, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 3.44 err+2.0 n 18 locOK 2 bad [("['SKIPPED:C1s', 'SKIPPED:C1e', 'LOST:MISSED_C1e']", 10)] zone1 start rel C1s (-3.06, -2.7) band (-0.91, -0.63, 14) band late>0.1m 0 misfire<-1.2 0
+skip None D 6.0 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.09, 0.41) band (0.13, 0.35, 16) band late>0.1m 16 misfire<-1.2 0
+skip None D 6.0 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.65, -0.21) band (-0.42, -0.09, 18) band late>0.1m 17 misfire<-1.2 0
+skip None D 6.0 err+0.0 n 18 locOK 17 bad [] zone1 start rel C1s (-1.16, -0.71) band (-0.92, -0.47, 18) band late>0.1m 4 misfire<-1.2 0
+skip None D 6.0 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.63, -1.31) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 6.0 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.03, -1.7) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 6.0 err+2.0 n 18 locOK 4 bad [("['SKIPPED:C1s', 'SKIPPED:C1e', 'LOST:MISSED_C1e']", 8)] zone1 start rel C1s (-3.02, -2.68) band (-0.91, -0.63, 15) band late>0.1m 0 misfire<-1.2 0
+skip None D 9.0 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.07, 0.21) band (0.14, 0.25, 11) band late>0.1m 11 misfire<-1.2 0
+skip None D 9.0 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.64, -0.36) band (-0.42, -0.15, 18) band late>0.1m 17 misfire<-1.2 0
+skip None D 9.0 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.12, -0.82) band (-0.88, -0.47, 18) band late>0.1m 2 misfire<-1.2 0
+skip None D 9.0 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.67, -1.31) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 9.0 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.05, -1.7) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip None D 9.0 err+2.0 n 18 locOK 2 bad [("['SKIPPED:C1s', 'SKIPPED:C1e', 'LOST:MISSED_C1e']", 10)] zone1 start rel C1s (-3.1, -2.74) band (-0.92, -0.64, 13) band late>0.1m 0 misfire<-1.2 0
+skip None D 10.5 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.09, 0.2) band (0.13, 0.26, 15) band late>0.1m 14 misfire<-1.2 0
+skip None D 10.5 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.68, -0.22) band (-0.45, -0.21, 18) band late>0.1m 17 misfire<-1.2 0
+skip None D 10.5 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.13, -0.7) band (-0.88, -0.47, 18) band late>0.1m 2 misfire<-1.2 0
+skip None D 10.5 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.61, -1.24) band (-0.92, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 2.5 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.53, -0.36) band (-0.3, -0.15, 18) band late>0.1m 18 misfire<-1.2 0
+skip 9.0 D 2.5 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.03, -0.82) band (-0.78, -0.47, 18) band late>0.1m 6 misfire<-1.2 0
+skip 9.0 D 2.5 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.52, -1.23) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 2.5 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.17, -1.67) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 2.5 err+2.0 n 18 locOK 18 bad [] zone1 start rel C1s (-3.16, -2.72) band (-0.92, -0.63, 13) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 3.44 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.07, 0.14) band (0.13, 0.25, 15) band late>0.1m 15 misfire<-1.2 0
+skip 9.0 D 3.44 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.68, -0.22) band (-0.45, -0.04, 18) band late>0.1m 18 misfire<-1.2 0
+skip 9.0 D 3.44 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.11, -0.78) band (-0.83, -0.47, 18) band late>0.1m 4 misfire<-1.2 0
+skip 9.0 D 3.44 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.63, -1.31) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 3.44 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.02, -1.77) band (-0.92, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 3.44 err+2.0 n 18 locOK 18 bad [] zone1 start rel C1s (-3.06, -2.7) band (-0.91, -0.63, 14) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 6.0 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.09, 0.41) band (0.13, 0.35, 16) band late>0.1m 16 misfire<-1.2 0
+skip 9.0 D 6.0 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.65, -0.21) band (-0.42, -0.09, 18) band late>0.1m 17 misfire<-1.2 0
+skip 9.0 D 6.0 err+0.0 n 18 locOK 17 bad [] zone1 start rel C1s (-1.16, -0.71) band (-0.92, -0.47, 18) band late>0.1m 4 misfire<-1.2 0
+skip 9.0 D 6.0 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.63, -1.31) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 6.0 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.03, -1.7) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 6.0 err+2.0 n 18 locOK 18 bad [] zone1 start rel C1s (-3.02, -2.68) band (-0.91, -0.63, 15) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 9.0 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.07, 0.21) band (0.14, 0.25, 11) band late>0.1m 11 misfire<-1.2 0
+skip 9.0 D 9.0 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.64, -0.36) band (-0.42, -0.15, 18) band late>0.1m 17 misfire<-1.2 0
+skip 9.0 D 9.0 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.12, -0.82) band (-0.88, -0.47, 18) band late>0.1m 2 misfire<-1.2 0
+skip 9.0 D 9.0 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.67, -1.31) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 9.0 err+1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-2.05, -1.7) band (-0.91, -0.47, 18) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 9.0 err+2.0 n 18 locOK 18 bad [] zone1 start rel C1s (-3.1, -2.74) band (-0.92, -0.64, 13) band late>0.1m 0 misfire<-1.2 0
+skip 9.0 D 10.5 err-1.0 n 18 locOK 18 bad [] zone1 start rel C1s (-0.09, 0.2) band (0.13, 0.26, 15) band late>0.1m 14 misfire<-1.2 0
+skip 9.0 D 10.5 err-0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-0.68, -0.22) band (-0.45, -0.21, 18) band late>0.1m 17 misfire<-1.2 0
+skip 9.0 D 10.5 err+0.0 n 18 locOK 18 bad [] zone1 start rel C1s (-1.13, -0.7) band (-0.88, -0.47, 18) band late>0.1m 2 misfire<-1.2 0
+skip 9.0 D 10.5 err+0.5 n 18 locOK 18 bad [] zone1 start rel C1s (-1.61, -1.24) band (-0.92, -0.47, 18) band late>0.1m 0 misfire<-1.2 0

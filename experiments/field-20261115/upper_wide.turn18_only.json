@@ -1,0 +1,6 @@
+{
+ "enabled": true,
+ "revision": "upper-wide-r1",
+ "turn_pwm": 18,
+ "note": "2026-11-15 field: only replace the PWM 13 (LOCK_PWM) on turning frames with 18 (= TURN PWM); post_pwm / coast not set."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "best-today-46db",
+  "name": "今日最佳版",
+  "summary": "11-08 跑得最好的一輪：一圈93.0秒，直線最穩",
+  "reference": {
+    "id": "46db59ec",
+    "start": "2026-11-08 16:58:10",
+    "laps": 2,
+    "lap_s": 93.0,
+    "end": "PHYSICAL_ESTOP（使用者跑完兩圈後按急停）",
+    "source": "交接 2026-11-08 17:0x 46db完整兩圈"
+  },
+  "compatibility": [
+    "與現役舵機設定與韌體相同",
+    "PID文件需為rev136內容（pid-parameters.json）"
+  ],
+  "verified": true,
+  "file_count": 106,
+  "identity": "78973126f74538a539f705d2b91484a1b6c7187f794836a6e62b36045929b711",
+  "parameters": {
+    "direction_enabled": 0,
+    "direction_far_row": 0.7,
+    "direction_weight": 0.5,
+    "backlash_initial_enabled": 0,
+    "backlash_initial_left_us": 20,
+    "backlash_initial_right_us": 90,
+    "backlash_initial_threshold_us": 10,
+    "backlash_initial_rate": 300,
+    "backlash_enabled": 0,
+    "backlash_left_us": 30,
+    "backlash_right_us": 80,
+    "backlash_threshold_us": 30,
+    "backlash_rate": 500,
+    "kp": 220,
+    "ki": 40,
+    "kd": 60,
+    "pwm": 15,
+    "steer_rate": 1300,
+    "row_ratio": 0.6,
+    "center_us": 1390,
+    "left_gain": 1.5,
+    "right_gain": 1.65,
+    "min_us": 780,
+    "max_us": 2050,
+    "derivative_tau": 0.15,
+    "integral_limit": 1.0,
+    "max_gap": 0.4,
+    "visual_center_offset_px_640": 18,
+    "curve_outward_px_640": 0,
+    "preview_far_weight": 0.2,
+    "preview_far_row": 0.45
+  },
+  "parameter_revision": 136,
+  "recognition": {
+    "model_id": "v4-default",
+    "weights_sha256": "8b802fa03d34fa73049b92ac5c3a6df121f94d3e9f7875103ceaf50de3424e54",
+    "imgsz": 640
+  },
+  "path_algorithm": "camera-pair-v2-junction-flag",
+  "installed": false
+}

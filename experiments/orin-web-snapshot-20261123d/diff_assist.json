@@ -1,0 +1,1 @@
+{"enabled": false, "start_us": 240, "full_us": 330, "max_diff_pct": 10, "min_inner_pct": 10, "max_outer_pct": 35, "rate_pct_s": 80, "restart_gap_s": 0.3, "routes": ["WAIT_CLIMB"], "max_pitch_deg": 3, "right_only": true, "mode": "balanced", "swap_sides": true}

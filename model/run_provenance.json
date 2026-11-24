@@ -1,0 +1,8 @@
+{
+  "parent_checkpoint_sha256": "79253ba0dd4ff1563a498563418c78894b4377721b2e7dc0a161918fae548e3b",
+  "training_images": 63,
+  "new_validation_images": 15,
+  "old_validation_images": 10,
+  "container_image": "sha256:71cb50a4b43c7b6df91b96d7b8e6e13f1762da74e274bb799ae50bc29d8bb2fd",
+  "comparison": "Both checkpoints evaluated with identical imgsz640 FP32 at original image resolution on each validation set. No deployment to vehicle."
+}

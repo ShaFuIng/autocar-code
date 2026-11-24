@@ -1,0 +1,59 @@
+D. risk data from the recorded laps (car config; runs e1b4 / b93e / 9934, laps with a complete curve 4). us = microseconds, centre 1475.
+
+1. curve 4 back half (LAND8 >= 3.4 m .. C4e): steering margin and error
+   run lap | max steer-centre us | frames > 250 us % | > 300 us % | |e| P90 | |e| max | |e| > 0.6 % | gz sd dps | enc speed mean / max m/s (inner rear wheel, 5 Hz)
+   e1b4 L1 |  218 |  0.0 |  0.0 | 0.51 | 0.54 |  0.0 | 11.3 | 1.18 / 1.74
+   e1b4 L2 |  205 |  0.0 |  0.0 | 0.45 | 0.47 |  0.0 |  7.4 | 1.18 / 1.66
+   e1b4 L3 |  209 |  0.0 |  0.0 | 0.49 | 0.56 |  0.0 |  5.4 | 1.18 / 1.56
+   e1b4 L4 |  187 |  0.0 |  0.0 | 0.44 | 0.54 |  0.0 |  6.6 | 1.19 / 1.67
+   e1b4 L5 |  230 |  0.0 |  0.0 | 0.59 | 0.64 |  8.8 |  9.6 | 1.25 / 1.67
+   b93e L1 |  248 |  0.0 |  0.0 | 0.49 | 0.69 |  5.6 |  9.0 | 1.17 / 1.56
+   b93e L2 |  216 |  0.0 |  0.0 | 0.53 | 0.58 |  0.0 |  8.8 | 1.23 / 1.64
+   b93e L3 |  201 |  0.0 |  0.0 | 0.56 | 0.59 |  0.0 |  6.7 | 1.19 / 1.57
+   b93e L4 |  218 |  0.0 |  0.0 | 0.56 | 0.59 |  0.0 |  7.3 | 1.19 / 1.71
+   9934 L1 |  231 |  0.0 |  0.0 | 0.45 | 0.49 |  0.0 |  7.9 | 1.19 / 1.57
+   9934 L2 |  213 |  0.0 |  0.0 | 0.52 | 0.57 |  0.0 |  5.7 | 1.19 / 1.69
+   9934 L3 |  212 |  0.0 |  0.0 | 0.52 | 0.57 |  0.0 |  9.7 | 1.19 / 1.65
+   9934 L4 |  201 |  0.0 |  0.0 | 0.48 | 0.58 |  0.0 |  7.0 | 1.21 / 1.66
+   median  |  213 |  0.0 |  0.0 | 0.51 | 0.57 |  0.0 |  7.4 | 1.19 / 1.66   (n=13 laps; servo right limit = centre + 575 us)
+
+2. after the exit, C4e+0 .. 3.0 m (c4_exit window is C4e+0..9 m)
+   run lap | e mean | e min | e max | gz sd | |gz| max | steer sd us | enc speed first 8 frames m/s
+   e1b4 L1 | -0.01 | -0.20 | +0.09 | 12.2 | 31.0 |   35 | 1.23
+   e1b4 L2 | +0.07 | -0.10 | +0.29 | 10.8 | 24.8 |   33 | 1.32
+   e1b4 L3 | +0.14 | -0.07 | +0.48 | 11.0 | 29.6 |   31 | 1.19
+   e1b4 L4 | +0.02 | -0.20 | +0.28 | 13.7 | 27.1 |   40 | 1.21
+   e1b4 L5 | +0.16 | -0.02 | +0.38 |  9.6 | 20.6 |   28 | 1.21
+   b93e L1 | -0.02 | -0.12 | +0.18 |  9.0 | 17.7 |   23 | 1.30
+   b93e L2 | +0.17 | +0.03 | +0.51 |  9.4 | 29.5 |   24 | 1.26
+   b93e L3 | +0.09 | -0.09 | +0.39 | 11.8 | 23.9 |   33 | 1.24
+   b93e L4 | +0.08 | -0.06 | +0.38 |  9.3 | 29.6 |   22 | 1.36
+   9934 L1 | -0.02 | -0.10 | +0.15 |  8.2 | 16.4 |   19 | 1.30
+   9934 L2 | +0.05 | -0.08 | +0.32 | 11.2 | 20.7 |   33 | 1.22
+   9934 L3 | +0.01 | -0.11 | +0.22 |  8.3 | 22.3 |   18 | 1.34
+   9934 L4 | +0.05 | -0.10 | +0.32 | 10.9 | 26.6 |   30 | 1.28
+   median  | +0.05 | -0.10 | +0.32 | 10.8 | 24.8 |   30 | 1.26
+
+3. main straight / entry to the next curve 1 (first-order model, k 1.02, recorded PWM vs step70 PWM; measured = encoder)
+   run lap | at C4e+3.0: model old / step70 / measured | at C4e+6.0 | at C4e+9.0
+   e1b4 L1 | 1.45 / 1.46 / 1.41 | 1.47 / 1.47 / 1.52 | 1.30 / 1.30 / 1.31
+   e1b4 L2 | 1.44 / 1.45 / 1.48 | 1.47 / 1.47 / 1.53 | 1.30 / 1.30 / 1.38
+   e1b4 L3 | 1.35 / 1.36 / 1.29 | 1.47 / 1.47 / 1.52 | 1.30 / 1.30 / 1.30
+   e1b4 L4 | 1.36 / 1.37 / 1.36 | 1.47 / 1.47 / 1.43 | 1.27 / 1.27 / 1.31
+   b93e L1 | 1.45 / 1.46 / 1.46 | 1.47 / 1.47 / 1.51 | 1.30 / 1.30 / 1.30
+   b93e L2 | 1.46 / 1.46 / 1.40 | 1.47 / 1.47 / 1.43 | 1.29 / 1.29 / 1.30
+   b93e L3 | 1.44 / 1.45 / 1.37 | 1.47 / 1.47 / 1.38 | 1.30 / 1.30 / 1.37
+   9934 L1 | 1.45 / 1.46 / 1.55 | 1.47 / 1.47 / 1.41 | 1.28 / 1.28 / 1.14
+   9934 L2 | 1.44 / 1.45 / 1.45 | 1.47 / 1.47 / 1.44 | 1.29 / 1.29 / 1.26
+   9934 L3 | 1.45 / 1.46 / 1.40 | 1.47 / 1.47 / 1.55 | 1.30 / 1.30 / 1.28
+   median  | 1.45 / 1.45 / 1.41 | 1.47 / 1.47 / 1.48 | 1.30 / 1.30 / 1.30
+
+4. downhill guard: see section 6 (its own log). (An earlier draft of this section used the 5 Hz encoder differences, which are too noisy for a per-frame maximum, and a wrong armed range; removed.)
+
+5. history: lap_speed.json note (11-16 field): a curve-4 zone DOWN+6.4..10.0 at PWM 42 was removed after run 1e69 (exit over-rotation at 1.2-1.35 m/s) and 7af0 lap 4. Since then: curve-4 band (lap_ff4), c4_exit (11-20), curve PWM 48 since 11-19/20. step70 brings the modelled exit speed to ~1.35 m/s.
+
+6. downhill guard, from its own log (proposal.speed_guard.dh; v_a / v_b = the guard's wheel speeds in cps):
+   e1b4: states {'ARMED': 334} | last armed position per lap LAND8+3.17 3.34 3.20 3.24 3.19 m | max wheel speed while armed after LAND8+2.5 m: 4580 4625 4335 4595 4565 cps (trigger 6800)
+   b93e: states {'ARMED': 266} | last armed position per lap LAND8+3.20 3.50 3.29 3.33 m | max wheel speed while armed after LAND8+2.5 m: 4495 5310 4435 4600 cps (trigger 6800)
+   9934: states {'ARMED': 268} | last armed position per lap LAND8+3.39 3.10 3.18 3.20 m | max wheel speed while armed after LAND8+2.5 m: 5190 4395 4450 4985 cps (trigger 6800)
+   -> in these 13 laps the guard is no longer armed after LAND8+3.3..3.5 m; the candidate zone starts at LAND8+3.4 m and needs ~0.2-0.4 s to reach its PWM.

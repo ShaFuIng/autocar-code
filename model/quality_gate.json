@@ -1,0 +1,9 @@
+{
+  "ready_to_train": true,
+  "reason": "User explicitly chose to retain all 84 images without locating the unresolved issue.",
+  "exclude": [],
+  "known_limitations": [
+    "One unidentified image may contain partially annotated blurry regions. Unlabeled pixels remain background (0), not ignore pixels.",
+    "Same-route temporal-block validation is not an independent generalization test."
+  ]
+}

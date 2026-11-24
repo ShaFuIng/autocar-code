@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "sensor": "MPU6050",
+  "bus": 7,
+  "address": 104,
+  "mount": "component_side_up_connector_row_toward_vehicle_front",
+  "vehicle_frame": "X forward, Y left, Z up; right-handed",
+  "sensor_to_vehicle": [[-1, 0, 0], [0, -1, 0], [0, 0, 1]],
+  "orientation_evidence": "user-confirmed mounting and prior six-face identification; horizontal axes not independently verified by vehicle motion",
+  "accel_calibration_file": "mpu6050_six_face_candidate_20261019_164443.json",
+  "accel_calibration_sha256": "7f31e8125ce3abb2a5b0b337effd5cdba7b3b243205b6cc64105c2139d8490d4",
+  "gyro_bias_policy": "estimate from first stationary segment each diagnostic run; validate on separate second segment; never silently reuse old bias",
+  "vehicle_control_enabled": false
+}

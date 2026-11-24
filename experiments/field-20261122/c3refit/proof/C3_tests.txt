@@ -1,0 +1,9 @@
+test_hashes        OK     2 checks
+test_patches       OK     3 checks
+test_key_absent    OK    49 checks  (14232 frames compared)
+test_configs       OK    29 checks
+test_law           OK   381 checks
+test_x_dr          OK     6 checks
+test_terms         OK    11 checks
+test_scope         OK    19 checks
+ALL 8 tests, 500 checks passed

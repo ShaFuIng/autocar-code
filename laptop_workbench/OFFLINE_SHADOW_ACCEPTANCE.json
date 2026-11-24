@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-21",
+  "passed": true,
+  "tests": 11,
+  "scope": "新增離線影子流程；合成影格＋假辨識器，實際路徑算法與PID。未重跑舊套件、未載入V4 GPU、未連Orin。",
+  "hardware_output": false,
+  "version": "workbench-shadow-20261021.1",
+  "notes": [
+    "初次沙箱暫存rename被拒，改用專案內隔離暫存後只重試失敗項目。",
+    "合成影格重複內容被快取正確去重，測試改用不同內容以驗證逐張辨識。",
+    "修正numpy數值在JSON協定邊界的轉換後，只重測受影響案例。"
+  ],
+  "ui": {
+    "passed": true,
+    "checks": [
+      "06選片、三組設定與唯讀PID v37（1360µs）可見",
+      "三組結果同影格、事件跳轉、遮罩疊圖",
+      "假資料評語追加成功",
+      "總覽狀態、版本、待辦、最近驗收已在實際頁面核對"
+    ],
+    "fixture_job": "00000000000000000000000020261021",
+    "screenshot": "data/experiments/v7-pid-integration/offline-shadow-ui.png"
+  },
+  "local_service": {
+    "reloaded": true,
+    "port": 8093,
+    "active_work_before_reload": false,
+    "orin_contacted": false
+  },
+  "source_sha256": {
+    "shadow_offline.py": "fa4639a0e7351a44527d8dd8ac2947513aa4ae1316a057aa379beb0baeffc1ff",
+    "shadow_worker.py": "c77b4b8aa04840a13126f92b15d54a1874014bb6605763e185e426ceacf26dad",
+    "shadow-offline.js": "a5a5d9c91f5665f0f11f2161897a77cbe7d5648ecd2d0d435b13f26983fb30f4",
+    "analysis_jobs.py": "81d871d9a2bcb585c833b9e3b87acb6659e4028fe732017717dd6936d6504247",
+    "analysis.js": "d4daac37b44243dc7764937972416b8d927ebec9ce4b25905c51dac68001fc3b",
+    "server.py": "2645a9de3e7505c031ec519a59e08468ec5bdcd54e681aceeae21e7f01a8c400",
+    "test_shadow_offline.py": "8bd99cc06d4628883cded90b6c74c289969305141721d1d60ec3ea7e902dfa73"
+  }
+}

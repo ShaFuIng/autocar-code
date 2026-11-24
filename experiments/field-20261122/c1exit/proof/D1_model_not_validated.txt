@@ -1,0 +1,28 @@
+simplified closed-loop model (tools/sim.py) against the 34 logged curve-1 passes: NOT validated -> not used for any prediction in this delivery
+logged (A1/A2):  late pk_sent median 315, p90 ~565, >=430: 18% | passes with near >= 0.98: 9% (3/34) | rear-axle y in the curve: min about -10 cm (median), max about +1 | exit swing median 102, p90 ~240, >=200: 12% | e min median -0.07 (p10 -0.2), e max median +0.17 (p90 +0.3) | r(late peak, swing) +0.75
+model 'base' (today's chain), camera sensitivities as listed (b = per cm, c = per deg; straight from ident_straight.py, arc from ident.py):
+
+straight c 0.023, arc c 0.0105 (b straight 0.034, arc 0.022)
+base                               n 120 | in curve: late pk_sent med  417 p90  572 >=430: 49% | near>=0.98 passes 95% | y in -40.0 (p10 -46.1) out +14.4 (p90 +17.7) | cmd sd 206 max jump 114
+                                        | exit 2.5 s: cmd swing med  444 p90  640 >=200: 99% | e min med -0.86 p10 -1.00 | e max med +0.84 p90 +0.99 | y after min -46.1 max +20.6 | r(pk_sent, swing) +0.57 | psi0 med -11.6 sd 8.0
+
+straight c 0.045, arc c 0.0105 (b straight 0.034, arc 0.022)
+base                               n 120 | in curve: late pk_sent med  268 p90  572 >=430: 30% | near>=0.98 passes 93% | y in -40.4 (p10 -46.0) out +12.3 (p90 +16.9) | cmd sd 200 max jump 106
+                                        | exit 2.5 s: cmd swing med  276 p90  380 >=200: 63% | e min med -0.68 p10 -0.86 | e max med +0.40 p90 +0.56 | y after min -44.5 max  +3.4 | r(pk_sent, swing) +0.68 | psi0 med +1.2 sd 9.8
+
+straight c 0.045, arc c 0.020 (b straight 0.034, arc 0.022)
+base                               n 120 | in curve: late pk_sent med  182 p90  239 >=430:  0% | near>=0.98 passes 65% | y in -24.3 (p10 -29.6) out  +7.2 (p90 +10.9) | cmd sd 130 max jump 123
+                                        | exit 2.5 s: cmd swing med   98 p90  186 >=200:  8% | e min med -0.12 p10 -0.17 | e max med +0.21 p90 +0.26 | y after min  -4.1 max  +1.6 | r(pk_sent, swing) +0.25 | psi0 med +3.1 sd 1.7
+
+straight c 0.045, arc c 0.025 (b straight 0.034, arc 0.022)
+base                               n 120 | in curve: late pk_sent med  284 p90  333 >=430:  0% | near>=0.98 passes 62% | y in -19.7 (p10 -25.0) out  +5.6 (p90  +8.7) | cmd sd 111 max jump 128
+                                        | exit 2.5 s: cmd swing med  133 p90  224 >=200: 15% | e min med -0.15 p10 -0.20 | e max med +0.18 p90 +0.28 | y after min  -4.1 max  +3.8 | r(pk_sent, swing) +0.13 | psi0 med +0.4 sd 1.5
+
+straight c 0.045, arc c 0.040 (b straight 0.034, arc 0.022)
+base                               n 120 | in curve: late pk_sent med  417 p90  442 >=430: 20% | near>=0.98 passes 95% | y in -14.8 (p10 -20.3) out  +3.3 (p90  +5.7) | cmd sd 127 max jump 133
+                                        | exit 2.5 s: cmd swing med  106 p90  196 >=200:  9% | e min med -0.10 p10 -0.18 | e max med +0.16 p90 +0.25 | y after min  -9.7 max  +0.3 | r(pk_sent, swing) -0.18 | psi0 med +3.6 sd 1.7
+
+Reading: no parameter set reproduces the car. With the arc heading sensitivity from the arc_lat regression (0.0105 /deg) the model saturates on every entry and swings +-0.7 at the exit;
+with a larger value the exit statistics come close (swing median 98-133, >=200 in 8-15 %) but the entry still saturates in 62-95 % of the passes (car 9 %), the car sits 15-25 cm inside (car ~10) and the
+tie between the late slam and the exit swing is lost (r -0.18..+0.25, car 0.75). The camera's heading sensitivity inside the arc (single-line frames) is the unknown: arc_lat regression 0.0105, gyro-based straight fit 0.022-0.024,
+11-17 geometry model 0.037, single big exits ~0.045 /deg. The model is kept in tools/ for later work only.

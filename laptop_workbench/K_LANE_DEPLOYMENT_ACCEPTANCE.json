@@ -1,0 +1,35 @@
+{
+  "release": "k-shared-lane-test-r1",
+  "algorithm": "junction-k-lane-v3",
+  "date": "2026-10-24",
+  "host": "192.168.0.244",
+  "network": "R18-AIRACE 5GHz",
+  "remote_path": "/home/jetson/orin_interface_v1/releases/k-shared-lane-test-r1",
+  "deployment_scope": "independent offline release; active web unchanged",
+  "archive_sha256": "b9f1ff6479d120b8b39bdd1f6cbc3b40546fcd80962672a145e7e9c21287dcf7",
+  "image_sha256": "71cb50a4b43c7b6df91b96d7b8e6e13f1762da74e274bb799ae50bc29d8bb2fd",
+  "service_before": {
+    "MainPID": 1405,
+    "ActiveEnterTimestamp": "Thu 2026-10-22 21:29:57 CST"
+  },
+  "original_files": {
+    "web/live_pid.py": "e8fac70d415901ee4aa1a507c2f741dbc3b537fc3359ac42c331cf5af9ca18ea",
+    "web/live_model_worker.py": "6a1b6e896b8a8f9788578080d7393e344e3c3ebba303c7ad0ac930ec987569bf"
+  },
+  "control_service_restarted": false,
+  "pid_connected": false,
+  "actuator_commands_sent": false,
+  "container_network": "none",
+  "device_mounts": [],
+  "state": "deployed_offline_verified",
+  "result_sha256": "62970eb13a8dd866a15a30128c00ab31d293a8c13f7026debefbec02b7d1116f",
+  "service_after": {
+    "MainPID": 1405,
+    "ActiveEnterTimestamp": "Thu 2026-10-22 21:29:57 CST"
+  },
+  "original_file_hashes_unchanged": true,
+  "source_manifest_verified": true,
+  "input_hashes_verified": true,
+  "frames": 1760,
+  "comparison_report": "data/experiments/k-lane-deployed/report.json"
+}

@@ -1,0 +1,32 @@
+{
+ "revision": "vehicle-model-r1",
+ "note": "cleanup-20261117. 'use' = overrides read by the modules that are wired to vehicle_model.get(name, own_default); EMPTY = every module keeps its own value (identical behaviour). Read once at import -> a change needs a car-control restart. Wired today: m_per_count (live_pid.py). 'inventory' is documentation only (never read by code): where each car constant lives now and its value there. Measured values: AGENTS.md 11-12..11-17, exit-osc-20261117, inventory-20261117/out/C_multi.tsv.",
+ "use": {},
+ "inventory": {
+  "m_per_count": {"meaning": "rear-encoder metres per count", "values": {
+    "live_pid.py (yaw_inner speed, curve_map speed, upper-edges odometer)": 0.000222,
+    "lap_pos.json m_per_count": 0.000222, "brake_zones.json cm_per_count (cm)": 0.0222,
+    "bottom_guide.py dist() default": 0.000222, "upper_path.py literal": 0.000222, "upper_wide.py COAST_DEFAULTS": 0.000222},
+   "wired": ["live_pid.py"]},
+  "centre_us": {"meaning": "servo command the code treats as 'straight' / zero of the steering offset", "values": {
+    "run parameters center_us (= servo profile rev38, PID document rev149): gyro_hold, heading_hold, upper_single, yaw_inner, gain_schedule, bottom_owner, cmd_comp, curve_ff, crossing_pass, down_straight, lost policy": 1480,
+    "lap_ff.json c_eff_us / arc2.py c_eff_us": 1490,
+    "arc2 straight_us (land / blind / blind_c2) ; bottom_guide 1480 + straight_offset_us 33": 1513,
+    "yaw_inner.py docstring (11-07, old linkage; not used by code)": 1387},
+   "measured": "track straight point 1490-1517 (11-12..11-17, several methods); mat 0.37 m/s 1454", "wired": [], "single_centre": "single-centre-r1 (single_centre.py, switch web/single_centre.json): on = 1490 / 1513 / +33 -> center_us and absolute caps -> center_us + (cap - 1480); the only number is the shared centre (servo profile = PID document center_us)"},
+  "steer_gain": {"meaning": "yaw response per us of command", "values": {
+    "yaw_inner.json gain_dps_per_us / gain_lo@0.35 / gain_hi@0.55 / climb_gain / downhill_gain (dps per us)": [0.073, 0.047, 0.07, 0.048, 0.048],
+    "curve_map.json lock_gain_dps_per_us (lock off)": 0.1,
+    "lap_ff.json / arc2.py gain_table (deg/m per us @ m/s)": [[0.8, 0.192], [0.93, 0.167], [1.06, 0.159], [1.22, 0.15], [1.37, 0.13]],
+    "bottom_guide.json gain_v / gain_deg_m_us": [[0.6, 0.21], [0.9, 0.18], [1.2, 0.16], [1.4, 0.145]]},
+   "measured": "0.16-0.20 deg/m per us (= about 0.14-0.18 dps/us at 0.9 m/s); yaw_inner is 2-2.6 x lower", "wired": []},
+  "delay_s": {"meaning": "command -> heading response delay assumed by a layer", "values": {
+    "cmd_comp.json window_s (designed for ~1 s command->camera)": 1.2, "yaw_inner.py docstring": 0.75,
+    "arc2 land lead_s": 0.25, "upper_turn.json delay_slack (m, not s)": "0.61 + 0.46 v"},
+   "measured": "command -> heading 0.25-0.3 s; scene -> wheels about 0.36 s", "wired": []},
+  "play_us": {"meaning": "steering linkage play", "values": {
+    "play_comp.json right_us / left_us / threshold_us": [55, 55, 15], "PID document backlash_enabled": 0,
+    "lane_segment r12 play (off while play_comp is on)": "centre-estimator offsets"},
+   "measured": "hard play 110-155 us (fit on track runs 110-130; mat 155)", "wired": []}
+ }
+}

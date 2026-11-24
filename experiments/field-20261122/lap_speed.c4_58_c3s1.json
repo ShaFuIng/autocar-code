@@ -1,0 +1,104 @@
+{
+ "revision": "lap-speed-r1",
+ "enabled": true,
+ "rate_pwm_s": 60.0,
+ "err_guard": 0.3,
+ "steer_guard_us": 250.0,
+ "level_deg": 5.0,
+ "carry_s": 0.5,
+ "zones": [
+  {
+   "name": "A main straight 100 (C4e+0.8..6.8; 436d: 100->50 back to <=1.23 m/s in 1.4-1.9 m; curve-1 cap 32 starts C4e+9.1..9.8 -> >=2.3 m of PWM 50 left)",
+   "anchor": "C4e",
+   "from_m": 0.8,
+   "to_m": 7.3,
+   "pwm": 100
+  },
+  {
+   "name": "A diagonal 100 (C1e+0.8..7.5; curve-2 entry cap 30 at C1e+9.8 -> >=2.3 m of PWM 50; V-junction blind window C1e+4.8..7.8 runs at up to 1.44 m/s)",
+   "anchor": "C1e",
+   "from_m": 0.8,
+   "to_m": 8.0,
+   "pwm": 100,
+   "allow_low": true
+  },
+  {
+   "name": "A circle straight 100 (C2e+0.5..4.5; left bend starts C2e+6.8..7.0 -> >=2.3 m of PWM 50; err_guard 0.40 as the 50 zone)",
+   "anchor": "C2e",
+   "from_m": 0.5,
+   "to_m": 5.0,
+   "pwm": 100,
+   "err_guard": 0.4,
+   "allow_low": true
+  },
+  {
+   "name": "A ramp 100 (RAMP+0.3..1.9, allow_climb; the brake zone ramp last metre cap 50 RAMP+1.9..3.6 then pulls it back to 50 on the slope before the crest)",
+   "anchor": "RAMP",
+   "from_m": 0.3,
+   "to_m": 1.9,
+   "pwm": 100,
+   "allow_climb": true
+  },
+  {
+   "name": "c4 back half 58 (LAND8+3.4..9.0 = after the bottom_owner scope / landing window, through C4e (LAND8+7.2..7.6) to the main-straight 100 zone at C4e+0.8; allow_low: CURVE_AHEAD / ERROR_LARGE are the normal state in curve 4; err_guard 0.60, steer guard 300 us)",
+   "anchor": "LAND8",
+   "from_m": 3.4,
+   "to_m": 9.0,
+   "pwm": 58,
+   "allow_low": true,
+   "err_guard": 0.6,
+   "steer_guard_us": 300.0
+  },
+  {
+   "name": "main straight (C4e+0.8 .. +8.0; the curve-1 brake zone DOWN+18.4 = ~C4e+8.5 still caps after it)",
+   "anchor": "C4e",
+   "from_m": 0.8,
+   "to_m": 8.0,
+   "pwm": 50
+  },
+  {
+   "name": "diagonal (C1e+0.8 .. +9.6; the curve-2 entry zone C1e+9.8 still caps; V junction C1e+5..8 runs under arc2 blind)",
+   "anchor": "C1e",
+   "from_m": 0.8,
+   "to_m": 9.6,
+   "pwm": 50
+  },
+  {
+   "name": "circle straight (C2e+0.5 .. +6.3; the crossing cap 45 C2e+0.3..6.7 still applies; left bend at C2e+6.8)",
+   "anchor": "C2e",
+   "from_m": 0.5,
+   "to_m": 6.3,
+   "pwm": 50,
+   "err_guard": 0.4
+  },
+  {
+   "name": "crest (RAMP+2.3 .. +4.4; crest = pitch < 6 at RAMP+2.78..3.23 on 32 climbs 11-18): lift speed_adapt's crest-drop / CLIMBED-level upper_pwm 24 to 27 on the flat crest frames only (allow_upper, no allow_climb: slope frames with pitch > level_deg are blocked, so nothing above 27 is carried into the crest); after route OPEN the lane cap 27 rules anyway",
+   "anchor": "RAMP",
+   "from_m": 2.3,
+   "to_m": 4.4,
+   "pwm": 27,
+   "allow_upper": true
+  },
+  {
+   "name": "c3 front 40 (C3s+0.3..2.0 m; c3front-20261121: camera line R ~2.45 m, driven R ~2.2 m, PWM 32 today; ends 2.8 m before the corner peak C3s+4.84 so speed_adapt is back at 32 by ~C3s+2.3)",
+   "anchor": "C3s",
+   "from_m": 0.3,
+   "to_m": 2.0,
+   "pwm": 40,
+   "allow_low": true,
+   "err_guard": 0.6,
+   "steer_guard_us": 300.0
+  }
+ ],
+ "note": "lap65-20261115 stage C1 (first conservative profile). Per-run read. Rollback: enabled false or delete the file. | 11-16 field: curve-4 zone (DOWN+6.4..10.0 at 42) removed after run 1e69 (exit over-rotation at 1.2-1.35 m/s) and 7af0 lap 4.",
+ "note_c2x": "c2-crossing-20261117: circle-straight zone err_guard 0.30 -> 0.40 (the single-line offset on the circle straight is +0.26..+0.37 on settled exits, 47f2 / 2161; speed_adapt ERROR at 0.25 then cut 45 -> 28). LOW (ERROR_LARGE >= 0.45) still blocks. Back out: delete err_guard in that zone.",
+ "note_speed_next": "speed-next-20261117 step 2: circle straight zone pwm 45 -> 50 (err_guard 0.40 kept). Back out: pwm 45.",
+ "note_throttle_free_C": "throttle-free-20261118 set C: + diagonal zone C1e+0.8..9.6 at 50 (err_guard 0.30). Back out: delete that zone.",
+ "note_crest_blend": "crest-blend-20261118: + crest zone RAMP+2.3..4.4 -> 27 (allow_upper; needs lap_speed.py 7ca5f462 lap-speed-r2). Back out: delete that zone.",
+ "note_pwm_plan_A": "pwm-plan-20261119 A: four PWM-100 zones put first (first matching zone wins; no carry between zones, so leaving a 100 zone drops to the 50 zone / speed_adapt at once). Back out: delete the four zones whose name starts with \"A \".",
+ "note_crossing_nolow_20261120": "field 11-20 (run-6e01): at the V crossing (C1e+6.0..7.3 m, 4/4 laps) the camera error jumps (derr ~1.2) -> speed_adapt ERROR_RATE_LARGE (LOW) -> the 100 zone was blocked: PWM 100 -> 48 -> ramp back -> 50 at the zone end, while the heading is held by arc2 blind HOLD; circle crossing C2e+3.7..4.4 m 2/4 laps. allow_low true on the diagonal and circle 100 zones: a path-caused LOW no longer blocks the zone; |e| > err_guard (0.3 / 0.4) and the steer guard 250 us still block. Back = lap_speed.json 0d518ca2.",
+ "down_rate_pwm_s": 80.0,
+ "note_taper_20261120": "field 11-20: needs lap_speed.py 3ad2272b (taper). When the last raised PWM is above the current zone's target (100 zone -> 50 zone) the PWM steps down at 80 PWM/s (100 -> 50 in ~0.63 s, ~0.9 m) instead of dropping at once; blocked frames still drop at once. Delete the key = no taper. Back = lap_speed.json b548e211.",
+ "note_ext05_20261120": "field 11-20 (run-ca35): the car is already at ~1.1 m/s 1 m before curve 1 and enters at 0.97 = the in-curve speed. 100 zones extended by 0.5 m (C4e 6.8 -> 7.3, C1e 7.5 -> 8.0, C2e 4.5 -> 5.0); no brake zone, the taper (80 PWM/s) does the hand-over. Back = lap_speed.json 82d0ea2b.",
+ "note_merged_20261121": "merged by straightfast/tools/mkmerge.py from the car lap_speed.json 77ffbe32: c4fast step58 + c3front s1. Back = 77ffbe32."
+}

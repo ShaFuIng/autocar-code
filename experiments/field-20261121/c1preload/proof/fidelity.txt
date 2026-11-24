@@ -1,0 +1,5 @@
+fidelity of the replay (off side) against the car log, frames matched by proposal.t; synthetic IMU (no 50 Hz IMU log is used)
+9934: replay frames 5660, matched 5601 | |steer_us diff| median 1.92 P95 32.9 max 551 us, <=1 us on 37.4% | error identical 95.3% | I diff median 0.00 us | pwm identical 75.5%
+9284: replay frames 5975, matched 5931 | |steer_us diff| median 1.74 P95 28.8 max 561 us, <=1 us on 38.9% | error identical 93.3% | I diff median 0.00 us | pwm identical 76.2%
+69a8: replay frames 240, matched 221 | |steer_us diff| median 1.23 P95 9.0 max 40 us, <=1 us on 46.2% | error identical 74.2% | I diff median 0.12 us | pwm identical 59.3%
+bab2: replay frames 2958, matched 2928 | |steer_us diff| median 1.89 P95 47.3 max 483 us, <=1 us on 38.0% | error identical 90.5% | I diff median 0.03 us | pwm identical 76.2%

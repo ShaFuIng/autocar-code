@@ -1,0 +1,21 @@
+{
+ "enabled": true,
+ "zones": [
+  "xp2"
+ ],
+ "zone_start_m": 0.4,
+ "zone_end_m": 4.5,
+ "zone_min_turned_deg": 100.0,
+ "kink_deg": 15.0,
+ "base_cm": 12.0,
+ "seg_cm": 12.0,
+ "dir_deg": 15.0,
+ "gz_max_dps": 30.0,
+ "ref_max_s": 1.5,
+ "min_span_cm": 12.0,
+ "z_min_cm": 30.0,
+ "z_max_cm": 140.0,
+ "dir_rule": true,
+ "kink_rule": true,
+ "note": "crossing-source-r2 (offline candidate 2026-11-14). enabled: worker applies the two rules on frames whose request carries zone in zones, and live_pid (crossing-source-zone-r1) sends zone xp2 from zone_start_m to zone_end_m after the curve-2 CURVE_END (turned >= zone_min_turned_deg) until the next curve FLOOR. The worker reads this file at each model load (JunctionLine.set_row); live_pid reads it at each run start. enabled false = no zone field in requests and worker untouched."
+}

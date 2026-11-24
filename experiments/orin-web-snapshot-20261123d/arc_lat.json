@@ -1,0 +1,37 @@
+{
+ "revision": "arc-lat-r2",
+ "enabled": true,
+ "note": "arc-lat-r2 (arc-lat2-20261119, offline candidate): zones with \"law\": \"r2\" use the r2 law (feed-forward gain per curve ff_us_per_dpm, heading-target cascade kpsi2 10 us/deg x k_yp 0.8 deg/cm, integral 3 us/(cm s) only near the target and faded out at the curve exit, outer guard out_min_cm 0 = stop pushing out when the outer wheel is predicted (0.3 s) to reach the outer line inner edge; c3 inner guard in_min_cm 2 = stop pushing in when the right rear wheel is predicted within 2 cm of the inner line). control false + law r2 = log only with proposal.arc_lat.u_shadow. Needs the arc-lat2 arc_lat.py (r2). Delete this file = off. Read once per run.",
+ "zones": {
+  "c1": {
+   "enabled": true,
+   "law": "r2",
+   "ff_us_per_dpm": 4.4,
+   "y_target_cm": 0.0,
+   "out_min_cm": 0.0,
+   "control": false
+  },
+  "c2": {
+   "enabled": true,
+   "control": false
+  },
+  "c3": {
+   "enabled": true,
+   "law": "r2",
+   "ff_us_per_dpm": 4.3,
+   "y_target_cm": 1.0,
+   "in_min_cm": 2.0,
+   "out_min_cm": 0.0,
+   "control": false
+  },
+  "c4": {
+   "enabled": true,
+   "law": "r2",
+   "ff_us_per_dpm": 4.1,
+   "y_target_cm": 0.0,
+   "out_min_cm": 0.0,
+   "control": false
+  }
+ },
+ "note_field": "11-19 evening: all four curves log-only (user: back to the stable inner-line version; arc_lat kept as a ruler). c1/c3/c4 r2 shadow, c2 r1 log."
+}

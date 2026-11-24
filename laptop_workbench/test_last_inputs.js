@@ -1,0 +1,16 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+function setup(){
+ const data=new Map(),elements={};let writes=0;
+ const ctx={window:{},localStorage:{getItem:k=>data.get(k)??null,setItem:(k,v)=>{data.set(k,v);writes++;}},document:{querySelector:s=>elements[s.slice(1)]}};
+ vm.runInNewContext(fs.readFileSync(__dirname+'/last-inputs.js','utf8'),ctx);
+ function element(id,type='text',value=''){const handlers={};return elements[id]={id,type,value,checked:false,tagName:'INPUT',min:'',max:'',dataset:{},addEventListener:(n,f)=>(handlers[n]??=new Set()).add(f),removeEventListener:(n,f)=>handlers[n]?.delete(f),emit:n=>{for(const f of handlers[n]||[])f();}};}
+ return {api:ctx.window.LastInputs,element,data,ctx,writes:()=>writes};
+}
+test('last edit survives replacement, including empty and false',()=>{const s=setup();let e=s.element('n');s.api.bind('a',['n']);e.value='17';e.emit('input');e=s.element('n');s.api.bind('a',['n']);assert.equal(e.value,'17');e.value='';e.emit('change');e=s.element('n');s.api.bind('a',['n']);assert.equal(e.value,'');const c=s.element('c','checkbox');s.api.bind('a',['c']);c.emit('change');c.checked=true;s.api.restore(c,s.api.read('a').c);assert.equal(c.checked,false);});
+test('job scopes do not overwrite each other',()=>{const s=setup(),e=s.element('n');s.api.put('a',{n:'4'});s.api.put('b',{n:'9'});s.api.bind('a',['n']);assert.equal(e.value,'4');s.api.bind('b',['n']);assert.equal(e.value,'9');e.value='8';e.emit('input');assert.equal(s.api.read('a').n,'4');assert.equal(s.api.read('b').n,'8');});
+test('restoration emits no action and does not save defaults',()=>{const s=setup(),e=s.element('n');let calls=0;e.addEventListener('change',()=>calls++);e.addEventListener('input',()=>calls++);s.api.put('a',{n:'7'});const before=s.writes();s.api.bind('a',['n']);assert.equal(calls,0);assert.equal(s.writes(),before);});
+test('invalid and unavailable values rejected',()=>{const s=setup(),e=s.element('n','number','2');e.min='1';e.max='10';assert.equal(s.api.restore(e,'99'),false);assert.equal(s.api.restore(e,'NaN'),false);const sel=s.element('sel');sel.tagName='SELECT';sel.options=[{value:'new',disabled:false}];assert.equal(s.api.restore(sel,'removed'),false);});
+test('confirmations and file/password never restored',()=>{const s=setup();for(const id of ['livePIDClear','livePIDPose','areaClear','wheelsRaised','groundClear','trialRecordOnly']){const e=s.element(id,'checkbox');assert.equal(s.api.restore(e,true),false);assert.equal(e.checked,false);}for(const type of ['password','file'])assert.equal(s.api.restore(s.element(type,type),'secret'),false);});
+test('rebind same mounted field does not overwrite editing or duplicate listeners',()=>{const s=setup(),e=s.element('n');s.api.put('a',{n:'1'});s.api.bind('a',['n']);e.value='2';s.api.bind('a',['n']);assert.equal(e.value,'2');const before=s.writes();e.emit('input');assert.equal(s.writes(),before+1);});
+test('broken storage does not break form',()=>{const s=setup();s.data.set('wb-last-inputs-v1:a','broken');s.api.bind('a',[s.element('n')]);s.ctx.localStorage.setItem=()=>{throw Error('quota');};assert.equal(s.api.put('a',{n:'3'}),false);});

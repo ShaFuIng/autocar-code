@@ -1,0 +1,139 @@
+{
+ "enabled": true,
+ "cm_per_count": 0.0222,
+ "first_curve_min_m": 3.0,
+ "first_curve_err": 0.0,
+ "slope_end_pitch_deg": -8.0,
+ "slope_end_level_deg": -5.0,
+ "zones": [
+  {
+   "name": "curve 1 on lap 1 (FLOOR 0.8-3.1 m after the start)",
+   "anchor": "start",
+   "from_m": 0.0,
+   "to_m": 3.5,
+   "cap_pwm": 28
+  },
+  {
+   "name": "curve 1 after the slope (FLOOR 17.8-17.9 m after slope_end on 5 of 7 laps, 2026-11-10); speed-plan: from_m 14.5 -> 16.0 (FLOOR at slope_end +18.08..18.72 on 9 laps 11-14; 50->28 coast reaches 0.90-0.95 m/s in 1.6-2.3 m)",
+   "anchor": "slope_end",
+   "from_m": 16.8,
+   "to_m": 18.5,
+   "cap_pwm": 32,
+   "lap_anchor": "DOWN",
+   "lap_from_m": 19.2,
+   "lap_to_m": 20.9
+  },
+  {
+   "name": "curve 2 on lap 1 (FLOOR 17.75-18.0 m after the start on 5 runs, 2026-11-11 2099 entered at 1.55 m/s and ran wide)",
+   "anchor": "start",
+   "from_m": 14.0,
+   "to_m": 18.5,
+   "cap_pwm": 30
+  },
+  {
+   "name": "slope bottom -> curve 4: keep today's PWM <= 28 (curve 4 FLOOR at slope_end +2.4..3.1 m); speed-plan stage 2",
+   "anchor": "slope_end",
+   "from_m": 0.0,
+   "to_m": 1.5,
+   "cap_pwm": 28,
+   "lap_anchor": "DOWN",
+   "lap_from_m": 2.3,
+   "lap_to_m": 3.8
+  },
+  {
+   "name": "circle-crossing guard after curve 2 (crossing seg starts slope_end +40.3..41.7 m, ends +43.9..44.9 m); speed-plan stage 2, remove only after the crossing re-anchoring is on the car",
+   "anchor": "slope_end",
+   "from_m": 38.5,
+   "to_m": 44.5,
+   "cap_pwm": 50,
+   "lap_anchor": "C2e",
+   "lap_from_m": 0.3,
+   "lap_to_m": 6.7
+  },
+  {
+   "name": "circle-crossing guard lap 1 (crossing seg starts 25.8..26.1 m after the start, ends 29.2..29.5 m)",
+   "anchor": "start",
+   "from_m": 23.5,
+   "to_m": 29.5,
+   "cap_pwm": 50
+  },
+  {
+   "name": "crest: back to PWM 21 before the downhill (DASHe +1.8 m .. past DOWN; DASHe->DOWN is 2.9-3.4 m), so the slope is entered at the 11-14 speed while the upper straight runs faster",
+   "anchor": "slope_end",
+   "from_m": 62.7,
+   "to_m": 66.0,
+   "cap_pwm": 24,
+   "lap_anchor": "DASHe",
+   "lap_from_m": 1.5,
+   "lap_to_m": 3.9,
+   "lap_max_since_m": 4.5
+  },
+  {
+   "name": "crest lap 1 fallback (DASHe +1.8 m is about 48.9 m after the start, DOWN about 50.5 m)",
+   "anchor": "start",
+   "from_m": 48.0,
+   "to_m": 51.2,
+   "cap_pwm": 24
+  },
+  {
+   "name": "pre-turn: back to PWM 21 before the dashed left turn (TOP +1.5 m .. DASHs; TOP->DASHs is 2.9-3.4 m). d077 2026-11-14: entered the turn at 0.94-0.98 m/s with pre-turn PWM 27 and ended 13-18 deg short of the dashed line",
+   "anchor": "slope_end",
+   "from_m": 59.5,
+   "to_m": 62.0,
+   "cap_pwm": 27,
+   "lap_anchor": "TOP",
+   "lap_from_m": 1.5,
+   "lap_to_m": 3.6,
+   "lap_max_since_m": 4.0
+  },
+  {
+   "name": "pre-turn lap 1 fallback (TOP +1.5 m is about 44.8 m after the start, DASHs about 46.3 m)",
+   "anchor": "start",
+   "from_m": 44.6,
+   "to_m": 47.0,
+   "cap_pwm": 27
+  },
+  {
+   "name": "curve 2 entry (11-16 field): cap 30 from C1e+9.8 m to C1e+12.3 m; laps 2+ entered curve 2 at PWM 50 / 1.15-1.27 m/s and slammed to 2048 at the entry (e904 lap 2 pressed the inner line)",
+   "lap_anchor": "C1e",
+   "lap_from_m": 9.8,
+   "lap_to_m": 12.3,
+   "anchor": "start",
+   "from_m": 999.0,
+   "to_m": 999.5,
+   "cap_pwm": 30
+  },
+  {
+   "name": "ramp last metre cap 40 (RAMP+1.9 .. +3.6; crest = pitch < 6 at RAMP+2.78..3.23): the slope before the crest runs at 40 instead of the STABLE 50 push now that the crest midpoint is no longer SPECIAL; on the flat crest the PWM is 24-27 anyway. lap-anchored only (the fallback piece below never matches)",
+   "lap_anchor": "RAMP",
+   "lap_from_m": 1.9,
+   "lap_to_m": 3.6,
+   "anchor": "start",
+   "from_m": 999.0,
+   "to_m": 999.5,
+   "cap_pwm": 40
+  },
+  {
+   "name": "curve 3 entry (11-19 field, run 8545): after the left bend (ends ~C2e+8.2) the PWM rose 28 -> 47-50 for ~1 m and dropped back to 28 at the first curve-3 bend (starts ~0.85 m before C3s, error 0.1 -> 0.85, sent 1935, gz -60..-67). Cap 30 from C2e+8.4 to +10.8. lap-anchored only",
+   "lap_anchor": "C2e",
+   "lap_from_m": 8.4,
+   "lap_to_m": 10.8,
+   "anchor": "start",
+   "from_m": 999.0,
+   "to_m": 999.5,
+   "cap_pwm": 30
+  }
+ ],
+ "note": "2026-11-10 17:1x user: curve 1 entry at PWM 35-50 overshot (gz -74); old 11-06 zones (first_curve anchor, bottom cap 18) removed, copy in backups",
+ "note_speed_plan": "speed-plan-20261114 stage 2 (offline plan, not deployed when written)",
+ "lap_zones": true,
+ "lap_margin_m": 5.0,
+ "note_lap_zones": "verify-20261114 offline candidate brake-zones-r2 (needs brake_zones.py r2 + speed_policy.py from verify-20261114/candidate/set and lap_pos.json enabled). lap_zones true: zones with lap_anchor are measured from the last lap_pos crossing of that landmark (lap_from_m..lap_to_m); lap_pos lost / disabled / crossing older than lap_to_m + lap_margin_m -> the zone's anchor/from_m/to_m (fallback). Offsets = today's per-lap medians of the current slope_end zones re-expressed from the DOWN / C2e crossings (6d63 1db9 ac4f 51a0 40e9 a747, 19-22 laps): curve-1 zone start scatter sd 0.20 -> 0.11 m, bottom cap 0.21 -> 0.14 m, crossing guard 0.37 -> 0.27 m (crossing guard lap_from_m 0.3 instead of the median-matched 0.68: starts at the C2e decision, avoids a 1-3 frame gap after the fallback piece). lap_zones false or key absent = r1 behaviour.",
+ "fallback_max_pitch_deg": 4.0,
+ "note_arc2": "arc2-20261116 E(i): zones measured from an odometer anchor (fallback / start-anchored) do not cap while pitch_rel > 4 deg (f70e lap 1: 'pre-turn lap 1 fallback' cap 21 on the ramp, 0.26 m/s for 5 s). lap-measured zones unchanged.",
+ "note_speed_next": "speed-next-20261117 step 2: the two circle-crossing guard zones cap 45 -> 50 (= no cap below the speed_adapt maximum; kept so the back-out is one number each). Back out: cap_pwm 45 in both.",
+ "note_20261117_speed3": "2026-11-17 field (user): curve-1 brake zone starts 0.8 m later and caps 32 (= curve-1 PWM; was 18.4/16.0 m, 28); slope-bottom cap zone ends DOWN+4.8 m / slope_end+2.5 m (was 6.3 / 4.0).",
+ "note_20261118_landing": "prepared offline 2026-11-17 night (NOT on the car yet): slope-bottom cap zone ends DOWN+3.8 m / slope_end+1.5 m (was 4.8 / 2.5) = about LAND8+1.6 m.",
+ "note_crest_blend": "crest-blend-20261118: + ramp last metre cap 40 (RAMP+1.9..3.6, lap-anchored). Back out: delete that zone.",
+ "note_c3_entry": "11-19: + curve-3 entry cap 30 (C2e+8.4..10.8). Back out: delete that zone."
+}

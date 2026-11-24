@@ -1,0 +1,8 @@
+真正影格中斷（>0.15 s 或跳號>4）: 0
+WARMUP 格: 244 ；起跑首格以外: 152
+ WARMUP 前一格原因: Counter({'PID_HOLD': 112, None: 92, 'UPPER_SINGLE_HOLD': 23, 'LOST_HEADING': 7, 'DOWNHILL_HOLD': 5, 'LOST_TURN': 5})
+ WARMUP 路段(lseg): Counter({'downhill': 103, 'upper_straight': 28, 'curve3': 8, 'curve4': 7, 'dashed_turn': 3, 'ramp': 2, 'curve2': 1})
+失線列 >=0.2 s 或接 WARMUP: 188
+ 依路段: Counter({'downhill': 116, 'upper_straight': 45, 'curve3': 14, 'curve4': 7, 'dashed_turn': 3, 'ramp': 2, 'curve2': 1})
+ 接 WARMUP 的: 152  依路段: Counter({'downhill': 103, 'upper_straight': 28, 'curve3': 8, 'curve4': 7, 'dashed_turn': 3, 'ramp': 2, 'curve2': 1})
+ 結束輪次的(END): [('54cb', 'downhill', 2.992), ('69d9', 'curve3', 0.785)]

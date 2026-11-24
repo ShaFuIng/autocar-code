@@ -1,0 +1,75 @@
+d60e: v(mcu) - v(logged): median +0.018 mean -0.004 p10 -0.007 p90 +0.054 m/s (n 2076)
+   base detector vs logged reversal flags: 0 frames differ
+ccf1: v(mcu) - v(logged): median +0.017 mean -0.007 p10 -0.090 p90 +0.057 m/s (n 2624)
+   base detector vs logged reversal flags: 0 frames differ
+6f61: v(mcu) - v(logged): median +0.019 mean -0.006 p10 -0.032 p90 +0.057 m/s (n 2630)
+   base detector vs logged reversal flags: 0 frames differ
+c6f3: v(mcu) - v(logged): median +0.019 mean -0.006 p10 -0.029 p90 +0.056 m/s (n 1739)
+   base detector vs logged reversal flags: 0 frames differ
+7658: v(mcu) - v(logged): median +0.017 mean -0.005 p10 -0.031 p90 +0.058 m/s (n 1289)
+   base detector vs logged reversal flags: 0 frames differ
+2728: v(mcu) - v(logged): median +0.019 mean -0.005 p10 -0.032 p90 +0.058 m/s (n 1665)
+   base detector vs logged reversal flags: 0 frames differ
+9af6: v(mcu) - v(logged): median +0.020 mean -0.006 p10 -0.031 p90 +0.057 m/s (n 2738)
+   base detector vs logged reversal flags: 0 frames differ
+e69d: v(mcu) - v(logged): median +0.019 mean -0.006 p10 -0.018 p90 +0.057 m/s (n 2920)
+   base detector vs logged reversal flags: 0 frames differ
+54cb: v(mcu) - v(logged): median +0.018 mean -0.005 p10 -0.024 p90 +0.057 m/s (n 1587)
+   base detector vs logged reversal flags: 0 frames differ
+
+all runs given (open loop):
+  c1      base   flips/s  2.18  sent|d| p50   8.9 p95  123.8  pre|d| p95   33.1
+  c1      mcu    flips/s  2.18  sent|d| p50   8.9 p95  123.8  pre|d| p95   33.1
+  c1      vref108 flips/s  2.18  sent|d| p50   8.9 p95  123.8  pre|d| p95   33.1
+  c1      ou     flips/s  1.57  sent|d| p50   7.2 p95  115.6  pre|d| p95   31.4
+  c1      mcu_ou flips/s  1.57  sent|d| p50   7.2 p95  115.6  pre|d| p95   31.4
+  c2      base   flips/s  5.74  sent|d| p50  14.5 p95  152.7  pre|d| p95   59.6
+  c2      mcu    flips/s  5.23  sent|d| p50  11.6 p95  143.4  pre|d| p95   45.3  recomputed  3391  shift mean   -1.7 p05  -52.1 p95   +9.2
+  c2      vref108 flips/s  5.26  sent|d| p50  11.6 p95  143.4  pre|d| p95   45.5  recomputed  3391  shift mean   +5.2 p05  -41.7 p95  +21.6
+  c2      ou     flips/s  4.17  sent|d| p50   7.3 p95  132.8  pre|d| p95   33.6
+  c2      mcu_ou flips/s  3.73  sent|d| p50   6.3 p95  127.0  pre|d| p95   28.4  recomputed  3391  shift mean   -1.7 p05  -52.1 p95   +9.2
+  c3tail  base   flips/s  2.86  sent|d| p50   9.0 p95  134.1  pre|d| p95   65.7
+  c3tail  mcu    flips/s  2.85  sent|d| p50   9.0 p95  134.0  pre|d| p95   65.7
+  c3tail  vref108 flips/s  2.86  sent|d| p50   9.0 p95  134.1  pre|d| p95   65.7
+  c3tail  ou     flips/s  2.07  sent|d| p50   8.8 p95  120.5  pre|d| p95   53.3
+  c3tail  mcu_ou flips/s  2.08  sent|d| p50   8.8 p95  120.5  pre|d| p95   53.3
+  c3x     base   flips/s  2.32  sent|d| p50   8.4 p95  127.1  pre|d| p95   35.8
+  c3x     mcu    flips/s  1.73  sent|d| p50   7.7 p95  119.8  pre|d| p95   35.3  recomputed  1213  shift mean   -0.3 p05   -8.6 p95   +1.8
+  c3x     vref108 flips/s  2.32  sent|d| p50   8.4 p95  127.1  pre|d| p95   35.8
+  c3x     ou     flips/s  1.40  sent|d| p50   6.7 p95  113.1  pre|d| p95   30.0
+  c3x     mcu_ou flips/s  1.28  sent|d| p50   6.4 p95   79.9  pre|d| p95   29.5  recomputed  1213  shift mean   -0.3 p05   -8.6 p95   +1.8
+  c4win   base   flips/s  5.26  sent|d| p50   9.6 p95  139.0  pre|d| p95   32.4
+  c4win   mcu    flips/s  4.18  sent|d| p50   7.9 p95  134.9  pre|d| p95   28.7  recomputed  1685  shift mean   +0.4 p05  -23.6 p95   +9.0
+  c4win   vref108 flips/s  5.26  sent|d| p50   9.6 p95  139.0  pre|d| p95   32.4
+  c4win   ou     flips/s  3.40  sent|d| p50   5.2 p95  123.1  pre|d| p95   20.5
+  c4win   mcu_ou flips/s  2.70  sent|d| p50   4.6 p95  120.6  pre|d| p95   18.7  recomputed  1685  shift mean   +0.4 p05  -23.6 p95   +9.0
+  circle  base   flips/s  2.32  sent|d| p50   5.5 p95  121.2  pre|d| p95   19.1
+  circle  mcu    flips/s  2.32  sent|d| p50   5.5 p95  121.2  pre|d| p95   19.1
+  circle  vref108 flips/s  2.32  sent|d| p50   5.5 p95  121.1  pre|d| p95   19.1
+  circle  ou     flips/s  1.99  sent|d| p50   4.0 p95  116.1  pre|d| p95   13.7
+  circle  mcu_ou flips/s  1.99  sent|d| p50   4.0 p95  116.0  pre|d| p95   13.7
+  diag    base   flips/s  2.40  sent|d| p50   4.9 p95  123.7  pre|d| p95   21.9
+  diag    mcu    flips/s  2.40  sent|d| p50   4.9 p95  123.7  pre|d| p95   21.9
+  diag    vref108 flips/s  2.40  sent|d| p50   4.9 p95  123.7  pre|d| p95   21.9
+  diag    ou     flips/s  2.00  sent|d| p50   3.4 p95  115.9  pre|d| p95   15.8
+  diag    mcu_ou flips/s  2.00  sent|d| p50   3.4 p95  115.9  pre|d| p95   15.8
+  land    base   flips/s  5.62  sent|d| p50  13.1 p95  159.3  pre|d| p95   60.0
+  land    mcu    flips/s  5.62  sent|d| p50  13.1 p95  159.3  pre|d| p95   60.0
+  land    vref108 flips/s  5.62  sent|d| p50  13.1 p95  159.3  pre|d| p95   60.0
+  land    ou     flips/s  3.14  sent|d| p50   9.4 p95  128.2  pre|d| p95   36.7
+  land    mcu_ou flips/s  3.14  sent|d| p50   9.4 p95  128.2  pre|d| p95   36.7
+  main    base   flips/s  2.00  sent|d| p50   4.3 p95  118.0  pre|d| p95   18.0
+  main    mcu    flips/s  2.00  sent|d| p50   4.3 p95  118.0  pre|d| p95   18.0
+  main    vref108 flips/s  2.00  sent|d| p50   4.3 p95  118.0  pre|d| p95   18.0
+  main    ou     flips/s  1.65  sent|d| p50   2.9 p95  113.6  pre|d| p95   13.7
+  main    mcu_ou flips/s  1.65  sent|d| p50   2.9 p95  113.6  pre|d| p95   13.7
+  ramp    base   flips/s  2.95  sent|d| p50  11.4 p95  129.3  pre|d| p95   47.5
+  ramp    mcu    flips/s  2.95  sent|d| p50  11.4 p95  129.3  pre|d| p95   47.5
+  ramp    vref108 flips/s  2.95  sent|d| p50  11.4 p95  129.3  pre|d| p95   47.5
+  ramp    ou     flips/s  2.35  sent|d| p50   9.5 p95  120.2  pre|d| p95   40.7
+  ramp    mcu_ou flips/s  2.35  sent|d| p50   9.5 p95  120.2  pre|d| p95   40.7
+  upper   base   flips/s  1.05  sent|d| p50   5.0 p95   36.7  pre|d| p95   18.8
+  upper   mcu    flips/s  1.05  sent|d| p50   5.0 p95   36.7  pre|d| p95   18.8
+  upper   vref108 flips/s  1.05  sent|d| p50   5.0 p95   36.7  pre|d| p95   18.8
+  upper   ou     flips/s  0.95  sent|d| p50   3.6 p95   29.4  pre|d| p95   18.1
+  upper   mcu_ou flips/s  0.95  sent|d| p50   3.6 p95   29.4  pre|d| p95   18.1

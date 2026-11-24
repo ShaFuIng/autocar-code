@@ -1,0 +1,69 @@
+open-loop replay, curve 2 exit (runs c6f3 / 6f61 = driven with the base lap_ff.json 052be3dc). The first curve-2 pass of each run is not evaluated (replay IMU heading, see tools/README.txt).
+
+===== c2_step1_tail10 (car program) =====
+
+c6f3  tag c2s1  frames 5883
+  lap | band END tb old -> new (x_m old -> new, why) | pre median by band tb (old band tb): 170-180  180-190  190-200  200-210 old | new | first 1.5 s after C2e: pre min/max old -> new
+    1 | 1804.0 -> 1804.0 (0.58 -> 0.58, ANGLE -> ANGLE) | +nan +nan +nan +nan | +nan +nan +nan +nan |  -50/+104 ->  -50/+104
+    2 | 198.3 -> 207.1 (5.13 -> 6.71, ANGLE -> MAX_M) | +212 +145  +15  +10 | +211 +192  +56   +3 |  -21/ +70 ->   +0/ +73
+    3 | 201.6 -> 210.9 (5.41 -> 6.22, ANGLE -> ANGLE) | +216 +142  +14  +58 | +215 +216  +93  +22 |  -27/ +95 ->  -27/+105
+    4 | 198.8 -> 209.1 (5.56 -> 6.56, ANGLE -> MAX_M) | +244 +172  +40   +9 | +257 +202  +99   +9 |  -20/ +79 ->  -20/ +38
+  frames with a different sent command: 177 of 5883; outside the c2 windows (-6.0 s .. +3.0 s around C2e): 0; frames with a different throttle: 0
+
+6f61  tag c2s1  frames 8784
+  lap | band END tb old -> new (x_m old -> new, why) | pre median by band tb (old band tb): 170-180  180-190  190-200  200-210 old | new | first 1.5 s after C2e: pre min/max old -> new
+    1 | 1483.5 -> 1483.5 (0.57 -> 0.57, ANGLE -> ANGLE) | +nan +nan +nan +nan | +nan +nan +nan +nan |  -29/ +86 ->  -29/ +86
+    2 | 199.7 -> 210.8 (5.54 -> 6.54, MAX_M -> MAX_M) | +187 +105  +33  +66 | +186 +187 +106  +25 |  -21/ +80 ->  -21/ +49
+    3 | 199.8 -> 209.7 (5.53 -> 6.58, MAX_M -> MAX_M) | +196  +97  +36  +12 | +196 +193 +104   +8 |  -30/+108 ->  -10/+113
+    4 | 195.8 -> 208.9 (5.54 -> 6.54, MAX_M -> MAX_M) | +201 +204  +76  +12 | +200 +205 +134  +10 |  -45/ +61 ->  -45/ +39
+    5 | 200.8 -> 210.5 (5.56 -> 6.58, MAX_M -> MAX_M) | +221 +165  +35  +19 | +220 +214 +112   +8 |  -22/ +72 ->  -10/+136
+    6 | 198.7 -> 208.0 (5.61 -> 6.47, MAX_M -> MAX_M) | +194 +114  +40  +17 | +193 +185 +126  +17 |   -3/ +92 ->   -3/+189
+  frames with a different sent command: 302 of 8784; outside the c2 windows (-6.0 s .. +3.0 s around C2e): 0; frames with a different throttle: 0
+
+TOTAL (runs driven with the base lap_ff.json 052be3dc: c6f3, 6f61) frames 14667, changed outside the windows 0
+
+===== c2_step2_exit_hold (candidate lap_ff.py) =====
+
+c6f3  tag c2s2  frames 5883
+  lap | band END tb old -> new (x_m old -> new, why) | pre median by band tb (old band tb): 170-180  180-190  190-200  200-210 old | new | first 1.5 s after C2e: pre min/max old -> new
+    1 | 1804.0 -> 1804.0 (0.58 -> 0.58, ANGLE -> ANGLE) | +nan +nan +nan +nan | +nan +nan +nan +nan |  -50/+104 ->  -50/+104
+    2 | 198.3 -> 207.1 (5.13 -> 6.71, ANGLE -> MAX_M) | +212 +145  +15  +10 | +198 +184  +47   +1 |  -21/ +70 ->  -96/ +52
+    3 | 201.6 -> 212.1 (5.41 -> 6.98, ANGLE -> MAX_M) | +216 +142  +14  +58 | +183 +174  +89  -25 |  -27/ +95 -> -114/+103
+    4 | 198.8 -> 209.2 (5.56 -> 6.77, ANGLE -> MAX_M) | +244 +172  +40   +9 | +205 +182  +91   +4 |  -20/ +79 ->  -48/ +33
+  frames with a different sent command: 463 of 5883; outside the c2 windows (-6.0 s .. +3.0 s around C2e): 0; frames with a different throttle: 0
+
+6f61  tag c2s2  frames 8784
+  lap | band END tb old -> new (x_m old -> new, why) | pre median by band tb (old band tb): 170-180  180-190  190-200  200-210 old | new | first 1.5 s after C2e: pre min/max old -> new
+    1 | 1483.5 -> 1483.5 (0.57 -> 0.57, ANGLE -> ANGLE) | +nan +nan +nan +nan | +nan +nan +nan +nan |  -29/ +86 ->  -29/ +86
+    2 | 199.7 -> 212.9 (5.54 -> 6.75, MAX_M -> MAX_M) | +187 +105  +33  +66 | +189 +177  +99   +2 |  -21/ +80 ->  -38/ +46
+    3 | 199.8 -> 208.6 (5.53 -> 6.83, MAX_M -> MAX_M) | +196  +97  +36  +12 | +197 +189  +98   +1 |  -30/+108 ->  -70/ +86
+    4 | 195.8 -> 207.9 (5.54 -> 6.74, MAX_M -> MAX_M) | +201 +204  +76  +12 | +199 +178 +129  +10 |  -45/ +61 ->  -68/ +36
+    5 | 200.8 -> 209.6 (5.56 -> 6.82, MAX_M -> MAX_M) | +221 +165  +35  +19 | +194 +185 +107   -1 |  -22/ +72 ->  -77/+131
+    6 | 198.7 -> 209.3 (5.61 -> 6.99, MAX_M -> MAX_M) | +194 +114  +40  +17 | +189 +180 +115   +5 |   -3/ +92 ->  -43/+146
+  frames with a different sent command: 780 of 8784; outside the c2 windows (-6.0 s .. +3.0 s around C2e): 0; frames with a different throttle: 0
+
+TOTAL (runs driven with the base lap_ff.json 052be3dc: c6f3, 6f61) frames 14667, changed outside the windows 0
+
+===== i_ramp_c2e (car program + on/i_ramp_c2e/i_ramp.json; the integral differs for the rest of the lap in an open-loop replay, so the frames outside the window differ too) =====
+
+c6f3  tag c2i  frames 5883
+  lap | band END tb old -> new (x_m old -> new, why) | pre median by band tb (old band tb): 170-180  180-190  190-200  200-210 old | new | first 1.5 s after C2e: pre min/max old -> new
+    1 | 1804.0 -> 1804.0 (0.58 -> 0.58, ANGLE -> ANGLE) | +nan +nan +nan +nan | +nan +nan +nan +nan |  -50/+104 ->  -93/+104
+    2 | 198.3 -> 198.3 (5.13 -> 5.13, ANGLE -> ANGLE) | +212 +145  +15  +10 | +212 +145  +13  -19 |  -21/ +70 ->  -64/ +39
+    3 | 201.6 -> 201.6 (5.41 -> 5.41, ANGLE -> ANGLE) | +216 +142  +14  +58 | +216 +142  +14  +24 |  -27/ +95 ->  -70/ +81
+    4 | 198.8 -> 198.8 (5.56 -> 5.56, ANGLE -> ANGLE) | +244 +172  +40   +9 | +244 +172  +40  -28 |  -20/ +79 ->  -61/ +79
+  frames with a different sent command: 1021 of 5883; outside the c2 windows (-6.0 s .. +3.0 s around C2e): 771; frames with a different throttle: 0
+    outside-window differences: 3.1 .. 13.1 s after the nearest earlier C2e; |difference| median 31.9 max 198.4 us
+
+6f61  tag c2i  frames 8784
+  lap | band END tb old -> new (x_m old -> new, why) | pre median by band tb (old band tb): 170-180  180-190  190-200  200-210 old | new | first 1.5 s after C2e: pre min/max old -> new
+    1 | 1483.5 -> 1483.5 (0.57 -> 0.57, ANGLE -> ANGLE) | +nan +nan +nan +nan | +nan +nan +nan +nan |  -29/ +86 ->  -72/ +79
+    2 | 199.7 -> 199.7 (5.54 -> 5.54, MAX_M -> MAX_M) | +187 +105  +33  +66 | +187 +105  +33  +31 |  -21/ +80 ->  -62/ +79
+    3 | 199.8 -> 199.8 (5.53 -> 5.53, MAX_M -> MAX_M) | +196  +97  +36  +12 | +196  +97  +36  -21 |  -30/+108 ->  -72/ +87
+    4 | 195.8 -> 195.8 (5.54 -> 5.54, MAX_M -> MAX_M) | +201 +204  +76  +12 | +201 +204  +76  -14 |  -45/ +61 ->  -87/ +61
+    5 | 200.8 -> 200.8 (5.56 -> 5.56, MAX_M -> MAX_M) | +221 +165  +35  +19 | +221 +165  +27  -20 |  -22/ +72 ->  -65/ +43
+    6 | 198.7 -> 198.7 (5.61 -> 5.61, MAX_M -> MAX_M) | +194 +114  +40  +17 | +194 +114  +37  -15 |   -3/ +92 ->  -45/ +75
+  frames with a different sent command: 1596 of 8784; outside the c2 windows (-6.0 s .. +3.0 s around C2e): 1202; frames with a different throttle: 0
+    outside-window differences: 3.0 .. 1000000000.0 s after the nearest earlier C2e; |difference| median 29.0 max 173.6 us
+
+TOTAL (runs driven with the base lap_ff.json 052be3dc: c6f3, 6f61) frames 14667, changed outside the windows 1973

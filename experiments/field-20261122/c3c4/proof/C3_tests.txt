@@ -1,0 +1,9 @@
+ok  test_hashes          3 checks
+ok  test_patches         3 checks
+ok  test_key_absent      14 checks
+ok  test_c4_tables       68 checks
+ok  test_c4_band_law     9 checks
+ok  test_c4_own          14 checks
+ok  test_c3_xband        116 checks
+ok  test_c3_cfgonly      17 checks
+ALL PASSED: 8 tests, 244 checks

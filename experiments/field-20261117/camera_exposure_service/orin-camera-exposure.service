@@ -1,0 +1,17 @@
+# 2026-11-17 (user: apply manual camera exposure automatically at boot). Camera control ioctls only;
+# not part of vehicle control, does not touch the UART / BMduino / orin-dashboard.
+[Unit]
+Description=Keep USB camera on manual exposure (camera/camera_exposure.json)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jetson/orin_interface_v1/camera
+ExecStart=/usr/bin/python3 camera_exposure.py
+StandardOutput=append:/home/jetson/orin_interface_v1/logs/camera_exposure.log
+StandardError=append:/home/jetson/orin_interface_v1/logs/camera_exposure.log
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

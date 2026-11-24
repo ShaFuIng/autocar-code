@@ -1,0 +1,94 @@
+{
+  "version": "workbench-six-pages-20261021.1",
+  "date": "2026-10-21",
+  "status": "passed",
+  "python_tests": 24,
+  "client_regressions": 7,
+  "pid_entry_tests": 11,
+  "parameter_source_assertions": 9,
+  "history_preservation": {
+    "history": {
+      "original_rows": 120,
+      "all_preserved": true
+    },
+    "tasks": {
+      "original_rows": 3,
+      "all_preserved": true
+    },
+    "events": {
+      "original_rows": 263,
+      "all_preserved": true
+    },
+    "attachments": {
+      "original_rows": 5,
+      "all_preserved": true
+    },
+    "config": {
+      "unchanged": true
+    },
+    "visual-pid": {
+      "unchanged": true
+    },
+    "test-A": {
+      "unchanged": true
+    },
+    "test-J": {
+      "unchanged": true
+    },
+    "camera-ground-measure": {
+      "unchanged": true
+    }
+  },
+  "geometry_migration": {
+    "from_revision": 6,
+    "to_revision": 7,
+    "added": [
+      "track_width",
+      "line_width",
+      "track_outer_width"
+    ],
+    "source": "config v8",
+    "existing_items_preserved": true,
+    "original_item_count": 30
+  },
+  "offline_replay": {
+    "id_prefix": "919ba71b",
+    "parameter_revision": 37,
+    "frames": 84,
+    "valid_proposals": 83,
+    "hardware_output": false
+  },
+  "hardware_actions": false,
+  "orin_control_restarted": false,
+  "laptop_service_restarted": false,
+  "browser_checks": [
+    "01四項總覽及保存版本",
+    "02唯一量測入口與跑道來源",
+    "03 A引用02及C量測表",
+    "04唯一PID編輯與開發區收合",
+    "05歷史PID影格及時間差可讀",
+    "06四類分區與共用v37離線回算"
+  ],
+  "history_pid_replay": {
+    "id": "45e345daa12245a58abb073046b7efa6",
+    "frozen_pid_revision": 37,
+    "frozen_geometry_revision": 6,
+    "frame_zero_match_gap_s": 0.048
+  },
+  "source_sha256": {
+    "app.js": "3c61479674009841610bba03f36c77168f9302a7056f84b904c67529263327d6",
+    "integration.js": "e6d9b91493261ce5556c1f38a2298968969417829553c0002c47cf0ca5abd551",
+    "field-trials.js": "50fd0c9fd42dac6e5d7f55fe04a9785930e78b94f24d650d20a8f505ab07fbda",
+    "pid.js": "0bbf4812dbe8dd51523ef0527661baf00676679e08cf21e8d97946297c70532a",
+    "pid-console.js": "51b2c53d1ad4b23446198ecd5b11b7d3e985976f41f2c79dbc496f8d8292ac60",
+    "index.html": "40743b5fb6d250102b9e2af9be0dc98b201df1b45c0ff8ad7ea3de5ddf4a1c7f",
+    "style.css": "a6e8bad2c98ee158e3cf80d4bdfc5a2711ec1444923d5dca20d3384a8893a477",
+    "dimension_sources.py": "3b1a4bf3e33fa1c5f6a0a1b559b98cde04454ff497951820a26cbbb0ec37816e"
+  },
+  "limitations": [
+    "未執行馬達、舵機、UART、燒錄或控制服務重啟",
+    "未重新驗收Orin實車部署與行駛效果",
+    "離線回算是保存流程驗證，不是新參數行駛效果或辨識準確率",
+    "三個跑道欄位沿用config v8，標示來源及待確認，非本次重新量測"
+  ]
+}

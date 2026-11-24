@@ -1,0 +1,340 @@
+{
+  "date": "2026-10-18",
+  "scope": "新工作台接替既有 Orin 網頁入口；保留來源後端",
+  "final_snapshot": {
+    "type": "status",
+    "fw": "orin-v1.4.1-manual",
+    "boot_policy": "center_1360_v1",
+    "web_manual_start": true,
+    "ms": 47416200,
+    "mode": "ORIN",
+    "state": "LOCKED",
+    "reason": "REMOTE_STOP",
+    "generation": 7,
+    "neutral_required": true,
+    "cmd_age_ms": -1,
+    "pins": {
+      "D10": 1,
+      "D11": 1,
+      "D12_command": 0
+    },
+    "motor_a": {
+      "pwm_command": 0,
+      "target": 0,
+      "dir": 0,
+      "wanted_dir": 0
+    },
+    "motor_b": {
+      "pwm_command": 0,
+      "target": 0,
+      "dir": 0,
+      "wanted_dir": 0
+    },
+    "servo_calibration": true,
+    "steer_output_enabled": false,
+    "servo_profile_valid": true,
+    "steer_us_command": 1360,
+    "throttle_limit_pct": 25,
+    "pca_ok": true,
+    "i2c_errors": 0,
+    "servo_profile": {
+      "synced": true,
+      "revision": 12,
+      "min_us": 500,
+      "center_us": 1360,
+      "max_us": 2500
+    },
+    "servo_returning": false,
+    "ble_enabled": false,
+    "ble_connected": false,
+    "ble_bad_frames": 0,
+    "motor_test": {
+      "active": false,
+      "started": false,
+      "start_ms": 46952207,
+      "duration_ms": 1000,
+      "right_pct": 0,
+      "left_pct": 0
+    },
+    "enc_sample_ms": 47416003,
+    "enc_enabled": true,
+    "enc_a": {
+      "forward": 0,
+      "reverse": 0,
+      "delta": 0,
+      "edges": 0,
+      "invalid": 0,
+      "seen": false,
+      "age_ms": -1,
+      "ab": 3
+    },
+    "enc_b": {
+      "forward": 0,
+      "reverse": 0,
+      "delta": 0,
+      "edges": 0,
+      "invalid": 0,
+      "seen": false,
+      "age_ms": -1,
+      "ab": 1
+    },
+    "voltage_v": null,
+    "current_a": null,
+    "speed_mps": null,
+    "rx_good": 72,
+    "rx_bad": 3801,
+    "rx_rejected": 1,
+    "tx_dropped": 3,
+    "max_loop_us": 96774
+  },
+  "motor_test": {
+    "id": "716766efe3e5405c9db93649dca345ca",
+    "created_at": "2026-10-18T05:36:40.291906+00:00",
+    "status": "completed",
+    "reason": "DURATION_COMPLETE",
+    "config": {
+      "wheel": "both",
+      "direction": "forward",
+      "right_pct": 5,
+      "left_pct": 5,
+      "seconds": 1,
+      "duration_ms": 1000,
+      "warmup_s": 0,
+      "label": "新工作台通路驗收：架空5%／1秒，非速度校準",
+      "right_command": 5,
+      "left_command": 5
+    },
+    "generation": 5,
+    "rows": [
+      {
+        "host_time": "2026-10-18T05:36:40.879727+00:00",
+        "sample_ms": 46952203,
+        "elapsed_s": 0,
+        "interval_s": 0.2,
+        "phase": "running",
+        "right_pwm": 12,
+        "left_pwm": 12,
+        "right_target": 12,
+        "left_target": 12,
+        "right_cps": 0.0,
+        "left_cps": 0.0,
+        "right_delta_raw": 0,
+        "left_delta_raw": 0,
+        "rx_bad": 3801,
+        "rx_rejected": 0,
+        "tx_dropped": 1,
+        "state": "MOTOR_TEST",
+        "reason": "MOTOR_TEST_ARMED",
+        "generation": 5,
+        "right_raw_net": 0,
+        "right_invalid": 0,
+        "left_raw_net": 0,
+        "left_invalid": 0
+      },
+      {
+        "host_time": "2026-10-18T05:36:41.079588+00:00",
+        "sample_ms": 46952403,
+        "elapsed_s": 0.196,
+        "interval_s": 0.2,
+        "phase": "running",
+        "right_pwm": 12,
+        "left_pwm": 12,
+        "right_target": 12,
+        "left_target": 12,
+        "right_cps": 0.0,
+        "left_cps": 0.0,
+        "right_delta_raw": 0,
+        "left_delta_raw": 0,
+        "rx_bad": 3801,
+        "rx_rejected": 0,
+        "tx_dropped": 1,
+        "state": "MOTOR_TEST",
+        "reason": "MOTOR_TEST_ARMED",
+        "generation": 5,
+        "right_raw_net": 0,
+        "right_invalid": 0,
+        "left_raw_net": 0,
+        "left_invalid": 0
+      },
+      {
+        "host_time": "2026-10-18T05:36:41.279824+00:00",
+        "sample_ms": 46952603,
+        "elapsed_s": 0.396,
+        "interval_s": 0.2,
+        "phase": "running",
+        "right_pwm": 12,
+        "left_pwm": 12,
+        "right_target": 12,
+        "left_target": 12,
+        "right_cps": 0.0,
+        "left_cps": 0.0,
+        "right_delta_raw": 0,
+        "left_delta_raw": 0,
+        "rx_bad": 3801,
+        "rx_rejected": 0,
+        "tx_dropped": 1,
+        "state": "MOTOR_TEST",
+        "reason": "MOTOR_TEST_ARMED",
+        "generation": 5,
+        "right_raw_net": 0,
+        "right_invalid": 0,
+        "left_raw_net": 0,
+        "left_invalid": 0
+      },
+      {
+        "host_time": "2026-10-18T05:36:41.479631+00:00",
+        "sample_ms": 46952803,
+        "elapsed_s": 0.596,
+        "interval_s": 0.2,
+        "phase": "running",
+        "right_pwm": 12,
+        "left_pwm": 12,
+        "right_target": 12,
+        "left_target": 12,
+        "right_cps": 0.0,
+        "left_cps": 0.0,
+        "right_delta_raw": 0,
+        "left_delta_raw": 0,
+        "rx_bad": 3801,
+        "rx_rejected": 0,
+        "tx_dropped": 1,
+        "state": "MOTOR_TEST",
+        "reason": "MOTOR_TEST_ARMED",
+        "generation": 5,
+        "right_raw_net": 0,
+        "right_invalid": 0,
+        "left_raw_net": 0,
+        "left_invalid": 0
+      }
+    ],
+    "elapsed_s": 1,
+    "summary": {
+      "steady_samples": 2,
+      "mean_right_cps": null,
+      "mean_left_cps": null,
+      "right_left_ratio": null,
+      "speed_gap_pct": null,
+      "first_right_pulse_s": null,
+      "first_left_pulse_s": null,
+      "right_invalid_added": 0,
+      "left_invalid_added": 0
+    },
+    "ended_at": "2026-10-18T05:36:41.898851+00:00"
+  },
+  "notebook": {
+    "kernel_websocket": true,
+    "output": [
+      "WORKBENCH_GPU_OK True 2.10.0\n"
+    ],
+    "test_kernel_deleted": true
+  },
+  "manual_zero_evidence": "data/manual-zero-acceptance.json",
+  "connection_test": {
+    "requests": 137,
+    "failures": 0,
+    "max_response_ms": 95
+  },
+  "shadow_run": {
+    "id": "9190f4c2de9a4127bb4a1275e519cd38",
+    "frames": 84,
+    "state": "ready",
+    "review_saved_and_synced": true
+  },
+  "regressions": {
+    "backend_pass": 27,
+    "client_pass": 7
+  },
+  "preserved": [
+    "原車控與影子服務未重啟",
+    "車上 v4 未替換",
+    "原始錄影、Notebook 與歷史評語保留",
+    "BMduino 未燒錄"
+  ],
+  "limitations": [
+    "5% 測試沒有編碼器脈波，不能確認實際輪速",
+    "舵機指令接受不等於實際輪角量測",
+    "尚未驗證落地直行、地面幾何與自動路徑追蹤",
+    "CVAT 與 field-6 無運行來源服務，未接入",
+    "舊 8000／8091 後端仍必要，不可移除"
+  ],
+  "followup": {
+    "encoder_passive_check": {
+      "state": "LOCKED",
+      "reason": "REMOTE_STOP",
+      "enc_a": {
+        "forward": 1,
+        "reverse": 759,
+        "delta": 0,
+        "edges": 760,
+        "invalid": 0,
+        "seen": true,
+        "age_ms": 29153,
+        "ab": 0
+      },
+      "enc_b": {
+        "forward": 842,
+        "reverse": 1,
+        "delta": 0,
+        "edges": 843,
+        "invalid": 0,
+        "seen": true,
+        "age_ms": 13398,
+        "ab": 0
+      },
+      "enc_sample_ms": 48180803,
+      "motor_a": {
+        "pwm_command": 0,
+        "target": 0,
+        "dir": 0,
+        "wanted_dir": 0
+      },
+      "motor_b": {
+        "pwm_command": 0,
+        "target": 0,
+        "dir": 0,
+        "wanted_dir": 0
+      }
+    },
+    "motor_10pct": "data/motor-10pct-diagnosis.json",
+    "motor_15pct_estop": "data/motor-15pct-diagnosis.json",
+    "user_observation": "有動而且急停按鈕正常",
+    "conclusion": "目前兩通道可讀且馬達帶動時有脈波；5%不足以起轉是較可能原因。精確起轉門檻、RPM、m/s、實際輪角尚未測定。",
+    "estop_latency_measured": false,
+    "single_turn_estimate": {
+      "right_counts": -1297,
+      "left_counts": 1301,
+      "mapping": "A=right, B=left",
+      "repeat_calibration": false,
+      "rpm_10pct": [
+        41.50236809560524,
+        42.00065884704074
+      ],
+      "rpm_15pct": [
+        96.83885888974557,
+        99.02638994619522
+      ],
+      "diameter_cm": {
+        "right": 7.5,
+        "left": 7.5
+      },
+      "diameter_source": "使用者直尺量測",
+      "circumference_m": 0.23561944901923448,
+      "peripheral_speed_mps_10pct": [
+        0.16297941839466604,
+        0.16493620159974293
+      ],
+      "peripheral_speed_mps_15pct": [
+        0.3802853095875542,
+        0.38887572395810627
+      ],
+      "speed_scope": "架空輪胎圓周速度初估；非落地車速，未校準負載變形與打滑"
+    },
+    "outer_wheel_span_cm": 32,
+    "steering": {
+      "status": "待落地場地驗證",
+      "reason": "架空與落地負載不同；使用者指出連桿間隙造成接近方向相關的輪角差異",
+      "required": "固定地面、負載與供電，左右接近分開記錄同一指令的輪角及實際軌跡，重複量測",
+      "adopted_calibration": false
+    }
+  }
+}

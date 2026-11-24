@@ -1,0 +1,11 @@
+{
+ "enabled": true,
+ "max_outstanding": 2,
+ "ack_timeout_s": 1.0,
+ "read_timeout_s": 0.01,
+ "min_period_s": 0.025,
+ "max_period_s": 0.1,
+ "ack_supersede": true,
+ "ack_link_loss_s": 0.45,
+ "pace_after_timeout_s": 0.01
+}

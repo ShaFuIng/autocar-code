@@ -1,0 +1,22 @@
+TOTAL frames 286740 identical 286740 different 0 all_identical True  (9 recorded runs + 12 fuzz sequences, x3 configs without mode mcu)
+  d60e: frames 7375 different 0
+  ccf1: frames 8564 different 0
+  6f61: frames 8725 different 0
+  c6f3: frames 5824 different 0
+  7658: frames 4434 different 0
+  2728: frames 5887 different 0
+  9af6: frames 7330 different 0
+  e69d: frames 7371 different 0
+  54cb: frames 4070 different 0
+absent: frames 95580 identical 95580 different 0
+bad_json: frames 95580 identical 95580 different 0
+mode_frame: frames 95580 identical 95580 different 0
+mcu mode e69d: one-frame spikes > 0.10 m/s old 698 -> mcu 0
+mcu mode e69d: equals re-implementation on 7361 of 7361 frames (rest = stale-status fallback to the old rate)
+mcu mode 9af6: one-frame spikes > 0.10 m/s old 709 -> mcu 0
+mcu mode 9af6: equals re-implementation on 7327 of 7327 frames (rest = stale-status fallback to the old rate)
+mcu mode d60e: one-frame spikes > 0.10 m/s old 685 -> mcu 0
+mcu mode d60e: equals re-implementation on 7371 of 7371 frames (rest = stale-status fallback to the old rate)
+
+tests: 39 passed, 0 failed
+

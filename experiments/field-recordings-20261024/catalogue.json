@@ -1,0 +1,1273 @@
+[
+  {
+    "kind": "manual",
+    "id": "ef5740a252ca4752af1c27e9610e0c30",
+    "bytes": 39941370,
+    "files": 4,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "ef5740a252ca4752af1c27e9610e0c30",
+        "status": "stopped",
+        "reason": "BUTTON_STOP",
+        "created_at": "2026-10-24T13:50:47.319488+00:00",
+        "generation": 7,
+        "config": {
+          "right_pct": 16,
+          "left_pct": 16,
+          "center_us": 1580,
+          "steer_rate_us_s": 100,
+          "accel_seconds": 0.2,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": 216,
+        "input_diagnostics": {
+          "accepted": 216,
+          "max_gap_ms": 402.2,
+          "last_gap_ms": 211.2,
+          "last_received_at": "2026-10-24T13:51:30.619752+00:00",
+          "age_at_stop_ms": 308.1
+        },
+        "controller": "manual",
+        "last_input_event": {
+          "event": "CONTROL_AREA_ENTER",
+          "seq": 7,
+          "time": "2026-10-24T13:50:48.286570+00:00"
+        },
+        "ended_at": "2026-10-24T13:51:30.927892+00:00"
+      }
+    },
+    "modified": 1792849890.9763415
+  },
+  {
+    "kind": "manual",
+    "id": "ed704ccd324547d78251e2ebe53b988c",
+    "bytes": 3382188,
+    "files": 4,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "ed704ccd324547d78251e2ebe53b988c",
+        "status": "failed",
+        "reason": "CAMERA_LOST",
+        "created_at": "2026-10-24T13:50:04.369023+00:00",
+        "generation": 6,
+        "config": {
+          "right_pct": 16,
+          "left_pct": 16,
+          "center_us": 1580,
+          "steer_rate_us_s": 100,
+          "accel_seconds": 0.2,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": 18,
+        "input_diagnostics": {
+          "accepted": 18,
+          "max_gap_ms": 207.7,
+          "last_gap_ms": 201.4,
+          "last_received_at": "2026-10-24T13:50:07.638044+00:00",
+          "age_at_stop_ms": 103.2
+        },
+        "controller": "manual",
+        "last_input_event": {
+          "event": "CONTROL_AREA_ENTER",
+          "seq": 6,
+          "time": "2026-10-24T13:50:05.310279+00:00"
+        },
+        "ended_at": "2026-10-24T13:50:07.741285+00:00"
+      }
+    },
+    "modified": 1792849807.7903395
+  },
+  {
+    "kind": "manual",
+    "id": "dcb92d6b50ae47a6a8400ae95dca5c30",
+    "bytes": 45563180,
+    "files": 4,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "dcb92d6b50ae47a6a8400ae95dca5c30",
+        "status": "failed",
+        "reason": "CAMERA_LOST",
+        "created_at": "2026-10-24T13:47:56.043562+00:00",
+        "generation": 5,
+        "config": {
+          "right_pct": 16,
+          "left_pct": 16,
+          "center_us": 1580,
+          "steer_rate_us_s": 100,
+          "accel_seconds": 0.2,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": 244,
+        "input_diagnostics": {
+          "accepted": 244,
+          "max_gap_ms": 226.6,
+          "last_gap_ms": 199.5,
+          "last_received_at": "2026-10-24T13:48:45.065312+00:00",
+          "age_at_stop_ms": 62.2
+        },
+        "controller": "manual",
+        "last_input_event": {
+          "event": "CONTROL_AREA_ENTER",
+          "seq": 7,
+          "time": "2026-10-24T13:47:57.123162+00:00"
+        },
+        "ended_at": "2026-10-24T13:48:45.127560+00:00"
+      }
+    },
+    "modified": 1792849725.1283615
+  },
+  {
+    "kind": "manual",
+    "id": "60aee9fc8be344d2bd2e3ded24bc4819",
+    "bytes": 56583304,
+    "files": 4,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "60aee9fc8be344d2bd2e3ded24bc4819",
+        "status": "stopped",
+        "reason": "BUTTON_STOP",
+        "created_at": "2026-10-24T13:46:47.485017+00:00",
+        "generation": 4,
+        "config": {
+          "right_pct": 16,
+          "left_pct": 16,
+          "center_us": 1580,
+          "steer_rate_us_s": 100,
+          "accel_seconds": 0.2,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": 322,
+        "input_diagnostics": {
+          "accepted": 322,
+          "max_gap_ms": 221.1,
+          "last_gap_ms": 162.3,
+          "last_received_at": "2026-10-24T13:47:52.099998+00:00",
+          "age_at_stop_ms": 228.6
+        },
+        "controller": "manual",
+        "last_input_event": {
+          "event": "CONTROL_AREA_EXIT",
+          "seq": 321,
+          "time": "2026-10-24T13:47:51.937600+00:00"
+        },
+        "ended_at": "2026-10-24T13:47:52.328647+00:00"
+      }
+    },
+    "modified": 1792849672.3751063
+  },
+  {
+    "kind": "manual",
+    "id": "4edf0adca4fe442ba061c2e4bd203e4e",
+    "bytes": 50110233,
+    "files": 4,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "4edf0adca4fe442ba061c2e4bd203e4e",
+        "status": "stopped",
+        "reason": "BUTTON_STOP",
+        "created_at": "2026-10-24T13:45:03.903048+00:00",
+        "generation": 3,
+        "config": {
+          "right_pct": 16,
+          "left_pct": 16,
+          "center_us": 1580,
+          "steer_rate_us_s": 100,
+          "accel_seconds": 0.2,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": 314,
+        "input_diagnostics": {
+          "accepted": 314,
+          "max_gap_ms": 225.3,
+          "last_gap_ms": 186.7,
+          "last_received_at": "2026-10-24T13:46:06.978934+00:00",
+          "age_at_stop_ms": 350.1
+        },
+        "controller": "manual",
+        "last_input_event": {
+          "event": "CONTROL_AREA_ENTER",
+          "seq": 8,
+          "time": "2026-10-24T13:45:05.066933+00:00"
+        },
+        "ended_at": "2026-10-24T13:46:07.329022+00:00"
+      }
+    },
+    "modified": 1792849567.380627
+  },
+  {
+    "kind": "manual",
+    "id": "1274e47fc80946fb9a031fbbccbcd695",
+    "bytes": 41519904,
+    "files": 4,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "1274e47fc80946fb9a031fbbccbcd695",
+        "status": "stopped",
+        "reason": "BUTTON_STOP",
+        "created_at": "2026-10-24T13:43:28.910372+00:00",
+        "generation": 2,
+        "config": {
+          "right_pct": 16,
+          "left_pct": 16,
+          "center_us": 1580,
+          "steer_rate_us_s": 100,
+          "accel_seconds": 0.2,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": 260,
+        "input_diagnostics": {
+          "accepted": 260,
+          "max_gap_ms": 231.7,
+          "last_gap_ms": 205.7,
+          "last_received_at": "2026-10-24T13:44:21.134804+00:00",
+          "age_at_stop_ms": 402.6
+        },
+        "controller": "manual",
+        "last_input_event": {
+          "event": "CONTROL_AREA_ENTER",
+          "seq": 27,
+          "time": "2026-10-24T13:43:33.859817+00:00"
+        },
+        "ended_at": "2026-10-24T13:44:21.537439+00:00"
+      }
+    },
+    "modified": 1792849461.586159
+  },
+  {
+    "kind": "manual",
+    "id": "eff15e02071a461988d5ffe1332e929c",
+    "bytes": 20467620,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "eff15e02071a461988d5ffe1332e929c",
+        "status": "stopped",
+        "reason": "PID_DURATION_COMPLETE",
+        "created_at": "2026-10-24T12:50:32.140595+00:00",
+        "generation": 1,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1615
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 243.3
+        },
+        "controller": "visual_pid",
+        "deadline": 11210.866849953,
+        "pid_target_us": 1611.3803741561208,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T12:51:02.348046+00:00"
+      }
+    },
+    "modified": 1792846262.3497744
+  },
+  {
+    "kind": "manual",
+    "id": "ab5e60677d5e4d89aaa9b4904e0b734c",
+    "bytes": 12721374,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "ab5e60677d5e4d89aaa9b4904e0b734c",
+        "status": "failed",
+        "reason": "STALE_GENERATION",
+        "created_at": "2026-10-24T12:35:41.302803+00:00",
+        "generation": 5,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1897
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 55.7
+        },
+        "controller": "visual_pid",
+        "deadline": 10320.029060217,
+        "pid_target_us": 1898.4841049902113,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T12:36:01.763028+00:00"
+      }
+    },
+    "modified": 1792845361.7624638
+  },
+  {
+    "kind": "manual",
+    "id": "4e2a9ac52d0c470ab571af09254d370c",
+    "bytes": 40906706,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "4e2a9ac52d0c470ab571af09254d370c",
+        "status": "stopped",
+        "reason": "PID_DURATION_COMPLETE",
+        "created_at": "2026-10-24T12:12:06.055692+00:00",
+        "generation": 3,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1513
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 248.1
+        },
+        "controller": "visual_pid",
+        "deadline": 8934.781948786,
+        "pid_target_us": 1506.9400981006638,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T12:13:06.270528+00:00"
+      }
+    },
+    "modified": 1792843986.319575
+  },
+  {
+    "kind": "manual",
+    "id": "0d77c3ca05284af9b8e5ad4d0ef81d5c",
+    "bytes": 40332678,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "0d77c3ca05284af9b8e5ad4d0ef81d5c",
+        "status": "stopped",
+        "reason": "PID_DURATION_COMPLETE",
+        "created_at": "2026-10-24T11:40:45.327962+00:00",
+        "generation": 2,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1834
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 184.8
+        },
+        "controller": "visual_pid",
+        "deadline": 7054.054220287,
+        "pid_target_us": 1821.034547543069,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T11:41:45.473891+00:00"
+      }
+    },
+    "modified": 1792842105.4749691
+  },
+  {
+    "kind": "manual",
+    "id": "7d69dd63290a436287e777efdab56aa6",
+    "bytes": 6976420,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "7d69dd63290a436287e777efdab56aa6",
+        "status": "failed",
+        "reason": "STALE_GENERATION",
+        "created_at": "2026-10-24T11:11:02.024195+00:00",
+        "generation": 8,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1785
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 3.4
+        },
+        "controller": "visual_pid",
+        "deadline": 5270.750458905,
+        "pid_target_us": 1797.187484049191,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T11:11:12.638074+00:00"
+      }
+    },
+    "modified": 1792840272.6742127
+  },
+  {
+    "kind": "manual",
+    "id": "14177717d0de42acbdcff3bda6108d65",
+    "bytes": 2741663,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "14177717d0de42acbdcff3bda6108d65",
+        "status": "stopped",
+        "reason": "PID_INVALID_OR_STALE_PATH",
+        "created_at": "2026-10-24T11:05:14.355871+00:00",
+        "generation": 7,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1851
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 367.7
+        },
+        "controller": "visual_pid",
+        "deadline": 4923.082129813,
+        "pid_target_us": 1850.7470953040997,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T11:05:18.645678+00:00"
+      }
+    },
+    "modified": 1792839918.6967967
+  },
+  {
+    "kind": "manual",
+    "id": "4396573ebfb64cb8b698b61e3b70d3bf",
+    "bytes": 7638225,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "4396573ebfb64cb8b698b61e3b70d3bf",
+        "status": "stopped",
+        "reason": "PID_INVALID_OR_STALE_PATH",
+        "created_at": "2026-10-24T10:50:19.606873+00:00",
+        "generation": 6,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1479
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 341.7
+        },
+        "controller": "visual_pid",
+        "deadline": 4028.33313005,
+        "pid_target_us": 1479.3140189289,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T10:50:30.829713+00:00"
+      }
+    },
+    "modified": 1792839030.8310413
+  },
+  {
+    "kind": "manual",
+    "id": "b2728f20b8be456dad944f1dc62c29dc",
+    "bytes": 1689923,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "b2728f20b8be456dad944f1dc62c29dc",
+        "status": "stopped",
+        "reason": "PID_VISION_STALE",
+        "created_at": "2026-10-24T10:48:23.038384+00:00",
+        "generation": 5,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1525
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 366.6
+        },
+        "controller": "visual_pid",
+        "deadline": 3911.764637677,
+        "pid_target_us": 1525.1709382877816,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T10:48:25.473464+00:00"
+      }
+    },
+    "modified": 1792838905.4765854
+  },
+  {
+    "kind": "manual",
+    "id": "05d104ddad73471ca7320af8a64d2403",
+    "bytes": 4231003,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "05d104ddad73471ca7320af8a64d2403",
+        "status": "stopped",
+        "reason": "PID_INVALID_OR_STALE_PATH",
+        "created_at": "2026-10-24T10:47:09.349374+00:00",
+        "generation": 4,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1505
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 291.0
+        },
+        "controller": "visual_pid",
+        "deadline": 3838.07563232,
+        "pid_target_us": 1499.4678362254274,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T10:47:15.471109+00:00"
+      }
+    },
+    "modified": 1792838835.4712071
+  },
+  {
+    "kind": "manual",
+    "id": "3e2e923da282451d90bd2b8085433fa1",
+    "bytes": 4580338,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "3e2e923da282451d90bd2b8085433fa1",
+        "status": "stopped",
+        "reason": "PID_INVALID_OR_STALE_PATH",
+        "created_at": "2026-10-24T10:29:33.195406+00:00",
+        "generation": 3,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1480
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 308.2
+        },
+        "controller": "visual_pid",
+        "deadline": 2781.921658376,
+        "pid_target_us": 1480.3631029096066,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T10:29:39.841530+00:00"
+      }
+    },
+    "modified": 1792837779.8448696
+  },
+  {
+    "kind": "manual",
+    "id": "db7089a3c4a246c1a7c8595779681d00",
+    "bytes": 23920536,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "db7089a3c4a246c1a7c8595779681d00",
+        "status": "stopped",
+        "reason": "PID_INVALID_OR_STALE_PATH",
+        "created_at": "2026-10-24T10:10:13.965518+00:00",
+        "generation": 1,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1556
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 399.9
+        },
+        "controller": "visual_pid",
+        "deadline": 1622.691769645,
+        "pid_target_us": 1556.4263684781718,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T10:10:49.082640+00:00"
+      }
+    },
+    "modified": 1792836649.0847924
+  },
+  {
+    "kind": "manual",
+    "id": "98fac47fa70342e7a55ec294e535319f",
+    "bytes": 14823171,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "98fac47fa70342e7a55ec294e535319f",
+        "status": "failed",
+        "reason": "STALE_GENERATION",
+        "created_at": "2026-10-24T09:46:39.396601+00:00",
+        "generation": 2,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1924
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 61.5
+        },
+        "controller": "visual_pid",
+        "deadline": 208.12285569,
+        "pid_target_us": 1929.1180617139944,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T09:46:59.164170+00:00"
+      }
+    },
+    "modified": 1792835219.172942
+  },
+  {
+    "kind": "manual",
+    "id": "6bbe2c1ae4594017baf7be13d77d9bdb",
+    "bytes": 11560824,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "6bbe2c1ae4594017baf7be13d77d9bdb",
+        "status": "failed",
+        "reason": "STALE_GENERATION",
+        "created_at": "2026-10-24T09:14:15.053437+00:00",
+        "generation": 10,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1812
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 38.3
+        },
+        "controller": "visual_pid",
+        "deadline": 8973.799357752,
+        "pid_target_us": 1832.9199175439094,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T09:14:33.091423+00:00"
+      }
+    },
+    "modified": 1792833273.1398144
+  },
+  {
+    "kind": "manual",
+    "id": "aff77d9714784624b1b36488e61da309",
+    "bytes": 15433727,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "aff77d9714784624b1b36488e61da309",
+        "status": "stopped",
+        "reason": "PID_DURATION_COMPLETE",
+        "created_at": "2026-10-24T09:11:00.241859+00:00",
+        "generation": 9,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1776
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 218.6
+        },
+        "controller": "visual_pid",
+        "deadline": 8738.987780329,
+        "pid_target_us": 1778.4656207539786,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T09:11:20.488331+00:00"
+      }
+    },
+    "modified": 1792833080.4925296
+  },
+  {
+    "kind": "record",
+    "id": "45890d2042b74db1a56852450ea07472",
+    "bytes": 21501730,
+    "files": 3,
+    "metadata": {
+      "summary.json": {
+        "id": "45890d2042b74db1a56852450ea07472",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T09:04:21.987046+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/45890d2042b74db1a56852450ea07472",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T09:04:42.072786+00:00"
+      }
+    },
+    "modified": 1792832682.0757744
+  },
+  {
+    "kind": "record",
+    "id": "5ede36f9cd6a4612a7daa485bef9507b",
+    "bytes": 21458835,
+    "files": 3,
+    "metadata": {
+      "summary.json": {
+        "id": "5ede36f9cd6a4612a7daa485bef9507b",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T09:02:07.617821+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/5ede36f9cd6a4612a7daa485bef9507b",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T09:02:27.705214+00:00"
+      }
+    },
+    "modified": 1792832547.7036762
+  },
+  {
+    "kind": "manual",
+    "id": "3b428ba5375b4984a4f36c70a11230ae",
+    "bytes": 4235188,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "3b428ba5375b4984a4f36c70a11230ae",
+        "status": "stopped",
+        "reason": "PID_VISION_STALE",
+        "created_at": "2026-10-24T08:13:23.520080+00:00",
+        "generation": 8,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 15,
+          "left": 15,
+          "steer_us": 1726
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 363.5
+        },
+        "controller": "visual_pid",
+        "deadline": 5282.266001594,
+        "pid_target_us": 1726.4387699729623,
+        "pid_pwm": 15,
+        "ended_at": "2026-10-24T08:13:29.468787+00:00"
+      }
+    },
+    "modified": 1792829609.46627
+  },
+  {
+    "kind": "record",
+    "id": "14ded31be9ea4a25909db5e1cae1c038",
+    "bytes": 17713521,
+    "files": 3,
+    "metadata": {
+      "summary.json": {
+        "id": "14ded31be9ea4a25909db5e1cae1c038",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T08:08:38.869976+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/14ded31be9ea4a25909db5e1cae1c038",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T08:08:58.895629+00:00"
+      }
+    },
+    "modified": 1792829338.8975606
+  },
+  {
+    "kind": "record",
+    "id": "94e4c8d6e9084bab92268691bafeef24",
+    "bytes": 17541190,
+    "files": 3,
+    "metadata": {
+      "summary.json": {
+        "id": "94e4c8d6e9084bab92268691bafeef24",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T07:50:52.064609+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/94e4c8d6e9084bab92268691bafeef24",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T07:51:12.137110+00:00"
+      }
+    },
+    "modified": 1792828272.1371322
+  },
+  {
+    "kind": "record",
+    "id": "a923a06268aa4073a72516f30d025440",
+    "bytes": 17514220,
+    "files": 3,
+    "metadata": {
+      "summary.json": {
+        "id": "a923a06268aa4073a72516f30d025440",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T07:47:54.403118+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/a923a06268aa4073a72516f30d025440",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T07:48:14.496818+00:00"
+      }
+    },
+    "modified": 1792828094.4964178
+  },
+  {
+    "kind": "record",
+    "id": "bedd3a2252c34349acb148c2fde6ee1b",
+    "bytes": 17436448,
+    "files": 3,
+    "metadata": {
+      "summary.json": {
+        "id": "bedd3a2252c34349acb148c2fde6ee1b",
+        "mode": "record_only",
+        "status": "stopped",
+        "created_at": "2026-10-24T07:45:09.697534+00:00",
+        "path": "/home/jetson/orin_interface_v1/logs/record_only/bedd3a2252c34349acb148c2fde6ee1b",
+        "frames": 167,
+        "nominal_fps": 10,
+        "reason": "USER_STOP",
+        "motion_labels": false,
+        "ended_at": "2026-10-24T07:45:29.798015+00:00"
+      }
+    },
+    "modified": 1792827929.8005648
+  },
+  {
+    "kind": "manual",
+    "id": "7f544862c0f54ab1ab1666e8614ab8b5",
+    "bytes": 264335,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "7f544862c0f54ab1ab1666e8614ab8b5",
+        "status": "stopped",
+        "reason": "PID_VISION_STALE",
+        "created_at": "2026-10-24T07:36:01.516221+00:00",
+        "generation": 3,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 507.0
+        },
+        "controller": "visual_pid",
+        "deadline": 3040.262139578,
+        "pid_target_us": 1580,
+        "pid_pwm": 0,
+        "ended_at": "2026-10-24T07:36:02.111079+00:00"
+      }
+    },
+    "modified": 1792827362.1126416
+  },
+  {
+    "kind": "manual",
+    "id": "a668e3b475aa43349184e8db57e60115",
+    "bytes": 160657,
+    "files": 5,
+    "metadata": {
+      "summary.json": {
+        "control_version": 2,
+        "id": "a668e3b475aa43349184e8db57e60115",
+        "status": "stopped",
+        "reason": "PID_VISION_STALE",
+        "created_at": "2026-10-24T07:35:46.163695+00:00",
+        "generation": 2,
+        "config": {
+          "right_pct": 15,
+          "left_pct": 15,
+          "center_us": 1580,
+          "steer_rate_us_s": 300,
+          "accel_seconds": 0.0,
+          "decel_seconds": 0.0
+        },
+        "limits": {
+          "revision": 19,
+          "min_us": 1020,
+          "center_us": 1580,
+          "max_us": 2100
+        },
+        "recording": false,
+        "command": {
+          "right": 0,
+          "left": 0,
+          "steer_us": 1580
+        },
+        "last_input_seq": -1,
+        "input_diagnostics": {
+          "accepted": 0,
+          "max_gap_ms": 0,
+          "last_gap_ms": 0,
+          "age_at_stop_ms": 377.1
+        },
+        "controller": "visual_pid",
+        "deadline": 3024.90961572,
+        "pid_target_us": 1580,
+        "pid_pwm": 0,
+        "ended_at": "2026-10-24T07:35:46.687297+00:00"
+      }
+    },
+    "modified": 1792827346.6881006
+  }
+]

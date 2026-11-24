@@ -1,0 +1,1 @@
+{"enabled": true, "curves": {"curve1": 1650.0, "curve2": 1700.0, "curve4": 1565.0}, "lead_m": 0.3, "ramp_in_m": 0.3, "lead_out_m": 0.3, "ramp_out_m": 0.5, "cam_gain": 0.5, "release_err": 0.5, "max_since_anchor_m": 25.0, "check_m": 1.5, "check_deg": 15.0, "max_pitch_deg": 6.0, "source": "arc-ff-calc-20261108/result.json, 9 runs; user 2026-11-08"}

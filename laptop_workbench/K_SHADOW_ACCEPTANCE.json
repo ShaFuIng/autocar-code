@@ -1,0 +1,91 @@
+{
+  "first": {
+    "frames": 171,
+    "seconds": 6.994940519332886,
+    "different_frames": [],
+    "states": [
+      [
+        0,
+        "APPROACH"
+      ],
+      [
+        38,
+        "CROSS"
+      ],
+      [
+        80,
+        "CONFIRM"
+      ],
+      [
+        81,
+        "CROSS"
+      ],
+      [
+        132,
+        "CONFIRM"
+      ],
+      [
+        134,
+        "CROSS"
+      ],
+      [
+        136,
+        "CONFIRM"
+      ],
+      [
+        140,
+        "BLEND"
+      ],
+      [
+        144,
+        "FOLLOW_A"
+      ]
+    ]
+  },
+  "second": {
+    "frames": 181,
+    "seconds": 6.903051853179932,
+    "different_frames": [],
+    "states": [
+      [
+        0,
+        "APPROACH"
+      ],
+      [
+        29,
+        "CROSS"
+      ],
+      [
+        139,
+        "CONFIRM"
+      ],
+      [
+        140,
+        "CROSS"
+      ],
+      [
+        146,
+        "CONFIRM"
+      ],
+      [
+        150,
+        "BLEND"
+      ],
+      [
+        154,
+        "FOLLOW_A"
+      ]
+    ]
+  },
+  "algorithm": "junction-k-v1",
+  "unit_tests_passed": 2,
+  "ui_selection_verified": true,
+  "ui_console_errors": 0,
+  "server_reloaded": true,
+  "hardware_output": false,
+  "dependencies": {
+    "junction_k.py": "82086deffcac1da989a2764e1e060c23cbfd0f175afb48da38ff454078f9eb8e",
+    "shadow_worker.py": "3f020691e9de40a8378a7ae26ea55ce2b9c4fe0f9e6efb007ab9dc0cc8ccb21f",
+    "shadow_offline.py": "d130cd5d95cc1c41d5f64848be6264b7fee393d3e7e93a42cd67a2a85a4fd810"
+  }
+}

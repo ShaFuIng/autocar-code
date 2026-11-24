@@ -1,0 +1,3 @@
+run-e1b4-20261121: frames 6857 | frames with a lap_speed log (recorded or emulated) 2337, both 2332, same zone 2332, same pwm+blocked 1566 (67.2%), worst pwm diff 4.06 | final pwm identical 5690/6857 (83.0%), max diff 16.00
+run-b93e-20261121: frames 5434 | frames with a lap_speed log (recorded or emulated) 1819, both 1819, same zone 1819, same pwm+blocked 1202 (66.1%), worst pwm diff 4.22 | final pwm identical 4487/5434 (82.6%), max diff 16.00
+run-9934-20261121: frames 5602 | frames with a lap_speed log (recorded or emulated) 1896, both 1895, same zone 1895, same pwm+blocked 1278 (67.4%), worst pwm diff 3.70 | final pwm identical 4630/5602 (82.6%), max diff 16.00

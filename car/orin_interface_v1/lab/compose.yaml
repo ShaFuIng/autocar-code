@@ -1,0 +1,36 @@
+services:
+  notebook:
+    image: orin-notebook:v1
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:?GPU base digest required}
+    container_name: orin-notebook
+    runtime: nvidia
+    user: "1000:1000"
+    restart: unless-stopped
+    shm_size: 512m
+    mem_limit: 5g
+    memswap_limit: 5g
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    ports:
+      - "${BIND_ADDR:-127.0.0.1}:8888:8888"
+    environment:
+      USER: jetson
+      LOGNAME: jetson
+      ORIN_HOST: ${ORIN_HOST}
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+      JUPYTER_TOKEN_FILE: /run/secrets/jupyter_token
+      XDG_CONFIG_HOME: /tmp/.config
+      YOLO_CONFIG_DIR: /workspace/.ultralytics
+    volumes:
+      - ./notebooks:/workspace
+      - ./jupyter_server_config.py:/etc/jupyter/jupyter_server_config.py:ro
+      - ${HOME}/.config/orin_lab/token:/run/secrets/jupyter_token:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"

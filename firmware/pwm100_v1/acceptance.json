@@ -1,0 +1,28 @@
+{
+ "date": "2026-11-19",
+ "status": "FLASHED 2026-11-19 (COM8, Operation success, exit 0)",
+ "base": "pwm70_v1 (bin 878f3a22d3e1aca5, rebuilt bit-identical from this source copy before the change)",
+ "change": "pwm100-r1: Config.h MAX_THROTTLE_PERCENT 70 -> 100 (one line). Reply strings \"PWM_LIMIT_50\" left unchanged.",
+ "candidate": {
+  "flash_bytes": 63116,
+  "ram_bytes": 15160,
+  "bin_sha256_16": "defe4cf24b8bc3cd",
+  "bin_size": 63352
+ },
+ "binary_diff": "7 bytes differ from pwm70_v1: five 70->100 and two 140->200 (0x6834,0x683e,0x6b90,0x6b94,0x6b9a,0x6b9c,0x7be6)",
+ "orin_side": "Orin still caps at 50. To use more: web/throttle_cap.py FIRMWARE_MAX 70 -> 100 (restart) and web/throttle_cap.json max_pct. Only lap_speed zones and the bench motor test can exceed 50.",
+ "not_verified": "nothing above 70 % run yet (bench or floor); motor / driver / battery limits unknown",
+ "reason": "user 2026-11-19: teacher / seniors ask for the measured floor speed at 100 % throttle",
+ "rollback": "flash pwm70_v1/build",
+ "authorization": "user in chat 2026-11-19: \"已架空，燒錄\"",
+ "postflash": {
+  "fw": "orin-v1.4.1-manual",
+  "state": "LOCKED",
+  "reason": "BOOT_LOCK",
+  "throttle_limit_pct": 100,
+  "pca_ok": true,
+  "i2c_errors": 0,
+  "estop_debounce_us": 10000,
+  "steer_us_command": 1510
+ }
+}

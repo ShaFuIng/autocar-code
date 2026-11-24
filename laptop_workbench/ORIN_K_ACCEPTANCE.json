@@ -1,0 +1,14 @@
+{
+  "state": "deployed_offline_comparison_completed_with_differences",
+  "report": "data/experiments/orin-k/report.json",
+  "same_input_parity_passed": false,
+  "frames": 352,
+  "mode_difference_frames": [
+    16,
+    10
+  ],
+  "source_preserved": true,
+  "hardware_output": false,
+  "dashboard_unchanged": true,
+  "ui_verified": true
+}

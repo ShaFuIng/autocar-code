@@ -1,0 +1,55 @@
+FIDELITY (car table through this code vs the recorded arc2_c3.steer_us, frames without a top record): n 1390 | identical within 0.15 us: 99.0 % | within 2 us: 100.0 % | |diff| P99 0.1 us, max 0.3 us
+==============================================================================================================
+candidate arc2.c3flat50.json
+  kappa_table old: [34.8, 32.0, 12.8, 12.0, 13.6, 20.8, 40.4, 49.6, 40.4, 36.4, 24.4, 14.0, 8.8, 15.6, 16.0, 27.2, 40.0, 35.2]
+  kappa_table new: [34.8, 32.0, 18.3, 17.9, 18.7, 22.3, 32.1, 36.7, 32.1, 30.1, 24.1, 18.9, 16.3, 19.7, 19.9, 25.5, 40.0, 35.2]
+  other c3 keys changed: none
+  TOTAL frames 17893 | frames with a c3 record 1613 | command changed on 481 | changed outside x 0.17..3.93 m: 2 | changed frames that also have a tail top record: 0
+  per 0.25 m of x (complete laps): PID command entering the layer | floor target old -> new | layer output old -> new (us above the centre 1475), mean change, floor binds old / new (%), estimated curvature change deg/m
+    x +0.50  pid  +69 | target  +52 ->  +76 | out  +69 ->  +69  change mean  +0.0 (min   +0 max   +0) | binds   0% ->   0% | curvature -0.0
+    x +0.75  pid  +75 | target  +61 ->  +81 | out  +75 ->  +77  change mean  +1.7 (min   +0 max  +14) | binds  16% ->  27% | curvature -0.3
+    x +1.00  pid +118 | target  +92 ->  +97 | out +118 -> +118  change mean  +0.3 (min   +0 max   +5) | binds   5% ->  12% | curvature -0.0
+    x +1.25  pid +125 | target +156 -> +129 | out +156 -> +130  change mean -24.1 (min  -33 max   -5) | binds 100% ->  73% | curvature +3.9
+    x +1.50  pid +139 | target +196 -> +149 | out +196 -> +150  change mean -38.5 (min  -55 max   -4) | binds 100% ->  61% | curvature +6.3
+    x +1.75  pid +155 | target +191 -> +147 | out +194 -> +156  change mean -26.0 (min  -55 max   +0) | binds  83% ->  38% | curvature +4.2
+    x +2.00  pid +125 | target +157 -> +129 | out +158 -> +136  change mean -19.0 (min  -45 max   +0) | binds  82% ->  52% | curvature +3.1
+    x +2.25  pid  +97 | target +114 -> +108 | out +129 -> +112  change mean -11.7 (min  -34 max   +0) | binds  80% ->  76% | curvature +1.9
+    x +2.50  pid  +64 | target  +75 ->  +88 | out  +76 ->  +87  change mean  +3.4 (min  -13 max  +17) | binds  62% ->  72% | curvature -0.6
+    x +2.75  pid  +50 | target  +48 ->  +76 | out  +53 ->  +69  change mean  +6.2 (min   +0 max  +18) | binds  28% ->  58% | curvature -1.0
+    x +3.00  pid  +90 | target  +61 ->  +85 | out  +90 ->  +91  change mean  +2.4 (min   +0 max  +21) | binds  11% ->  39% | curvature -0.4
+    x +3.25  pid +129 | target  +75 ->  +89 | out +129 -> +129  change mean  +0.0 (min   +0 max   +0) | binds   0% ->   0% | curvature -0.0
+    x +3.50  pid +152 | target +117 -> +111 | out +152 -> +152  change mean  -0.2 (min   -6 max   +0) | binds   5% ->   0% | curvature +0.0
+    x +3.75  pid +167 | target +164 -> +163 | out +170 -> +169  change mean  -1.0 (min   -3 max   +0) | binds  49% ->  49% | curvature +0.2
+    x +4.00  pid +169 | target +159 -> +159 | out +173 -> +173  change mean  -0.1 (min   -2 max   +0) | binds  43% ->  43% | curvature +0.0
+    x +4.25  pid +267 | target +154 -> +154 | out +267 -> +267  change mean  +0.0 (min   +0 max   +0) | binds   2% ->   2% | curvature -0.0
+    x +4.50  pid +382 | target +190 -> +190 | out +382 -> +382  change mean  +0.0 (min   +0 max   +0) | binds   4% ->   4% | curvature -0.0
+    x +4.75  pid +370 | target  +25 ->  +25 | out +370 -> +370  change mean  +0.0 (min   +0 max   +0) | binds   0% ->   0% | curvature -0.0
+  per lap: frames in x -0.1..5.0, changed, largest raise / largest reduction (us): 9934-L1 106/39 +18/-52 9934-L2 106/37 +6/-48 b93e-L1 99/44 +9/-46 b93e-L2 104/54 +14/-49 b93e-L3 104/38 +21/-47 e1b4-L1 102/41 +15/-49 e1b4-L2 104/42 +18/-43 e1b4-L3 82/30 +4/-55 e1b4-L4 104/35 +16/-55
+  command over x 0.6..3.6 m, per pass (n=12): standard deviation median 54 -> 44 us ; max - min median 198 -> 165 us (open loop: the PID input is the recorded one)
+==============================================================================================================
+candidate arc2.c3flat100.json
+  kappa_table old: [34.8, 32.0, 12.8, 12.0, 13.6, 20.8, 40.4, 49.6, 40.4, 36.4, 24.4, 14.0, 8.8, 15.6, 16.0, 27.2, 40.0, 35.2]
+  kappa_table new: [34.8, 32.0, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 23.7, 40.0, 35.2]
+  other c3 keys changed: none
+  TOTAL frames 17893 | frames with a c3 record 1613 | command changed on 570 | changed outside x 0.17..3.93 m: 2 | changed frames that also have a tail top record: 0
+  per 0.25 m of x (complete laps): PID command entering the layer | floor target old -> new | layer output old -> new (us above the centre 1475), mean change, floor binds old / new (%), estimated curvature change deg/m
+    x +0.50  pid  +69 | target  +52 -> +100 | out  +69 ->  +69  change mean  +0.0 (min   +0 max   +0) | binds   0% ->   3% | curvature -0.0
+    x +0.75  pid  +75 | target  +61 -> +101 | out  +75 ->  +91  change mean  +6.3 (min   +0 max  +29) | binds  16% ->  58% | curvature -1.0
+    x +1.00  pid +118 | target  +92 -> +101 | out +118 -> +118  change mean  +0.6 (min   +0 max  +11) | binds   5% ->  14% | curvature -0.1
+    x +1.25  pid +125 | target +156 -> +101 | out +156 -> +125  change mean -32.6 (min  -65 max   -5) | binds 100% ->  22% | curvature +5.3
+    x +1.50  pid +139 | target +196 -> +101 | out +196 -> +139  change mean -52.0 (min -101 max   -4) | binds 100% ->  10% | curvature +8.5
+    x +1.75  pid +155 | target +191 -> +101 | out +194 -> +155  change mean -32.2 (min  -95 max   +0) | binds  83% ->   1% | curvature +5.3
+    x +2.00  pid +125 | target +157 -> +102 | out +158 -> +126  change mean -29.4 (min  -68 max   +0) | binds  82% ->  20% | curvature +4.8
+    x +2.25  pid  +97 | target +114 -> +103 | out +129 -> +103  change mean -17.5 (min  -68 max   +0) | binds  80% ->  63% | curvature +2.8
+    x +2.50  pid  +64 | target  +75 -> +103 | out  +76 ->  +99  change mean +10.0 (min  -13 max  +34) | binds  62% ->  78% | curvature -1.6
+    x +2.75  pid  +50 | target  +48 -> +104 | out  +53 ->  +86  change mean +19.7 (min   +0 max  +38) | binds  28% ->  82% | curvature -3.2
+    x +3.00  pid  +90 | target  +61 -> +104 | out  +90 -> +103  change mean +10.2 (min   +0 max  +54) | binds  11% ->  72% | curvature -1.7
+    x +3.25  pid +129 | target  +75 -> +103 | out +129 -> +129  change mean  +0.3 (min   +0 max  +13) | binds   0% ->   6% | curvature -0.1
+    x +3.50  pid +152 | target +117 -> +104 | out +152 -> +152  change mean  -0.2 (min   -6 max   +0) | binds   5% ->   0% | curvature +0.0
+    x +3.75  pid +167 | target +164 -> +161 | out +170 -> +168  change mean  -2.0 (min   -7 max   +0) | binds  49% ->  47% | curvature +0.3
+    x +4.00  pid +169 | target +159 -> +159 | out +173 -> +173  change mean  -0.1 (min   -4 max   +0) | binds  43% ->  43% | curvature +0.0
+    x +4.25  pid +267 | target +154 -> +154 | out +267 -> +267  change mean  +0.0 (min   +0 max   +0) | binds   2% ->   2% | curvature -0.0
+    x +4.50  pid +382 | target +190 -> +190 | out +382 -> +382  change mean  +0.0 (min   +0 max   +0) | binds   4% ->   4% | curvature -0.0
+    x +4.75  pid +370 | target  +25 ->  +25 | out +370 -> +370  change mean  +0.0 (min   +0 max   +0) | binds   0% ->   0% | curvature -0.0
+  per lap: frames in x -0.1..5.0, changed, largest raise / largest reduction (us): 9934-L1 106/45 +37/-101 9934-L2 106/45 +16/-68 b93e-L1 99/46 +19/-51 b93e-L2 104/55 +29/-61 b93e-L3 104/45 +54/-76 e1b4-L1 102/52 +29/-95 e1b4-L2 104/51 +38/-58 e1b4-L3 82/40 +9/-79 e1b4-L4 104/43 +37/-56
+  command over x 0.6..3.6 m, per pass (n=12): standard deviation median 54 -> 41 us ; max - min median 198 -> 160 us (open loop: the PID input is the recorded one)

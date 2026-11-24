@@ -1,0 +1,1 @@
+{"enabled": false, "k_g": 18.0, "cap_us": 0.0, "tau_s": 1.5, "e_max": 0.35, "gz_lp_max": 8.0, "scale_with_gain": false, "yaw_mode": true, "yaw_off_us": 120.0, "yaw_g0": 3.0, "yaw_cap_us": 90.0, "yaw_conv_g0": 10.0}

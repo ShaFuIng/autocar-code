@@ -1,0 +1,116 @@
+======================================================================================================================
+candidate A1  (lap_speed.A1_relax.json, car lap_speed.py 3ad2272b)
+frames 17893 | PWM changed 327 | changed outside the three straights (zone start-0.3 m .. next curve entry+0.3 m) 0  | lowered 0
+steering: gain_schedule k = max(0.57, 19.6 / PWM); frames where the changed PWM crosses PWM 34.4 (k would differ): 6 of 327 changed frames
+  main   passes 13 frames 1433 | PWM >= 95: 75.8% -> 80.4% | mean PWM  92.1 ->  94.1 | dips (>=90 then <70):  1 ->  1 | model time saved per pass: median 0.00 s (min 0.00 max 0.14, n 10, rms 0.146 m/s)
+           speed at zone end C4e+7.3           old 1.45 -> new 1.45 m/s (median; max increase +0.00)
+           speed at C4e+9.0                    old 1.28 -> new 1.28 m/s (median; max increase +0.01)
+           speed at curve 1 entry C4e+10.2     old 1.06 -> new 1.06 m/s (median; max increase +0.03)
+  diag   passes 13 frames 1597 | PWM >= 95: 61.9% -> 66.9% | mean PWM  85.9 ->  88.6 | dips (>=90 then <70): 12 -> 11 | model time saved per pass: median 0.00 s (min 0.00 max 0.42, n 13, rms 0.148 m/s)
+           speed at zone end C1e+8.0           old 1.39 -> new 1.42 m/s (median; max increase +0.19)
+           speed at entry zone C1e+9.8         old 1.28 -> new 1.28 m/s (median; max increase +0.05)
+           speed at curve 2 entry C1e+11.8     old 0.91 -> new 0.92 m/s (median; max increase +0.10)
+  circle passes 13 frames 1062 | PWM >= 95: 49.6% -> 49.6% | mean PWM  79.7 ->  79.7 | dips (>=90 then <70): 12 -> 12 | model time saved per pass: median 0.00 s (min 0.00 max 0.00, n 13, rms 0.156 m/s)
+           speed at zone end C2e+5.0           old 1.29 -> new 1.29 m/s (median; max increase +0.00)
+           speed at left bend C2e+6.8          old 1.20 -> new 1.20 m/s (median; max increase +0.00)
+  model sum of the three medians: 0.00 s per lap
+  empirical main  : window time = 7.30 s + -0.0023 s per PWM*s of in-zone deficit (n 10, r -0.31); the candidate removes median 0 PWM*s -> 0.00 s per pass (model above: 0.00)
+  empirical diag  : window time = 8.67 s + 0.0029 s per PWM*s of in-zone deficit (n 13, r 0.71); the candidate removes median 0 PWM*s -> 0.00 s per pass (model above: 0.00)
+  empirical circle: window time = 4.80 s + 0.0045 s per PWM*s of in-zone deficit (n 13, r 0.69); the candidate removes median 0 PWM*s -> 0.00 s per pass (model above: 0.00)
+  empirical sum: 0.00 s per lap (regression over 10-13 recorded passes per straight; a rough cross-check, not a prediction)
+  in-zone frames with real trouble (|e| > 0.40 or |gz_lp| > 25 dps or no error): 19 ; PWM <= 75 within 0.25 s: old 19, new 19
+  what still holds the PWM down inside the 100 zones (new side, frames): {'LOW': 94, 'ERROR': 13}
+======================================================================================================================
+candidate A2  (lap_speed.A2_relax_rate120.json, car lap_speed.py 3ad2272b)
+frames 17893 | PWM changed 1813 | changed outside the three straights (zone start-0.3 m .. next curve entry+0.3 m) 297 {'A ramp 100 (RAMP+0.3..1.9, a': 297} | lowered 0
+steering: gain_schedule k = max(0.57, 19.6 / PWM); frames where the changed PWM crosses PWM 34.4 (k would differ): 11 of 1813 changed frames
+  main   passes 13 frames 1433 | PWM >= 95: 75.8% -> 89.6% | mean PWM  92.1 ->  96.7 | dips (>=90 then <70):  1 ->  1 | model time saved per pass: median 0.07 s (min 0.04 max 0.18, n 10, rms 0.146 m/s)
+           speed at zone end C4e+7.3           old 1.45 -> new 1.45 m/s (median; max increase +0.00)
+           speed at C4e+9.0                    old 1.28 -> new 1.29 m/s (median; max increase +0.02)
+           speed at curve 1 entry C4e+10.2     old 1.06 -> new 1.06 m/s (median; max increase +0.05)
+  diag   passes 13 frames 1597 | PWM >= 95: 61.9% -> 80.0% | mean PWM  85.9 ->  92.8 | dips (>=90 then <70): 12 -> 12 | model time saved per pass: median 0.21 s (min 0.05 max 0.50, n 13, rms 0.148 m/s)
+           speed at zone end C1e+8.0           old 1.39 -> new 1.44 m/s (median; max increase +0.22)
+           speed at entry zone C1e+9.8         old 1.28 -> new 1.29 m/s (median; max increase +0.07)
+           speed at curve 2 entry C1e+11.8     old 0.91 -> new 0.94 m/s (median; max increase +0.11)
+  circle passes 13 frames 1062 | PWM >= 95: 49.6% -> 65.2% | mean PWM  79.7 ->  85.3 | dips (>=90 then <70): 12 -> 12 | model time saved per pass: median 0.10 s (min 0.05 max 0.15, n 13, rms 0.156 m/s)
+           speed at zone end C2e+5.0           old 1.29 -> new 1.32 m/s (median; max increase +0.06)
+           speed at left bend C2e+6.8          old 1.20 -> new 1.23 m/s (median; max increase +0.04)
+  model sum of the three medians: 0.38 s per lap
+  empirical main  : window time = 7.30 s + -0.0023 s per PWM*s of in-zone deficit (n 10, r -0.31); the candidate removes median 15 PWM*s -> 0.00 s per pass (model above: 0.07)
+  empirical diag  : window time = 8.67 s + 0.0029 s per PWM*s of in-zone deficit (n 13, r 0.71); the candidate removes median 32 PWM*s -> 0.09 s per pass (model above: 0.21)
+  empirical circle: window time = 4.80 s + 0.0045 s per PWM*s of in-zone deficit (n 13, r 0.69); the candidate removes median 19 PWM*s -> 0.09 s per pass (model above: 0.10)
+  empirical sum: 0.18 s per lap (regression over 10-13 recorded passes per straight; a rough cross-check, not a prediction)
+  in-zone frames with real trouble (|e| > 0.40 or |gz_lp| > 25 dps or no error): 19 ; PWM <= 75 within 0.25 s: old 19, new 19
+  what still holds the PWM down inside the 100 zones (new side, frames): {'LOW': 94, 'ERROR': 13}
+======================================================================================================================
+candidate B1  (lap_speed.B1_two_level_main.json, candidate lap_speed.py lap-speed-r3)
+frames 17893 | PWM changed 340 | changed outside the three straights (zone start-0.3 m .. next curve entry+0.3 m) 0  | lowered 0
+steering: gain_schedule k = max(0.57, 19.6 / PWM); frames where the changed PWM crosses PWM 34.4 (k would differ): 0 of 340 changed frames
+  main   passes 13 frames 1433 | PWM >= 95: 75.8% -> 93.3% | mean PWM  92.1 ->  97.9 | dips (>=90 then <70):  1 ->  0 | model time saved per pass: median 0.08 s (min 0.06 max 0.19, n 10, rms 0.146 m/s)
+           speed at zone end C4e+7.3           old 1.45 -> new 1.45 m/s (median; max increase +0.00)
+           speed at C4e+9.0                    old 1.28 -> new 1.29 m/s (median; max increase +0.02)
+           speed at curve 1 entry C4e+10.2     old 1.06 -> new 1.06 m/s (median; max increase +0.05)
+  diag   passes 13 frames 1597 | PWM >= 95: 61.9% -> 61.9% | mean PWM  85.9 ->  85.9 | dips (>=90 then <70): 12 -> 12 | model time saved per pass: median 0.00 s (min 0.00 max 0.00, n 13, rms 0.148 m/s)
+           speed at zone end C1e+8.0           old 1.39 -> new 1.39 m/s (median; max increase +0.00)
+           speed at entry zone C1e+9.8         old 1.28 -> new 1.28 m/s (median; max increase +0.00)
+           speed at curve 2 entry C1e+11.8     old 0.91 -> new 0.91 m/s (median; max increase +0.00)
+  circle passes 13 frames 1062 | PWM >= 95: 49.6% -> 49.6% | mean PWM  79.7 ->  79.7 | dips (>=90 then <70): 12 -> 12 | model time saved per pass: median 0.00 s (min 0.00 max 0.00, n 13, rms 0.156 m/s)
+           speed at zone end C2e+5.0           old 1.29 -> new 1.29 m/s (median; max increase +0.00)
+           speed at left bend C2e+6.8          old 1.20 -> new 1.20 m/s (median; max increase +0.00)
+  model sum of the three medians: 0.08 s per lap
+  empirical main  : window time = 7.30 s + -0.0023 s per PWM*s of in-zone deficit (n 10, r -0.31); the candidate removes median 20 PWM*s -> 0.00 s per pass (model above: 0.08)
+  empirical diag  : window time = 8.67 s + 0.0029 s per PWM*s of in-zone deficit (n 13, r 0.71); the candidate removes median 0 PWM*s -> 0.00 s per pass (model above: 0.00)
+  empirical circle: window time = 4.80 s + 0.0045 s per PWM*s of in-zone deficit (n 13, r 0.69); the candidate removes median 0 PWM*s -> 0.00 s per pass (model above: 0.00)
+  empirical sum: 0.00 s per lap (regression over 10-13 recorded passes per straight; a rough cross-check, not a prediction)
+  in-zone frames with real trouble (|e| > 0.40 or |gz_lp| > 25 dps or no error): 19 ; PWM <= 75 within 0.25 s: old 19, new 19
+  what still holds the PWM down inside the 100 zones (new side, frames): {'LOW': 93, 'ERROR': 55}
+======================================================================================================================
+candidate B2a  (lap_speed.B2a_two_level_main_diag.json, candidate lap_speed.py lap-speed-r3)
+frames 17893 | PWM changed 1048 | changed outside the three straights (zone start-0.3 m .. next curve entry+0.3 m) 0  | lowered 0
+steering: gain_schedule k = max(0.57, 19.6 / PWM); frames where the changed PWM crosses PWM 34.4 (k would differ): 6 of 1048 changed frames
+  main   passes 13 frames 1433 | PWM >= 95: 75.8% -> 93.3% | mean PWM  92.1 ->  97.9 | dips (>=90 then <70):  1 ->  0 | model time saved per pass: median 0.08 s (min 0.06 max 0.19, n 10, rms 0.146 m/s)
+           speed at zone end C4e+7.3           old 1.45 -> new 1.45 m/s (median; max increase +0.00)
+           speed at C4e+9.0                    old 1.28 -> new 1.29 m/s (median; max increase +0.02)
+           speed at curve 1 entry C4e+10.2     old 1.06 -> new 1.06 m/s (median; max increase +0.05)
+  diag   passes 13 frames 1597 | PWM >= 95: 61.9% -> 94.4% | mean PWM  85.9 ->  98.0 | dips (>=90 then <70): 12 ->  0 | model time saved per pass: median 0.39 s (min 0.06 max 0.67, n 13, rms 0.148 m/s)
+           speed at zone end C1e+8.0           old 1.39 -> new 1.46 m/s (median; max increase +0.23)
+           speed at entry zone C1e+9.8         old 1.28 -> new 1.30 m/s (median; max increase +0.11)
+           speed at curve 2 entry C1e+11.8     old 0.91 -> new 0.96 m/s (median; max increase +0.15)
+  circle passes 13 frames 1062 | PWM >= 95: 49.6% -> 49.6% | mean PWM  79.7 ->  79.7 | dips (>=90 then <70): 12 -> 12 | model time saved per pass: median 0.00 s (min 0.00 max 0.00, n 13, rms 0.156 m/s)
+           speed at zone end C2e+5.0           old 1.29 -> new 1.29 m/s (median; max increase +0.00)
+           speed at left bend C2e+6.8          old 1.20 -> new 1.20 m/s (median; max increase +0.00)
+  model sum of the three medians: 0.47 s per lap
+  empirical main  : window time = 7.30 s + -0.0023 s per PWM*s of in-zone deficit (n 10, r -0.31); the candidate removes median 20 PWM*s -> 0.00 s per pass (model above: 0.08)
+  empirical diag  : window time = 8.67 s + 0.0029 s per PWM*s of in-zone deficit (n 13, r 0.71); the candidate removes median 72 PWM*s -> 0.21 s per pass (model above: 0.39)
+  empirical circle: window time = 4.80 s + 0.0045 s per PWM*s of in-zone deficit (n 13, r 0.69); the candidate removes median 0 PWM*s -> 0.00 s per pass (model above: 0.00)
+  empirical sum: 0.21 s per lap (regression over 10-13 recorded passes per straight; a rough cross-check, not a prediction)
+  in-zone frames with real trouble (|e| > 0.40 or |gz_lp| > 25 dps or no error): 19 ; PWM <= 75 within 0.25 s: old 19, new 19
+  what still holds the PWM down inside the 100 zones (new side, frames): {'LOW': 61, 'ERROR': 13}
+======================================================================================================================
+candidate B2  (lap_speed.B2_two_level_all.json, candidate lap_speed.py lap-speed-r3)
+frames 17893 | PWM changed 1682 | changed outside the three straights (zone start-0.3 m .. next curve entry+0.3 m) 0  | lowered 0
+steering: gain_schedule k = max(0.57, 19.6 / PWM); frames where the changed PWM crosses PWM 34.4 (k would differ): 21 of 1682 changed frames
+  main   passes 13 frames 1433 | PWM >= 95: 75.8% -> 93.3% | mean PWM  92.1 ->  97.9 | dips (>=90 then <70):  1 ->  0 | model time saved per pass: median 0.08 s (min 0.06 max 0.19, n 10, rms 0.146 m/s)
+           speed at zone end C4e+7.3           old 1.45 -> new 1.45 m/s (median; max increase +0.00)
+           speed at C4e+9.0                    old 1.28 -> new 1.29 m/s (median; max increase +0.02)
+           speed at curve 1 entry C4e+10.2     old 1.06 -> new 1.06 m/s (median; max increase +0.05)
+  diag   passes 13 frames 1597 | PWM >= 95: 61.9% -> 94.4% | mean PWM  85.9 ->  98.0 | dips (>=90 then <70): 12 ->  0 | model time saved per pass: median 0.39 s (min 0.06 max 0.67, n 13, rms 0.148 m/s)
+           speed at zone end C1e+8.0           old 1.39 -> new 1.46 m/s (median; max increase +0.23)
+           speed at entry zone C1e+9.8         old 1.28 -> new 1.30 m/s (median; max increase +0.11)
+           speed at curve 2 entry C1e+11.8     old 0.91 -> new 0.96 m/s (median; max increase +0.15)
+  circle passes 13 frames 1062 | PWM >= 95: 49.6% -> 89.0% | mean PWM  79.7 ->  95.8 | dips (>=90 then <70): 12 ->  0 | model time saved per pass: median 0.25 s (min 0.07 max 0.43, n 13, rms 0.156 m/s)
+           speed at zone end C2e+5.0           old 1.29 -> new 1.44 m/s (median; max increase +0.21)
+           speed at left bend C2e+6.8          old 1.20 -> new 1.26 m/s (median; max increase +0.14)
+  model sum of the three medians: 0.72 s per lap
+  empirical main  : window time = 7.30 s + -0.0023 s per PWM*s of in-zone deficit (n 10, r -0.31); the candidate removes median 20 PWM*s -> 0.00 s per pass (model above: 0.08)
+  empirical diag  : window time = 8.67 s + 0.0029 s per PWM*s of in-zone deficit (n 13, r 0.71); the candidate removes median 72 PWM*s -> 0.21 s per pass (model above: 0.39)
+  empirical circle: window time = 4.80 s + 0.0045 s per PWM*s of in-zone deficit (n 13, r 0.69); the candidate removes median 57 PWM*s -> 0.26 s per pass (model above: 0.25)
+  empirical sum: 0.47 s per lap (regression over 10-13 recorded passes per straight; a rough cross-check, not a prediction)
+  in-zone frames with real trouble (|e| > 0.40 or |gz_lp| > 25 dps or no error): 19 ; PWM <= 75 within 0.25 s: old 19, new 18
+  what still holds the PWM down inside the 100 zones (new side, frames): {'two_level TROUBLE:ERROR': 23}
+======================================================================================================================
+SUMMARY A1                     changed   327 | outside    0 | lowered   0 | model 0.00 s/lap | empirical 0.00 s/lap
+SUMMARY A2                     changed  1813 | outside  297 | lowered   0 | model 0.38 s/lap | empirical 0.18 s/lap
+SUMMARY B1                     changed   340 | outside    0 | lowered   0 | model 0.08 s/lap | empirical 0.00 s/lap
+SUMMARY B2a                    changed  1048 | outside    0 | lowered   0 | model 0.47 s/lap | empirical 0.21 s/lap
+SUMMARY B2                     changed  1682 | outside    0 | lowered   0 | model 0.72 s/lap | empirical 0.47 s/lap

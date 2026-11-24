@@ -1,0 +1,269 @@
+{
+ "revision": "arc2-r1",
+ "enabled": true,
+ "note": "arc2-20261116 offline candidate. land (A) / blind (D) / c3 (C) each switchable with its own enabled; file absent or enabled false = no arc2 layer.",
+ "land": {
+  "enabled": true
+ },
+ "blind": {
+  "enabled": true,
+  "x0": 5.0,
+  "x1": 8.0,
+  "ref_from": 3.8,
+  "note": "window C1e+5.0..8.0 m (+0.5 m fade): 853c lap 3 swing starts at 5.55 m, |de|>=0.3 jumps of 72 passes at 6.5-7.8 m (853c also 9.9); heading settled by C1e+3.5 m (heading(3.5..8 m) p50 -0.5..+1.6 deg); reference = mean IMU heading over 3.8..5.0 m"
+ },
+ "c3": {
+  "enabled": true,
+  "anchors": [
+   [
+    "C3s",
+    0.0
+   ]
+  ],
+  "yaw_ref": "anchor",
+  "win_m": [
+   0.0,
+   0.6
+  ],
+  "kappa_table": [
+   [
+    -0.075,
+    34.8
+   ],
+   [
+    0.175,
+    32.0
+   ],
+   [
+    0.425,
+    12.8
+   ],
+   [
+    0.675,
+    12.0
+   ],
+   [
+    0.925,
+    13.6
+   ],
+   [
+    1.175,
+    20.8
+   ],
+   [
+    1.425,
+    40.4
+   ],
+   [
+    1.675,
+    49.6
+   ],
+   [
+    1.925,
+    40.4
+   ],
+   [
+    2.175,
+    36.4
+   ],
+   [
+    2.425,
+    24.4
+   ],
+   [
+    2.675,
+    14.0
+   ],
+   [
+    2.925,
+    8.8
+   ],
+   [
+    3.175,
+    15.6
+   ],
+   [
+    3.425,
+    16.0
+   ],
+   [
+    3.675,
+    27.2
+   ],
+   [
+    3.925,
+    40.0
+   ],
+   [
+    4.175,
+    35.2
+   ],
+   [
+    4.425,
+    34.8
+   ],
+   [
+    4.675,
+    53.2
+   ],
+   [
+    4.925,
+    49.6
+   ],
+   [
+    5.175,
+    57.6
+   ],
+   [
+    5.425,
+    30.4
+   ],
+   [
+    5.675,
+    22.0
+   ],
+   [
+    5.925,
+    20.0
+   ],
+   [
+    6.175,
+    29.2
+   ]
+  ],
+  "frac": 0.7,
+  "cap_us": 1750.0,
+  "delay_m": 0.0,
+  "ramp_m": 0.3,
+  "end_deg": 999.0,
+  "max_m": 6.2,
+  "fade_m": 0.4,
+  "pitch_max": 3.0,
+  "cancel_fade_m": 0.3,
+  "check_m": 1.5,
+  "min_turn_deg": 5.0,
+  "e_cancel": -9.0,
+  "cancel_after_m": 0.0,
+  "prof_turn": [
+   [
+    0,
+    0.0
+   ],
+   [
+    0.25,
+    8.7
+   ],
+   [
+    0.5,
+    16.7
+   ],
+   [
+    0.75,
+    19.9
+   ],
+   [
+    1.0,
+    22.9
+   ],
+   [
+    1.25,
+    26.3
+   ],
+   [
+    1.5,
+    31.5
+   ],
+   [
+    1.75,
+    41.6
+   ],
+   [
+    2.0,
+    54.0
+   ],
+   [
+    2.25,
+    64.1
+   ],
+   [
+    2.5,
+    73.2
+   ],
+   [
+    2.75,
+    79.3
+   ],
+   [
+    3.0,
+    82.8
+   ],
+   [
+    3.25,
+    85.0
+   ],
+   [
+    3.5,
+    88.9
+   ],
+   [
+    3.75,
+    92.9
+   ],
+   [
+    4.0,
+    99.7
+   ],
+   [
+    4.25,
+    109.7
+   ],
+   [
+    4.5,
+    118.5
+   ],
+   [
+    4.75,
+    127.2
+   ],
+   [
+    5.0,
+    140.5
+   ],
+   [
+    5.25,
+    152.9
+   ],
+   [
+    5.5,
+    167.3
+   ],
+   [
+    5.75,
+    174.9
+   ],
+   [
+    6.0,
+    180.4
+   ],
+   [
+    6.25,
+    185.4
+   ],
+   [
+    6.5,
+    192.7
+   ]
+  ],
+  "ahead_lo": 10.0,
+  "ahead_hi": 20.0,
+  "yield_e": [
+   -0.15,
+   0.1
+  ],
+  "yield_rate": 0.25,
+  "max_drop_us": 60.0,
+  "rearm_m": 20.0,
+  "max_age_s": 0.25,
+  "note": "kappa = median turn-vs-distance of 70 curve-3 passes (11-14..11-16) in 0.25 m bins since the lap_pos C3s crossing, shifted 0.2 m earlier (plant lead); frac 0.7 keeps the floor below the median; turn since C3s already ~38 deg at the crossing (C3s is late: gyro onset 0.85 m before it)"
+ }
+}

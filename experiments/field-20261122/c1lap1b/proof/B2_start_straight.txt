@@ -1,0 +1,151 @@
+start straight of lap 1. hd = heading since the start pose (deg, + = left, gyro bias at rest removed); lat = IMU lateral drift (cm, + = left; assumes the start pose square to the lane);
+near = camera near error (+ = lane centre to the right of the car = car left of centre / pointing left); y = arc_lat lateral (cm, + = left; only from ~1.8 m).
+== 3f22 band=True gyro_bias=0.01 s_trig=2.52 hd_trig=0.6 hd_max=3.6 hd_min=-1.5 lat_trig=6.3 lat_max=6.2 near_rest=0.044711304331551335 near_trig=0.129726377332577 y_trig=1.2 plat_vs_start=2.2 y_min=-11.9
+   s=0.25 hd= -1.3 lat= -0.5 near=-0.047 y=None sb=-40.0 pre=1423 sent=1367.6
+   s=0.50 hd=  0.4 lat= -0.7 near=-0.045 y=None sb=-40.0 pre=1427 sent=1371.6
+   s=0.75 hd=  1.3 lat= -0.3 near=-0.006 y=None sb=-40.0 pre=1446 sent=1391.4
+   s=1.00 hd=  2.4 lat=  0.5 near=0.031 y=None sb=-40.0 pre=1478 sent=1533.2
+   s=1.25 hd=  2.0 lat=  1.8 near=0.048 y=None sb=-40.0 pre=1440 sent=1384.7
+   s=1.50 hd=  1.2 lat=  2.3 near=-0.017 y=None sb=-40.0 pre=1428 sent=1372.6
+   s=1.75 hd=  2.4 lat=  3.1 near=0.01 y=None sb=-36.5 pre=1477 sent=1531.8
+   s=2.00 hd=  3.6 lat=  4.8 near=0.102 y=-3.6 sb=-25.3 pre=1500 sent=1554.6
+   s=2.25 hd=  1.8 lat=  5.8 near=0.096 y=-2.4 sb=-14.6 pre=1486 sent=1431.5
+== fd22 band=True gyro_bias=-0.01 s_trig=2.56 hd_trig=-6.0 hd_max=0.1 hd_min=-5.6 lat_trig=-15.3 lat_max=0.0 near_rest=0.16564588208849412 near_trig=0.1387403431364402 y_trig=2.2 plat_vs_start=-3.4 y_min=-14.4
+   s=0.25 hd= -1.8 lat= -0.5 near=0.149 y=None sb=-40.0 pre=1469 sent=1414.3
+   s=0.50 hd= -2.0 lat= -1.4 near=0.161 y=None sb=-40.0 pre=1474 sent=1528.9
+   s=0.75 hd= -2.5 lat= -2.3 near=0.163 y=None sb=-40.0 pre=1474 sent=1529.2
+   s=1.00 hd= -3.5 lat= -3.6 near=0.149 y=None sb=-40.0 pre=1473 sent=1417.9
+   s=1.25 hd= -3.8 lat= -5.4 near=0.134 y=None sb=-40.0 pre=1467 sent=1412.4
+   s=1.50 hd= -4.1 lat= -7.1 near=0.092 y=None sb=-40.0 pre=1455 sent=1400.2
+   s=1.75 hd= -4.5 lat= -9.1 near=0.062 y=None sb=-34.7 pre=1479 sent=1534.3
+   s=2.00 hd= -3.8 lat=-10.9 near=0.096 y=-0.2 sb=-25.4 pre=1501 sent=1555.8
+   s=2.25 hd= -4.5 lat=-12.8 near=0.099 y=0.4 sb=-13.9 pre=1497 sent=1551.8
+== b23a band=True gyro_bias=-0.03 s_trig=2.33 hd_trig=1.4 hd_max=1.8 hd_min=-0.3 lat_trig=5.3 lat_max=5.1 near_rest=0.06130454129814267 near_trig=0.16473644821972905 y_trig=6.3 plat_vs_start=3.1 y_min=-17.8
+   s=0.25 hd=  0.7 lat=  0.2 near=0.097 y=None sb=-40.0 pre=1458 sent=1403.2
+   s=0.50 hd=  1.2 lat=  0.6 near=0.132 y=None sb=-40.0 pre=1496 sent=1551.2
+   s=0.75 hd=  1.5 lat=  1.3 near=0.16 y=None sb=-40.0 pre=1479 sent=1424.1
+   s=1.00 hd=  1.3 lat=  1.9 near=0.16 y=None sb=-40.0 pre=1471 sent=1416.4
+   s=1.25 hd=  1.4 lat=  2.5 near=0.177 y=None sb=-40.0 pre=1481 sent=1426.3
+   s=1.50 hd=  1.5 lat=  3.0 near=0.152 y=None sb=-40.0 pre=1469 sent=1413.5
+   s=1.75 hd=  1.4 lat=  3.6 near=0.147 y=None sb=-35.6 pre=1485 sent=1539.6
+   s=2.00 hd=  1.8 lat=  4.5 near=0.164 y=2.5 sb=-21.3 pre=1510 sent=1565.4
+== 2b72 band=True gyro_bias=-0.08 s_trig=2.34 hd_trig=-0.5 hd_max=2.5 hd_min=-0.8 lat_trig=4.2 lat_max=4.4 near_rest=0.033512457509835454 near_trig=0.1927624148754781 y_trig=8.5 plat_vs_start=3.3 y_min=-18.9
+   s=0.25 hd=  1.4 lat=  0.3 near=0.127 y=None sb=-40.0 pre=1496 sent=1551.3
+   s=0.50 hd=  2.5 lat=  1.3 near=0.208 y=None sb=-40.0 pre=1505 sent=1560.2
+   s=0.75 hd=  2.1 lat=  2.5 near=0.232 y=None sb=-40.0 pre=1491 sent=1436.1
+   s=1.00 hd=  1.7 lat=  3.1 near=0.24 y=None sb=-40.0 pre=1495 sent=1439.5
+   s=1.25 hd=  1.3 lat=  3.7 near=0.272 y=None sb=-40.0 pre=1506 sent=1560.7
+   s=1.50 hd=  0.7 lat=  4.3 near=0.249 y=None sb=-40.0 pre=1489 sent=1434.4
+   s=1.75 hd=  0.2 lat=  4.4 near=0.246 y=7.8 sb=-34.8 pre=1504 sent=1449.0
+   s=2.00 hd= -0.1 lat=  4.4 near=0.197 y=5.4 sb=-23.8 pre=1511 sent=1566.3
+   s=2.25 hd= -0.4 lat=  4.2 near=0.189 y=8.5 sb=-12.2 pre=1528 sent=1583.0
+== b619 band=True gyro_bias=0.02 s_trig=2.54 hd_trig=-1.3 hd_max=6.6 hd_min=-1.1 lat_trig=5.6 lat_max=6.5 near_rest=-0.05556659771597599 near_trig=0.14212206869117508 y_trig=3.4 plat_vs_start=3.5 y_min=-13.4
+   s=0.25 hd=  3.5 lat=  0.9 near=0.088 y=None sb=-40.0 pre=1458 sent=1402.8
+   s=0.50 hd=  5.5 lat=  3.0 near=0.216 y=None sb=-40.0 pre=1535 sent=1590.3
+   s=0.75 hd=  4.5 lat=  5.4 near=0.297 y=None sb=-40.0 pre=1504 sent=1448.6
+   s=1.00 hd=  1.0 lat=  6.5 near=0.235 y=None sb=-40.0 pre=1459 sent=1404.1
+   s=1.25 hd= -0.8 lat=  6.3 near=0.119 y=None sb=-40.0 pre=1463 sent=1518.0
+   s=1.50 hd= -0.3 lat=  6.1 near=0.08 y=None sb=-40.0 pre=1464 sent=1518.6
+   s=1.75 hd= -0.3 lat=  5.9 near=0.076 y=4.4 sb=-33.3 pre=1487 sent=1542.2
+   s=2.00 hd= -0.1 lat=  5.9 near=0.067 y=0.5 sb=-20.8 pre=1496 sent=1550.6
+   s=2.25 hd=  0.2 lat=  5.9 near=0.129 y=1.2 sb=-11.4 pre=1526 sent=1581.4
+== 1377 band=True gyro_bias=-0.01 s_trig=2.53 hd_trig=-0.8 hd_max=0.8 hd_min=-1.3 lat_trig=-2.9 lat_max=0.4 near_rest=0.05903893405675095 near_trig=0.15916650875935257 y_trig=3.6 plat_vs_start=-0.0 y_min=-13.9
+   s=0.25 hd=  0.5 lat=  0.0 near=0.121 y=None sb=-40.0 pre=1489 sent=1434.0
+   s=0.50 hd=  0.5 lat=  0.3 near=0.166 y=None sb=-40.0 pre=1474 sent=1528.8
+   s=0.75 hd= -0.4 lat=  0.4 near=0.147 y=None sb=-40.0 pre=1462 sent=1406.6
+   s=1.00 hd= -1.2 lat= -0.0 near=0.12 y=None sb=-40.0 pre=1463 sent=1407.8
+   s=1.25 hd= -1.3 lat= -0.7 near=0.107 y=None sb=-40.0 pre=1468 sent=1523.1
+   s=1.50 hd= -1.1 lat= -1.2 near=0.098 y=None sb=-40.0 pre=1467 sent=1522.4
+   s=1.75 hd= -1.2 lat= -1.7 near=0.099 y=4.2 sb=-36.1 pre=1473 sent=1528.0
+   s=2.00 hd= -1.0 lat= -2.2 near=0.092 y=-0.0 sb=-25.9 pre=1490 sent=1544.6
+   s=2.25 hd= -1.0 lat= -2.6 near=0.127 y=1.3 sb=-16.2 pre=1511 sent=1565.8
+== e69d band=True gyro_bias=0.01 s_trig=2.51 hd_trig=-1.4 hd_max=0.0 hd_min=-4.1 lat_trig=-11.9 lat_max=0.0 near_rest=0.10639422283181778 near_trig=0.11212356693517812 y_trig=-0.2 plat_vs_start=-3.5 y_min=-16.4
+   s=0.25 hd= -2.6 lat= -0.9 near=0.049 y=None sb=-40.0 pre=1447 sent=1391.7
+   s=0.50 hd= -3.0 lat= -2.1 near=0.052 y=None sb=-40.0 pre=1448 sent=1503.3
+   s=0.75 hd= -3.4 lat= -3.5 near=0.037 y=None sb=-40.0 pre=1447 sent=1391.7
+   s=1.00 hd= -3.9 lat= -5.2 near=-0.017 y=None sb=-40.0 pre=1428 sent=1373.2
+   s=1.25 hd= -4.1 lat= -6.8 near=-0.054 y=None sb=-40.0 pre=1423 sent=1367.6
+   s=1.50 hd= -3.7 lat= -8.5 near=-0.09 y=None sb=-40.0 pre=1428 sent=1373.0
+   s=1.75 hd= -2.6 lat= -9.7 near=-0.052 y=None sb=-36.5 pre=1470 sent=1524.9
+   s=2.00 hd= -1.7 lat=-10.6 near=-0.001 y=-5.6 sb=-25.2 pre=1480 sent=1535.1
+   s=2.25 hd= -1.6 lat=-11.3 near=0.023 y=-5.4 sb=-14.4 pre=1490 sent=1545.5
+== 54cb band=True gyro_bias=-0.03 s_trig=2.52 hd_trig=-0.7 hd_max=0.6 hd_min=-1.2 lat_trig=-1.4 lat_max=0.0 near_rest=0.08935099803356245 near_trig=0.1476228861339062 y_trig=2.8 plat_vs_start=1.2 y_min=-8.7
+   s=0.25 hd= -0.4 lat= -0.3 near=0.067 y=None sb=-40.0 pre=1450 sent=1395.4
+   s=0.50 hd=  0.0 lat= -0.4 near=0.093 y=None sb=-40.0 pre=1458 sent=1513.0
+   s=0.75 hd= -0.1 lat= -0.3 near=0.109 y=None sb=-40.0 pre=1474 sent=1529.4
+   s=1.00 hd= -0.3 lat= -0.4 near=0.096 y=None sb=-40.0 pre=1463 sent=1518.3
+   s=1.25 hd= -1.0 lat= -0.7 near=0.084 y=None sb=-40.0 pre=1449 sent=1394.0
+   s=1.50 hd= -1.2 lat= -1.1 near=0.035 y=None sb=-40.0 pre=1450 sent=1394.7
+   s=1.75 hd= -0.1 lat= -1.4 near=0.051 y=None sb=-35.9 pre=1481 sent=1536.1
+   s=2.00 hd=  0.6 lat= -1.3 near=0.069 y=-1.1 sb=-26.3 pre=1484 sent=1428.8
+   s=2.25 hd= -0.2 lat= -1.2 near=0.075 y=-0.1 sb=-13.6 pre=1485 sent=1430.5
+== 1cd7 band=True gyro_bias=-0.02 s_trig=2.50 hd_trig=-2.4 hd_max=1.7 hd_min=-2.0 lat_trig=0.4 lat_max=2.0 near_rest=0.08446238598701482 near_trig=0.17489183495613475 y_trig=6.4 plat_vs_start=0.8 y_min=-19.7
+   s=0.25 hd= -0.1 lat= -0.2 near=0.094 y=None sb=-40.0 pre=1458 sent=1513.4
+   s=0.50 hd=  1.2 lat=  0.0 near=0.158 y=None sb=-40.0 pre=1474 sent=1528.8
+   s=0.75 hd=  1.3 lat=  0.6 near=0.206 y=None sb=-40.0 pre=1490 sent=1544.7
+   s=1.00 hd=  1.3 lat=  1.2 near=0.242 y=None sb=-40.0 pre=1506 sent=1561.4
+   s=1.25 hd=  0.9 lat=  1.8 near=0.197 y=None sb=-40.0 pre=1482 sent=1427.5
+   s=1.50 hd=  0.2 lat=  2.0 near=0.228 y=None sb=-40.0 pre=1492 sent=1437.1
+   s=1.75 hd= -0.4 lat=  1.9 near=0.215 y=7.4 sb=-33.7 pre=1490 sent=1435.5
+   s=2.00 hd= -0.7 lat=  1.7 near=0.168 y=4.4 sb=-23.1 pre=1494 sent=1439.1
+   s=2.25 hd= -1.2 lat=  1.2 near=0.155 y=7.3 sb=-11.0 pre=1503 sent=1558.2
+== 9af6 band=False gyro_bias=-0.06 s_trig=3.48 hd_trig=-14.9 hd_max=2.8 hd_min=-14.1 lat_trig=-6.8 lat_max=3.1 near_rest=0.027585982096701715 near_trig=0.5807110309543089 y_trig=1.9 plat_vs_start=None y_min=-14.6
+   s=0.25 hd=  0.8 lat=  0.1 near=0.063 y=None sb=-40.0 pre=1452 sent=1396.5
+   s=0.50 hd=  2.5 lat=  1.0 near=0.155 y=None sb=-40.0 pre=1474 sent=1418.7
+   s=0.75 hd=  2.1 lat=  2.0 near=0.202 y=None sb=-40.0 pre=1482 sent=1537.2
+   s=1.00 hd=  1.1 lat=  2.7 near=0.181 y=None sb=-40.0 pre=1474 sent=1419.0
+   s=1.25 hd=  0.5 lat=  3.0 near=0.175 y=None sb=-40.0 pre=1477 sent=1422.1
+   s=1.50 hd= -0.1 lat=  3.1 near=0.137 y=None sb=-40.0 pre=1466 sent=1410.8
+   s=1.75 hd= -0.6 lat=  2.9 near=0.107 y=4.6 sb=-38.3 pre=1460 sent=1405.4
+   s=2.00 hd= -0.1 lat=  2.8 near=0.079 y=1.3 sb=-27.1 pre=1481 sent=1536.3
+   s=2.25 hd=  0.0 lat=  2.8 near=0.114 y=1.7 sb=-15.9 pre=1499 sent=1553.6
+== c6f3 band=False gyro_bias=-0.02 s_trig=3.42 hd_trig=-20.4 hd_max=1.5 hd_min=-19.1 lat_trig=-12.8 lat_max=0.3 near_rest=-0.003906819709403645 near_trig=0.5046172816968615 y_trig=0.1 plat_vs_start=None y_min=-12.7
+   s=0.25 hd= -0.3 lat= -0.3 near=-0.002 y=None sb=-40.0 pre=1437 sent=1382.0
+   s=0.50 hd=  1.5 lat=  0.1 near=0.102 y=None sb=-40.0 pre=1488 sent=1543.1
+   s=0.75 hd= -1.0 lat=  0.1 near=0.088 y=None sb=-40.0 pre=1422 sent=1366.8
+   s=1.00 hd= -2.1 lat= -0.9 near=-0.031 y=None sb=-40.0 pre=1440 sent=1494.7
+   s=1.25 hd= -0.2 lat= -1.3 near=0.027 y=None sb=-40.0 pre=1467 sent=1412.4
+   s=1.50 hd=  0.2 lat= -1.2 near=0.079 y=None sb=-40.0 pre=1461 sent=1405.5
+   s=1.75 hd=  0.3 lat= -1.2 near=0.096 y=2.6 sb=-35.2 pre=1481 sent=1536.4
+   s=2.00 hd=  0.8 lat= -0.9 near=0.102 y=-1.9 sb=-23.8 pre=1493 sent=1548.2
+   s=2.25 hd=  0.6 lat= -0.5 near=0.124 y=3.4 sb=-10.3 pre=1498 sent=1553.0
+== 6f61 band=False gyro_bias=-0.42 s_trig=3.58 hd_trig=-21.7 hd_max=0.3 hd_min=-18.6 lat_trig=-31.6 lat_max=0.0 near_rest=0.13075058295316744 near_trig=0.6666616173166667 y_trig=-0.9 plat_vs_start=None y_min=-13.6
+   s=0.25 hd= -2.4 lat= -1.1 near=0.057 y=None sb=-40.0 pre=1453 sent=1508.1
+   s=0.50 hd= -2.3 lat= -2.2 near=0.083 y=None sb=-40.0 pre=1459 sent=1514.0
+   s=0.75 hd= -2.2 lat= -3.2 near=0.093 y=None sb=-40.0 pre=1468 sent=1522.7
+   s=1.00 hd= -3.0 lat= -4.3 near=0.077 y=None sb=-40.0 pre=1457 sent=1401.7
+   s=1.25 hd= -3.5 lat= -5.7 near=0.058 y=None sb=-40.0 pre=1454 sent=1399.4
+   s=1.50 hd= -4.1 lat= -7.3 near=0.016 y=None sb=-40.0 pre=1441 sent=1386.1
+   s=1.75 hd= -4.4 lat= -9.8 near=-0.024 y=0.8 sb=-33.8 pre=1446 sent=1390.8
+   s=2.00 hd= -4.2 lat=-11.2 near=-0.024 y=-3.7 sb=-25.2 pre=1453 sent=1508.0
+   s=2.25 hd= -4.4 lat=-13.2 near=-0.046 y=-4.3 sb=-14.2 pre=1468 sent=1522.5
+== e0cd band=False gyro_bias=-0.00 s_trig=3.54 hd_trig=-19.5 hd_max=1.1 hd_min=-17.7 lat_trig=-18.7 lat_max=0.1 near_rest=0.05545743279774127 near_trig=0.6208062893870007 y_trig=-3.0 plat_vs_start=None y_min=-12.5
+   s=0.25 hd= -0.4 lat= -0.5 near=0.062 y=None sb=-40.0 pre=1452 sent=1507.0
+   s=0.50 hd=  0.9 lat= -0.3 near=0.143 y=None sb=-40.0 pre=1470 sent=1525.5
+   s=0.75 hd=  0.5 lat=  0.1 near=0.185 y=None sb=-40.0 pre=1468 sent=1413.2
+   s=1.00 hd= -2.6 lat= -0.7 near=0.094 y=None sb=-40.0 pre=1425 sent=1370.0
+   s=1.25 hd= -2.9 lat= -1.9 near=0.013 y=None sb=-40.0 pre=1437 sent=1492.0
+   s=1.50 hd= -1.6 lat= -2.9 near=0.005 y=None sb=-40.0 pre=1470 sent=1524.9
+   s=1.75 hd= -1.4 lat= -3.4 near=0.041 y=2.3 sb=-35.1 pre=1458 sent=1512.5
+   s=2.00 hd= -1.9 lat= -4.1 near=0.02 y=-2.4 sb=-25.9 pre=1449 sent=1394.0
+   s=2.25 hd= -2.5 lat= -5.2 near=-0.02 y=-2.4 sb=-15.9 pre=1473 sent=1528.1
+== 2728 band=False gyro_bias=-0.02 s_trig=3.51 hd_trig=-15.9 hd_max=2.2 hd_min=-14.6 lat_trig=-2.9 lat_max=5.9 near_rest=-0.011091218955954062 near_trig=0.617269123792035 y_trig=1.7 plat_vs_start=None y_min=-13.0
+   s=0.25 hd=  1.1 lat=  0.3 near=0.014 y=None sb=-40.0 pre=1449 sent=1394.0
+   s=0.50 hd=  2.1 lat=  0.9 near=0.068 y=None sb=-40.0 pre=1483 sent=1538.2
+   s=0.75 hd=  0.6 lat=  1.6 near=0.067 y=None sb=-40.0 pre=1428 sent=1372.8
+   s=1.00 hd=  0.3 lat=  1.6 near=-0.013 y=None sb=-40.0 pre=1442 sent=1497.3
+   s=1.25 hd=  0.6 lat=  1.8 near=-0.002 y=None sb=-40.0 pre=1445 sent=1500.3
+   s=1.50 hd=  1.0 lat=  2.1 near=0.007 y=None sb=-40.0 pre=1454 sent=1509.4
+   s=1.75 hd=  1.5 lat=  2.6 near=0.032 y=1.5 sb=-37.2 pre=1471 sent=1525.6
+   s=2.00 hd=  2.2 lat=  3.6 near=0.077 y=-3.7 sb=-24.9 pre=1487 sent=1542.3
+   s=2.25 hd=  2.1 lat=  4.7 near=0.083 y=-1.5 sb=-13.2 pre=1495 sent=1550.3
+== 7658 band=False gyro_bias=-0.04 s_trig=3.54 hd_trig=-18.7 hd_max=0.2 hd_min=-17.0 lat_trig=-20.7 lat_max=0.0 near_rest=0.11199372959177076 near_trig=0.6685115703916543 y_trig=1.0 plat_vs_start=None y_min=-11.2
+   s=0.25 hd= -0.5 lat= -0.4 near=0.085 y=None sb=-40.0 pre=1456 sent=1510.7
+   s=0.50 hd= -0.5 lat= -0.6 near=0.113 y=None sb=-40.0 pre=1474 sent=1529.3
+   s=0.75 hd= -0.9 lat= -0.9 near=0.117 y=None sb=-40.0 pre=1470 sent=1525.3
+   s=1.00 hd= -1.3 lat= -1.3 near=0.089 y=None sb=-40.0 pre=1453 sent=1398.3
+   s=1.25 hd= -2.1 lat= -2.2 near=0.056 y=None sb=-40.0 pre=1446 sent=1391.1
+   s=1.50 hd= -2.5 lat= -3.1 near=0.008 y=None sb=-40.0 pre=1440 sent=1384.8
+   s=1.75 hd= -2.0 lat= -4.2 near=-0.007 y=1.8 sb=-33.2 pre=1455 sent=1509.6
+   s=2.00 hd= -2.0 lat= -5.1 near=0.007 y=-3.3 sb=-23.2 pre=1475 sent=1529.8
+   s=2.25 hd= -2.0 lat= -5.9 near=0.001 y=-3.1 sb=-14.3 pre=1478 sent=1533.1

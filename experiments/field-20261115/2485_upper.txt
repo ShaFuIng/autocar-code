@@ -1,0 +1,258 @@
+=== pass 1 t0 3882.8  TURN->downhill 8.1s  v before DOWN -  v_in 0.52
+ 3882.81 top      V e -0.62 pre  982 sent  927 pwm 18 v 0.52 gz  -2 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3882.93 top      V e -0.62 pre  983 sent  928 pwm 18 v 0.51 gz   2 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3883.11 top      V e -0.50 pre 1078 sent 1133 pwm 18 v 0.60 gz  36 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3883.27 dashed_t V e -0.71 pre  915 sent  860 pwm 18 v 0.81 gz  33 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3883.47 dashed_t V e -0.55 pre 1042 sent 1097 pwm 18 v 0.68 gz  32 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3883.64 dashed_t V e -0.48 pre 1094 sent 1150 pwm 18 v 0.61 gz  35 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3883.82 dashed_t V e -0.48 pre 1094 sent 1150 pwm 18 v 0.51 gz  32 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | dash_turn
+ 3883.94 dashed_t V e -0.48 pre 1094 sent 1150 pwm 18 v 0.35 gz  29 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | dash_turn
+ 3884.12 dashed_t V e -0.67 pre  946 sent  891 pwm 18 v 0.31 gz  28 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3884.30 dashed_t V e -0.66 pre  946 sent  891 pwm 18 v 0.29 gz  28 yh     - -      None  tgt         | dash TURN   DIRECTION_MISMATCH| uw   | dash_turn
+ 3884.48 dashed_t V e -0.53 pre 1056 sent 1111 pwm 18 v 0.39 gz  32 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3884.59 dashed_t V e -0.55 pre 1043 sent 1098 pwm 18 v 0.29 gz  30 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3884.71 dashed_t V e -0.47 pre 1102 sent 1156 pwm 18 v 0.33 gz  34 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3884.88 dashed_t V e -0.33 pre 1219 sent 1274 pwm 18 v 0.32 gz  30 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3885.04 dashed_t V e -0.20 pre 1166 sent 1111 pwm 18 v 0.43 gz  30 yh -27.5 ALIGN  None  tgt         | dash TURN   OK                | uw   | upper_single
+ 3885.18 dashed_t V e -0.33 pre 1177 sent 1122 pwm 21 v 0.27 gz  24 yh -24.2 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3885.28 dashed_t V e -0.44 pre 1249 sent 1304 pwm 21 v 0.33 gz  24 yh -21.1 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3885.43 dashed_t V e -0.55 pre 1371 sent 1426 pwm 21 v 0.34 gz  32 yh -17.0 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3885.58 dashed_t V e -0.53 pre 1444 sent 1499 pwm 21 v 0.23 gz  34 yh -13.5 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3885.68 upper_st V e -0.44 pre 1470 sent 1525 pwm 21 v 0.33 gz  18 yh -11.2 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3885.79 upper_st V e -0.35 pre 1451 sent 1506 pwm 21 v 0.26 gz   7 yh  -9.8 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3885.90 upper_st V e -0.31 pre 1471 sent 1526 pwm 32 v 0.31 gz  11 yh  -8.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3886.04 upper_st V e -0.31 pre 1439 sent 1384 pwm 33 v 0.52 gz  10 yh  -7.2 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3886.19 upper_st V e -0.29 pre 1455 sent 1400 pwm 33 v 0.56 gz  13 yh  -5.0 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3886.34 upper_st V e -0.25 pre 1474 sent 1529 pwm 33 v 0.47 gz  14 yh  -2.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3886.54 upper_st V e -0.19 pre 1519 sent 1574 pwm 33 v 0.47 gz  16 yh  -0.6 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3886.68 upper_st V e -0.08 pre 1488 sent 1433 pwm 33 v 0.55 gz  -2 yh   1.6 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 3886.83 upper_st V e  0.02 pre 1483 sent 1428 pwm 33 v 0.88 gz -10 yh   0.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.895, "y_rem": 2.555, "v": 0.668, "v_allow": 1.163, "cap": 44.81, "revision": "upper-wide-r1"} | upper_single
+ 3887.00 upper_st V e  0.03 pre 1499 sent 1444 pwm 33 v 1.04 gz  -4 yh  -0.5 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.066, "y_rem": 2.384, "v": 0.958, "v_allow": 1.13, "cap": 41.83, "revision": "upper-wide-r1"} | upper_single
+ 3887.16 upper_st V e -0.01 pre 1476 sent 1421 pwm 33 v 0.71 gz  -0 yh  -0.5 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.066, "y_rem": 2.384, "v": 0.774, "v_allow": 1.13, "cap": 41.83, "revision": "upper-wide-r1"} | upper_single
+ 3887.29 upper_st V e -0.04 pre 1466 sent 1411 pwm 21 v 0.79 gz   2 yh  -0.4 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.255, "y_rem": 2.195, "v": 0.921, "v_allow": 1.093, "cap": 38.91, "revision": "upper-wide-r1"} | upper_single
+ 3887.39 upper_st V e -0.03 pre 1487 sent 1432 pwm 21 v 0.65 gz   5 yh  -0.2 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.255, "y_rem": 2.195, "v": 0.757, "v_allow": 1.093, "cap": 38.91, "revision": "upper-wide-r1"} | upper_single
+ 3887.55 upper_st V e -0.03 pre 1494 sent 1439 pwm 21 v 0.70 gz   2 yh   0.1 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.451, "y_rem": 1.999, "v": 0.847, "v_allow": 1.053, "cap": 36.41, "revision": "upper-wide-r1"} | upper_single
+ 3887.68 upper_st V e -0.03 pre 1490 sent 1435 pwm 21 v 1.10 gz  -0 yh   0.5 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.644, "y_rem": 1.806, "v": 0.859, "v_allow": 1.011, "cap": 34.06, "revision": "upper-wide-r1"} | upper_single
+ 3887.85 upper_st V e -0.03 pre 1512 sent 1567 pwm 10 v 1.26 gz   2 yh   0.9 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.829, "y_rem": 1.621, "v": 1.096, "v_allow": 0.97, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 3889.14 -        x e  0.21 pre 1507 sent 1562 pwm 10 v    - gz   - yh     - -      None  tgt         | dash None   NO_DASH_LINE      | uw  {"y": 1.829, "y_rem": 1.621, "v": 1.096, "v_allow": 0.97, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befor | warmup_hold
+ 3889.30 upper_st V e  0.13 pre 1486 sent 1431 pwm 21 v 0.66 gz  -2 yh   0.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw   | upper_single
+ 3889.40 upper_st V e  0.12 pre 1463 sent 1408 pwm 21 v 0.62 gz  -5 yh   0.3 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.785, "y_rem": 0.665, "v": 0.0, "v_allow": 0.722, "cap": 23.23, "revision": "upper-wide-r1"} | upper_single
+ 3889.74 upper_st V e  0.87 pre 1490 sent 1545 pwm 21 v 0.55 gz   3 yh  -0.2 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.025, "y_rem": 0.425, "v": 0.532, "v_allow": 0.644, "cap": 21.12, "revision": "upper-wide-r1"} | upper_single
+ 3889.85 upper_st V e  1.00 pre 1507 sent 1562 pwm 20 v 0.76 gz   8 yh   0.4 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.126, "y_rem": 0.324, "v": 0.586, "v_allow": 0.609, "cap": 20.33, "revision": "upper-wide-r1", "pwm_bef | upper_single
+ 3890.00 upper_st V e  0.81 pre 1513 sent 1568 pwm 20 v 0.58 gz   2 yh   0.9 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.126, "y_rem": 0.324, "v": 0.552, "v_allow": 0.609, "cap": 20.33, "revision": "upper-wide-r1", "pwm_bef | upper_single
+ 3890.15 upper_st V e -0.44 pre 1501 sent 1556 pwm 20 v 0.50 gz  -1 yh   1.1 HOLD   None  tgt DASH_DIR| dash None   DIRECTION_MISMATCH| uw POST {"y": 3.23, "y_rem": 0.22, "v": 0.589, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before" | upper_single
+ 3890.29 upper_st V e -0.41 pre 1522 sent 1577 pwm 10 v 0.47 gz   3 yh   1.2 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.335, "y_rem": 0.115, "v": 0.611, "v_allow": 0.6, "cap": 10.0, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 3890.41 upper_st V e -0.40 pre 1510 sent 1565 pwm 20 v 0.78 gz  -1 yh   1.4 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.446, "y_rem": 0.004, "v": 0.594, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 3890.86 -        x e  0.18 pre 1452 sent 1397 pwm 21 v    - gz   - yh     - -      None  tgt         | dash None   None              | uw   | warmup_hold
+ 3890.99 downhill V e  0.27 pre 1651 sent 1706 pwm 10 v 0.38 gz   9 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 3891.09 downhill V e  0.09 pre 1546 sent 1491 pwm 10 v 0.47 gz  11 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3891.24 downhill V e  0.17 pre 1590 sent 1645 pwm 10 v 0.52 gz   9 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3891.34 downhill V e  0.22 pre 1636 sent 1691 pwm 10 v 0.46 gz  11 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3891.45 downhill V e  0.26 pre 1596 sent 1541 pwm 10 v 0.76 gz -16 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3891.58 downhill V e  0.20 pre 1561 sent 1506 pwm 10 v 0.49 gz -23 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 3891.69 downhill V e  0.33 pre 1583 sent 1528 pwm 10 v 0.63 gz -32 yh     - -      None  tgt         | dash None   None              | uw   | downhill_gz
+ 3891.79 downhill V e  0.25 pre 1582 sent 1527 pwm 10 v 0.63 gz -19 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 3891.89 downhill V e  0.22 pre 1565 sent 1510 pwm 10 v 0.72 gz -15 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3892.04 downhill V e  0.14 pre 1501 sent 1446 pwm 10 v 0.71 gz -15 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3892.14 downhill V e  0.09 pre 1481 sent 1426 pwm 10 v 0.80 gz -14 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3892.29 downhill V e -0.01 pre 1480 sent 1425 pwm 10 v 1.10 gz  -4 yh     - -      None  tgt         | dash None   None              | uw   | downhill_dli
+ 3892.39 downhill V e -0.06 pre 1436 sent 1381 pwm 10 v 1.17 gz  -4 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3892.54 downhill V e -0.11 pre 1461 sent 1406 pwm 10 v 0.98 gz   7 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+=== pass 2 t0 3954.3  TURN->downhill 7.8s  v before DOWN 0.41  v_in 0.58
+ 3954.27 top      V e -0.56 pre 1030 sent  975 pwm 18 v 0.58 gz  -1 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3954.44 top      V e -0.46 pre 1110 sent 1165 pwm 18 v 0.78 gz  -2 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3954.60 dashed_t V e -0.51 pre 1073 sent 1018 pwm 18 v 0.71 gz  23 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3954.79 dashed_t V e -0.36 pre 1188 sent 1244 pwm 18 v 0.72 gz  38 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3954.96 dashed_t V e -0.53 pre 1056 sent 1002 pwm 18 v 0.48 gz  33 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3955.15 dashed_t V e -0.65 pre  961 sent  906 pwm 18 v 0.42 gz  24 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3955.32 dashed_t V e -0.64 pre  961 sent  906 pwm 18 v 0.36 gz  31 yh     - -      None  tgt         | dash TURN   DIRECTION_MISMATCH| uw   | dash_turn
+ 3955.50 dashed_t V e -0.63 pre  977 sent  922 pwm 18 v 0.49 gz  30 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3955.63 dashed_t V e -0.61 pre  991 sent 1046 pwm 18 v 0.48 gz  30 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3955.81 dashed_t V e -0.46 pre 1111 sent 1166 pwm 18 v 0.44 gz  29 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3955.99 dashed_t V e -0.36 pre 1192 sent 1248 pwm 18 v 0.29 gz  32 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3956.11 dashed_t V e -0.31 pre 1233 sent 1288 pwm 18 v 0.28 gz  32 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 3956.22 dashed_t V e -0.31 pre 1229 sent 1284 pwm 18 v 0.32 gz  26 yh     - -      None  tgt         | dash TURN   DIRECTION_MISMATCH| uw   | upper_path
+ 3956.36 dashed_t V e -0.17 pre 1120 sent 1065 pwm 21 v 0.24 gz  27 yh -31.7 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3956.56 dashed_t V e -0.02 pre 1120 sent 1065 pwm 21 v 0.28 gz  27 yh -28.5 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3956.66 dashed_t V e  0.08 pre 1189 sent 1244 pwm 24 v 0.29 gz  28 yh -25.6 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3956.76 dashed_t V e  0.08 pre 1292 sent 1347 pwm 27 v 0.32 gz  35 yh -22.0 ALIGN  None  tgt         | dash FOLLOW HOLD_LAST         | uw   | upper_single
+ 3956.86 dashed_t V e  0.22 pre 1421 sent 1476 pwm 27 v 0.39 gz  44 yh -16.4 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3957.02 dashed_t V e  0.22 pre 1556 sent 1611 pwm 33 v 0.46 gz  25 yh -11.5 HOLD   None  tgt DASH_DIR| dash FOLLOW DIRECTION_MISMATCH| uw POST  | upper_single
+ 3957.18 dashed_t V e  0.08 pre 1579 sent 1634 pwm 33 v 0.36 gz  13 yh  -9.6 HOLD   rejec tgt DASH_DIR| dash FOLLOW OK                | uw POST  | upper_single
+ 3957.33 upper_st V e -0.06 pre 1444 sent 1389 pwm 33 v 0.36 gz -13 yh -10.2 HOLD   rejec tgt DASH_DIR| dash FOLLOW OK                | uw POST  | upper_single
+ 3957.48 upper_st V e -0.20 pre 1303 sent 1248 pwm 28 v 0.46 gz -11 yh -11.8 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3957.61 upper_st V e -0.36 pre 1205 sent 1150 pwm 27 v 0.83 gz   5 yh -13.3 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 3957.82 upper_st V e -0.35 pre 1380 sent 1435 pwm 33 v 0.90 gz  49 yh  -6.0 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST  | upper_single
+ 3958.02 upper_st V e -0.54 pre 1280 sent 1225 pwm 28 v 0.88 gz  56 yh   0.8 FOLLOW dash  tgt         | dash FOLLOW OK                | uw  {"y": 0.959, "y_rem": 2.491, "v": 0.935, "v_allow": 1.151, "cap": 43.7, "revision": "upper-wide-r1"} | upper_single
+ 3958.17 upper_st V e -0.60 pre 1415 sent 1470 pwm 33 v 0.65 gz  24 yh   6.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.959, "y_rem": 2.491, "v": 0.77, "v_allow": 1.151, "cap": 43.7, "revision": "upper-wide-r1"} | upper_single
+ 3958.32 upper_st V e -0.46 pre 1580 sent 1635 pwm 33 v 0.67 gz  34 yh  11.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.11, "y_rem": 2.34, "v": 0.759, "v_allow": 1.121, "cap": 41.04, "revision": "upper-wide-r1"} | upper_single
+ 3958.47 upper_st V e -0.29 pre 1608 sent 1663 pwm 28 v 0.68 gz   5 yh  16.1 FOLLOW dash  tgt         | dash FOLLOW OK                | uw  {"y": 1.256, "y_rem": 2.194, "v": 0.759, "v_allow": 1.092, "cap": 38.89, "revision": "upper-wide-r1"} | upper_single
+ 3958.67 upper_st V e -0.14 pre 1680 sent 1735 pwm 27 v 0.94 gz -20 yh  14.8 FOLLOW dash  tgt         | dash FOLLOW OK                | uw  {"y": 1.415, "y_rem": 2.035, "v": 0.728, "v_allow": 1.06, "cap": 36.86, "revision": "upper-wide-r1"} | upper_single
+ 3958.81 upper_st V e -0.14 pre 1558 sent 1503 pwm 27 v 0.64 gz -22 yh  12.2 HOLD   None  tgt DASH_DIR| dash FOLLOW DIRECTION_MISMATCH| uw  {"y": 1.415, "y_rem": 2.035, "v": 0.744, "v_allow": 1.06, "cap": 36.86, "revision": "upper-wide-r1"} | upper_single
+ 3958.91 upper_st V e -0.01 pre 1561 sent 1506 pwm 33 v 0.75 gz -28 yh   8.2 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.582, "y_rem": 1.868, "v": 0.841, "v_allow": 1.025, "cap": 34.73, "revision": "upper-wide-r1"} | upper_single
+ 3959.08 upper_st V e -0.01 pre 1435 sent 1380 pwm 21 v 0.87 gz -30 yh   3.9 HOLD   None  tgt DASH_DIR| dash FOLLOW DIRECTION_MISMATCH| uw POST {"y": 1.771, "y_rem": 1.679, "v": 0.948, "v_allow": 0.983, "cap": 32.66, "revision": "upper-wide-r1"} | upper_single
+ 3959.17 upper_st V e  0.09 pre 1440 sent 1385 pwm 21 v 0.71 gz -17 yh   1.6 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.771, "y_rem": 1.679, "v": 0.79, "v_allow": 0.983, "cap": 32.66, "revision": "upper-wide-r1"} | upper_single
+ 3959.32 upper_st V e -0.02 pre 1394 sent 1339 pwm 21 v 0.92 gz  12 yh   1.4 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.962, "y_rem": 1.488, "v": 0.855, "v_allow": 0.94, "cap": 30.48, "revision": "upper-wide-r1"} | upper_single
+ 3959.42 upper_st V e -0.02 pre 1424 sent 1369 pwm 10 v 1.12 gz  12 yh   2.5 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 2.156, "y_rem": 1.294, "v": 1.153, "v_allow": 0.893, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3959.58 upper_st V e -0.02 pre 1503 sent 1558 pwm 21 v 0.94 gz  15 yh   4.8 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 2.156, "y_rem": 1.294, "v": 0.891, "v_allow": 0.893, "cap": 28.61, "revision": "upper-wide-r1"} | upper_single
+ 3959.72 upper_st V e -0.02 pre 1547 sent 1602 pwm 10 v 0.94 gz  18 yh   7.0 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 2.338, "y_rem": 1.112, "v": 0.864, "v_allow": 0.847, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3960.12 upper_st V e  0.02 pre 1476 sent 1422 pwm 10 v 0.88 gz  -3 yh   7.4 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.632, "y_rem": 0.818, "v": 0.773, "v_allow": 0.767, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3960.22 upper_st V e  0.10 pre 1451 sent 1396 pwm 10 v 0.60 gz  -5 yh   6.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.632, "y_rem": 0.818, "v": 0.777, "v_allow": 0.767, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3960.32 upper_st V e  0.15 pre 1511 sent 1566 pwm 21 v 0.71 gz   4 yh   7.3 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.759, "y_rem": 0.691, "v": 0.703, "v_allow": 0.729, "cap": 23.44, "revision": "upper-wide-r1"} | upper_single
+ 3960.47 upper_st V e  0.25 pre 1547 sent 1602 pwm 10 v 0.72 gz  10 yh   7.6 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.876, "y_rem": 0.574, "v": 0.72, "v_allow": 0.693, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 3960.62 upper_st V e  0.33 pre 1510 sent 1455 pwm 10 v 0.85 gz  -0 yh   8.1 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.977, "y_rem": 0.473, "v": 0.702, "v_allow": 0.66, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 3960.77 upper_st V e  0.39 pre 1494 sent 1439 pwm 21 v 0.49 gz  -1 yh   7.8 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.977, "y_rem": 0.473, "v": 0.566, "v_allow": 0.66, "cap": 21.56, "revision": "upper-wide-r1"} | upper_single
+ 3960.92 upper_st V e  0.35 pre 1463 sent 1408 pwm 21 v 0.40 gz  -4 yh   7.0 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.054, "y_rem": 0.396, "v": 0.46, "v_allow": 0.634, "cap": 20.87, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3961.12 upper_st V e  0.40 pre 1460 sent 1405 pwm 20 v 0.31 gz  -2 yh   6.5 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.131, "y_rem": 0.319, "v": 0.384, "v_allow": 0.607, "cap": 20.29, "revision": "upper-wide-r1", "pwm_bef | upper_single
+ 3961.27 upper_st V e  0.35 pre 1467 sent 1412 pwm 20 v 0.42 gz   1 yh   6.2 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.191, "y_rem": 0.259, "v": 0.307, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 3961.48 upper_st V e  0.34 pre 1469 sent 1414 pwm 20 v 0.37 gz   1 yh   6.3 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.263, "y_rem": 0.187, "v": 0.401, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 3961.63 upper_st V e  0.53 pre 1478 sent 1423 pwm 20 v 0.44 gz   2 yh   6.5 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.353, "y_rem": 0.097, "v": 0.42, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 3961.83 upper_st V e -0.99 pre 1312 sent 1258 pwm 20 v 0.47 gz   1 yh   6.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw  {"y": 3.449, "y_rem": 0.001, "v": 0.44, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 3962.02 upper_st V e -0.99 pre 1452 sent 1507 pwm 20 v 0.54 gz   9 yh   7.4 HOLD   None  tgt TARGET  | dash FOLLOW HOLD_LAST         | uw POST {"y": 3.553, "y_rem": -0.103, "v": 0.533, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3962.12 upper_st V e -0.99 pre 1590 sent 1645 pwm 20 v 0.41 gz  22 yh  10.4 HOLD   None  tgt TARGET  | dash FOLLOW HOLD_LAST         | uw POST {"y": 3.553, "y_rem": -0.103, "v": 0.444, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 3962.32 downhill V e  0.57 pre 1480 sent 1425 pwm 15 v 0.43 gz  23 yh     - -      None  tgt         | dash None   None              | uw   | downhill_ass
+ 3962.41 downhill V e  0.61 pre 1525 sent 1580 pwm 10 v 0.55 gz  -1 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3962.57 downhill V e  0.99 pre 1738 sent 1793 pwm 10 v 0.48 gz  -3 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3962.67 downhill V e -0.24 pre 1738 sent 1793 pwm 10 v 0.58 gz -14 yh     - -      None  tgt         | dash None   None              | uw   | jump_guard
+ 3962.77 downhill V e -0.25 pre 1738 sent 1793 pwm 10 v 0.48 gz  -3 yh     - -      None  tgt         | dash None   None              | uw   | jump_guard
+ 3962.87 downhill V e -0.25 pre 1738 sent 1793 pwm 10 v 0.23 gz -29 yh     - -      None  tgt         | dash None   None              | uw   | jump_guard
+ 3962.91 downhill V e -0.26 pre 1738 sent 1793 pwm 10 v 0.44 gz -35 yh     - -      None  tgt         | dash None   None              | uw   | jump_guard
+ 3963.01 downhill V e -0.32 pre 1180 sent 1125 pwm 10 v 0.50 gz -34 yh     - -      None  tgt         | dash None   None              | uw   | down_straigh
+ 3963.11 downhill V e -0.45 pre 1180 sent 1125 pwm 10 v 0.57 gz -38 yh     - -      None  tgt         | dash None   None              | uw   | down_straigh
+ 3963.17 downhill V e -0.42 pre 1180 sent 1125 pwm 10 v 0.51 gz -39 yh     - -      None  tgt         | dash None   None              | uw   | down_straigh
+ 3963.53 downhill V e  0.41 pre 1716 sent 1771 pwm 10 v 0.82 gz   9 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3963.62 downhill V e  0.47 pre 1680 sent 1625 pwm 10 v 0.75 gz  -9 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 3963.72 downhill V e  0.52 pre 1596 sent 1541 pwm 10 v 0.94 gz -34 yh     - -      None  tgt         | dash None   None              | uw   | downhill_gz
+ 3963.82 downhill V e  0.50 pre 1612 sent 1557 pwm 10 v 1.06 gz -32 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+=== pass 3 t0 4027.2  TURN->downhill 7.9s  v before DOWN 0.25  v_in 0.51
+ 4027.19 top      V e -0.63 pre  979 sent  924 pwm 18 v 0.51 gz   5 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4027.31 top      V e -0.56 pre 1034 sent 1088 pwm 18 v 0.56 gz   8 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4027.50 top      V e -0.60 pre  998 sent  942 pwm 18 v 0.61 gz  26 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4027.68 top      V e -0.65 pre  958 sent  902 pwm 18 v 0.79 gz  39 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4027.86 dashed_t V e -0.57 pre 1024 sent 1080 pwm 18 v 0.67 gz  35 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4028.05 dashed_t V e -0.48 pre 1094 sent 1149 pwm 18 v 0.60 gz  36 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4028.22 dashed_t V e -0.32 pre 1225 sent 1280 pwm 18 v 0.53 gz  29 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4028.40 dashed_t V e -0.32 pre 1221 sent 1276 pwm 18 v 0.32 gz  32 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | upper_path
+ 4028.52 dashed_t V e -0.32 pre 1219 sent 1274 pwm 18 v 0.33 gz  26 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | upper_path
+ 4028.64 dashed_t V e -0.19 pre 1242 sent 1297 pwm 18 v 0.34 gz  24 yh     - -      None  tgt         | dash TURN   OK                | uw   | upper_path
+ 4028.75 dashed_t V e -0.34 pre 1211 sent 1156 pwm 18 v 0.40 gz  28 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4028.94 dashed_t V e -0.39 pre 1168 sent 1113 pwm 18 v 0.33 gz  25 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4029.13 dashed_t V e -0.30 pre 1243 sent 1298 pwm 18 v 0.29 gz  26 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4029.24 dashed_t V e -0.41 pre 1151 sent 1096 pwm 18 v 0.15 gz  27 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4029.36 dashed_t V e -0.31 pre 1233 sent 1288 pwm 18 v 0.33 gz  23 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4029.47 dashed_t V e -0.18 pre 1143 sent 1088 pwm 18 v 0.39 gz  29 yh -28.0 ALIGN  None  tgt         | dash TURN   OK                | uw   | upper_single
+ 4029.60 dashed_t V e -0.32 pre 1200 sent 1255 pwm 23 v 0.45 gz  29 yh -24.2 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4029.78 dashed_t V e -0.46 pre 1302 sent 1357 pwm 21 v 0.34 gz  29 yh -20.8 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4029.83 dashed_t V e -0.56 pre 1349 sent 1404 pwm 21 v 0.45 gz  37 yh -17.1 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4029.95 dashed_t V e -0.56 pre 1407 sent 1462 pwm 33 v 0.46 gz  25 yh -11.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.13 dashed_t V e -0.45 pre 1497 sent 1552 pwm 33 v 0.28 gz  19 yh -10.0 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.22 upper_st V e -0.35 pre 1507 sent 1562 pwm 33 v 0.52 gz  16 yh  -7.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.37 upper_st V e -0.25 pre 1448 sent 1393 pwm 33 v 0.20 gz  -0 yh  -7.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.48 upper_st V e -0.23 pre 1434 sent 1379 pwm 21 v 0.34 gz   0 yh  -7.5 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.63 upper_st V e -0.29 pre 1444 sent 1389 pwm 21 v 0.24 gz  15 yh  -7.0 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.71 upper_st V e -0.33 pre 1416 sent 1361 pwm 33 v 0.45 gz  13 yh  -5.5 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.83 upper_st V e -0.32 pre 1389 sent 1334 pwm 33 v 0.85 gz   6 yh  -3.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4030.97 upper_st V e -0.26 pre 1491 sent 1546 pwm 33 v 0.60 gz  19 yh  -1.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4031.08 upper_st V e -0.22 pre 1501 sent 1556 pwm 33 v 1.00 gz  16 yh   0.3 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.833, "y_rem": 2.617, "v": 0.766, "v_allow": 1.175, "cap": 45.87, "revision": "upper-wide-r1"} | upper_single
+ 4031.22 upper_st V e -0.13 pre 1535 sent 1590 pwm 33 v 0.94 gz  13 yh   3.4 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.986, "y_rem": 2.464, "v": 0.93, "v_allow": 1.145, "cap": 43.22, "revision": "upper-wide-r1"} | upper_single
+ 4031.38 upper_st V e -0.02 pre 1522 sent 1577 pwm 33 v 0.78 gz  -1 yh   3.3 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.986, "y_rem": 2.464, "v": 0.706, "v_allow": 1.145, "cap": 43.22, "revision": "upper-wide-r1"} | upper_single
+ 4031.53 upper_st V e  0.05 pre 1538 sent 1593 pwm 33 v 0.71 gz  -1 yh   3.1 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.15, "y_rem": 2.3, "v": 0.692, "v_allow": 1.114, "cap": 40.32, "revision": "upper-wide-r1"} | upper_single
+ 4031.68 upper_st V e  0.06 pre 1513 sent 1568 pwm 33 v 0.74 gz  -2 yh   2.8 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.326, "y_rem": 2.124, "v": 0.791, "v_allow": 1.078, "cap": 38.01, "revision": "upper-wide-r1"} | upper_single
+ 4031.83 upper_st V e  0.07 pre 1518 sent 1573 pwm 33 v 1.19 gz  -0 yh   2.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.519, "y_rem": 1.931, "v": 0.902, "v_allow": 1.038, "cap": 35.5, "revision": "upper-wide-r1"} | upper_single
+ 4031.97 upper_st V e  0.12 pre 1540 sent 1595 pwm 33 v 0.83 gz  -3 yh   2.6 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.519, "y_rem": 1.931, "v": 0.744, "v_allow": 1.038, "cap": 35.5, "revision": "upper-wide-r1"} | upper_single
+ 4032.07 upper_st V e  0.15 pre 1554 sent 1608 pwm 10 v 1.05 gz  -1 yh   2.4 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.714, "y_rem": 1.736, "v": 1.051, "v_allow": 0.996, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4032.23 upper_st V e  0.15 pre 1471 sent 1416 pwm 21 v 0.48 gz  -4 yh   2.2 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.714, "y_rem": 1.736, "v": 0.857, "v_allow": 0.996, "cap": 33.29, "revision": "upper-wide-r1"} | upper_single
+ 4032.32 upper_st V e  0.15 pre 1491 sent 1436 pwm 10 v 0.79 gz   0 yh   2.1 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.909, "y_rem": 1.541, "v": 0.972, "v_allow": 0.952, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4032.43 upper_st V e  0.15 pre 1474 sent 1419 pwm 21 v 0.86 gz  -1 yh   1.8 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.909, "y_rem": 1.541, "v": 0.819, "v_allow": 0.952, "cap": 31.09, "revision": "upper-wide-r1"} | upper_single
+ 4032.54 upper_st V e  0.15 pre 1501 sent 1556 pwm 21 v 0.83 gz   3 yh   2.0 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 2.106, "y_rem": 1.344, "v": 0.837, "v_allow": 0.905, "cap": 29.07, "revision": "upper-wide-r1"} | upper_single
+ 4033.32 -        x e  0.05 pre 1418 sent 1363 pwm 13 v    - gz   - yh     - -      None  tgt         | dash None   NO_DASH_LINE      | uw  {"y": 2.106, "y_rem": 1.344, "v": 0.837, "v_allow": 0.905, "cap": 29.07, "revision": "upper-wide-r1"} | warmup_hold
+ 4033.42 upper_st V e  0.02 pre 1495 sent 1550 pwm 10 v 0.75 gz   6 yh   1.1 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.762, "y_rem": 0.688, "v": 0.757, "v_allow": 0.729, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4033.53 upper_st V e -0.22 pre 1493 sent 1548 pwm 10 v 0.80 gz   4 yh   1.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.905, "y_rem": 0.545, "v": 0.903, "v_allow": 0.684, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4033.67 upper_st V e  0.95 pre 1503 sent 1558 pwm 10 v 0.82 gz   2 yh   2.3 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.039, "y_rem": 0.411, "v": 0.954, "v_allow": 0.639, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4033.82 upper_st V e  0.94 pre 1488 sent 1543 pwm 10 v 0.69 gz  -0 yh   2.1 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.039, "y_rem": 0.411, "v": 0.683, "v_allow": 0.639, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4033.92 upper_st V e  0.94 pre 1502 sent 1557 pwm 10 v 0.78 gz   3 yh   2.0 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.152, "y_rem": 0.298, "v": 0.707, "v_allow": 0.6, "cap": 10.0, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4034.07 upper_st V e  0.91 pre 1482 sent 1537 pwm 10 v 0.50 gz  -1 yh   2.0 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.24, "y_rem": 0.21, "v": 0.638, "v_allow": 0.6, "cap": 10.0, "revision": "upper-wide-r1", "pwm_before": | upper_single
+ 4034.48 -        x e -0.52 pre 1482 sent 1537 pwm 10 v    - gz   - yh     - -      None  tgt         | dash None   NO_DASH_LINE      | uw  {"y": 3.24, "y_rem": 0.21, "v": 0.638, "v_allow": 0.6, "cap": 10.0, "revision": "upper-wide-r1"} | warmup_hold
+ 4034.63 upper_st V e -0.51 pre 1463 sent 1408 pwm 20 v 0.29 gz  -3 yh   1.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.4, "y_rem": 0.05, "v": 0.341, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before": | upper_single
+ 4034.83 upper_st V e -0.51 pre 1479 sent 1424 pwm 20 v 0.27 gz  -0 yh   1.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.447, "y_rem": 0.003, "v": 0.309, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 4034.93 upper_st V e -0.49 pre 1496 sent 1551 pwm 20 v 0.24 gz   3 yh   1.8 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.447, "y_rem": 0.003, "v": 0.25, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4035.10 upper_st V e -0.47 pre 1510 sent 1565 pwm 20 v 0.25 gz   4 yh   2.1 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.515, "y_rem": -0.065, "v": 0.286, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4035.37 downhill V e  0.28 pre 1637 sent 1692 pwm 15 v 0.31 gz  -0 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 4035.48 downhill V e  0.18 pre 1609 sent 1664 pwm 15 v 0.42 gz   7 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4035.62 downhill V e  0.31 pre 1669 sent 1724 pwm 10 v 0.31 gz  -1 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4035.72 downhill V e  0.10 pre 1492 sent 1436 pwm 10 v 0.41 gz -15 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4035.83 downhill V e  0.10 pre 1480 sent 1425 pwm 10 v 0.41 gz -21 yh     - -      None  tgt         | dash None   None              | uw   | downhill_dli
+ 4035.93 downhill V e  0.06 pre 1480 sent 1425 pwm 10 v 0.47 gz -22 yh     - -      None  tgt         | dash None   None              | uw   | downhill_dli
+ 4036.03 downhill V e -0.04 pre 1358 sent 1303 pwm 10 v 0.83 gz  -8 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4036.13 downhill V e -0.12 pre 1387 sent 1332 pwm 10 v 0.59 gz   7 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4036.28 downhill V e -0.18 pre 1429 sent 1484 pwm 10 v 0.87 gz  19 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4036.38 downhill V e -0.16 pre 1440 sent 1495 pwm 10 v 0.63 gz  22 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4036.47 downhill V e -0.07 pre 1486 sent 1541 pwm 10 v 0.71 gz  24 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4036.58 downhill V e  0.04 pre 1510 sent 1566 pwm 10 v 0.71 gz  10 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4036.68 downhill V e  0.17 pre 1622 sent 1677 pwm 10 v 0.87 gz   9 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4036.77 downhill V e  0.21 pre 1645 sent 1700 pwm 10 v 0.65 gz   7 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+=== pass 4 t0 4100.2  TURN->downhill 7.8s  v before DOWN 0.30  v_in 0.55
+ 4100.16 top      V e -0.60 pre 1002 sent  947 pwm 18 v 0.55 gz  -2 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4100.27 top      V e -0.65 pre  957 sent  902 pwm 18 v 0.68 gz   7 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4100.46 top      V e -0.68 pre  938 sent  883 pwm 18 v 0.54 gz  26 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4100.64 top      V e -0.72 pre  905 sent  850 pwm 18 v 0.82 gz  40 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4100.74 top      V e -0.66 pre  950 sent 1005 pwm 18 v 0.54 gz  36 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4100.94 dashed_t V e -0.53 pre 1055 sent 1110 pwm 18 v 0.50 gz  33 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4101.11 dashed_t V e -0.41 pre 1156 sent 1210 pwm 18 v 0.41 gz  35 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4101.24 dashed_t V e -0.40 pre 1156 sent 1210 pwm 18 v 0.56 gz  33 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | dash_turn
+ 4101.42 dashed_t V e -0.40 pre 1156 sent 1210 pwm 18 v 0.50 gz  27 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | dash_turn
+ 4101.54 dashed_t V e -0.40 pre 1156 sent 1210 pwm 18 v 0.36 gz  25 yh     - -      None  tgt         | dash TURN   HOLD_LAST         | uw   | dash_turn
+ 4101.65 dashed_t V e -0.34 pre 1207 sent 1262 pwm 18 v 0.35 gz  26 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4101.79 dashed_t V e -0.23 pre 1255 sent 1310 pwm 18 v 0.26 gz  28 yh     - -      None  tgt         | dash TURN   OK                | uw   | upper_path
+ 4101.89 dashed_t V e -0.33 pre 1214 sent 1160 pwm 18 v 0.30 gz  29 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4102.02 dashed_t V e -0.44 pre 1127 sent 1072 pwm 18 v 0.44 gz  24 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4102.18 dashed_t V e -0.57 pre 1022 sent  967 pwm 18 v 0.27 gz  26 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4102.28 dashed_t V e -0.44 pre 1129 sent 1184 pwm 18 v 0.43 gz  28 yh     - -      None  tgt         | dash TURN   OK                | uw   | dash_turn
+ 4102.43 dashed_t V e -0.46 pre 1216 sent 1271 pwm 18 v 0.34 gz  33 yh -27.3 ALIGN  None  tgt         | dash TURN   OK                | uw   | upper_single
+ 4102.58 dashed_t V e -0.58 pre 1322 sent 1377 pwm 21 v 0.25 gz  35 yh -23.4 ALIGN  dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4102.68 dashed_t V e -0.71 pre 1313 sent 1368 pwm 21 v 0.43 gz  27 yh -19.5 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4102.84 dashed_t V e -0.66 pre 1392 sent 1447 pwm 21 v 0.36 gz  24 yh -16.3 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4102.98 dashed_t V e -0.59 pre 1405 sent 1460 pwm 21 v 0.27 gz  18 yh -13.8 FOLLOW dash  tgt         | dash FOLLOW OK                | uw   | upper_single
+ 4103.08 upper_st V e -0.53 pre 1410 sent 1464 pwm 33 v 0.37 gz  14 yh -11.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.19 upper_st V e -0.48 pre 1430 sent 1485 pwm 33 v 0.29 gz  17 yh  -9.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.27 upper_st V e -0.44 pre 1437 sent 1492 pwm 33 v 0.39 gz  16 yh  -7.3 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.43 upper_st V e -0.37 pre 1483 sent 1538 pwm 33 v 0.62 gz  20 yh  -4.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.55 upper_st V e -0.33 pre 1492 sent 1547 pwm 33 v 0.43 gz  21 yh  -2.6 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.69 upper_st V e -0.25 pre 1472 sent 1527 pwm 33 v 0.55 gz   7 yh  -1.1 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.83 upper_st V e -0.15 pre 1536 sent 1591 pwm 33 v 0.69 gz  12 yh   0.4 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST  | upper_single
+ 4103.98 upper_st V e -0.10 pre 1506 sent 1451 pwm 33 v 1.02 gz   5 yh   1.6 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.851, "y_rem": 2.599, "v": 0.539, "v_allow": 1.171, "cap": 45.55, "revision": "upper-wide-r1"} | upper_single
+ 4104.13 upper_st V e -0.04 pre 1459 sent 1404 pwm 33 v 0.72 gz  -7 yh   0.7 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 0.851, "y_rem": 2.599, "v": 0.684, "v_allow": 1.171, "cap": 45.55, "revision": "upper-wide-r1"} | upper_single
+ 4104.34 upper_st V e -0.05 pre 1488 sent 1433 pwm 33 v 0.68 gz   3 yh   0.2 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.03, "y_rem": 2.42, "v": 0.72, "v_allow": 1.137, "cap": 42.45, "revision": "upper-wide-r1"} | upper_single
+ 4104.49 upper_st V e -0.08 pre 1454 sent 1399 pwm 33 v 0.73 gz   2 yh   0.9 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.219, "y_rem": 2.231, "v": 0.783, "v_allow": 1.1, "cap": 39.37, "revision": "upper-wide-r1"} | upper_single
+ 4104.63 upper_st V e -0.06 pre 1496 sent 1551 pwm 33 v 1.14 gz   7 yh   2.0 FOLLOW dash  tgt         | dash FOLLOW OK                | uw POST {"y": 1.418, "y_rem": 2.032, "v": 0.862, "v_allow": 1.059, "cap": 36.83, "revision": "upper-wide-r1"} | upper_single
+ 4104.78 upper_st V e -0.06 pre 1536 sent 1591 pwm 10 v 1.33 gz   7 yh   3.1 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.614, "y_rem": 1.836, "v": 1.246, "v_allow": 1.018, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4104.93 upper_st V e -0.06 pre 1508 sent 1563 pwm 33 v 0.89 gz  -3 yh   4.1 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.614, "y_rem": 1.836, "v": 1.01, "v_allow": 1.018, "cap": 34.39, "revision": "upper-wide-r1"} | upper_single
+ 4105.08 upper_st V e -0.06 pre 1492 sent 1437 pwm 10 v 0.86 gz  -3 yh   3.4 HOLD   None  tgt DASH_DIR| dash FOLLOW HOLD_LAST         | uw POST {"y": 1.808, "y_rem": 1.642, "v": 1.057, "v_allow": 0.975, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4105.88 -        x e  0.18 pre 1663 sent 1718 pwm 10 v    - gz   - yh     - -      None  tgt         | dash None   NO_DASH_LINE      | uw  {"y": 1.808, "y_rem": 1.642, "v": 1.057, "v_allow": 0.975, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | warmup_hold
+ 4105.98 upper_st V e  0.21 pre 1475 sent 1420 pwm 21 v 0.78 gz -21 yh   4.8 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.504, "y_rem": 0.946, "v": 0.778, "v_allow": 0.803, "cap": 25.58, "revision": "upper-wide-r1"} | upper_single
+ 4106.15 upper_st V e  0.34 pre 1340 sent 1285 pwm 10 v 0.78 gz -25 yh   1.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.644, "y_rem": 0.806, "v": 0.931, "v_allow": 0.763, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4106.29 upper_st V e  0.35 pre 1329 sent 1274 pwm 10 v 0.80 gz -15 yh  -0.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.78, "y_rem": 0.67, "v": 0.953, "v_allow": 0.723, "cap": 10.0, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4106.53 upper_st V e -0.08 pre 1445 sent 1500 pwm 10 v 0.74 gz  20 yh  -0.9 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 2.912, "y_rem": 0.538, "v": 0.743, "v_allow": 0.682, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4106.68 upper_st V e -0.11 pre 1489 sent 1544 pwm 10 v 0.73 gz  10 yh   0.7 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.03, "y_rem": 0.42, "v": 0.746, "v_allow": 0.642, "cap": 10.0, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4106.83 upper_st V e -0.10 pre 1512 sent 1567 pwm 10 v 0.63 gz   7 yh   2.1 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.119, "y_rem": 0.331, "v": 0.672, "v_allow": 0.611, "cap": 10.0, "revision": "upper-wide-r1", "pwm_befo | upper_single
+ 4106.99 upper_st V e -0.12 pre 1511 sent 1566 pwm 20 v 0.61 gz   4 yh   2.8 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.195, "y_rem": 0.255, "v": 0.576, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 4107.13 upper_st V e -0.20 pre 1506 sent 1561 pwm 20 v 0.37 gz   2 yh   2.9 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.195, "y_rem": 0.255, "v": 0.451, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 4107.28 upper_st V e -0.21 pre 1506 sent 1561 pwm 20 v 0.31 gz   2 yh   2.9 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.259, "y_rem": 0.191, "v": 0.36, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4107.48 upper_st V e -0.21 pre 1494 sent 1549 pwm 20 v 0.23 gz   2 yh   2.9 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.309, "y_rem": 0.141, "v": 0.287, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 4107.64 upper_st V e -0.20 pre 1496 sent 1551 pwm 20 v 0.35 gz  -0 yh   3.0 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.373, "y_rem": 0.077, "v": 0.264, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_befor | upper_single
+ 4107.84 upper_st V e -0.21 pre 1500 sent 1555 pwm 20 v 0.36 gz  -0 yh   3.1 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.46, "y_rem": -0.01, "v": 0.389, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4107.99 upper_st V e -0.20 pre 1484 sent 1539 pwm 20 v 0.30 gz  -2 yh   2.8 HOLD   None  tgt DASH_DIR| dash None   NO_DASH_LINE      | uw POST {"y": 3.46, "y_rem": -0.01, "v": 0.304, "v_allow": 0.6, "cap": 20.14, "revision": "upper-wide-r1", "pwm_before | upper_single
+ 4108.13 downhill V e  0.30 pre 1626 sent 1681 pwm 15 v 0.38 gz   3 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 4108.38 -        x e  0.32 pre 1626 sent 1681 pwm 15 v    - gz   - yh     - -      None  tgt         | dash None   None              | uw   | warmup_hold
+ 4108.49 downhill V e  0.35 pre 1598 sent 1653 pwm 10 v 0.65 gz  -3 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4108.59 downhill V e  0.33 pre 1593 sent 1538 pwm 10 v 0.49 gz  -2 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 4108.69 downhill V e  0.30 pre 1580 sent 1525 pwm 10 v 0.62 gz  -5 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 4108.79 downhill V e  0.27 pre 1542 sent 1486 pwm 10 v 0.53 gz -14 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4108.89 downhill V e  0.27 pre 1575 sent 1630 pwm 10 v 0.66 gz -17 yh     - -      None  tgt         | dash None   None              | uw   | pid
+ 4108.98 downhill V e  0.23 pre 1536 sent 1480 pwm 10 v 0.54 gz  -4 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4109.13 downhill V e  0.16 pre 1503 sent 1448 pwm 10 v 0.69 gz -10 yh     - -      None  tgt         | dash None   None              | uw   | yaw_inner
+ 4109.23 downhill V e  0.14 pre 1497 sent 1442 pwm 10 v 0.69 gz  -9 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4109.33 downhill V e  0.12 pre 1498 sent 1443 pwm 10 v 0.76 gz  -4 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4109.43 downhill V e  0.08 pre 1489 sent 1434 pwm 10 v 1.16 gz  -4 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4109.54 downhill V e  0.07 pre 1498 sent 1443 pwm 10 v 0.88 gz  -3 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe
+ 4109.70 downhill V e  0.04 pre 1483 sent 1428 pwm 10 v 1.18 gz  -4 yh     - -      None  tgt         | dash None   None              | uw   | downhill_spe

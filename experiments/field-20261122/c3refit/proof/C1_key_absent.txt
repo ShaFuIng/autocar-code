@@ -1,0 +1,12 @@
+6f61  frames in  8785 | replayed old  8784 new  8784 | commands identical  8784 | read order identical  8784 | proposals identical  8784 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 8784 of 8784 | |steer diff| median 2.5 P90 26.4 P99 309.9 max 549 us, <=1 us on 33.7% | pwm identical 74.5% | reason identical 99.9%
+c6f3  frames in  5884 | replayed old  5883 new  5883 | commands identical  5883 | read order identical  5883 | proposals identical  5883 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 5883 of 5883 | |steer diff| median 2.6 P90 35.8 P99 332.4 max 580 us, <=1 us on 32.9% | pwm identical 74.1% | reason identical 99.9%
+d60e_new  frames in  7449 | replayed old  7448 new  7448 | commands identical  7448 | read order identical  7448 | proposals identical  7448 | stops ['REPLAY_END'] / ['REPLAY_END'] | loop_err None / None | IDENTICAL
+      fidelity vs car log: matched 7448 of 7448 | |steer diff| median 2.0 P90 21.9 P99 321.0 max 554 us, <=1 us on 35.9% | pwm identical 74.0% | reason identical 100.0%
+TOTAL frames 22115 | identical 22115 | all runs identical: True
+how much of the x-band-r1 code path these replays exercised (new side): frames with proposal.arc2_c3.xband / frames where the band changed the command
+   6f61: 8784 frames, x-band r1 active on 377, command changed by it on 0
+   c6f3: 5883 frames, x-band r1 active on 130, command changed by it on 130
+   d60e_new: 7448 frames, x-band r1 active on 0, command changed by it on 0
+note: fewer band frames than on the car (6f61 478, c6f3 ~326): the harness rebuilds the IMU heading and gets it wrong on part of the curve-3 passes, so the c3 layer does not trigger on every lap in the replay. Both sides see the same input, so the identity above stands; the unit tests cover the r1 path on 14,232 more frames.

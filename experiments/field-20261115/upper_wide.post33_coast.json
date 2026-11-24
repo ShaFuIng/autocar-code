@@ -1,0 +1,18 @@
+{
+ "enabled": true,
+ "revision": "upper-wide-r1",
+ "turn_pwm": 18,
+ "post_pwm": 33,
+ "post_up_rate": 30.0,
+ "post_err_max": 0.6,
+ "post_head_max_deg": 12.0,
+ "coast": {
+  "y_down_m": 3.45,
+  "v_down": 0.6,
+  "a": 0.22,
+  "margin_m": 0.3,
+  "pwm": 10.0,
+  "start_y_m": 0.8
+ },
+ "note": "2026-11-15 field step: turn PWM 18 (replaces LOCK 13) + post-turn PWM 33 with coast profile to reach DOWN at 0.60 m/s. brake_zones crest zone (DASHe+1.5, cap 21) left as on the car = fallback."
+}

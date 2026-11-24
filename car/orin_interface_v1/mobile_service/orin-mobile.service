@@ -1,0 +1,12 @@
+[Unit]
+Description=Orin mobile console (phone page -> dashboard :8000)
+After=orin-dashboard.service
+
+[Service]
+WorkingDirectory=%h/orin_interface_v1/mobile_service
+ExecStart=/usr/bin/python3 server.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

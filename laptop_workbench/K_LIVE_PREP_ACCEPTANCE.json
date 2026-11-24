@@ -1,0 +1,4076 @@
+{
+  "state": "completed_local_only",
+  "entry": {
+    "state": "prepared_not_deployed",
+    "checks": [
+      {
+        "case": "first",
+        "frames": 171,
+        "protocol_parity": true,
+        "mode_parity": true,
+        "path_parity": true,
+        "mean_worker_ms": 300.65497075417215
+      },
+      {
+        "case": "second",
+        "frames": 181,
+        "protocol_parity": true,
+        "mode_parity": true,
+        "path_parity": true,
+        "mean_worker_ms": 301.3314917125322
+      }
+    ],
+    "original_registry_preserved": true,
+    "real_pid_connected": false,
+    "model_inference": false,
+    "orin_connected": false,
+    "service_restarted": false,
+    "hardware_output": false,
+    "opencv": "4.11.0",
+    "limitations": [
+      "Saved masks replace V4 only for offline protocol verification",
+      "Laptop worker time excludes neural inference and is not Orin control latency",
+      "K counters were tested at 10fps; real capture cadence and closed-loop timing require checking on Orin"
+    ]
+  },
+  "clip": {
+    "job": "ee3d85e48a8a47b592fb4997ea645d67",
+    "frames": 1760,
+    "player_range_s": [
+      0,
+      176
+    ],
+    "capture_end_s": 225.49151301383972,
+    "metrics": {
+      "A": {
+        "frames": 1760,
+        "empty_paths": 0,
+        "invalid": 0,
+        "events": [
+          {
+            "frame": 0,
+            "player_s": 0.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1,
+            "player_s": 0.1,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 2,
+            "player_s": 0.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 3,
+            "player_s": 0.3,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 5,
+            "player_s": 0.5,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 6,
+            "player_s": 0.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 7,
+            "player_s": 0.7,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 11,
+            "player_s": 1.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 12,
+            "player_s": 1.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 13,
+            "player_s": 1.3,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 14,
+            "player_s": 1.4,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 19,
+            "player_s": 1.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 21,
+            "player_s": 2.1,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 22,
+            "player_s": 2.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 23,
+            "player_s": 2.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 25,
+            "player_s": 2.5,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 30,
+            "player_s": 3.0,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 31,
+            "player_s": 3.1,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 32,
+            "player_s": 3.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 33,
+            "player_s": 3.3,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 34,
+            "player_s": 3.4,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 36,
+            "player_s": 3.6,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 37,
+            "player_s": 3.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 38,
+            "player_s": 3.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 39,
+            "player_s": 3.9,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 40,
+            "player_s": 4.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 41,
+            "player_s": 4.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 44,
+            "player_s": 4.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 45,
+            "player_s": 4.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 46,
+            "player_s": 4.6,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 47,
+            "player_s": 4.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 51,
+            "player_s": 5.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 52,
+            "player_s": 5.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 53,
+            "player_s": 5.3,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 54,
+            "player_s": 5.4,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 57,
+            "player_s": 5.7,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 58,
+            "player_s": 5.8,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 60,
+            "player_s": 6.0,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 61,
+            "player_s": 6.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 72,
+            "player_s": 7.2,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 73,
+            "player_s": 7.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 74,
+            "player_s": 7.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 75,
+            "player_s": 7.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 76,
+            "player_s": 7.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 77,
+            "player_s": 7.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 78,
+            "player_s": 7.8,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 79,
+            "player_s": 7.9,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 80,
+            "player_s": 8.0,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 81,
+            "player_s": 8.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 85,
+            "player_s": 8.5,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 86,
+            "player_s": 8.6,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 89,
+            "player_s": 8.9,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 90,
+            "player_s": 9.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 92,
+            "player_s": 9.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 93,
+            "player_s": 9.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 97,
+            "player_s": 9.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 98,
+            "player_s": 9.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 100,
+            "player_s": 10.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 103,
+            "player_s": 10.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 104,
+            "player_s": 10.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 105,
+            "player_s": 10.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 107,
+            "player_s": 10.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 108,
+            "player_s": 10.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 112,
+            "player_s": 11.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 115,
+            "player_s": 11.5,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 117,
+            "player_s": 11.7,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 118,
+            "player_s": 11.8,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 120,
+            "player_s": 12.0,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 123,
+            "player_s": 12.3,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 125,
+            "player_s": 12.5,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 126,
+            "player_s": 12.6,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 127,
+            "player_s": 12.7,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 128,
+            "player_s": 12.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 129,
+            "player_s": 12.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 130,
+            "player_s": 13.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 131,
+            "player_s": 13.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 132,
+            "player_s": 13.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 133,
+            "player_s": 13.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 134,
+            "player_s": 13.4,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 135,
+            "player_s": 13.5,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 136,
+            "player_s": 13.6,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 137,
+            "player_s": 13.7,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 138,
+            "player_s": 13.8,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 139,
+            "player_s": 13.9,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 140,
+            "player_s": 14.0,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 141,
+            "player_s": 14.1,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 142,
+            "player_s": 14.2,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 143,
+            "player_s": 14.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 144,
+            "player_s": 14.4,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 148,
+            "player_s": 14.8,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 149,
+            "player_s": 14.9,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 150,
+            "player_s": 15.0,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 151,
+            "player_s": 15.1,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 152,
+            "player_s": 15.2,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 153,
+            "player_s": 15.3,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 154,
+            "player_s": 15.4,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 157,
+            "player_s": 15.7,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 158,
+            "player_s": 15.8,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 159,
+            "player_s": 15.9,
+            "mode": "single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 160,
+            "player_s": 16.0,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 161,
+            "player_s": 16.1,
+            "mode": "single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 162,
+            "player_s": 16.2,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 163,
+            "player_s": 16.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 164,
+            "player_s": 16.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 167,
+            "player_s": 16.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 168,
+            "player_s": 16.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 171,
+            "player_s": 17.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 174,
+            "player_s": 17.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 175,
+            "player_s": 17.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 176,
+            "player_s": 17.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 177,
+            "player_s": 17.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 181,
+            "player_s": 18.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 182,
+            "player_s": 18.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 183,
+            "player_s": 18.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 185,
+            "player_s": 18.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 187,
+            "player_s": 18.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 191,
+            "player_s": 19.1,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 192,
+            "player_s": 19.2,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 193,
+            "player_s": 19.3,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 194,
+            "player_s": 19.4,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 195,
+            "player_s": 19.5,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 196,
+            "player_s": 19.6,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 197,
+            "player_s": 19.7,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 198,
+            "player_s": 19.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 199,
+            "player_s": 19.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 200,
+            "player_s": 20.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 203,
+            "player_s": 20.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 204,
+            "player_s": 20.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 206,
+            "player_s": 20.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 207,
+            "player_s": 20.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 208,
+            "player_s": 20.8,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 209,
+            "player_s": 20.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 210,
+            "player_s": 21.0,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 211,
+            "player_s": 21.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 213,
+            "player_s": 21.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 214,
+            "player_s": 21.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 215,
+            "player_s": 21.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 216,
+            "player_s": 21.6,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 218,
+            "player_s": 21.8,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 220,
+            "player_s": 22.0,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 221,
+            "player_s": 22.1,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 223,
+            "player_s": 22.3,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 225,
+            "player_s": 22.5,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 226,
+            "player_s": 22.6,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 228,
+            "player_s": 22.8,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 229,
+            "player_s": 22.9,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 231,
+            "player_s": 23.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 232,
+            "player_s": 23.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 233,
+            "player_s": 23.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 235,
+            "player_s": 23.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 238,
+            "player_s": 23.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 239,
+            "player_s": 23.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 240,
+            "player_s": 24.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 242,
+            "player_s": 24.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 243,
+            "player_s": 24.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 244,
+            "player_s": 24.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 245,
+            "player_s": 24.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 246,
+            "player_s": 24.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 247,
+            "player_s": 24.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 249,
+            "player_s": 24.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 251,
+            "player_s": 25.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 253,
+            "player_s": 25.3,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 254,
+            "player_s": 25.4,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 256,
+            "player_s": 25.6,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 257,
+            "player_s": 25.7,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 260,
+            "player_s": 26.0,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 261,
+            "player_s": 26.1,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 262,
+            "player_s": 26.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 263,
+            "player_s": 26.3,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 264,
+            "player_s": 26.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 267,
+            "player_s": 26.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 269,
+            "player_s": 26.9,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 270,
+            "player_s": 27.0,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 271,
+            "player_s": 27.1,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 272,
+            "player_s": 27.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 273,
+            "player_s": 27.3,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 275,
+            "player_s": 27.5,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 276,
+            "player_s": 27.6,
+            "mode": "history+single+single_history"
+          },
+          {
+            "frame": 277,
+            "player_s": 27.7,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 281,
+            "player_s": 28.1,
+            "mode": "history+single+single_history"
+          },
+          {
+            "frame": 282,
+            "player_s": 28.2,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 283,
+            "player_s": 28.3,
+            "mode": "history+single+single_history"
+          },
+          {
+            "frame": 284,
+            "player_s": 28.4,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 285,
+            "player_s": 28.5,
+            "mode": "single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 286,
+            "player_s": 28.6,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 287,
+            "player_s": 28.7,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 288,
+            "player_s": 28.8,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 289,
+            "player_s": 28.9,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 291,
+            "player_s": 29.1,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 307,
+            "player_s": 30.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 310,
+            "player_s": 31.0,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 311,
+            "player_s": 31.1,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 315,
+            "player_s": 31.5,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 319,
+            "player_s": 31.9,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 331,
+            "player_s": 33.1,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 332,
+            "player_s": 33.2,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 340,
+            "player_s": 34.0,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 344,
+            "player_s": 34.4,
+            "mode": "double+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 345,
+            "player_s": 34.5,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 346,
+            "player_s": 34.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 347,
+            "player_s": 34.7,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 348,
+            "player_s": 34.8,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 349,
+            "player_s": 34.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 350,
+            "player_s": 35.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 351,
+            "player_s": 35.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 352,
+            "player_s": 35.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 355,
+            "player_s": 35.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 356,
+            "player_s": 35.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 363,
+            "player_s": 36.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 365,
+            "player_s": 36.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 366,
+            "player_s": 36.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 370,
+            "player_s": 37.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 371,
+            "player_s": 37.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 372,
+            "player_s": 37.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 375,
+            "player_s": 37.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 376,
+            "player_s": 37.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 377,
+            "player_s": 37.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 379,
+            "player_s": 37.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 380,
+            "player_s": 38.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 383,
+            "player_s": 38.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 384,
+            "player_s": 38.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 385,
+            "player_s": 38.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 386,
+            "player_s": 38.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 388,
+            "player_s": 38.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 389,
+            "player_s": 38.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 397,
+            "player_s": 39.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 399,
+            "player_s": 39.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 404,
+            "player_s": 40.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 405,
+            "player_s": 40.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 407,
+            "player_s": 40.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 411,
+            "player_s": 41.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 416,
+            "player_s": 41.6,
+            "mode": "double"
+          },
+          {
+            "frame": 417,
+            "player_s": 41.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 418,
+            "player_s": 41.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 419,
+            "player_s": 41.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 420,
+            "player_s": 42.0,
+            "mode": "double+history"
+          },
+          {
+            "frame": 421,
+            "player_s": 42.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 423,
+            "player_s": 42.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 424,
+            "player_s": 42.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 430,
+            "player_s": 43.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 431,
+            "player_s": 43.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 432,
+            "player_s": 43.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 435,
+            "player_s": 43.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 436,
+            "player_s": 43.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 444,
+            "player_s": 44.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 446,
+            "player_s": 44.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 447,
+            "player_s": 44.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 448,
+            "player_s": 44.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 449,
+            "player_s": 44.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 450,
+            "player_s": 45.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 451,
+            "player_s": 45.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 453,
+            "player_s": 45.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 458,
+            "player_s": 45.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 459,
+            "player_s": 45.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 460,
+            "player_s": 46.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 465,
+            "player_s": 46.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 466,
+            "player_s": 46.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 469,
+            "player_s": 46.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 470,
+            "player_s": 47.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 471,
+            "player_s": 47.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 472,
+            "player_s": 47.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 476,
+            "player_s": 47.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 477,
+            "player_s": 47.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 483,
+            "player_s": 48.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 484,
+            "player_s": 48.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 486,
+            "player_s": 48.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 487,
+            "player_s": 48.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 488,
+            "player_s": 48.8,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 491,
+            "player_s": 49.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 492,
+            "player_s": 49.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 495,
+            "player_s": 49.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 496,
+            "player_s": 49.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 497,
+            "player_s": 49.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 528,
+            "player_s": 52.8,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 611,
+            "player_s": 61.1,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 613,
+            "player_s": 61.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 617,
+            "player_s": 61.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 618,
+            "player_s": 61.8,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 623,
+            "player_s": 62.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 626,
+            "player_s": 62.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 627,
+            "player_s": 62.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 628,
+            "player_s": 62.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 629,
+            "player_s": 62.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 630,
+            "player_s": 63.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 633,
+            "player_s": 63.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 635,
+            "player_s": 63.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 636,
+            "player_s": 63.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 637,
+            "player_s": 63.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 638,
+            "player_s": 63.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 639,
+            "player_s": 63.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 640,
+            "player_s": 64.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 641,
+            "player_s": 64.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 642,
+            "player_s": 64.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 644,
+            "player_s": 64.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 647,
+            "player_s": 64.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 648,
+            "player_s": 64.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 649,
+            "player_s": 64.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 651,
+            "player_s": 65.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 654,
+            "player_s": 65.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 655,
+            "player_s": 65.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 657,
+            "player_s": 65.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 658,
+            "player_s": 65.8,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 659,
+            "player_s": 65.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 660,
+            "player_s": 66.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 661,
+            "player_s": 66.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 662,
+            "player_s": 66.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 663,
+            "player_s": 66.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 664,
+            "player_s": 66.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 665,
+            "player_s": 66.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 669,
+            "player_s": 66.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 670,
+            "player_s": 67.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 674,
+            "player_s": 67.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 675,
+            "player_s": 67.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 676,
+            "player_s": 67.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 678,
+            "player_s": 67.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 681,
+            "player_s": 68.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 682,
+            "player_s": 68.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 683,
+            "player_s": 68.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 684,
+            "player_s": 68.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 685,
+            "player_s": 68.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 686,
+            "player_s": 68.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 687,
+            "player_s": 68.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 689,
+            "player_s": 68.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 690,
+            "player_s": 69.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 693,
+            "player_s": 69.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 694,
+            "player_s": 69.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 696,
+            "player_s": 69.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 697,
+            "player_s": 69.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 699,
+            "player_s": 69.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 702,
+            "player_s": 70.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 703,
+            "player_s": 70.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 704,
+            "player_s": 70.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 706,
+            "player_s": 70.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 707,
+            "player_s": 70.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 709,
+            "player_s": 70.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 711,
+            "player_s": 71.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 713,
+            "player_s": 71.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 714,
+            "player_s": 71.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 715,
+            "player_s": 71.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 717,
+            "player_s": 71.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 719,
+            "player_s": 71.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 720,
+            "player_s": 72.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 722,
+            "player_s": 72.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 723,
+            "player_s": 72.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 726,
+            "player_s": 72.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 727,
+            "player_s": 72.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 728,
+            "player_s": 72.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 729,
+            "player_s": 72.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 730,
+            "player_s": 73.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 737,
+            "player_s": 73.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 738,
+            "player_s": 73.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 739,
+            "player_s": 73.9,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 740,
+            "player_s": 74.0,
+            "mode": "double+history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 741,
+            "player_s": 74.1,
+            "mode": "double+history+single+single_history"
+          },
+          {
+            "frame": 743,
+            "player_s": 74.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 746,
+            "player_s": 74.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 748,
+            "player_s": 74.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 749,
+            "player_s": 74.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 750,
+            "player_s": 75.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 754,
+            "player_s": 75.4,
+            "mode": "double+history"
+          },
+          {
+            "frame": 755,
+            "player_s": 75.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 757,
+            "player_s": 75.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 760,
+            "player_s": 76.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 761,
+            "player_s": 76.1,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 762,
+            "player_s": 76.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 763,
+            "player_s": 76.3,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 764,
+            "player_s": 76.4,
+            "mode": "double+history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 766,
+            "player_s": 76.6,
+            "mode": "double+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 767,
+            "player_s": 76.7,
+            "mode": "double+history+single+single_history"
+          },
+          {
+            "frame": 768,
+            "player_s": 76.8,
+            "mode": "double+history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 771,
+            "player_s": 77.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 772,
+            "player_s": 77.2,
+            "mode": "double+history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 773,
+            "player_s": 77.3,
+            "mode": "double+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 774,
+            "player_s": 77.4,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 775,
+            "player_s": 77.5,
+            "mode": "double+history+single+single_history"
+          },
+          {
+            "frame": 776,
+            "player_s": 77.6,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 778,
+            "player_s": 77.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 779,
+            "player_s": 77.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 781,
+            "player_s": 78.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 782,
+            "player_s": 78.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 783,
+            "player_s": 78.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 786,
+            "player_s": 78.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 787,
+            "player_s": 78.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 788,
+            "player_s": 78.8,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 789,
+            "player_s": 78.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 792,
+            "player_s": 79.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 793,
+            "player_s": 79.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 795,
+            "player_s": 79.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 796,
+            "player_s": 79.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 797,
+            "player_s": 79.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 809,
+            "player_s": 80.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 811,
+            "player_s": 81.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 812,
+            "player_s": 81.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 815,
+            "player_s": 81.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 817,
+            "player_s": 81.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 818,
+            "player_s": 81.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 819,
+            "player_s": 81.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 820,
+            "player_s": 82.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 822,
+            "player_s": 82.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 827,
+            "player_s": 82.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 828,
+            "player_s": 82.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 830,
+            "player_s": 83.0,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 831,
+            "player_s": 83.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 833,
+            "player_s": 83.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 834,
+            "player_s": 83.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 841,
+            "player_s": 84.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 842,
+            "player_s": 84.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 843,
+            "player_s": 84.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 844,
+            "player_s": 84.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 845,
+            "player_s": 84.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 853,
+            "player_s": 85.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 854,
+            "player_s": 85.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 855,
+            "player_s": 85.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 856,
+            "player_s": 85.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 857,
+            "player_s": 85.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 859,
+            "player_s": 85.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 860,
+            "player_s": 86.0,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 861,
+            "player_s": 86.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 862,
+            "player_s": 86.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 863,
+            "player_s": 86.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 864,
+            "player_s": 86.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 866,
+            "player_s": 86.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 867,
+            "player_s": 86.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 868,
+            "player_s": 86.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 869,
+            "player_s": 86.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 870,
+            "player_s": 87.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 872,
+            "player_s": 87.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 873,
+            "player_s": 87.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 874,
+            "player_s": 87.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 878,
+            "player_s": 87.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 879,
+            "player_s": 87.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 880,
+            "player_s": 88.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 881,
+            "player_s": 88.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 882,
+            "player_s": 88.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 892,
+            "player_s": 89.2,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 894,
+            "player_s": 89.4,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 964,
+            "player_s": 96.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 965,
+            "player_s": 96.5,
+            "mode": "history+single_extrapolated"
+          },
+          {
+            "frame": 966,
+            "player_s": 96.6,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 967,
+            "player_s": 96.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 969,
+            "player_s": 96.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 970,
+            "player_s": 97.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 980,
+            "player_s": 98.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 981,
+            "player_s": 98.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 989,
+            "player_s": 98.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 990,
+            "player_s": 99.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 991,
+            "player_s": 99.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 992,
+            "player_s": 99.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 994,
+            "player_s": 99.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 998,
+            "player_s": 99.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 999,
+            "player_s": 99.9,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1000,
+            "player_s": 100.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1001,
+            "player_s": 100.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1002,
+            "player_s": 100.2,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1004,
+            "player_s": 100.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1006,
+            "player_s": 100.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1007,
+            "player_s": 100.7,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1008,
+            "player_s": 100.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1009,
+            "player_s": 100.9,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1011,
+            "player_s": 101.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1012,
+            "player_s": 101.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1014,
+            "player_s": 101.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1015,
+            "player_s": 101.5,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1016,
+            "player_s": 101.6,
+            "mode": "double"
+          },
+          {
+            "frame": 1023,
+            "player_s": 102.3,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1024,
+            "player_s": 102.4,
+            "mode": "double"
+          },
+          {
+            "frame": 1033,
+            "player_s": 103.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1034,
+            "player_s": 103.4,
+            "mode": "double"
+          },
+          {
+            "frame": 1036,
+            "player_s": 103.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1039,
+            "player_s": 103.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1040,
+            "player_s": 104.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1041,
+            "player_s": 104.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1042,
+            "player_s": 104.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1047,
+            "player_s": 104.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1048,
+            "player_s": 104.8,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1049,
+            "player_s": 104.9,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1051,
+            "player_s": 105.1,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1052,
+            "player_s": 105.2,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1055,
+            "player_s": 105.5,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1056,
+            "player_s": 105.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1057,
+            "player_s": 105.7,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1058,
+            "player_s": 105.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1059,
+            "player_s": 105.9,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1060,
+            "player_s": 106.0,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1061,
+            "player_s": 106.1,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1063,
+            "player_s": 106.3,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1064,
+            "player_s": 106.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1065,
+            "player_s": 106.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1068,
+            "player_s": 106.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1069,
+            "player_s": 106.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1070,
+            "player_s": 107.0,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1072,
+            "player_s": 107.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1073,
+            "player_s": 107.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1074,
+            "player_s": 107.4,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1076,
+            "player_s": 107.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1078,
+            "player_s": 107.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1082,
+            "player_s": 108.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1083,
+            "player_s": 108.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1084,
+            "player_s": 108.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1085,
+            "player_s": 108.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1088,
+            "player_s": 108.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1089,
+            "player_s": 108.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1091,
+            "player_s": 109.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1092,
+            "player_s": 109.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1093,
+            "player_s": 109.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1094,
+            "player_s": 109.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1095,
+            "player_s": 109.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1096,
+            "player_s": 109.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1097,
+            "player_s": 109.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1098,
+            "player_s": 109.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1100,
+            "player_s": 110.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1101,
+            "player_s": 110.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1102,
+            "player_s": 110.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1103,
+            "player_s": 110.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1104,
+            "player_s": 110.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1105,
+            "player_s": 110.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1106,
+            "player_s": 110.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1108,
+            "player_s": 110.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1109,
+            "player_s": 110.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1110,
+            "player_s": 111.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1112,
+            "player_s": 111.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1113,
+            "player_s": 111.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1114,
+            "player_s": 111.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1118,
+            "player_s": 111.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1120,
+            "player_s": 112.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1123,
+            "player_s": 112.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1124,
+            "player_s": 112.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1125,
+            "player_s": 112.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1126,
+            "player_s": 112.6,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1127,
+            "player_s": 112.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1128,
+            "player_s": 112.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1131,
+            "player_s": 113.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1136,
+            "player_s": 113.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1137,
+            "player_s": 113.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1142,
+            "player_s": 114.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1143,
+            "player_s": 114.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1147,
+            "player_s": 114.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1149,
+            "player_s": 114.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1151,
+            "player_s": 115.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1158,
+            "player_s": 115.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1160,
+            "player_s": 116.0,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 1161,
+            "player_s": 116.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1163,
+            "player_s": 116.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1164,
+            "player_s": 116.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1166,
+            "player_s": 116.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1167,
+            "player_s": 116.7,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1170,
+            "player_s": 117.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1172,
+            "player_s": 117.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1173,
+            "player_s": 117.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1175,
+            "player_s": 117.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1178,
+            "player_s": 117.8,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1179,
+            "player_s": 117.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1180,
+            "player_s": 118.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1181,
+            "player_s": 118.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1182,
+            "player_s": 118.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1183,
+            "player_s": 118.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1186,
+            "player_s": 118.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1187,
+            "player_s": 118.7,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1188,
+            "player_s": 118.8,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1189,
+            "player_s": 118.9,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1190,
+            "player_s": 119.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1191,
+            "player_s": 119.1,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1192,
+            "player_s": 119.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1193,
+            "player_s": 119.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1195,
+            "player_s": 119.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1198,
+            "player_s": 119.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1200,
+            "player_s": 120.0,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1201,
+            "player_s": 120.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1202,
+            "player_s": 120.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1203,
+            "player_s": 120.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1204,
+            "player_s": 120.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1207,
+            "player_s": 120.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1209,
+            "player_s": 120.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1212,
+            "player_s": 121.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1216,
+            "player_s": 121.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1220,
+            "player_s": 122.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1221,
+            "player_s": 122.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1223,
+            "player_s": 122.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1224,
+            "player_s": 122.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1226,
+            "player_s": 122.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1227,
+            "player_s": 122.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1229,
+            "player_s": 122.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1230,
+            "player_s": 123.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1232,
+            "player_s": 123.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1234,
+            "player_s": 123.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1235,
+            "player_s": 123.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1237,
+            "player_s": 123.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1239,
+            "player_s": 123.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1240,
+            "player_s": 124.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1246,
+            "player_s": 124.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1249,
+            "player_s": 124.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1253,
+            "player_s": 125.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1254,
+            "player_s": 125.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1255,
+            "player_s": 125.5,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1257,
+            "player_s": 125.7,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1258,
+            "player_s": 125.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1259,
+            "player_s": 125.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1262,
+            "player_s": 126.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1263,
+            "player_s": 126.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1264,
+            "player_s": 126.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1265,
+            "player_s": 126.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1267,
+            "player_s": 126.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1273,
+            "player_s": 127.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1276,
+            "player_s": 127.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1280,
+            "player_s": 128.0,
+            "mode": "double+history"
+          },
+          {
+            "frame": 1281,
+            "player_s": 128.1,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1283,
+            "player_s": 128.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1286,
+            "player_s": 128.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1287,
+            "player_s": 128.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1288,
+            "player_s": 128.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1289,
+            "player_s": 128.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1290,
+            "player_s": 129.0,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1291,
+            "player_s": 129.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1295,
+            "player_s": 129.5,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1296,
+            "player_s": 129.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1298,
+            "player_s": 129.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1301,
+            "player_s": 130.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1302,
+            "player_s": 130.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1304,
+            "player_s": 130.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1305,
+            "player_s": 130.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1308,
+            "player_s": 130.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1309,
+            "player_s": 130.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1310,
+            "player_s": 131.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1313,
+            "player_s": 131.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1316,
+            "player_s": 131.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1317,
+            "player_s": 131.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1318,
+            "player_s": 131.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1321,
+            "player_s": 132.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1322,
+            "player_s": 132.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1324,
+            "player_s": 132.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1326,
+            "player_s": 132.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1328,
+            "player_s": 132.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1331,
+            "player_s": 133.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1332,
+            "player_s": 133.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1334,
+            "player_s": 133.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1335,
+            "player_s": 133.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1339,
+            "player_s": 133.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1341,
+            "player_s": 134.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1342,
+            "player_s": 134.2,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1343,
+            "player_s": 134.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1344,
+            "player_s": 134.4,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1348,
+            "player_s": 134.8,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1349,
+            "player_s": 134.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1350,
+            "player_s": 135.0,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1352,
+            "player_s": 135.2,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1353,
+            "player_s": 135.3,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1357,
+            "player_s": 135.7,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1359,
+            "player_s": 135.9,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1360,
+            "player_s": 136.0,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1371,
+            "player_s": 137.1,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1372,
+            "player_s": 137.2,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1373,
+            "player_s": 137.3,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1375,
+            "player_s": 137.5,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1376,
+            "player_s": 137.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1378,
+            "player_s": 137.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1385,
+            "player_s": 138.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1391,
+            "player_s": 139.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1393,
+            "player_s": 139.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1394,
+            "player_s": 139.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1398,
+            "player_s": 139.8,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1400,
+            "player_s": 140.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1401,
+            "player_s": 140.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1403,
+            "player_s": 140.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1404,
+            "player_s": 140.4,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1405,
+            "player_s": 140.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1406,
+            "player_s": 140.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1407,
+            "player_s": 140.7,
+            "mode": "double+history+single_extrapolated"
+          },
+          {
+            "frame": 1408,
+            "player_s": 140.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1409,
+            "player_s": 140.9,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1411,
+            "player_s": 141.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1413,
+            "player_s": 141.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1414,
+            "player_s": 141.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1416,
+            "player_s": 141.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1417,
+            "player_s": 141.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1424,
+            "player_s": 142.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1426,
+            "player_s": 142.6,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1428,
+            "player_s": 142.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1430,
+            "player_s": 143.0,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1432,
+            "player_s": 143.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1433,
+            "player_s": 143.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1434,
+            "player_s": 143.4,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1438,
+            "player_s": 143.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1439,
+            "player_s": 143.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1443,
+            "player_s": 144.3,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1444,
+            "player_s": 144.4,
+            "mode": "history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1445,
+            "player_s": 144.5,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1451,
+            "player_s": 145.1,
+            "mode": "history+single+single_history"
+          },
+          {
+            "frame": 1452,
+            "player_s": 145.2,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1455,
+            "player_s": 145.5,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 1456,
+            "player_s": 145.6,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1458,
+            "player_s": 145.8,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1461,
+            "player_s": 146.1,
+            "mode": "history+single+single_history"
+          },
+          {
+            "frame": 1462,
+            "player_s": 146.2,
+            "mode": "history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1463,
+            "player_s": 146.3,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1464,
+            "player_s": 146.4,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1465,
+            "player_s": 146.5,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 1466,
+            "player_s": 146.6,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1468,
+            "player_s": 146.8,
+            "mode": "single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1469,
+            "player_s": 146.9,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1477,
+            "player_s": 147.7,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 1478,
+            "player_s": 147.8,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1481,
+            "player_s": 148.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1482,
+            "player_s": 148.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1483,
+            "player_s": 148.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1484,
+            "player_s": 148.4,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1485,
+            "player_s": 148.5,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1486,
+            "player_s": 148.6,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1487,
+            "player_s": 148.7,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1488,
+            "player_s": 148.8,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1490,
+            "player_s": 149.0,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1491,
+            "player_s": 149.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1492,
+            "player_s": 149.2,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1496,
+            "player_s": 149.6,
+            "mode": "double+single+single_extrapolated"
+          },
+          {
+            "frame": 1499,
+            "player_s": 149.9,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1500,
+            "player_s": 150.0,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1501,
+            "player_s": 150.1,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1502,
+            "player_s": 150.2,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1504,
+            "player_s": 150.4,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1505,
+            "player_s": 150.5,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1506,
+            "player_s": 150.6,
+            "mode": "history+single+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1507,
+            "player_s": 150.7,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1509,
+            "player_s": 150.9,
+            "mode": "history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1510,
+            "player_s": 151.0,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1511,
+            "player_s": 151.1,
+            "mode": "history+single+single_history"
+          },
+          {
+            "frame": 1512,
+            "player_s": 151.2,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1514,
+            "player_s": 151.4,
+            "mode": "history+single_history"
+          },
+          {
+            "frame": 1515,
+            "player_s": 151.5,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1520,
+            "player_s": 152.0,
+            "mode": "single_extrapolated+single_history"
+          },
+          {
+            "frame": 1523,
+            "player_s": 152.3,
+            "mode": "single+single_extrapolated"
+          },
+          {
+            "frame": 1741,
+            "player_s": 174.1,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1743,
+            "player_s": 174.3,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1744,
+            "player_s": 174.4,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1745,
+            "player_s": 174.5,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1747,
+            "player_s": 174.7,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1748,
+            "player_s": 174.8,
+            "mode": "double+single_extrapolated"
+          },
+          {
+            "frame": 1749,
+            "player_s": 174.9,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1750,
+            "player_s": 175.0,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1751,
+            "player_s": 175.1,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1752,
+            "player_s": 175.2,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1753,
+            "player_s": 175.3,
+            "mode": "double+history+single_history"
+          },
+          {
+            "frame": 1755,
+            "player_s": 175.5,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1756,
+            "player_s": 175.6,
+            "mode": "double+single_history"
+          },
+          {
+            "frame": 1757,
+            "player_s": 175.7,
+            "mode": "double+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1758,
+            "player_s": 175.8,
+            "mode": "double+history+single_extrapolated+single_history"
+          },
+          {
+            "frame": 1759,
+            "player_s": 175.9,
+            "mode": "double+single_extrapolated"
+          }
+        ]
+      },
+      "B": {
+        "frames": 1760,
+        "empty_paths": 701,
+        "invalid": 701,
+        "events": [
+          {
+            "frame": 0,
+            "player_s": 0.0,
+            "mode": "K_APPROACH"
+          },
+          {
+            "frame": 3,
+            "player_s": 0.3,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 359,
+            "player_s": 35.9,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 363,
+            "player_s": 36.3,
+            "mode": "K_BLEND"
+          },
+          {
+            "frame": 367,
+            "player_s": 36.7,
+            "mode": "K_FOLLOW_A"
+          },
+          {
+            "frame": 530,
+            "player_s": 53.0,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 621,
+            "player_s": 62.1,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 625,
+            "player_s": 62.5,
+            "mode": "K_BLEND"
+          },
+          {
+            "frame": 632,
+            "player_s": 63.2,
+            "mode": "K_FOLLOW_A"
+          },
+          {
+            "frame": 729,
+            "player_s": 72.9,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 730,
+            "player_s": 73.0,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 733,
+            "player_s": 73.3,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 782,
+            "player_s": 78.2,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 786,
+            "player_s": 78.6,
+            "mode": "K_BLEND"
+          },
+          {
+            "frame": 790,
+            "player_s": 79.0,
+            "mode": "K_FOLLOW_A"
+          },
+          {
+            "frame": 888,
+            "player_s": 88.8,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 981,
+            "player_s": 98.1,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 985,
+            "player_s": 98.5,
+            "mode": "K_BLEND"
+          },
+          {
+            "frame": 989,
+            "player_s": 98.9,
+            "mode": "K_FOLLOW_A"
+          },
+          {
+            "frame": 1098,
+            "player_s": 109.8,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 1159,
+            "player_s": 115.9,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 1162,
+            "player_s": 116.2,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 1166,
+            "player_s": 116.6,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 1173,
+            "player_s": 117.3,
+            "mode": "K_BLEND"
+          },
+          {
+            "frame": 1177,
+            "player_s": 117.7,
+            "mode": "K_FOLLOW_A"
+          },
+          {
+            "frame": 1312,
+            "player_s": 131.2,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 1323,
+            "player_s": 132.3,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 1328,
+            "player_s": 132.8,
+            "mode": "K_CROSS"
+          },
+          {
+            "frame": 1329,
+            "player_s": 132.9,
+            "mode": "K_CONFIRM"
+          },
+          {
+            "frame": 1333,
+            "player_s": 133.3,
+            "mode": "K_BLEND"
+          },
+          {
+            "frame": 1337,
+            "player_s": 133.7,
+            "mode": "K_FOLLOW_A"
+          },
+          {
+            "frame": 1441,
+            "player_s": 144.1,
+            "mode": "K_CROSS"
+          }
+        ]
+      }
+    },
+    "cache": {
+      "inferred": 1246,
+      "mask_reused": 514,
+      "path_reused": 0,
+      "live_mask_reused": 0
+    },
+    "empty_intervals_player_s": [
+      [
+        0.3,
+        11.5
+      ],
+      [
+        12.9,
+        12.9
+      ],
+      [
+        13.4,
+        23.1
+      ],
+      [
+        23.5,
+        23.9
+      ],
+      [
+        24.8,
+        24.8
+      ],
+      [
+        25.2,
+        25.3
+      ],
+      [
+        28.6,
+        28.6
+      ],
+      [
+        29.3,
+        29.5
+      ],
+      [
+        29.7,
+        29.7
+      ],
+      [
+        30.0,
+        34.3
+      ],
+      [
+        52.8,
+        60.9
+      ],
+      [
+        88.8,
+        97.2
+      ],
+      [
+        143.9,
+        157.5
+      ],
+      [
+        157.8,
+        160.7
+      ],
+      [
+        161.0,
+        169.5
+      ],
+      [
+        170.3,
+        171.4
+      ]
+    ],
+    "finding": "K長片空路徑701/1760，原一般道路A空路徑0/1760；即時入口協定通過不等於整趟K路徑驗證通過",
+    "full_clip_path_validation_passed": false,
+    "diagnosis": {
+      "no_reference_empty_frames": 701,
+      "cross_empty_frames": 697,
+      "follow_a_empty_frames": 4,
+      "first_failure": {
+        "player_s": 0.3,
+        "a_double_rows": 24,
+        "a_continuous": true,
+        "entry_hint": true,
+        "visible_reference": "NO_REFERENCE"
+      },
+      "interpretation": "At 0.3s, entry hint selects CROSS even though no v3 reference exists and current A still has 24 supported double rows. K reference-gated handoff cannot recover while reference is absent. Other empty intervals require visual review."
+    }
+  },
+  "package": {
+    "revision": "k-live-entry-prep-v1",
+    "k_revision": "k-stable-v2",
+    "opencv": "4.11.0",
+    "deployed": false,
+    "control_connected": false,
+    "automatic_restart": false,
+    "automatic_start": false,
+    "files": {
+      "web/live_pid.py": "eb6522553ee9cc78b6d3af22f43d7a4f381ff40aec71d8949ff974b484fd940e",
+      "web/live_model_worker.py": "2593afec3cd55ecf2b1622e5ce5a90630bb18b2ffd28a19168e3434fa27ca0cb",
+      "web/pid_paths.py": "cfb2377f50a627705dc03f7a971d72de2582d71fd0943b6eb7617d9458e4b28f",
+      "web/k_live_path.py": "82157eba3f460a074eead0fa1677eacab9cfbbdcc5911f199eb11579d19e7d10",
+      "web/visual_pid.py": "22fd4a2a204dae11baa27c1381db8fc661ddd8e59cf1b3575b8829bf0c72e6fc",
+      "web/calibrated_path.py": "b5f47ef0d3f7c516fe7967e6781810d75abe8ffc3d4090b9b829d76b11c212a1",
+      "laptop_workbench/curve_replay.py": "1941e5d580b12919fc625eb68ed9d94268c049a6c4380184a7abe4393fff313f",
+      "laptop_workbench/entrance_paths_v2.py": "eb33f685678261be23b9ab427b647086dc2d4b8ede05fe82fd7853572499bd8a",
+      "laptop_workbench/ground_calibration.py": "49fb8a441ef7e3e8980405c591ed3316e69aeb0d69751096760c69e7cac3752b",
+      "laptop_workbench/junction_k.py": "081a50dae7a8d7124e4e43f9f68c54886be51c21b8c8080865512bd68d7569e1",
+      "laptop_workbench/junction_straight.py": "3c18bfa3e672004bc62fe593db832c362d8b14ab7cc401a423a5d6bc0a610315",
+      "laptop_workbench/road_segments_v31.py": "461b104e8bc626f8f9de0d24e3aaad9559eff9992872e93ba11d6e6eee637f12",
+      "laptop_workbench/temporal_lane.py": "df97325382a4aa3058447c1f69d31c5aab91958e5a1d110b8c35976715bce980",
+      "laptop_workbench/visual_pid.py": "22fd4a2a204dae11baa27c1381db8fc661ddd8e59cf1b3575b8829bf0c72e6fc",
+      "laptop_workbench/road_segments_v3.py": "372403f8d53f46073fa25edf82aa4f8c55261b661557d82f824bbbfeaafc1b6f",
+      "laptop_workbench/entrance_paths.py": "433228c61b21f2d1aac5f0d8065aac11bf2feb6a7e17bf94c9f6b374bcdbddd2"
+    },
+    "baseline_files": {
+      "web/live_model_worker.py": "41460609b5c32a023ebe16aa4fdffa7c6b6c767f9052b42601c496872a2eb417",
+      "web/live_pid.py": "e9276c3cdc85e0a7a98a6c51727e981c0699c80cc619c669a5f0984e3344fa74",
+      "web/pid_paths.py": "bb4f3caed22f9e4b5b9b05377ce532e2527fbc8a59d70a5e4aafca8d4c45555d"
+    },
+    "deployment_note": "Prepared locally only. Compare target source against baseline before applying; do not restart services or connect PID without the next explicit authorization."
+  },
+  "deployed": false,
+  "orin_connected": false,
+  "service_restarted": false,
+  "hardware_output": false,
+  "ui_verified": true,
+  "ui_frame": 3,
+  "ui_browser_errors": 0,
+  "laptop_workbench_reloaded": true,
+  "orin_service_restarted": false,
+  "package_sha256": "ab8ac514e3412d329dc65fdbbc73086c24d92bd001603a239719ab67027848b7"
+}

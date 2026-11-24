@@ -1,0 +1,10 @@
+{
+  "elapsed_s": 948.2887651920319,
+  "save_dir": "/work/runs/trial01",
+  "metrics": {
+    "metrics/mIoU": 0.9276720285415649,
+    "metrics/pixel_acc": 0.9915193915367126,
+    "fitness": 0.9276720285415649
+  },
+  "limitation": "Same-video blocked development validation only, not an independent track test."
+}

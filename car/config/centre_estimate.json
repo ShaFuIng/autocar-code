@@ -1,0 +1,21 @@
+{
+ "revision": "centre-estimator-r2",
+ "record_only": true,
+ "saved_center_us": 1445.0,
+ "centre_us": 1451.3,
+ "centre_source": "left_right_mean",
+ "play_us": 42.9,
+ "left": {
+  "value": 1472.7399987881488,
+  "n": 778
+ },
+ "right": {
+  "value": 1429.8878916640858,
+  "n": 955
+ },
+ "steady": {
+  "value": 1444.472291333045,
+  "n": 3954
+ },
+ "saved_at": 1795498728.3198643
+}

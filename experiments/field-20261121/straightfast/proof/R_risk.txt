@@ -1,0 +1,27 @@
+R. risk numbers, runs e1b4, b93e, 9934
+
+1. Where do the blocked frames of the three 100 zones sit (0.5 m bins after the anchor), and who owns the steering there?
+  main   blocked frames per bin (of all frames in the bin): C4e+0.5: 3/28  C4e+1.0: 5/133  C4e+1.5: 3/125  C4e+2.0: 1/91
+         steering owner on the blocked frames: {'yaw_inner': 11, 'gain_schedule': 1}
+  diag   blocked frames per bin (of all frames in the bin): C1e+1.5: 1/132  C1e+2.0: 1/110  C1e+2.5: 1/117  C1e+4.0: 2/91  C1e+4.5: 1/121  C1e+5.0: 2/113  C1e+5.5: 4/107  C1e+6.0: 31/91  C1e+6.5: 23/118  C1e+7.0: 8/109
+         steering owner on the blocked frames: {'arc2_flat': 61, 'yaw_inner': 11, 'gain_schedule': 2}
+  circle blocked frames per bin (of all frames in the bin): C2e+0.5: 8/108  C2e+1.0: 5/154  C2e+2.0: 1/109  C2e+2.5: 2/97  C2e+3.5: 10/122  C2e+4.0: 22/109  C2e+4.5: 26/104  C2e+5.0: 1/22
+         steering owner on the blocked frames: {'arc2_flat': 59, 'yaw_inner': 11, 'lap_ff': 5}
+
+2-A2. PWM-changed frames by steering owner (crossing owners = arc2_flat / arc2_blind / crossing_pass), and the PWM there
+   yaw_inner 1338 (mean +16 PWM), arc2_flat 392 (mean +20 PWM), gain_schedule 37 (mean +24 PWM), cmd_comp 20 (mean +17 PWM), pid 19 (mean +11 PWM), lap_ff 3 (mean +3 PWM), lap_ff4 3 (mean +5 PWM), crossing_pass 1 (mean +2 PWM)
+   ramp zone (RAMP+0.3..1.9, allow_climb) frames changed: 297 ; PWM old mean 71.3 -> new mean 86.4, max increase +33.3 ; positions RAMP+0.31 .. +0.94 m
+
+2-B2. PWM-changed frames by steering owner (crossing owners = arc2_flat / arc2_blind / crossing_pass), and the PWM there
+   yaw_inner 1095 (mean +23 PWM), arc2_flat 520 (mean +41 PWM), gain_schedule 37 (mean +25 PWM), cmd_comp 20 (mean +17 PWM), lap_ff 7 (mean +15 PWM), lap_ff4 3 (mean +13 PWM)
+
+3. In-zone frames with |e| > 0.40 or |gz_lp| > 25 dps (three runs) and the PWM around them: recorded / car config emulated / B2
+   b93e C2e+0.64  e -0.47 gz_lp 19.5 | PWM now: recorded  32, old  32, B2  32 (None) | min in the next 0.6 s: old  32, B2  32 | max |e| next 0.6 s 0.55
+   b93e C2e+1.04  e -0.51 gz_lp  7.2 | PWM now: recorded  32, old  32, B2  70 (TROUBLE) | min in the next 0.6 s: old  32, B2  70 | max |e| next 0.6 s 0.51
+   b93e C2e+4.99  e +0.42 gz_lp  1.8 | PWM now: recorded  47, old  47, B2  96 (TROUBLE) | min in the next 0.6 s: old  27, B2  27 | max |e| next 0.6 s 0.62
+   9934 C2e+4.50  e -0.40 gz_lp  2.7 | PWM now: recorded  40, old  40, B2  97 (TROUBLE) | min in the next 0.6 s: old  35, B2  35 | max |e| next 0.6 s 0.40
+
+4. Do the present slow-downs damp a weave? Per zone pass: number of blocked frames vs the yaw-rate spread and the error of that pass (recorded)
+  main   passes without a blocked frame: n 5, gz sd 5.7 dps, |e| P90 0.14, mean PWM 95 | passes with blocked frames: n 8 (median 1 frames), gz sd 7.2 dps, |e| P90 0.14, mean PWM 91 | corr(blocked frames, gz sd) 0.25
+  diag   passes without a blocked frame: n 3, gz sd 4.5 dps, |e| P90 0.18, mean PWM 95 | passes with blocked frames: n 10 (median 9 frames), gz sd 6.2 dps, |e| P90 0.20, mean PWM 84 | corr(blocked frames, gz sd) 0.40
+  circle passes without a blocked frame: n 3, gz sd 5.8 dps, |e| P90 0.23, mean PWM 90 | passes with blocked frames: n 10 (median 5 frames), gz sd 7.1 dps, |e| P90 0.24, mean PWM 78 | corr(blocked frames, gz sd) 0.38

@@ -1,0 +1,12 @@
+B01 = Path(os.environ.get('C4X_B01', str(Path(__file__).resolve().parent)))
+WORK = Path(os.environ['DH_WORK']) if os.environ.get('DH_WORK') else WORK
+
+# ---- c1preload-20261121: base = car state 11-21 19:0x (orin-web-snapshot-20261121 + the car's pause_resume.py 89fc7a55 and its json; flat);
+# 4 runs of 11-21 after the linkage repair (synthetic IMU)
+SNAP = Path(os.environ['C1P_BASE'])
+FIX33 = SNAP
+PLAY_COMP = json.loads((SNAP / 'play_comp.json').read_text(encoding='utf8'))
+CROSSING_PASS = json.loads((SNAP / 'crossing_pass.json').read_text(encoding='utf8'))
+for _r in ('9934', '9284', '69a8', 'bab2'):
+    RUNS[_r] = '20261121'; UPPER_SINGLE_ON[_r] = True
+WORK = Path(os.environ['DH_WORK']) if os.environ.get('DH_WORK') else WORK

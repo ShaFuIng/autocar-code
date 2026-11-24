@@ -1,0 +1,112 @@
+startpage（2026-11-23，離線，未上車）— 手機操作頁「起點位置」：mobile-service-r6
+=====================================================================================
+全程沒有連車（無 ssh、無 192.168.0.244、無 127.0.0.1:8093/vehicle）。測試用假車控＋暫存資料夾的四檔複本。
+本機原始碼：Orin_Interface_v1/mobile_service/（改前的檔備份在 mobile_service/_backup_r5_20261123/）。
+
+一、做了什麼
+------------
+手機頁新增「起點位置」：填「車比旗子位置往後幾公尺」（0～7、0.1 m 一格）→ 套用 → 手機服務改車控每輪開跑時讀的四個檔（免重啟）。
+規則與 field-20261123/startcfg/mkstart_rule.py 相同：
+  D＝3.44＋back（back>0 時再少報 0.25）；Δ＝D−3.44
+  lap_pos.json      start_s＝−D；skip_after_by.C1s＝9.0（一律）
+  brake_zones.json  所有 anchor=='start' 且 from_m<900 的區：from_m／to_m＝旗子值＋Δ（from 999 的假區不動）
+  lap_ff.json       curves.c1.start.gap_m＝旗子值＋Δ（win_m、ref_win 不動）
+  start_bias.json   enabled＝(back≤2.5)，其他鍵不動
+
+二、設計選擇與理由
+------------------
+1. 只改規則鍵、不覆蓋整檔：讀車上現行檔→深拷貝→只指定規則鍵（值相同就不指定，保留 9 與 9.0、2 與 2.0 的寫法）→
+   依「該檔自己的排版」輸出。排版由檔案本身偵測（縮排 1/2/4/單行、ensure_ascii、LF/CRLF、結尾換行有無），找到能逐位元重現原檔的那一種。
+   原因：車上檔的排版並不一致——lap_pos.json 是 CRLF 且結尾 \r\n（筆電 mkstart 產生後上傳）、start_bias.json 是單行、另兩檔 indent 1＋LF。
+   一律改用 json.dumps(indent=1)＋\n 會讓「沒改內容的往返」也改到位元組，與要求的「來回切換逐位元相同」衝突。偵測不到時才退回 indent 1＋LF＋結尾換行（內容不變）。
+2. 事實來源：
+   - 目前往後幾公尺＝由 lap_pos.json start_s 反推。0.1 m 格點的 71 個值各對到唯一 D（含 back 0.1／0.2 的 D 3.29／3.39 < 3.44），反推一對一（有測）。
+   - 旗子參考值（每個起跑區的 from_m／to_m，依區名對應；同名區加 #2；c1 gap_m）存在手機服務目錄 start_ref.json，不寫進車控的檔。
+   選這個而不用「在車控檔加標記鍵」的理由：
+   - 車控檔不多任何鍵，車控程式完全不受影響（不必擔心哪個 .py 會對未知鍵出狀況）。
+   - 筆電用 mkstart_rule 產生的檔（沒有標記）照樣判得出來；標記法遇到筆電產生的檔會誤判成 0 m。
+   - 有人改了第 1 圈的區（長度或位置）→ 與「參考＋Δ」不符 → 套用被拒、頁面列出「哪一區、哪個鍵、現值、依參考應為」→
+     使用者按「以目前車上檔重建參考」（＝明確認定車上檔正確）→ 參考＝現值−Δ → 之後換起點會帶著該調整一起平移，不會被洗掉。
+     只改 cap_pwm（上限）不影響判斷（參考不存 cap），直接保留。新增／刪除起跑區也會被判不一致（同樣要明確重建）。
+3. 不一致時的行為（分三類）：
+   - START_NO_REF（沒有參考檔或壞掉）、START_INCONSISTENT（起跑區／gap_m 與參考＋Δ 不符、區數不同）、START_S_UNKNOWN（start_s 不在規則格點上）、
+     START_FILE_ERROR（檔案不存在／壞掉／結構不對）：套用一律拒絕、不寫任何檔；頁面紅框列出每一處原因。
+     前兩者頁面出現「以目前車上檔重建參考」按鈕（有確認視窗說明後果）；START_S_UNKNOWN 不能重建（判斷不出 Δ），要維護人員處理。
+   - START_NEEDS_APPLY：只有絕對值鍵不合規則（skip_after_by.C1s 不是 9.0、start_bias.enabled 不符距離），套用時直接補正（不會洗掉平移量）。
+   - 不一致不擋起跑、不擋起跑模式，只在「從起點開始」上方顯示紅色「目前起點：…・設定不一致」。理由：不一致多半是有人調過參數的「帳面」問題，
+     車照樣能跑；比賽時助手可能不在，擋住起跑代價比第 1 圈減速位置偏一點大。若要改成擋起跑，只要在 view()/race_arm() 讀 start_now()['consistent']。
+4. 安全：行駛／暫停中拒絕（RUN_ACTIVE；暫停也擋，因為接續的輪次仍用舊設定、容易誤會）；問不到車控就拒絕（CAR_UNREACHABLE，判斷不了有沒有輪次）；
+   比賽起跑模式開啟中拒絕套用與重建（RACE_ARMED，沿用 /api/repair 的規則）；輸入驗證（數字、非 bool、非 NaN、0～7、0.1 m 一格；字串 "2.5" 也拒絕）。
+   寫入順序：全部算好→自我檢查（重新解析＝預期、逐鍵差異只落在規則鍵、新檔反推回同一 back 且一致）→四原檔＋start_ref.json 備份到
+   ~/orin_interface_v1/backups/startcfg_<時間>/（含 README.txt 列出改動）→四個 .startcfg.tmp 寫入並 fsync→逐一 os.replace→讀回逐位元比對＋再反推。
+   任一步失敗：已換掉的檔用記憶體中的原位元組放回、刪 .tmp，回 START_WRITE_FAILED（放不回的檔名會列出並指向備份）。值不變時不寫、不備份。
+   同時兩支手機按：模組鎖序列化。
+5. 頁面：「從起點開始」正上方一行「目前起點：旗子往後 X.X m（起步左舵 開／關）」（起跑模式開啟時也看得到）；
+   「起點位置」區塊：−0.5／數字輸入（step 0.1）／+0.5、「旗子位置（0 m）」、「套用」（有確認視窗）、套用後預覽（內部距離 D、左舵開關）、說明。
+   說明文字照算術寫：容許誤差（anystart：D 誤差＝實際−輸入 −0.2～+1.5 m）扣掉內建少報 0.25 後，以「往後距離」表示是
+   「車比填的值更前面約 0.45 m 內、更後面約 1.25 m 內」→ 頁面寫「實際位置寧可比填的值更後面，不要更前面；更前面超過約 0.4 m 會變晚、更後面約 1.2 m 內沒問題；
+   量不準時填範圍裡較小的數（例 2.3～2.6 不確定填 2.3）；程式已內建少報 0.25，不要自己再扣」。
+   注意：任務說明裡「『不確定就往小的填』是錯的」與「實際位置寧可比填的值更後面」其實是同一件事（填小＝實際相對更後面），
+   anystart SUMMARY 也寫「寧可輸入偏小」，所以頁面兩句都寫了；若要拿掉「填較小的數」那句請告知。
+   另：任務給的「近 0.2／遠 1.5」是 D 的容許（少報 0.25 之前）；back＝0 時沒有少報，容許就是 −0.2～+1.5（＝今天驗證的原擺法）。
+6. 版本 mobile-service-r6（start_cfg.py 內 start-cfg-r1）；status 的 service 欄位顯示 r6。
+
+三、改動檔案（sha256 前 8 碼）
+------------------------------
+  新增 start_cfg.py           0064e9ae   規則、狀態判斷、套用、重建參考、CLI（status／plan／rebuild-ref）
+  新增 web/start.js           d216b237   頁面「起點位置」
+  新增 test_start.py          49b6cad3   18 項（不上 Orin 也可以，筆電找不到 experiments 資料夾時略過）
+  修改 server.py              8f9944c9   REVISION r6、/start.js、start_now()（依五個檔的 mtime/size 快取）、start_set()、start_rebuild()、
+                                         GET /api/start、status 加 start、POST /api/start/set、/api/start/rebuild-ref、起跑模式開啟時 /api/start/* 也拒絕
+  修改 web/index.html         873174cb   「目前起點」一行、「起點位置」區塊、載入 start.js；停止後提示改為「回到上面『目前起點』的位置」
+  修改 web/model.mjs          b2296d1c   新拒絕碼的中文說明（START_*）
+  修改 web/style.css          68104c67   新區塊樣式（只新增規則）
+  修改 README.md              6a2ff9f2   r6 一節
+  未動：app.js、repair.js、race.js、service.json、start_params.json、mobile_console/。
+
+四、測試結果（筆電，python 3.12）
+--------------------------------
+  python -m unittest test_start test_server test_level → 44 項全過（既有 26 項＋新 18 項）。
+  - 對 startcfg/base_flag 套用 back 0／2.5／2.6／6.0：四檔 JSON 與當場執行 mkstart_rule.py 的輸出逐鍵相同，也與 startcfg/back0.0、back2.5、back2.6、back6.0 相同；
+    唯一排除：mkstart_rule 在 back>2.5 時在 start_bias 多寫一個 note_far_20261123 說明鍵，本服務不加（規則 5「其他鍵不動」）。
+  - back 0.1／0.2（D<3.44）：mkstart 會順便縮短 start_bias.hold_s（2.4→約 2.25），本服務依規則 5 不動 hold_s；其餘鍵相同（有測，記為已知差異）。
+  - 由車上快照 20261123b 的四檔（CRLF、單行 start_bias）出發 0→6→2.5→0：四檔逐位元回到原樣、CRLF 保留、產生 3 份備份、第一份＝原檔、無 .tmp 殘留。
+  - 同值再套用：不寫、不備份。套用 6.0 只改 13 個鍵（5 區×2＋start_s＋gap_m＋enabled），999 假區不動。
+  - 其他調整保留：非起跑區 cap、起跑區自己的 cap、新增 lap 錨區、lap_ff c2 帶狀表、c1.start.win_m、lap_pos 其他 skip_after_by 鍵，換 6.0／0／3.3 後都還在。
+  - 不一致：無參考／參考壞掉、在 2.5 m 時把彎 1 第 1 圈區 to_m 改 6.0（拒絕、列出差異；重建後參考 to_m 3.75，換回 0 m 時保留為 3.75）、
+    只改 start_s（拒絕）、start_s 不在格點（拒絕且不能重建）、多一個起跑區、缺 gap_m、curves 結構壞、檔案不存在／JSON 壞 → 全部拒絕且檔案不變。
+  - 只有 start_bias.enabled 不合規則 → START_NEEDS_APPLY，套用後補正。
+  - 寫入失敗：第 3 次 replace 丟例外 → 四檔回原樣、無 .tmp、紀錄有 FAILED、備份已在；replace 後讀回內容不符 → 同樣放回。
+  - HTTP（真 Handler、假車控函式）：/start.js、GET /api/start、rebuild-ref、set 2.5（回 12 個改動與備份名）、status 帶 start 與 r6、
+    輸入 'abc'／null／7.5／−1／1.25 各回對應拒絕碼；running／paused→RUN_ACTIVE、起跑模式開啟→RACE_ARMED（套用與重建）、車控連不到→CAR_UNREACHABLE；拒絕時檔案不變。
+  - 頁面：本機假車控示範（手機寬 375 px）看過：無參考時紅框＋重建鈕、重建後套用 6.0 → 「目前起點：旗子往後 6.0 m（起步左舵 關）」、主控台無錯誤。Android 實機未看。
+
+五、上車步驟（需主對話複核後、使用者授權；不動車控、不重啟 orin-dashboard）
+------------------------------------------------------------------------------
+  1. 核對 Orin ~/orin_interface_v1/mobile_service/ 現有 server.py、web/index.html、web/model.mjs、web/style.css 的雜湊＝目前已部署版本（AGENTS.md 記 r4 server.py 0a4c47fd；
+     本機改前的 r5 在 _backup_r5_20261123/，若 Orin 上是 r5 應與它相同）。備份這四檔到 ~/orin_interface_v1/backups/mobile_r6_<時間>/。
+  2. 複製 6 檔到暫存資料夾核對雜湊：server.py、start_cfg.py、web/index.html、web/model.mjs、web/style.css、web/start.js
+     （test_start.py 可不複製；放上去也只會略過）。`python3 -m py_compile server.py start_cfg.py` 通過後才移進 mobile_service/。
+  3. 先不重啟，在 Orin 跑 `cd ~/orin_interface_v1/mobile_service && python3 start_cfg.py status`：確認 back_m 是預期值（例如今天車上若是旗子位置＝0.0）、reason＝START_NO_REF。
+  4. 確認車上四檔是對的之後：`python3 start_cfg.py rebuild-ref`（或頁面按「以目前車上檔重建參考」）。看輸出的參考值：起跑區應為
+     1.8～3.5、16.9～18.5、23.5～29.5、48.5～51.2、44.6～47.0，gap 3.2（＝11-23 旗子版；若車上之後有人刻意改過，以改過的為準）。再 status → consistent true。
+  5. `systemctl --user restart orin-mobile`（只重啟手機服務；起跑模式會關閉，無輪次時做）。手機開頁確認版本 r6、「目前起點」一行。
+  不需要建立 start_ref.json 以外的任何檔；start_ref.json 由步驟 4 產生（不建議從筆電複製，避免拿到過時的參考）。
+
+六、上車後第一次使用要做的檢查
+------------------------------
+  - 在頁面把起點改成 2.5 → 用 `python3 start_cfg.py status` 或讀檔確認：start_s −5.69、第一區 4.05～5.75、gap 5.45、start_bias enabled true；
+    backups/startcfg_<時間>/ 有四個原檔。再改回原值 → 四檔 sha256 與步驟 1 前相同（逐位元往返）。
+  - 第一次換起點後的實車：照 anystart 的驗法跑短起跑（lap_pos 認到 C1s、無 lost／SKIPPED、彎 1 第 1 圈減速區約在 C1s 前 0.8～1.1 m 開始）。
+  - 行駛中按套用 → 應顯示「行駛或暫停中不能執行」。
+
+七、已知限制與不確定處
+----------------------
+  1. back 0.1／0.2（D 3.29／3.39）時 start_bias.hold_s 不縮短（依使用者規則 5）；mkstart 會縮短約 0.15 s。若車上的檔曾用 mkstart 以 D<3.44 產生，hold_s 會停在縮短值，
+     本服務不會改回（它不管 hold_s）。實際使用 0.1～0.2 m 的機會低，但兩種做法不同，請使用者定。
+  2. 判斷「不一致」靠區名對應；若有人只改了起跑區的 name 文字，會判成「少一區＋多一區」→要重建參考（不會寫壞，只是多一步）。
+  3. 重建參考＝相信車上檔：若 start_s 和起跑區被人分別改錯但剛好落在格點上，重建會把錯的當參考（頁面有確認視窗說明；重建結果會顯示第一區與 gap 供核對）。
+  4. 不一致不擋起跑（見二.3），只警示；是否要擋請使用者決定。
+  5. 頁面說明的容許誤差數字（約 0.4／1.2 m）是由 anystart 的重播容許（D −0.2～+1.5）扣掉內建少報 0.25 推得，未另做實車驗證。
+  6. Orin 的 Python 版本未在本機重現（只用 3.6 以上都有的標準庫）；Android 實機畫面與 confirm 視窗未驗。
+  7. 本服務改的檔都是「每輪開跑時讀」（anystart SUMMARY 依程式確認）；套用後下一輪起跑才生效。

@@ -1,0 +1,29 @@
+chatter-20261122: does a play-comp flip (sent +-110 us) move the car more than the command change itself?
+python fliptest.py OUT.txt RUN [RUN ...]
+Events (frames inside a labelled region, valid, both frames with play_comp):
+  FLIP   pre moved 15..40 us against the previous direction and the compensation changed side on this frame (sent moved by
+         110 us + the pre move).
+  SAME   pre moved 15..40 us over the last 1..3 frames in the direction the compensation already holds (no flip in that window;
+         sent moved by the pre move only).
+Response = gz(t + tau) - gz(t), sign-aligned so that + = yawed the way the command moved (right = gz down), divided by the pre move
+(deg/s per us). If the flip moved the wheel by its 110 us, FLIP would be ~(110 + d)/d = 4..8 x SAME; if the compensation only takes
+up the linkage play, FLIP ~ SAME. Random-time baseline shown. Caution: the pre move itself partly follows gz (gyro terms), the
+same for both groups.
+band  FLIP   tau 0.25  n  1638  mean +0.028  median +0.030  (deg/s per us; x20 us = +0.6 deg/s)
+band  FLIP   tau 0.35  n  1630  mean +0.082  median +0.060  (deg/s per us; x20 us = +1.6 deg/s)
+band  FLIP   tau 0.50  n  1596  mean +0.078  median +0.059  (deg/s per us; x20 us = +1.6 deg/s)
+band  RANDOM tau 0.25  n   620  mean +0.003  median -0.009  (deg/s per us; x20 us = +0.1 deg/s)
+band  RANDOM tau 0.35  n   625  mean -0.013  median +0.015  (deg/s per us; x20 us = -0.3 deg/s)
+band  RANDOM tau 0.50  n   609  mean +0.005  median -0.033  (deg/s per us; x20 us = +0.1 deg/s)
+band  SAME   tau 0.25  n  4594  mean +0.612  median +0.518  (deg/s per us; x20 us = +12.2 deg/s)
+band  SAME   tau 0.35  n  4568  mean +0.701  median +0.592  (deg/s per us; x20 us = +14.0 deg/s)
+band  SAME   tau 0.50  n  4442  mean +0.748  median +0.623  (deg/s per us; x20 us = +15.0 deg/s)
+other FLIP   tau 0.25  n  1061  mean +0.122  median +0.093  (deg/s per us; x20 us = +2.4 deg/s)
+other FLIP   tau 0.35  n  1052  mean +0.280  median +0.208  (deg/s per us; x20 us = +5.6 deg/s)
+other FLIP   tau 0.50  n  1021  mean +0.337  median +0.268  (deg/s per us; x20 us = +6.7 deg/s)
+other RANDOM tau 0.25  n  1391  mean +0.001  median -0.011  (deg/s per us; x20 us = +0.0 deg/s)
+other RANDOM tau 0.35  n  1441  mean -0.019  median -0.019  (deg/s per us; x20 us = -0.4 deg/s)
+other RANDOM tau 0.50  n  1302  mean +0.010  median +0.006  (deg/s per us; x20 us = +0.2 deg/s)
+other SAME   tau 0.25  n  8740  mean +0.705  median +0.624  (deg/s per us; x20 us = +14.1 deg/s)
+other SAME   tau 0.35  n  8699  mean +0.785  median +0.689  (deg/s per us; x20 us = +15.7 deg/s)
+other SAME   tau 0.50  n  8477  mean +0.773  median +0.672  (deg/s per us; x20 us = +15.5 deg/s)

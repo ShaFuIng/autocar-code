@@ -1,0 +1,37 @@
+{
+ "enabled": true,
+ "amb_one_side": true,
+ "corridor_cal_h_max": 110.0,
+ "fallback_cont_px": null,
+ "outside_handback": true,
+ "outside_handback_px": 120.0,
+ "outside_handback_side": true,
+ "outside_handback_hist_n": 3,
+ "outside_handback_hist_px": 120.0,
+ "note": "crossings-worker-r1 as on the car (amb_one_side only) + curve3-handback-r1 (curve3-20261115, offline candidate): outside_handback with side + history restrictions (px 120). Read by the worker at each model load. | slope-width-r1 (slope-20261115): while the worker IMU pitch <= -8 the single-line width ratio starts at 0.85 and follows the two-line ratios seen on this slope at 1.0/s; afterwards the normal width memory continues from that value. null / absent = old behaviour. Read at model load.",
+ "slope_width": {
+  "pitch_deg": -8.0,
+  "ratio": 0.85,
+  "rate_per_s": 1.0
+ },
+ "note_cal_h": "2026-11-18: corridor_cal_h_max 110 (runs 0f91/d2af: corridor offset +135..150 px after a landing)",
+ "corridor_cal_gate": {
+  "hmax": 110,
+  "ws_max": 4.5,
+  "wide_drop_pitch": -8
+ },
+ "note_cal_gate": "2026-11-18: corridor-cal-gate-r1 (corridor-weak-20261118)",
+ "arc_fit": {
+  "enabled": true,
+  "pts": 16
+ },
+ "note_arc_fit": "2026-11-19: arc-fit-r1 + arc-lat-r1 pts (arc-lat-20261119): path_diagnostic.arc_fit incl. L/R line centre points (16 per line) for the arc_lat control layer. Remove the key to switch off. Read at model load.",
+ "curve_take_guard": {
+  "gz_min": 20,
+  "lr_max": 25,
+  "cont_px": 40,
+  "sign": true,
+  "hold_s": 0.6
+ },
+ "note_curve_take_guard": "2026-11-19: c2-exit-r1 (c2-exit-20261119): no STRONG_CORRIDOR_DISAGREES take while |worker IMU gz| >= 20 dps, the corridor's weaker side < 25 rows, the corridor lies on the outside of the turn and the baseline is continuous, held 0.6 s for the same-side disagreement (curve-2 exit stall). Remove the key to switch off. Read at model load."
+}

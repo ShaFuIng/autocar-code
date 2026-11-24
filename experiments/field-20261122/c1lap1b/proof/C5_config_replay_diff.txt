@@ -1,0 +1,34 @@
+### base vs base
+e69d frames 7447
+9af6 frames 7374
+TOTAL frames 20849 | differing 0
+### c1_lap1_win
+TOTAL frames 20849 | differing 808
+   lap1 no-band-frame 23
+   lap1 no-band-frame max|dsteer| 20.1
+   lap1 tb<100 451
+   lap1 tb<100 max|dsteer| 160.6
+   lap1 tb>=100 334
+   lap1 tb>=100 max|dsteer| 50.4
+### c1_tail_a
+TOTAL frames 20849 | differing 673
+   lap1 no-band-frame 53
+   lap1 no-band-frame max|dsteer| 73.3
+   lap1 tb>=100 289
+   lap1 tb>=100 max|dsteer| 87.8
+   later tb<100 2
+   later tb<100 max|dsteer| 3.4
+   later tb>=100 329
+   later tb>=100 max|dsteer| 88.1
+### combo_lap1_win__tail_a
+TOTAL frames 20849 | differing 1258
+   lap1 no-band-frame 76
+   lap1 no-band-frame max|dsteer| 73.3
+   lap1 tb<100 451
+   lap1 tb<100 max|dsteer| 160.6
+   lap1 tb>=100 400
+   lap1 tb>=100 max|dsteer| 87.8
+   later tb<100 2
+   later tb<100 max|dsteer| 3.4
+   later tb>=100 329
+   later tb>=100 max|dsteer| 88.1

@@ -1,0 +1,96 @@
+c1preload（2026-11-21，離線候選，未上車）— 第一圈彎 1 入彎預載 PID 積分（i-preload-r1）
+==========================================================================================
+
+一、要解決的問題（主對話已量，連桿重調後 21 次彎 1）
+  入彎時積分（ki*i）  第 1 圈 −1～−10 µs      後續圈 +16～+26 µs
+  入彎後誤差峰值      第 1 圈 0.80             後續圈 0.72
+  curve_ff 把命令拉到 ≥1850 µs：第 1 圈 5/9，後續圈 2/12；出彎誤差 ≤ −0.4：第 1 圈 2/9（run-69a8、run-bab2），後續圈 1/12。
+
+二、改了什麼
+  只改一個檔：candidate/i_ramp.py b87eb8c9（基底＝車上 web/i_ramp.py 760de37d；產生方式 patch_preload.py）。
+  live_pid.py 沒有改（800879c9 不動）。原本的 step() 內容一字未改，改名為 _step_base()；新的 step() 先呼叫它，再視設定做預載
+  （已用 diff 確認 _step_base 的程式本文與原 step 相同）。
+  新設定鍵（放在 web/i_ramp.json，鍵不存在＝行為與現在相同、紀錄也相同）：
+    "preload": {"enabled": true, "target_us": 20, "e_on": 0.30, "n_on": 2, "min_s": 1.5, "max_s": 15, "rate_us_s": 150}
+  i_ramp.json 在每輪開跑時讀（LivePID.start 內 self.iramp=i_ramp.load()）；i_ramp.py 是控制端程式，換檔後要重啟 orin-dashboard 才會載入。
+
+三、觸發條件（一輪最多一次）
+  等待中：lap_pos 回報 lap==0 且尚無任何地標錨點（＝從起點起跑、還沒過第一個地標），lap_pos 未遺失。
+  觸發：PID 的控制誤差（controller.e，即紀錄的 proposal.error）連續 n_on=2 格 ≥ e_on=0.30，且距本輪第一次步進已過 min_s=1.5 s。
+  動作：把積分以 rate_us_s=150 µs/s 抬到 target_us（ki*i；ki 40、integral_limit 1.0 → 上限 40 µs）；只往上抬，已 ≥ target 不動。
+        只寫 controller.i，不改當格命令（效果從下一格 PID 開始），與既有的積分釋放相同。
+  永久關閉（本輪不再觸發）的情況：觸發前 lap_pos 已有錨點或 lap>0（reason NOT_BEFORE_FIRST_LANDMARK）；max_s=15 s 內沒觸發（TIMEOUT）；
+        PID 物件被換掉＝暫停接續重建了 controller（CONTROLLER_REPLACED）；ki ≤ 0。lap_pos 遺失或沒有 lap 資訊時不計數。
+  門檻依據（今天 12 輪從起點起跑的第 1 圈，離線掃描 proposal.error）：e≥0.30 連 2 格都落在彎道地圖 FLOOR 開始前 0.09～0.58 s，
+        當時積分 −7.5～−24.6 µs；FLOOR 前 0.8 s 以前的誤差最大值 ≤ 0.03（起跑直線不會誤觸發）。
+        run-a355（從主直線起跑）在誤差出現前 lap_pos 已先給標稱錨點 C1s* → 不觸發。run-25ca（IMU 凍結）仍會在 3.89 s 觸發。
+  紀錄：proposal.i_ramp.preload＝{state RAMP／DONE／OFF, e, i_us_before, i_us 或 reason}，只在動作或關閉的那幾格出現。
+
+四、驗證（只用四輪：run-9934、run-9284、run-69a8、run-bab2，皆 2026-11-21）
+  重播工具：ramp-bias-20261119/harness＋c4-exit-20261120 的 common.py＋本資料夾 tools/harness_common_append.txt（合成 IMU）。
+  重播基底＝orin-web-snapshot-20261121 全部檔案，其中 pause_resume.py 換成車上現行的 89fc7a55、pause_resume.json 換成 f8622f3f
+  （快照存檔時的 pause_resume.py 是 50ee5fba，與車上現況不同，所以另組基底）。lap_ff.json 用快照的 3e1da49b（四輪當時的值；
+  車上 19:20 已改成 2e121d02＝彎 4 e_c 0.44，與本候選無關）。
+
+  A. 鍵缺＝車上現況（舊側 live_pid 800879c9＋車上 i_ramp.py；新側同一 live_pid＋候選 i_ramp.py；i_ramp.json 皆為車上 40f86bbb）
+     proof/A_line.txt：
+       9934  frames 5660/5660  commands identical 5660  reads 5660
+       9284  frames 5975/5975  commands identical 5975  reads 5975
+       69a8  frames  240/ 240  commands identical  240  reads  240
+       bab2  frames 2958/2958  commands identical 2958  reads 2958
+       TOTAL frames 14833 identical 14833 read-order identical 14833 all_cases_identical True stops_identical True any_unexpected False
+     註：bab2 實車有 4282 格，重播到第 3 圈第一次暫停為止（2958 格）；暫停之後不在重播範圍。
+
+  B. 開啟（target 20）對關閉的開迴路重播（proof/B_table.txt 有 15／20／25 三組完整表；輸入是錄下來的影像／IMU／輪速，車不會反應）
+     dt＝相對第 1 圈彎 1 彎道地圖 FLOOR 開始；command＝proposal.steer_us（輸出級之前）。
+       輪次  觸發 dt   觸發時積分  到達 target dt  命令有差的格數／最後一格 dt   第 2 圈起 命令或油門有差的格數
+       9934  −0.33 s   −7.6 µs     −0.17 s         67 格／+2.51 s                 0
+       9284  −0.33 s   −13.5 µs    −0.13 s         60 格／+2.31 s                 0
+       69a8  −0.30 s   −14.3 µs    −0.10 s         65 格／+2.75 s                 0（本輪只有第 1 圈）
+       bab2  −0.21 s   −11.1 µs    +0.00 s         64 格／+2.98 s                 0
+     各時段「積分差／命令差（平均）」µs：
+       dt          9934          9284          69a8          bab2
+       −0.3～0.0   +21.5／+35.3  +24.1／+42.8  +20.8／+24.5  +8.7／+10.1
+        0.0～0.3   +24.8／+52.3  +29.5／+32.4  +31.1／+48.7  +28.0／+27.7
+        0.3～0.6   +24.5／+62.8  +29.2／+53.3  +31.1／+72.2  +28.0／+32.7
+        0.6～0.9   +16.8／+44.5  +23.4／+37.3  +26.0／+48.1  +27.3／+29.9
+        0.9～1.2   +6.5／+31.0   +15.9／+18.1  +14.8／+3.9   +17.1／0.0（curve_ff 下限已頂到 1984，兩側相同）
+        1.2～1.8   +0.1／+4.2    +5.1／+10.9   +3.1／+11.7   +2.8／+4.3
+        1.8～2.6   0.0／+0.1     0.0／+0.3     0.0／+0.3     0.0／+0.3
+        2.6～4.0   0.0／0.0      0.0／0.0      0.0／0.0      0.0／0.0
+     要注意：積分多 20～31 µs，命令實際多 25～72 µs（PID 之後還有右轉增益與增益排程放大），不是 +20。這與後續圈本來就帶著的
+     積分造成的命令量同一來源，但數字比「+20」大，請主對話知悉。
+     油門：四輪 0 格不同。第 2 圈以後：9934、9284 整筆紀錄 0 格不同；bab2 有 1421 格只差 play_comp.reversals 這個累計換向次數
+     （37→33，是計數欄位，命令、實送舵量、油門皆相同）。
+     target 15／25：觸發點相同，積分差約少／多 5 µs，命令差依比例變化（完整表見 proof/B_table.txt）。
+
+  C. 單元測試 tests/test_preload.py：9 項通過（proof/unit_tests.txt）
+     鍵缺時與車上 i_ramp.py 逐步輸出與積分相同；觸發一次並依 150 µs/s 斜坡到 target、之後不再觸發；一步到位（rate null）與 target 15／20／25；
+     已高於 target 不動；lap>0／已有錨點（含標稱 C1s*）不觸發；太早（min_s）、單格尖峰、lap_pos 遺失、逾時、無 lap 資訊皆不觸發；
+     暫停接續換掉 controller 後不觸發；包了一層 .pid 的控制器可用；預載結束後既有的 C1e 出彎釋放照常作用。
+
+  重播對實車紀錄的吻合度（proof/fidelity.txt，以 proposal.t 對齊，關閉側）：舵量差中位 1.2～1.9 µs、P95 9～47 µs、最大 40～561 µs；
+     誤差逐格相同 74～95%；油門相同 59～76%。合成 IMU 下重播不是實車的逐格複製，A／B 比的是「同一套重播下新舊兩側」。
+
+五、沒有驗到的事（離線驗不了）
+  1. 閉迴路效果：預載後車會早一點、多一點右轉，誤差峰值是否因此降到 0.72 附近、curve_ff 是否不再把命令拉到 1900 以上、
+     出彎是否不再偏右——全部未驗。開迴路表只說明「同樣的影像下命令會多多少」。
+  2. 是否會讓第 1 圈彎 1 反過來更切內（後續圈內線淨空約 −6 cm；第 1 圈預載後應接近後續圈，但未驗）。
+  3. target 該取 15／20／25 哪一個：依據只有「後續圈入彎積分 +16～+26」，未做實車比較。
+  4. 觸發門檻 e_on 0.30 只用今天 12 輪檢查過；起跑時車擺得很歪、誤差在直線上就超過 0.30 且已過 1.5 s 時會提早觸發
+     （往右多打約 25～70 µs，之後由 PID 自己修回；未實測）。
+  5. 暫停在起跑直線、接續後再進彎 1：controller 被重建，預載不會觸發（依要求），該情況第 1 圈仍是沒有預載的狀態。
+  6. 從非起點位置起跑（lap_pos 仍是 lap 0、無錨點）時，會在第一個右彎入彎觸發；未特別處理。
+
+六、上車步驟（需使用者當次授權；主對話執行）
+  1. 核對車上 web/i_ramp.py＝760de37d、web/i_ramp.json＝40f86bbb。
+  2. 暫存區放 candidate/i_ramp.py（b87eb8c9）與 on/i_ramp.preload20.json（0781f8bf；另有 15＝5d5de572、25＝f96a45fb），核對雜湊、編譯。
+  3. 卸載模型→另一步確認車況→備份兩檔→i_ramp.py 進 web/→重啟 orin-dashboard→核對 IMU 數值在變。
+  4. 先不放新 json 跑一輪（鍵缺＝現況）；再把 web/i_ramp.json 換成 preload20 版（每輪開跑讀，免重啟）。
+  5. 驗證：連續從旗子起跑數次、過隧道即停，看 proposal.i_ramp.preload 有出現、入彎後誤差峰值與命令峰值、出彎誤差。
+  退回：web/i_ramp.json 放回 40f86bbb（免重啟，功能即關）；程式要退＝放回 i_ramp.py 760de37d 並重啟。
+
+七、交付檔（雜湊見 MANIFEST.sha256）
+  candidate/i_ramp.py、on/i_ramp.preload15／20／25.json（以車上 40f86bbb 為底只加 preload 鍵，已逐鍵核對其餘相同）、
+  patch_preload.py、tests/test_preload.py、tools/b_table.py、tools/harness_common_append.txt、
+  proof/A_line.txt、A_report.json、B_table.txt、fidelity.txt、unit_tests.txt。
